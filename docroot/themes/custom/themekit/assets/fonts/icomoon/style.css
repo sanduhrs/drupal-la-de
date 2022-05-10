@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?btnfvb');
-  src:  url('fonts/icomoon.eot?btnfvb#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?btnfvb') format('woff2'),
-    url('fonts/icomoon.ttf?btnfvb') format('truetype'),
-    url('fonts/icomoon.woff?btnfvb') format('woff'),
-    url('fonts/icomoon.svg?btnfvb#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?k4umis');
+  src:  url('fonts/icomoon.eot?k4umis#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?k4umis') format('truetype'),
+    url('fonts/icomoon.woff?k4umis') format('woff'),
+    url('fonts/icomoon.svg?k4umis#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -25,6 +25,81 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-angle-bottom:before {
+  content: "\e905";
+}
+.icon-angle-left:before {
+  content: "\e906";
+}
+.icon-angle-right:before {
+  content: "\e907";
+}
+.icon-arrow-right:before {
+  content: "\e908";
+}
+.icon-close:before {
+  content: "\e909";
+}
+.icon-commerce:before {
+  content: "\e90a";
+}
+.icon-externallink:before {
+  content: "\e90b";
+}
+.icon-facebook:before {
+  content: "\e90c";
+}
+.icon-government:before {
+  content: "\e90d";
+}
+.icon-health:before {
+  content: "\e90e";
+}
+.icon-linkedin:before {
+  content: "\e90f";
+}
+.icon-location:before {
+  content: "\e910";
+}
+.icon-mail-add:before {
+  content: "\e911";
+}
+.icon-mail:before {
+  content: "\e912";
+}
+.icon-menu:before {
+  content: "\e913";
+}
+.icon-nonprofit:before {
+  content: "\e914";
+}
+.icon-phone:before {
+  content: "\e915";
+}
+.icon-publishing:before {
+  content: "\e916";
+}
+.icon-quote:before {
+  content: "\e917";
+}
+.icon-search:before {
+  content: "\e918";
+}
+.icon-social-linkedin:before {
+  content: "\e919";
+}
+.icon-social-meetup:before {
+  content: "\e91a";
+}
+.icon-social-twitter:before {
+  content: "\e91b";
+}
+.icon-social-youtube:before {
+  content: "\e91c";
+}
+.icon-sport:before {
+  content: "\e91d";
+}
 .icon-clone:before {
   content: "\e900";
 }
@@ -40,7 +115,7 @@
 .icon-view:before {
   content: "\e904";
 }
-.icon-check_circle:before {
+.icon-check:before {
   content: "\e86c";
 }
 .icon-error:before {
