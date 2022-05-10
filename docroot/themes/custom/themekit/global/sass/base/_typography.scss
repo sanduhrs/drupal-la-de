@@ -1,0 +1,109 @@
+/**
+ * Load external Web Fonts
+ */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+// Should be improved to the separate <link> tas with preconnect feature (<link rel="preconnect" href="https://fonts.googleapis.com">
+//<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+//<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">)
+
+/**
+ * Typography
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  p {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+body {
+  @include font-sizes(body);
+  min-width: 320px;
+}
+
+.cke_editable,
+.text-formatted {
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1,
+  h2 {
+    margin-bottom: rem-calc(20);
+    @include breakpoint(xmedium) {
+      margin-bottom: rem-calc(40);
+    }
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  a {
+    @include selectors(active) {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    li::marker {
+      font-size: .75em;
+      line-height: 2;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  &.secondary {
+    margin: 0;
+    color: $color-secondary;
+    text-transform: uppercase;
+  }
+}
+
+// Heading styles
+@each $size, $headers in $header-styles {
+  @include breakpoint($size) {
+    @each $header, $header-defs in $headers {
+      #{$header}, .#{$header} {
+        @if map-has-key($header-defs, font-size) {
+          $font-size-temp: rem-calc(map-get($header-defs, font-size));
+          font-size: $font-size-temp;
+        }
+        @if map-has-key($header-defs, font-weight) {
+          font-weight: map-get($header-defs, font-weight);
+        }
+        @if map-has-key($header-defs, line-height) {
+          line-height: map-get($header-defs, line-height);
+        }
+      }
+    }
+  }
+}
+
+blockquote {
+  @include blockquote;
+}
+
+*::selection {
+  background-color: $color-secondary-lighter;
+}
+
+// Empty cart block
+.cart-empty-page {
+  @include content-width(default);
+  @include heading(h2);
+  margin-bottom: rem-calc(40);
+  @include breakpoint(xmedium) {
+    padding-top: rem-calc(120);
+    margin-bottom: rem-calc(200);
+    text-align: center;
+  }
+}

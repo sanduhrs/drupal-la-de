@@ -1,0 +1,70 @@
+# Drupal #
+##########
+# Ignore binaries.
+/bin
+
+# Ignore non-custom parts of Drupal.
+/docroot/core
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+/docroot/sites/default/files
+/docroot/sites/simpletest
+/docroot/libraries
+
+# Ignore Drupal scaffold.
+/.editorconfig
+/.gitattributes
+/docroot/.csslintrc
+/docroot/.editorconfig
+/docroot/.eslintignore
+/docroot/.eslintrc.json
+/docroot/.gitattributes
+/docroot/.htaccess
+/docroot/autoload.php
+/docroot/example.gitignore
+/docroot/index.php
+/docroot/INSTALL.txt
+/docroot/modules/README.txt
+/docroot/profiles/README.txt
+/docroot/README.md
+/docroot/README.txt
+/docroot/robots.txt
+/docroot/sites/default/default.services.yml
+/docroot/sites/default/default.settings.php
+/docroot/sites/example.settings.local.php
+/docroot/sites/development.services.yml
+/docroot/sites/example.sites.php
+/docroot/sites/README.txt
+/docroot/themes/README.txt
+/docroot/update.php
+/docroot/web.config
+
+# Ignore local setup.
+/docroot/sites/default/development.services.yml
+/docroot/sites/default/settings.local.php
+
+# Ignore Composer-managed dependencies.
+/vendor
+
+# Ignore Vagrant virtual machine data.
+/.vagrant
+
+# Ignore local VM settings overrides.
+/vm-settings.local.yml
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# Ignore Idea.
+.idea
+.DS_Store
+
+# Node modules #
+/node_modules/*
+
+# Ignore local Lando VM Settings
+.lando.local.yml
+.lando/

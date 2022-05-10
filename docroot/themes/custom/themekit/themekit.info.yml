@@ -1,0 +1,32 @@
+name: Drupal.nl Theme
+type: theme
+description: Drupal.nl Theme.
+core_version_requirement: ^8 || ^9
+# Defines the base theme
+base theme: classy
+
+ckeditor_stylesheets:
+  - dist/wysiwyg.css
+
+libraries:
+  - core/Drupal
+  - themekit/base
+
+libraries-override:
+  classy/base:
+    css:
+      component:
+        css/components/menu.css: false
+        css/components/more-link.css: false
+        css/components/breadcrumb.css: false
+        css/components/pager.css: false
+
+components:
+  namespaces:
+    partials: partials
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  content: Content
+  footer: Footer
