@@ -12,3 +12,53 @@
 @mixin font-vw-max($size, $breakpoint: large, $breakpoint-map: $breakpoints) {
   @include vw-with-max($size, $breakpoint: large, $breakpoint-map: $breakpoints, $property: font-size)
 }
+
+/// Blockquote styles
+@mixin blockquote() {
+  position: relative;
+  margin: rem-calc(0 0 32 16);
+  padding-left: rem-calc(32);
+  font-size: rem-calc(20);
+  font-weight: $global-weight-bold;
+  line-height: 1.2;
+  @include breakpoint(medium) {
+    margin-left: rem-calc(24);
+    font-size: rem-calc(22);
+    line-height: 1.1819;
+  }
+
+  @include icon-before(quote) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: rem-calc(24);
+  }
+
+  p {
+    line-height: inherit;
+  }
+
+  cite {
+    margin-top: rem-calc(8);
+    font-weight: $global-weight-normal;
+  }
+
+  @content;
+}
+
+@mixin hr($styles: $hr-styles) {
+  @include top-bottom(margin, rem-calc(24));
+  @include breakpoint(medium) {
+    @include top-bottom(margin, rem-calc(32));
+  }
+  height: rem-calc(4);
+  max-width: rem-calc(80);
+  border: none;
+
+  // Hr styles
+  //@each $hr in $styles {
+  //  &.#{$hr} {
+  //    background-color: key($hr, color);
+  //  }
+  //}
+}

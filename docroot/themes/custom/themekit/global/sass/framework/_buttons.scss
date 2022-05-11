@@ -18,29 +18,44 @@ $buttons: (
 /// Standard button style mixin
 /// @param {String} $button-key - the key in the $buttons map to use from config
 /// @param {String} $size [small] - the button size, choose from defined keywords in the mixin
-@mixin btn($button-key, $size: small) {
+@mixin btn($button-key, $size: large) {
   $button: extend-in-map($buttons, $button-key);
 
   @include disable-mouse-outline;
   display: inline-block;
-  line-height: 1;
-  font-weight: 400;
-
-  appearance: none;
-  border: 2px solid key($button, border);
+  @if (map-has-key($button, border)) {
+    border: 2px solid key($button, border);
+  }
   background: key($button, background);
   color: key($button, color);
+  line-height: 1;
+  font-weight: $global-weight-medium;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  appearance: none;
 
   @if ($size == small) {
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: rem-calc(8) rem-calc(12);
+    font-size: rem-calc(12);
   } @else if ($size == large) {
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: rem-calc(16) rem-calc(32);
+    font-size: rem-calc(15);
   }
 
-  @include selectors(active) {
-    border-color: key($button, active-border);
+  &:hover,
+  &:focus {
+    @if map-has-key($button, hover-border) {
+      border-color: key($button, hover-border);
+    }
+    box-shadow: 0 4px rem-calc(20) rgba($color-black, .25);
+    background: key($button, hover-background);
+    color: key($button, hover-color);
+  }
+
+  &:active {
+    @if map-has-key($button, active-border) {
+      border-color: key($button, active-border);
+    }
     background: key($button, active-background);
     color: key($button, active-color);
   }

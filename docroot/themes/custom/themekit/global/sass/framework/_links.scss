@@ -20,9 +20,144 @@ $links: (
 
   color: key($link-conf, color);
   font-weight: key($link-conf, font-weight);
-
-  @include selectors(active) {
-    color: key($link-conf, active-color);
+  @if ($link-key == default) {
     text-decoration: underline;
+
+    @include selectors(active) {
+      color: key($link-conf, active-color);
+    }
+  }
+
+  @if ($link-key == more) {
+    position: relative;
+    padding-right: rem-calc(52);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    @include global-transition(color);
+    @include icon-after(arrow-right) {
+      position: absolute;
+      top: 0;
+      right: rem-calc(8);
+      width: rem-calc(32);
+      font-size: rem-calc(40);
+      line-height: inherit;
+      overflow: hidden;
+      @include global-transition(width);
+    }
+
+    &:hover,
+    &:focus {
+      color: key($link-conf, hover-color);
+
+      &::after {
+        right: 0;
+        width: rem-calc(40);
+      }
+    }
+
+    &:active {
+      color: key($link-conf, active-color);
+
+      &::after {
+        right: 0;
+        width: rem-calc(40);
+      }
+    }
+  }
+
+  @if ($link-key == more-big) {
+    position: relative;
+    padding-right: rem-calc(52);
+    font-size: rem-calc(22);
+    line-height: rem-calc(26);
+    @include global-transition(color);
+    @include icon-after(arrow-right) {
+      position: absolute;
+      top: 0;
+      right: rem-calc(8);
+      width: rem-calc(32);
+      font-size: rem-calc(40);
+      line-height: inherit;
+      overflow: hidden;
+      @include global-transition(width);
+    }
+
+    &:hover,
+    &:focus {
+      color: key($link-conf, hover-color);
+
+      &::after {
+        right: 0;
+        width: rem-calc(40);
+      }
+    }
+
+    &:active {
+      color: key($link-conf, active-color);
+
+      &::after {
+        right: 0;
+        width: rem-calc(40);
+      }
+    }
+  }
+
+  @if ($link-key == back) {
+    position: relative;
+    padding-left: rem-calc(52);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    @include icon-after(arrow-left) {
+      position: absolute;
+      top: 0;
+      left: rem-calc(8);
+      width: rem-calc(32);
+      font-size: rem-calc(40);
+      line-height: inherit;
+      overflow: hidden;
+      @include global-transition(width);
+    }
+
+    &:hover,
+    &:focus {
+      color: key($link-conf, hover-color);
+
+      &::after {
+        left: 0;
+        width: rem-calc(40);
+      }
+    }
+
+    &:active {
+      color: key($link-conf, active-color);
+
+      &::after {
+        right: 0;
+        width: rem-calc(40);
+      }
+    }
+  }
+
+  @if ($link-key == external) {
+    position: relative;
+    padding-right: rem-calc(24);
+    padding-bottom: rem-calc(4);
+    @include global-transition(box-shadow);
+    @include icon-after(arrow-right) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: rem-calc(16);
+    }
+
+    &:hover,
+    &:focus {
+      color: key($link-conf, hover-color);
+      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset, 0 -2px 0 0 key($link-conf, hover-color) inset;
+    }
+
+    &:active {
+      color: key($link-conf, active-color);
+    }
   }
 }

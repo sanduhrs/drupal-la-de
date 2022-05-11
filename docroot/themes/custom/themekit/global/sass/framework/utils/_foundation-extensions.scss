@@ -141,6 +141,8 @@
   @each $size, $elements in $font-sizes {
     @include breakpoint($size) {
       font-size: rem-calc(map-get(map-get($elements, $setting), 'font-size'));
+      font-weight: map-get(map-get($elements, $setting), 'font-weight');
+      line-height: map-get(map-get($elements, $setting), 'line-height');
     }
   }
 }

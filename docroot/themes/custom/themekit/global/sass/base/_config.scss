@@ -31,42 +31,76 @@ $z-layers: (
   default: 0,
   under: -1,
   bottomless-pit: -9999,
-
-  // example nested z-index.
-  example: (
-    default: 100,
-    image: -2
-  )
+  dropdown: 800,
+  popup: 900,
 );
 
 /// Button config
 $buttons: (
   _base: (
-    background: slategray,
-    color: #fff,
-    border: slategray,
-    active-background: darken(slategray, 10%),
-    active-color: #fff,
-    active-border: darken(slategray, 10%)
+    background: $color-primary-600,
+    color: $color-white,
+    hover-background: $color-primary-700,
+    hover-color: $color-white,
+    active-background: $color-primary-400,
+    active-color: $color-gray-900,
   ),
   primary: (
-    extend: _base
+    extend: _base,
   )
 );
+
+/// Animations variables
+$global-transition-duration: .15s;
+$global-transition-timing-function: ease;
 
 /// Links config
 $links: (
   default: (
-    color: navy,
-    font-weight: 400,
-    active-color: skyblue
+    color: $color-primary-400,
+    font-weight: $global-weight-normal,
+    hover-color: $color-primary-600,
+    active-color: $color-primary-600,
   ),
-  primary: (
-    extend: _base
-  )
+  more: (
+    color: $color-primary-600,
+    font-weight: $global-weight-medium,
+    hover-color: $color-primary-600,
+    active-color: $color-gray-900,
+  ),
+  more-big: (
+    color: $color-primary-600,
+    font-weight: $global-weight-bold,
+    hover-color: $color-primary-600,
+    active-color: $color-gray-900,
+  ),
+  back: (
+    color: $color-primary-600,
+    font-weight: $global-weight-medium,
+    hover-color: $color-primary-600,
+    active-color: $color-gray-900,
+  ),
+  external: (
+    color: $color-primary-600,
+    font-weight: $global-weight-medium,
+    hover-color: $color-primary-600,
+    active-color: $color-primary-600,
+  ),
 );
 
-  /// Layouts
+/// Labels config
+$labels: (
+  default: (
+    color: $color-gray-900,
+    border-color: $color-primary-600,
+    background-color: $color-gray-100,
+    active-color: $color-gray-900,
+    active-border-color: $color-primary-600,
+    active-background-color: $color-gray-300,
+  ),
+);
+
+/// Layouts
 $layouts: (
   _base: (
     width: $global-width,
@@ -74,5 +108,18 @@ $layouts: (
   ),
   default: (
     extend: _base
+  ),
+);
+
+/// Hr styles
+$hr-styles: (
+  green: (
+    color: $color-linear-horizontal-green,
+  ),
+  purple: (
+    color: $color-linear-horizontal-purple,
+  ),
+  blue: (
+    color: $color-linear-horizontal-blue,
   ),
 );

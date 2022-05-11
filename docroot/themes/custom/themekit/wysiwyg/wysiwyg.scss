@@ -15,11 +15,13 @@
 
 @import '../global/sass/base/settings';
 @import '../global/sass/base/config';
+@import '../global/sass/base/typography';
 
 // print our base foundation styles
 @include foundation-global-styles();
 @include foundation-typography();
 @include foundation-table();
+//@include themekit-icons();
 
 // Add any partials that have relevant WYSIWYG styles
 

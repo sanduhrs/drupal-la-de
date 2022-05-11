@@ -93,6 +93,7 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
+$global-weight-medium: medium;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
@@ -125,7 +126,6 @@ $icons: (
   edit: "\e901",
   trash: "\e902",
   gear: "\e903",
-  view: "\e904",
   view: "\e904",
   angle-bottom: "\e905",
   angle-left: "\e906",
@@ -177,8 +177,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: 32px,
+  medium: 32px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -196,20 +196,38 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $font-sizes: (
   small: (
-    'page-title': ('font-size': 40),
-    'title': ('font-size': 31),
-    'subtitle': ('font-size': 25),
-    'heading': ('font-size': 20),
-    'subheading': ('font-size': 18),
-    'body': ('font-size': 16),
+    'body': ('font-size': 16, 'line-height': 1.75em),
+    'text-large': ('font-size': 20, 'line-height': 1.75em),
+    'text-card': ('font-size': 15, 'line-height': 1.6em),
+    'text-small': ('font-size': 13, 'line-height': 1.5385em),
+    'kicker-large': ('font-size': 14, 'line-height': 1.7143em, 'font-weight': $global-weight-medium, 'text-transform': uppercase, 'letter-spacing': .2em),
+    'kicker-small': ('font-size': 12, 'line-height': 1.5em, 'text-transform': uppercase, 'letter-spacing': .3em),
   ),
   medium: (
-    'page-title': ('font-size': 40),
-    'title': ('font-size': 31),
-    'subtitle': ('font-size': 25),
-    'heading': ('font-size': 20),
-    'subheading': ('font-size': 18),
-    'body': ('font-size': 16),
+    'body': ('font-size': 18, 'line-height': 1.6667em),
+    'text-large': ('font-size': 16, 'line-height': 1.8em),
+    'text-card': ('font-size': 16, 'line-height': 1.5em),
+    'text-small': ('font-size': 14, 'line-height': 1.7143em),
+    'kicker-large': ('font-size': 15, 'line-height': 1.6em, 'font-weight': $global-weight-medium, 'text-transform': uppercase, 'letter-spacing': .2em),
+    'kicker-small': ('font-size': 12, 'line-height': 1.5em, 'text-transform': uppercase, 'letter-spacing': .3em),
+  ),
+);
+$header-styles: (
+  small: (
+    'h1': ('font-size': 32, 'line-height': .9375, 'font-weight': $global-weight-bold),
+    'h2': ('font-size': 28, 'line-height': .9334, 'font-weight': $global-weight-bold),
+    'h3': ('font-size': 24, 'line-height': 1.1667, 'font-weight': $global-weight-bold),
+    'h4': ('font-size': 20, 'line-height': 1.2, 'font-weight': $global-weight-bold),
+    'h5': ('font-size': 16, 'line-height': 1.375, 'font-weight': $global-weight-bold),
+    'h6': ('font-size': 14, 'line-height': 1.7143, 'font-weight': $global-weight-medium),
+  ),
+  medium: (
+    'h1': ('font-size': 50, 'line-height': 1, 'font-weight': $global-weight-bold),
+    'h2': ('font-size': 40, 'line-height': 1, 'font-weight': $global-weight-bold),
+    'h3': ('font-size': 32, 'line-height': 1, 'font-weight': $global-weight-bold),
+    'h4': ('font-size': 22, 'line-height': 1.1818, 'font-weight': $global-weight-bold),
+    'h5': ('font-size': 18, 'line-height': 1.2222, 'font-weight': $global-weight-bold),
+    'h6': ('font-size': 16, 'line-height': 1.25, 'font-weight': $global-weight-bold),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -240,12 +258,12 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
-$cite-pseudo-content: '\2014 \0020';
+$blockquote-color: $body-color;
+$blockquote-padding: rem-calc(0 0 0 28);
+$blockquote-border: none;
+$cite-font-size: rem-calc(14);
+$cite-color: $color-black;
+$cite-pseudo-content: '';
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
 $keystroke-background: $light-gray;
@@ -829,20 +847,20 @@ $switch-paddle-transition: all 0.25s ease-out;
 
 $table-background: $white;
 $table-color-scale: 5%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
-$table-padding: rem-calc(8 10 10);
+$table-border: none;
+$table-padding: rem-calc(8 12);
 $table-hover-scale: 2%;
-$table-row-hover: darken($table-background, $table-hover-scale);
-$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-row-hover: none;
+$table-row-stripe-hover: none;
 $table-is-striped: true;
-$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-striped-background: $color-gray-100;
 $table-stripe: even;
-$table-head-background: smart-scale($table-background, $table-color-scale / 2);
-$table-head-row-hover: darken($table-head-background, $table-hover-scale);
-$table-foot-background: smart-scale($table-background, $table-color-scale);
-$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
-$table-head-font-color: $body-font-color;
-$table-foot-font-color: $body-font-color;
+$table-head-background: none;
+$table-head-row-hover: none;
+$table-foot-background: none;
+$table-foot-row-hover: none;
+$table-head-font-color: $color-black;
+$table-foot-font-color: $color-black;
 $show-header-for-stacked: false;
 $table-stack-breakpoint: medium;
 

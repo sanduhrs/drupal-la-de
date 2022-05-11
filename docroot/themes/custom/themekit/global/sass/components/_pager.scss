@@ -1,0 +1,157 @@
+////
+/// Global Pager
+////
+
+.pager {
+  margin-top: rem-calc(36);
+  margin-bottom: rem-calc(110);
+  @include breakpoint(medium) {
+    margin-top: rem-calc(64);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style-type: none;
+    line-height: rem-calc(48);
+  }
+
+  &__item {
+    @include left-right(margin, rem-calc(8));
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: rem-calc(48);
+      padding: 0 rem-calc(20);
+      line-height: 1.5em;
+      color: $color-black;
+      @include breakpoint(medium) {
+        height: rem-calc(56);
+      }
+    }
+
+    &.pager__item--first,
+    &.pager__item--previous,
+    &.pager__item--next,
+    &.pager__item--last {
+      a {
+        width: rem-calc(48);
+        background-color: $color-primary-600;
+        color: $color-black;
+        @include breakpoint(medium) {
+          width: rem-calc(56);
+        }
+      }
+
+      &:disabled {
+        opacity: .6;
+      }
+    }
+
+    &.pager__item--previous {
+      margin-left: 0;
+
+      a {
+        @include icon-before(angle-left) {
+          font-size: rem-calc(24);
+          color: ;
+          text-align: center;
+        }
+      }
+    }
+
+    &.pager__item--next {
+      margin-left: auto;
+      margin-right: 0;
+      @include breakpoint(small down) {
+        margin-right: rem-calc(-16);
+      }
+      @include breakpoint(xmedium) {
+        margin-left: rem-calc(8);
+      }
+
+      a {
+        @include icon-after(chevron-right) {
+          margin-left: rem-calc(6);
+          font-size: rem-calc(16);
+          color: $gray-darker;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0 rem-calc(16);
+    }
+
+    &--link {
+      &:not(.is-active) {
+        @include breakpoint(small down) {
+          display: none;
+        }
+      }
+    }
+
+    &:not(.is-active) {
+      a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+          background-color: $color-secondary-light;
+          color: inherit;
+        }
+
+        &:active {
+          background-color: $color-secondary;
+          color: $white;
+        }
+
+        &:disabled {
+          background-color: #e2e4e7;
+          color: $white;
+        }
+      }
+    }
+
+    &:not(.is-active) {
+      @include breakpoint(small down);
+    }
+
+    &.is-active {
+      a {
+        background-color: $color-secondary;
+        color: $white;
+      }
+    }
+  }
+}
+
+// Infinite scroll pager
+//.pager__items--infinite {
+//  margin: rem-calc(20) 0 rem-calc(40);
+//  list-style-type: none;
+//  @include breakpoint(medium) {
+//    margin-top: rem-calc(40);
+//    margin-bottom: rem-calc(80);
+//    text-align: center;
+//  }
+//
+//  .btn {
+//    display: block;
+//    text-align: center;
+//    @include breakpoint(medium) {
+//      display: inline-block;
+//    }
+//  }
+//}
+
+// Adjustments for the First and last links
+.pager__item--first,
+.pager__item--last {
+  display: none;
+}

@@ -31,11 +31,33 @@ body {
   }
 
   h1,
-  h2 {
-    margin-bottom: rem-calc(20);
-    @include breakpoint(xmedium) {
-      margin-bottom: rem-calc(40);
+  .h1 {
+    margin-bottom: rem-calc(24);
+  }
+
+  h2,
+  .h2 {
+    margin-bottom: rem-calc(16);
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(24);
     }
+  }
+
+  h3,
+  .h3 {
+    margin-bottom: rem-calc(16);
+  }
+
+  h4,
+  .h4 {
+    margin-bottom: rem-calc(10);
+  }
+
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    margin-bottom: rem-calc(12);
   }
 
   .align-center {
@@ -43,67 +65,102 @@ body {
   }
 
   a {
-    @include selectors(active) {
-      text-decoration: underline;
+    @include link(default);
+  }
+
+  ul,
+  ol {
+    margin-left: rem-calc(16);
+    line-height: inherit;
+    @include breakpoint(medium) {
+      margin-left: rem-calc(24);
     }
   }
 
   ul {
-    li::marker {
-      font-size: .75em;
-      line-height: 2;
-    }
-  }
-}
+    list-style-type: none;
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  &.secondary {
-    margin: 0;
-    color: $color-secondary;
-    text-transform: uppercase;
-  }
-}
+    li {
+      position: relative;
+      padding-left: rem-calc(28);
 
-// Heading styles
-@each $size, $headers in $header-styles {
-  @include breakpoint($size) {
-    @each $header, $header-defs in $headers {
-      #{$header}, .#{$header} {
-        @if map-has-key($header-defs, font-size) {
-          $font-size-temp: rem-calc(map-get($header-defs, font-size));
-          font-size: $font-size-temp;
+      &::before {
+        position: absolute;
+        top: calc(1.5em - 4px);
+        left: 0;
+        width: rem-calc(8);
+        height: rem-calc(8);
+        border-radius: 50%;
+        contain: '';
+      }
+
+      &::marker {
+        display: none;
+      }
+
+      &:nth-child(3n+1)::before {
+        background-color: $color-green-500;
+        @include breakpoint(medium) {
+          background-color: $color-linear-vertical-green;
         }
-        @if map-has-key($header-defs, font-weight) {
-          font-weight: map-get($header-defs, font-weight);
+      }
+
+      &:nth-child(3n+2)::before {
+        background-color: $color-purple-600;
+        @include breakpoint(medium) {
+          background-color: $color-linear-vertical-purple;
         }
-        @if map-has-key($header-defs, line-height) {
-          line-height: map-get($header-defs, line-height);
+      }
+
+      &:nth-child(3n+3)::before {
+        background-color: $color-primary-600;
+        @include breakpoint(medium) {
+          background-color: $color-linear-vertical-blue;
         }
       }
     }
   }
-}
 
-blockquote {
-  @include blockquote;
+  ol {
+    li {
+      position: relative;
+      &::marker {
+        display: none;
+      }
+    }
+  }
+
+  blockquote {
+    @include blockquote;
+  }
+
+  // Heading styles
+  @each $size, $headers in $header-styles {
+    @include breakpoint($size) {
+      @each $header, $header-defs in $headers {
+        #{$header}, .#{$header} {
+          @if map-has-key($header-defs, font-size) {
+            $font-size-temp: rem-calc(map-get($header-defs, font-size));
+            font-size: $font-size-temp;
+          }
+          @if map-has-key($header-defs, font-weight) {
+            font-weight: map-get($header-defs, font-weight);
+          }
+          @if map-has-key($header-defs, line-height) {
+            line-height: map-get($header-defs, line-height);
+          }
+        }
+      }
+    }
+  }
+
+  // Hr styles
+  hr {
+    @include hr();
+  }
 }
 
 *::selection {
-  background-color: $color-secondary-lighter;
-}
-
-// Empty cart block
-.cart-empty-page {
-  @include content-width(default);
-  @include heading(h2);
-  margin-bottom: rem-calc(40);
-  @include breakpoint(xmedium) {
-    padding-top: rem-calc(120);
-    margin-bottom: rem-calc(200);
-    text-align: center;
-  }
+  background-color: $color-primary-600;
+  color: $color-white;
 }

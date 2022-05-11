@@ -286,3 +286,9 @@ $selector-groups: (
 @function last($list) {
   @return nth($list, length($list));
 }
+
+/// Transition helper mixin
+/// @param {List} $list - A list
+@mixin global-transition($property: all, $duration: $global-transition-duration, $timing-function: $global-transition-timing-function) {
+  transition: $property $duration $timing-function;
+}

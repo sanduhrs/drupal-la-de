@@ -5,47 +5,28 @@
  * - 03 - Framework
  * - 04 - Settings
  */
-
-
 /*------------------------------------*\
   01 - Foundation
 \*------------------------------------*/
-
-@import 'node_modules/foundation-sites/scss/foundation';
-
-
-
-
-
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
 /*------------------------------------*\
   02 - Utilities
 \*------------------------------------*/
-
-@import '../framework/utils/utils';
-
-
-
-
-
 /*------------------------------------*\
   03 - Framework
 \*------------------------------------*/
-
-@import "../framework/buttons";
-@import "../framework/layout";
-@import "../framework/links";
-@import "../framework/labels";
-@import "../framework/typography";
-@import "../framework/custom-styles";
-
-
-
-
-
 /*------------------------------------*\
   04 - Settings
 \*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
 
-@import "colors";
-@import "settings";
-@import "config";
+
+/*# sourceMappingURL=layout.css.map*/

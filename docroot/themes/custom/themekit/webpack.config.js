@@ -3,7 +3,7 @@
  * Webpack file for compiling JS and CSS files.
  */
 
-const vmName = 'paragon.drupalvm';
+const vmName = 'drupal.nl.lndo.site';
 const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');

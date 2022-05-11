@@ -6,7 +6,7 @@ core_version_requirement: ^8 || ^9
 base theme: classy
 
 ckeditor_stylesheets:
-  - dist/wysiwyg.css
+  - dist/css/wysiwyg.css
 
 libraries:
   - core/Drupal
