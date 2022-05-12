@@ -1,6 +1,6 @@
 uuid: 0296a1b8-3a91-4f88-971d-3b76da4ebaf3
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: themekit_breadcrumbs
 theme: themekit
 region: highlighted
-weight: -8
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:

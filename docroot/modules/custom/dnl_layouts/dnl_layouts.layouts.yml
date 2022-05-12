@@ -1,4 +1,4 @@
-lemberg_layout_banner_section:
+dnl_layout_banner_section:
   label: 'Banner'
   template: templates/banner-layout
   class: '\Drupal\dnl_layouts\Plugin\Layout\DnlBannerLayout'
@@ -10,7 +10,7 @@ lemberg_layout_banner_section:
     first:
       label: First
 
-lemberg_layout_onecol_section:
+dnl_layout_onecol_section:
   label: 'One column'
   template: templates/onecol-layout
   class: '\Drupal\dnl_layouts\Plugin\Layout\DnlOneColumnLayout'
@@ -22,7 +22,7 @@ lemberg_layout_onecol_section:
     first:
       label: First
 
-lemberg_layout_twocol_section:
+dnl_layout_twocol_section:
   label: 'Two column'
   template: templates/twocol-layout
   class: '\Drupal\dnl_layouts\Plugin\Layout\DnlTwoColumnLayout'

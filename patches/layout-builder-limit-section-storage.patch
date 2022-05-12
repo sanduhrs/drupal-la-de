@@ -1,0 +1,35 @@
+diff --git a/layout_builder_limit.module b/layout_builder_limit.module
+index 2aff6b23a..fa4bbacad 100644
+--- a/layout_builder_limit.module
++++ b/layout_builder_limit.module
+@@ -142,17 +142,19 @@ function layout_builder_limit_form_section_configure_submit($form, FormStateInte
+ }
+
+ function layout_builder_limit_plugin_filter_block__layout_builder_alter(array &$definitions, array $extra) {
+-  /** @var \Drupal\layout_builder\SectionStorageInterface $section_storage */
+-  $section_storage = $extra['section_storage'];
+-  $delta = $extra['delta'];
+-  $section = $section_storage->getSection($delta);
+-  $settings = array_filter($section
+-      ->getThirdPartySetting('layout_builder_limit', 'limit', LayoutBuilderLimit::DEFAULT_CONFIGURATION)) + LayoutBuilderLimit::DEFAULT_CONFIGURATION;
+-
+-  if ($settings['section_maximum_enabled']) {
+-    $maximum = $settings['section_maximum'];
+-    if (count($section->getComponents()) >= $maximum) {
+-      $definitions = [];
++  if (!empty($extra['section_storage']) && !empty($extra['delta'])) {
++    /** @var \Drupal\layout_builder\SectionStorageInterface $section_storage */
++    $section_storage = $extra['section_storage'];
++    $delta = $extra['delta'];
++    $section = $section_storage->getSection($delta);
++    $settings = array_filter($section
++        ->getThirdPartySetting('layout_builder_limit', 'limit', LayoutBuilderLimit::DEFAULT_CONFIGURATION)) + LayoutBuilderLimit::DEFAULT_CONFIGURATION;
++
++    if ($settings['section_maximum_enabled']) {
++      $maximum = $settings['section_maximum'];
++      if (count($section->getComponents()) >= $maximum) {
++        $definitions = [];
++      }
+     }
+   }
+ }

@@ -113,13 +113,7 @@ $layouts: (
 
 /// Hr styles
 $hr-styles: (
-  green: (
-    color: $color-linear-horizontal-green,
-  ),
-  purple: (
-    color: $color-linear-horizontal-purple,
-  ),
-  blue: (
-    color: $color-linear-horizontal-blue,
-  ),
+  green: $color-linear-horizontal-green,
+  purple: $color-linear-horizontal-purple,
+  blue: $color-linear-horizontal-blue,
 );

@@ -1,0 +1,15 @@
+diff --git a/src/LayoutBuilderLimit.php b/src/LayoutBuilderLimit.php
+index 6840d5eb6..e1efec083 100644
+--- a/src/LayoutBuilderLimit.php
++++ b/src/LayoutBuilderLimit.php
+@@ -4,8 +4,9 @@
+ 
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Render\Element;
++use Drupal\Core\Security\TrustedCallbackInterface;
+ 
+-class LayoutBuilderLimit {
++class LayoutBuilderLimit implements TrustedCallbackInterface {
+ 
+   const DEFAULT_CONFIGURATION = [
+     'section_minimum_enabled' => FALSE,

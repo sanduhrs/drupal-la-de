@@ -64,6 +64,16 @@ function themekit_preprocess_layout(&$variables) {
  *   Default preprocess variables.
  */
 function themekit_preprocess_block(&$variables) {
+  static $number = 1;
+  $variables['counter'] = $number;
+
+  if (!empty($variables['elements']['#id'])) {
+    $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
+
+    $block_entity = Block::load($variables['elements']['#id']);
+    $variables['block_region'] = $block_entity->getRegion();
+  }
+
   // Set our own content blocks type preprocess and grab
   // block bundle for theming purposes.
   if (!empty($variables['elements']['content']['#block_content'])) {
@@ -79,6 +89,7 @@ function themekit_preprocess_block(&$variables) {
     $bundle = $block->bundle();
     $variables['block_type'] = $bundle;
   }
+  $number++;
 }
 
 /**

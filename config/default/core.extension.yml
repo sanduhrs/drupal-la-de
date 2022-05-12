@@ -72,7 +72,10 @@ module:
   layout_builder: 0
   layout_builder_browser: 0
   layout_builder_iframe_modal: 0
+  layout_builder_limit: 0
+  layout_builder_lock: 0
   layout_builder_restrictions: 0
+  layout_builder_restrictions_by_region: 0
   layout_discovery: 0
   lazy: 0
   lb_claro: 0
@@ -102,12 +105,6 @@ module:
   path: 0
   path_alias: 0
   path_redirect_import: 0
-  purge: 0
-  purge_drush: 0
-  purge_processor_cron: 0
-  purge_processor_lateruntime: 0
-  purge_queuer_coretags: 0
-  purge_ui: 0
   quicklink: 0
   rdf: 0
   redirect: 0

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f40191c0e42293394c2f12ffde9bdd3c",
+    "content-hash": "3dc36c0a5829c940a9821d925f1a20d7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4883,6 +4883,91 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_iframe_modal",
                 "issues": "https://www.drupal.org/project/issues/3169342?categories=All"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_limit",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_limit.git",
+                "reference": "dbc09c6d05ec22d0d34724e61e09702ea3c9c8f1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1608665908",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                }
+            ],
+            "description": "Provides limits to components in layout builder sections and regions.",
+            "homepage": "https://www.drupal.org/project/layout_builder_limit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_limit"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_lock",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_lock.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_lock-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "8bde4e52d128641436128e5e0ba98539b507d7c2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1629199299",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "swentel",
+                    "homepage": "https://www.drupal.org/user/107403"
+                }
+            ],
+            "description": "Allows to lock sections so a user can not add, update or remove blocks or add new sections before and after.",
+            "homepage": "https://www.drupal.org/project/layout_builder_lock",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_lock"
             }
         },
         {
@@ -14379,6 +14464,7 @@
         "drupal/imageapi_optimize_gd": 10,
         "drupal/imageapi_optimize_tinypng": 10,
         "drupal/imageapi_optimize_webp": 20,
+        "drupal/layout_builder_limit": 20,
         "drupal/lb_claro": 10,
         "drupal/linkit": 10,
         "drupal/paragon_adminkit": 15,

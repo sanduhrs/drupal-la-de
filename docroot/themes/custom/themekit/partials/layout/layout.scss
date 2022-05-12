@@ -1,3 +1,68 @@
 ////
 /// Layouts - Global Styles
 ////
+
+.layout {
+
+  // Bottom space for the page content
+  &:last-child {
+    padding-bottom: rem-calc(60);
+    @include breakpoint(medium) {
+      padding-bottom: rem-calc(40);
+    }
+  }
+
+  > .layout-content {
+    @include content-width(default);
+
+    > .layout__region {
+      @include breakpoint(medium) {
+        flex-shrink: 0;
+      }
+
+      &:not(:last-child) {
+        @include breakpoint(medium down) {
+          padding-bottom: rem-calc(40);
+        }
+      }
+
+      .block:not(.block--title) + .block {
+        margin-top: rem-calc(40);
+        @include breakpoint(large) {
+          margin-top: rem-calc(40);
+        }
+      }
+    }
+  }
+
+  // Spacing between sections
+  &.section-padding--default {
+    @include top-bottom(padding, rem-calc(45));
+    @include breakpoint(medium) {
+      @include top-bottom(padding, rem-calc(45));
+    }
+  }
+
+  &.section-padding--small {
+    @include top-bottom(padding, rem-calc(30));
+    @include breakpoint(medium) {
+      @include top-bottom(padding, rem-calc(30));
+    }
+  }
+
+  &.section-padding--none {
+    @include top-bottom(padding, 0);
+    @include breakpoint(medium) {
+      @include top-bottom(padding, 0);
+    }
+  }
+}
+
+.layout-builder-block {
+  background: none !important;
+}
+
+.layout-builder__add-section,
+.layout-builder__section {
+  position: relative;
+}

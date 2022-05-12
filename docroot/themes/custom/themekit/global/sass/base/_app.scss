@@ -116,7 +116,7 @@
 // Choose the styles that we actually want PRINTED into our stylesheets
 @include foundation-global-styles();
 @include foundation-typography();
-@include foundation-forms();
+//@include foundation-forms();
 @include foundation-table();
 
 @include themekit-icons();

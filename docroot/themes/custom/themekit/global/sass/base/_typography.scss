@@ -22,7 +22,7 @@ body {
   min-width: 320px;
 }
 
-.cke_editable,
+body.cke_editable,
 .text-formatted {
   p {
     &:last-child {
@@ -30,38 +30,28 @@ body {
     }
   }
 
-  h1,
-  .h1 {
+  h1 {
     margin-bottom: rem-calc(24);
   }
 
-  h2,
-  .h2 {
+  h2 {
     margin-bottom: rem-calc(16);
     @include breakpoint(medium) {
       margin-bottom: rem-calc(24);
     }
   }
 
-  h3,
-  .h3 {
+  h3 {
     margin-bottom: rem-calc(16);
   }
 
-  h4,
-  .h4 {
+  h4 {
     margin-bottom: rem-calc(10);
   }
 
   h5,
-  .h5,
-  h6,
-  .h6 {
+  h6 {
     margin-bottom: rem-calc(12);
-  }
-
-  .align-center {
-    text-align: center;
   }
 
   a {
@@ -75,6 +65,13 @@ body {
     @include breakpoint(medium) {
       margin-left: rem-calc(24);
     }
+
+    li + li {
+      margin-top: rem-calc(8);
+      @include breakpoint(medium) {
+        margin-top: rem-calc(16);
+      }
+    }
   }
 
   ul {
@@ -86,36 +83,33 @@ body {
 
       &::before {
         position: absolute;
-        top: calc(1.5em - 4px);
+        top: .8em;
         left: 0;
         width: rem-calc(8);
         height: rem-calc(8);
         border-radius: 50%;
-        contain: '';
-      }
-
-      &::marker {
-        display: none;
+        transform: translate3d(0, -50%, 0);
+        content: '';
       }
 
       &:nth-child(3n+1)::before {
         background-color: $color-green-500;
         @include breakpoint(medium) {
-          background-color: $color-linear-vertical-green;
+          background: $color-linear-vertical-green;
         }
       }
 
       &:nth-child(3n+2)::before {
         background-color: $color-purple-600;
         @include breakpoint(medium) {
-          background-color: $color-linear-vertical-purple;
+          background: $color-linear-vertical-purple;
         }
       }
 
       &:nth-child(3n+3)::before {
         background-color: $color-primary-600;
         @include breakpoint(medium) {
-          background-color: $color-linear-vertical-blue;
+          background: $color-linear-vertical-blue;
         }
       }
     }
@@ -123,9 +117,8 @@ body {
 
   ol {
     li {
-      position: relative;
       &::marker {
-        display: none;
+        display: inline-block;
       }
     }
   }
@@ -157,6 +150,18 @@ body {
   // Hr styles
   hr {
     @include hr();
+  }
+
+  // Default table styles
+  table {
+    th {
+      @include heading(h5);
+      box-shadow: inset 0 -2px 0 $color-primary-600;
+    }
+
+    td {
+      @include font-sizes(text-small);
+    }
   }
 }
 

@@ -34,10 +34,9 @@ settings:
         -
           name: Media
           items:
+            - HorizontalRule
             - Blockquote
             - Table
-            - image_embed
-            - video_embed
         -
           name: 'Block Formatting'
           items:
@@ -55,7 +54,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: "a.btn--primary|Button\r\na.link--more|More link\r\nhr.green|Green separator\r\nhr.purple|Purple separator\r\nhr.blue|Blue separator"
 image_upload:
   status: true
   scheme: public

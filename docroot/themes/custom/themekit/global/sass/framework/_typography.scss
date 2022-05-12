@@ -47,6 +47,7 @@
 }
 
 @mixin hr($styles: $hr-styles) {
+  margin-left: 0;
   @include top-bottom(margin, rem-calc(24));
   @include breakpoint(medium) {
     @include top-bottom(margin, rem-calc(32));
@@ -56,9 +57,26 @@
   border: none;
 
   // Hr styles
-  //@each $hr in $styles {
-  //  &.#{$hr} {
-  //    background-color: key($hr, color);
-  //  }
-  //}
+  @each $hr-name, $hr-value in $styles {
+    &.#{$hr-name} {
+      background: $hr-value;
+    }
+  }
+}
+
+@mixin heading($heading: h1, $weight: $global-weight-bold) {
+  font-family: $header-font-family;
+  @each $size, $headers in $header-styles {
+    @include breakpoint($size) {
+      @if map-has-key(key($headers, $heading), font-size) {
+        font-size: rem-calc(key(key($headers, $heading), font-size));
+      }
+      @if map-has-key(key($headers, $heading), font-weight) {
+        font-weight: key(key($headers, $heading), font-weight);
+      }
+      @if map-has-key(key($headers, $heading), line-height) {
+        line-height: key(key($headers, $heading), line-height);
+      }
+    }
+  }
 }

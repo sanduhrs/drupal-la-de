@@ -28,6 +28,10 @@ $links: (
     }
   }
 
+  @if ($link-key == default) {
+    @include global-transition(color);
+  }
+
   @if ($link-key == more) {
     position: relative;
     padding-right: rem-calc(52);

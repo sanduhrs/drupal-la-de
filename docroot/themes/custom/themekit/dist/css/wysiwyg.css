@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap);
+@charset "UTF-8";
 /**
  * Base Styles
  * - 01 - Foundation
@@ -18,6 +19,21 @@
 /*------------------------------------*\
   02 - Utilities
 \*------------------------------------*/
+body.cke_editable blockquote:before,
+.text-formatted blockquote:before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smoothing: antialiased; }
+
 /*------------------------------------*\
   03 - Framework
 \*------------------------------------*/
@@ -34,6 +50,21 @@
  * https://get.foundation
  * Licensed under MIT Open Source
  */
+body.cke_editable blockquote:before,
+.text-formatted blockquote:before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smoothing: antialiased; }
+
 /******* End Drupal Defaults *******/
 /**
  * Load external Web Fonts
@@ -55,194 +86,274 @@ body {
       font-size: 1.125rem;
       line-height: 1.6667em; } }
 
-.cke_editable p:last-child,
+body.cke_editable p:last-child,
 .text-formatted p:last-child {
   margin-bottom: 0; }
 
-.cke_editable h1,
-.cke_editable .h1,
-.text-formatted h1,
-.text-formatted .h1 {
+body.cke_editable h1,
+.text-formatted h1 {
   margin-bottom: 1.5rem; }
 
-.cke_editable h2,
-.cke_editable .h2,
-.text-formatted h2,
-.text-formatted .h2 {
+body.cke_editable h2,
+.text-formatted h2 {
   margin-bottom: 1rem; }
   @media print, screen and (min-width: 40em) {
-    .cke_editable h2,
-    .cke_editable .h2,
-    .text-formatted h2,
-    .text-formatted .h2 {
+    body.cke_editable h2,
+    .text-formatted h2 {
       margin-bottom: 1.5rem; } }
 
-.cke_editable h3,
-.cke_editable .h3,
-.text-formatted h3,
-.text-formatted .h3 {
+body.cke_editable h3,
+.text-formatted h3 {
   margin-bottom: 1rem; }
 
-.cke_editable h4,
-.cke_editable .h4,
-.text-formatted h4,
-.text-formatted .h4 {
+body.cke_editable h4,
+.text-formatted h4 {
   margin-bottom: 0.625rem; }
 
-.cke_editable h5,
-.cke_editable .h5,
-.cke_editable h6,
-.cke_editable .h6,
+body.cke_editable h5,
+body.cke_editable h6,
 .text-formatted h5,
-.text-formatted .h5,
-.text-formatted h6,
-.text-formatted .h6 {
+.text-formatted h6 {
   margin-bottom: 0.75rem; }
 
-.cke_editable .align-center,
-.text-formatted .align-center {
-  text-align: center; }
-
-.cke_editable a,
+body.cke_editable a,
 .text-formatted a {
   color: #53b0eb;
   font-weight: normal;
-  text-decoration: underline; }
-  .cke_editable a:hover, .cke_editable a:focus, .cke_editable a:active,
+  text-decoration: underline;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+  body.cke_editable a:hover, body.cke_editable a:focus, body.cke_editable a:active,
   .text-formatted a:hover,
   .text-formatted a:focus,
   .text-formatted a:active {
     color: #0678be; }
 
-.cke_editable ul,
-.cke_editable ol,
+body.cke_editable ul,
+body.cke_editable ol,
 .text-formatted ul,
 .text-formatted ol {
   margin-left: 1rem;
-  list-style-type: none;
   line-height: inherit; }
   @media print, screen and (min-width: 40em) {
-    .cke_editable ul,
-    .cke_editable ol,
+    body.cke_editable ul,
+    body.cke_editable ol,
     .text-formatted ul,
     .text-formatted ol {
       margin-left: 1.5rem; } }
+  body.cke_editable ul li + li,
+  body.cke_editable ol li + li,
+  .text-formatted ul li + li,
+  .text-formatted ol li + li {
+    margin-top: 0.5rem; }
+    @media print, screen and (min-width: 40em) {
+      body.cke_editable ul li + li,
+      body.cke_editable ol li + li,
+      .text-formatted ul li + li,
+      .text-formatted ol li + li {
+        margin-top: 1rem; } }
 
-.cke_editable ul li,
-.text-formatted ul li {
+body.cke_editable ul,
+.text-formatted ul {
+  list-style-type: none; }
+  body.cke_editable ul li,
+  .text-formatted ul li {
+    position: relative;
+    padding-left: 1.75rem; }
+    body.cke_editable ul li::before,
+    .text-formatted ul li::before {
+      position: absolute;
+      top: .8em;
+      left: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      -webkit-transform: translate3d(0, -50%, 0);
+              transform: translate3d(0, -50%, 0);
+      content: ''; }
+    body.cke_editable ul li:nth-child(3n+1)::before,
+    .text-formatted ul li:nth-child(3n+1)::before {
+      background-color: #0da40c; }
+      @media print, screen and (min-width: 40em) {
+        body.cke_editable ul li:nth-child(3n+1)::before,
+        .text-formatted ul li:nth-child(3n+1)::before {
+          background: linear-gradient(329.09deg, #15be11 16.38%, #098147 87.71%); } }
+    body.cke_editable ul li:nth-child(3n+2)::before,
+    .text-formatted ul li:nth-child(3n+2)::before {
+      background-color: #8017b3; }
+      @media print, screen and (min-width: 40em) {
+        body.cke_editable ul li:nth-child(3n+2)::before,
+        .text-formatted ul li:nth-child(3n+2)::before {
+          background: linear-gradient(330.66deg, #009cde -108.22%, #9a41b9 87.07%); } }
+    body.cke_editable ul li:nth-child(3n+3)::before,
+    .text-formatted ul li:nth-child(3n+3)::before {
+      background-color: #0678be; }
+      @media print, screen and (min-width: 40em) {
+        body.cke_editable ul li:nth-child(3n+3)::before,
+        .text-formatted ul li:nth-child(3n+3)::before {
+          background: linear-gradient(328.35deg, #009cde 14.89%, #9a41b9 158.67%); } }
+
+body.cke_editable ol li::marker,
+.text-formatted ol li::marker {
+  display: inline-block; }
+
+body.cke_editable blockquote,
+.text-formatted blockquote {
   position: relative;
-  padding-left: 1.75rem; }
-  .cke_editable ul li::before,
-  .text-formatted ul li::before {
+  margin: 0 0 2rem 1rem;
+  padding-left: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.2; }
+  @media print, screen and (min-width: 40em) {
+    body.cke_editable blockquote,
+    .text-formatted blockquote {
+      margin-left: 1.5rem;
+      font-size: 1.375rem;
+      line-height: 1.1819; } }
+  body.cke_editable blockquote:before,
+  .text-formatted blockquote:before {
+    content: "";
     position: absolute;
-    top: calc(1.5em - 4px);
+    top: 0;
     left: 0;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    contain: ''; }
-  .cke_editable ul li::marker,
-  .text-formatted ul li::marker {
-    display: none; }
-  .cke_editable ul li:nth-child(3n+1)::before,
-  .text-formatted ul li:nth-child(3n+1)::before {
-    background-color: #0da40c; }
-    @media print, screen and (min-width: 40em) {
-      .cke_editable ul li:nth-child(3n+1)::before,
-      .text-formatted ul li:nth-child(3n+1)::before {
-        background-color: linear-gradient(329.09deg, #15be11 16.38%, #098147 87.71%); } }
-  .cke_editable ul li:nth-child(3n+2)::before,
-  .text-formatted ul li:nth-child(3n+2)::before {
-    background-color: #8017b3; }
-    @media print, screen and (min-width: 40em) {
-      .cke_editable ul li:nth-child(3n+2)::before,
-      .text-formatted ul li:nth-child(3n+2)::before {
-        background-color: linear-gradient(330.66deg, #009cde -108.22%, #9a41b9 87.07%); } }
-  .cke_editable ul li:nth-child(3n+3)::before,
-  .text-formatted ul li:nth-child(3n+3)::before {
-    background-color: #0678be; }
-    @media print, screen and (min-width: 40em) {
-      .cke_editable ul li:nth-child(3n+3)::before,
-      .text-formatted ul li:nth-child(3n+3)::before {
-        background-color: linear-gradient(328.35deg, #009cde 14.89%, #9a41b9 158.67%); } }
+    font-size: 1.5rem; }
+  body.cke_editable blockquote p,
+  .text-formatted blockquote p {
+    line-height: inherit; }
+  body.cke_editable blockquote cite,
+  .text-formatted blockquote cite {
+    margin-top: 0.5rem;
+    font-weight: normal; }
 
-.cke_editable ol li,
-.text-formatted ol li {
-  position: relative; }
-  .cke_editable ol li::marker,
-  .text-formatted ol li::marker {
-    display: none; }
-
-h1, .h1 {
+body.cke_editable h1, body.cke_editable .h1,
+.text-formatted h1,
+.text-formatted .h1 {
   font-size: 2rem;
   font-weight: bold;
   line-height: 0.9375; }
 
-h2, .h2 {
+body.cke_editable h2, body.cke_editable .h2,
+.text-formatted h2,
+.text-formatted .h2 {
   font-size: 1.75rem;
   font-weight: bold;
   line-height: 0.9334; }
 
-h3, .h3 {
+body.cke_editable h3, body.cke_editable .h3,
+.text-formatted h3,
+.text-formatted .h3 {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.1667; }
 
-h4, .h4 {
+body.cke_editable h4, body.cke_editable .h4,
+.text-formatted h4,
+.text-formatted .h4 {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.2; }
 
-h5, .h5 {
+body.cke_editable h5, body.cke_editable .h5,
+.text-formatted h5,
+.text-formatted .h5 {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.375; }
 
-h6, .h6 {
+body.cke_editable h6, body.cke_editable .h6,
+.text-formatted h6,
+.text-formatted .h6 {
   font-size: 0.875rem;
   font-weight: medium;
   line-height: 1.7143; }
 
 @media print, screen and (min-width: 40em) {
-  h1, .h1 {
+  body.cke_editable h1, body.cke_editable .h1,
+  .text-formatted h1,
+  .text-formatted .h1 {
     font-size: 3.125rem;
     font-weight: bold;
     line-height: 1; }
-  h2, .h2 {
+  body.cke_editable h2, body.cke_editable .h2,
+  .text-formatted h2,
+  .text-formatted .h2 {
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 1; }
-  h3, .h3 {
+  body.cke_editable h3, body.cke_editable .h3,
+  .text-formatted h3,
+  .text-formatted .h3 {
     font-size: 2rem;
     font-weight: bold;
     line-height: 1; }
-  h4, .h4 {
+  body.cke_editable h4, body.cke_editable .h4,
+  .text-formatted h4,
+  .text-formatted .h4 {
     font-size: 1.375rem;
     font-weight: bold;
     line-height: 1.1818; }
-  h5, .h5 {
+  body.cke_editable h5, body.cke_editable .h5,
+  .text-formatted h5,
+  .text-formatted .h5 {
     font-size: 1.125rem;
     font-weight: bold;
     line-height: 1.2222; }
-  h6, .h6 {
+  body.cke_editable h6, body.cke_editable .h6,
+  .text-formatted h6,
+  .text-formatted .h6 {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.25; } }
 
-blockquote {
-  margin: 0 0 2rem 1.5rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  line-height: 1.2em; }
+body.cke_editable hr,
+.text-formatted hr {
+  margin-left: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: 0.25rem;
+  max-width: 5rem;
+  border: none; }
   @media print, screen and (min-width: 40em) {
-    blockquote {
-      margin-left: 1.5rem;
-      font-size: 1.375rem; } }
-  blockquote p {
-    line-height: inherit; }
-  blockquote cite {
-    margin-top: 0.5rem;
-    font-weight: normal; }
+    body.cke_editable hr,
+    .text-formatted hr {
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
+  body.cke_editable hr.green,
+  .text-formatted hr.green {
+    background: linear-gradient(259.21deg, #15be11 4.15%, #098147 92.87%); }
+  body.cke_editable hr.purple,
+  .text-formatted hr.purple {
+    background: linear-gradient(265.07deg, #009cde -133.86%, #9a41b9 96.03%); }
+  body.cke_editable hr.blue,
+  .text-formatted hr.blue {
+    background: linear-gradient(270.3deg, #009cde -6.06%, #9a41b9 185.45%); }
+
+body.cke_editable table th,
+.text-formatted table th {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.375;
+  -webkit-box-shadow: inset 0 -2px 0 #0678be;
+          box-shadow: inset 0 -2px 0 #0678be; }
+  @media print, screen and (min-width: 40em) {
+    body.cke_editable table th,
+    .text-formatted table th {
+      font-size: 1.125rem;
+      font-weight: bold;
+      line-height: 1.2222; } }
+
+body.cke_editable table td,
+.text-formatted table td {
+  line-height: 1.5;
+  font-size: 0.8125rem;
+  line-height: 1.5385em; }
+  @media print, screen and (min-width: 40em) {
+    body.cke_editable table td,
+    .text-formatted table td {
+      font-size: 0.875rem;
+      line-height: 1.7143em; } }
 
 *::-moz-selection {
   background-color: #0678be;
@@ -430,7 +541,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -516,9 +627,9 @@ td {
   padding: 0; }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: inherit;
-  line-height: 1.6;
+  line-height: inherit;
   text-rendering: optimizeLegibility; }
 
 em,
@@ -541,7 +652,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -559,37 +670,37 @@ h1, .h1 {
   font-size: 2rem;
   line-height: 0.9375;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0; }
 
 h2, .h2 {
   font-size: 1.75rem;
   line-height: 0.9334;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0; }
 
 h3, .h3 {
   font-size: 1.5rem;
   line-height: 1.1667;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0; }
 
 h4, .h4 {
   font-size: 1.25rem;
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0; }
 
 h5, .h5 {
   font-size: 1rem;
   line-height: 1.375;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0; }
 
 h6, .h6 {
   font-size: 0.875rem;
   line-height: 1.7143;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0; }
 
 @media print, screen and (min-width: 40em) {
   h1, .h1 {
@@ -634,9 +745,9 @@ hr {
 ul,
 ol,
 dl {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   list-style-position: outside;
-  line-height: 1.6; }
+  line-height: inherit; }
 
 li {
   font-size: inherit; }
@@ -659,11 +770,11 @@ dl {
     font-weight: bold; }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   padding: 0 0 0 1.75rem;
   border-left: none; }
   blockquote, blockquote p {
-    line-height: 1.6;
+    line-height: inherit;
     color: #1b1c1e; }
 
 abbr, abbr[title] {
@@ -835,17 +946,17 @@ table {
   thead,
   tbody,
   tfoot {
-    border: 1px solid #f1f1f1;
+    border: none;
     background-color: #fefefe; }
   caption {
-    padding: 0.5rem 0.625rem 0.625rem;
+    padding: 0.5rem 0.75rem;
     font-weight: bold; }
   thead {
-    background: #f8f8f8;
-    color: #0a0a0a; }
+    background: none;
+    color: #000; }
   tfoot {
-    background: #f1f1f1;
-    color: #0a0a0a; }
+    background: none;
+    color: #000; }
   thead tr,
   tfoot tr {
     background: transparent; }
@@ -853,19 +964,19 @@ table {
   thead td,
   tfoot th,
   tfoot td {
-    padding: 0.5rem 0.625rem 0.625rem;
+    padding: 0.5rem 0.75rem;
     font-weight: bold;
     text-align: left; }
   tbody th,
   tbody td {
-    padding: 0.5rem 0.625rem 0.625rem; }
+    padding: 0.5rem 0.75rem; }
   tbody tr:nth-child(even) {
     border-bottom: 0;
-    background-color: #f1f1f1; }
+    background-color: #f8f8f8; }
   table.unstriped tbody {
     background-color: #fefefe; }
     table.unstriped tbody tr {
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: none;
       background-color: #fefefe; }
 
 @media print, screen and (max-width: 63.99875em) {
@@ -886,16 +997,16 @@ table.scroll {
   overflow-x: auto; }
 
 table.hover thead tr:hover {
-  background-color: #f3f3f3; }
+  background-color: none; }
 
 table.hover tfoot tr:hover {
-  background-color: #ececec; }
+  background-color: none; }
 
 table.hover tbody tr:hover {
-  background-color: #f9f9f9; }
+  background-color: none; }
 
 table.hover:not(.unstriped) tr:nth-of-type(even):hover {
-  background-color: #ececec; }
+  background-color: none; }
 
 .table-scroll {
   overflow-x: auto; }

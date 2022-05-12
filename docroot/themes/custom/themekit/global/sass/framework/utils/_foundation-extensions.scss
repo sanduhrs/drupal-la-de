@@ -143,6 +143,8 @@
       font-size: rem-calc(map-get(map-get($elements, $setting), 'font-size'));
       font-weight: map-get(map-get($elements, $setting), 'font-weight');
       line-height: map-get(map-get($elements, $setting), 'line-height');
+      text-transform: map-get(map-get($elements, $setting), 'text-transform');
+      letter-spacing: map-get(map-get($elements, $setting), 'letter-spacing');
     }
   }
 }
