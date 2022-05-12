@@ -1,3 +1,32 @@
 ////
 /// Header
 ////
+
+.region-header {
+  @include breakpoint(medium) {
+    @include top-bottom(padding, rem-calc(32))
+    height: rem-calc(104);
+  }
+
+  &:not(.is-front) {
+    border-bottom: 1px solid $color-gray-300;
+  }
+
+  .content {
+    @include content-width(default);
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .block--system-branding-block {
+    img {
+      height: rem-calc(32);
+      @include breakpoint(medium) {
+        height: rem-calc(40);
+      }
+    }
+  }
+}

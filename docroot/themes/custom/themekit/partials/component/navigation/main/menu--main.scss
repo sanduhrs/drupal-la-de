@@ -1,0 +1,51 @@
+////
+/// Main navigation
+////
+
+.menu--main {
+  // Adjust Drupal admin styles
+  &.contextual-region {
+    position: static;
+    .contextual {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: flex;
+
+    &__item {
+      &:not(:last-child) {
+        @include breakpoint(medium) {
+          margin-right: rem-calc(24);
+        }
+      }
+
+      a {
+        display: inline-block;
+        font-weight: $global-weight-medium;
+        line-height: 1.5;
+        color: $color-gray-900;
+
+        @include breakpoint(medium) {
+          @include global-transition(border-bottom-color);
+          padding-top: rem-calc(4);
+          padding-bottom: rem-calc(2);
+          border-bottom: 2px solid transparent;
+        }
+        @include selectors(active) {
+          @include breakpoint(medium) {
+            border-bottom-color: $color-primary-600;
+          }
+        }
+
+        // Active menu item
+        &.is-active {
+          @include breakpoint(medium) {
+            border-bottom-color: $color-primary-600;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/**
+ * Base Styles
+ * - 01 - Foundation
+ * - 02 - Utilities
+ * - 03 - Framework
+ * - 04 - Settings
+ */
+/*------------------------------------*\
+  01 - Foundation
+\*------------------------------------*/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+/*------------------------------------*\
+  02 - Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+  03 - Framework
+\*------------------------------------*/
+/*------------------------------------*\
+  04 - Settings
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
+.menu--main.contextual-region {
+  position: static; }
+  .menu--main.contextual-region .contextual {
+    display: none; }
+
+.menu--main .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media print, screen and (min-width: 40em) {
+    .menu--main .menu__item:not(:last-child) {
+      margin-right: 1.5rem; } }
+  .menu--main .menu__item a {
+    display: inline-block;
+    font-weight: medium;
+    line-height: 1.5;
+    color: #1b1c1e; }
+    @media print, screen and (min-width: 40em) {
+      .menu--main .menu__item a {
+        -webkit-transition: border-bottom-color 0.15s ease;
+        transition: border-bottom-color 0.15s ease;
+        padding-top: 0.25rem;
+        padding-bottom: 0.125rem;
+        border-bottom: 2px solid transparent; } }
+    @media print, screen and (min-width: 40em) {
+      .menu--main .menu__item a:hover, .menu--main .menu__item a:focus, .menu--main .menu__item a:active {
+        border-bottom-color: #0678be; } }
+    @media print, screen and (min-width: 40em) {
+      .menu--main .menu__item a.is-active {
+        border-bottom-color: #0678be; } }
+
+
+/*# sourceMappingURL=menu--main.css.map*/
