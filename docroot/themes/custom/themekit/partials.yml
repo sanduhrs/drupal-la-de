@@ -1,21 +1,33 @@
+component:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block.css: {}
+component--navigation--main:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/menu--main.css: {}
+layout--banner:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/banner-layout.css: {}
 layout:
   dependencies:
     - themekit/themekit
   css:
     theme:
       dist/css/layout.css: {}
-node--type--article:
+node--type--page--full:
   dependencies:
     - themekit/themekit
   css:
     theme:
-      dist/css/article.css: {}
-node--view-mode--full:
-  dependencies:
-    - themekit/themekit
-  css:
-    theme:
-      dist/css/full.css: {}
+      dist/css/node--page--full.css: {}
 region--footer:
   dependencies:
     - themekit/themekit

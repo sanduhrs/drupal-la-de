@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.page.field_metatags
     - node.type.page
   module:
-    - metatag
     - text
     - user
 _core:
@@ -22,24 +21,10 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
-  field_metatags:
-    type: metatag_empty_formatter
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
+    weight: 0
     region: content
 hidden:
+  content_moderation_control: true
+  field_metatags: true
   langcode: true
+  links: true

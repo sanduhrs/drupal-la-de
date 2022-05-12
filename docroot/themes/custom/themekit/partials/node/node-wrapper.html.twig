@@ -72,20 +72,22 @@
  * @ingroup themeable
  */
 #}
+
 {{ attach_library('themekit/node') }}
 {{ attach_library('themekit/node--view-mode--' ~ view_mode|clean_class) }}
 {{ attach_library('themekit/node--type--' ~ node.bundle|clean_class) }}
 {{ attach_library('themekit/node--view-mode--' ~ view_mode|clean_class ~ '--' ~ node.bundle|clean_class) }}
+{{ attach_library('themekit/node--type--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class) }}
 
 {%
   set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-]
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
 %}
 
 <article{{ attributes.addClass(classes) }}>
