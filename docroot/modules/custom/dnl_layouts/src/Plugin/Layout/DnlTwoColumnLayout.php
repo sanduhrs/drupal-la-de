@@ -17,7 +17,6 @@ class DnlTwoColumnLayout extends BaseLayout {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $parentForm = parent::buildConfigurationForm($form, $form_state);
-    $parentForm['size']['#access'] = FALSE;
     return $parentForm;
   }
 

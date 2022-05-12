@@ -39,16 +39,6 @@ class BaseLayout extends LayoutDefault {
       ],
       '#default_value' => $configuration['padding'],
     ];
-
-    $form['size'] = [
-      '#type' => 'select',
-      '#title' => $this->t('Layout size'),
-      '#options' => [
-        'default' => 'Default',
-        'small' => 'Small',
-      ],
-      '#default_value' => $configuration['size'],
-    ];
     return $form;
   }
 
@@ -57,6 +47,5 @@ class BaseLayout extends LayoutDefault {
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     $this->configuration['padding'] = $form_state->getValue('padding');
-    $this->configuration['size'] = $form_state->getValue('size');
   }
 }
