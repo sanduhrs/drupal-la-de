@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.case
     - node.type.component_page
     - node.type.page
   module:
@@ -64,6 +65,7 @@ type_settings:
       weight: 1
   entity_types:
     node:
+      - case
       - component_page
       - page
   default_moderation_state: draft

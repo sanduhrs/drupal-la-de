@@ -1,0 +1,19 @@
+uuid: 2d57b532-84d5-496f-b60e-bad5a56f2936
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.logo_with_link
+id: paragraph.logo_with_link.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: logo_with_link
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

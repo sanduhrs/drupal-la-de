@@ -1,0 +1,26 @@
+uuid: eae6958d-44af-4837-a996-0a4fc048cd41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.case
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - full_html
+id: node.case.field_summary
+field_name: field_summary
+entity_type: node
+bundle: case
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

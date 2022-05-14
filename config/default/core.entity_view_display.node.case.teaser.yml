@@ -1,0 +1,49 @@
+uuid: 3d7caf63-d7d4-4bb2-b878-633f824a52cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case.body
+    - field.field.node.case.field_category
+    - field.field.node.case.field_component_item
+    - field.field.node.case.field_components
+    - field.field.node.case.field_image
+    - field.field.node.case.field_metatags
+    - field.field.node.case.field_summary
+    - node.type.case
+    - responsive_image.styles.third_column_hq
+  module:
+    - media_responsive_thumbnail
+    - user
+id: node.case.teaser
+targetEntityType: node
+bundle: case
+mode: teaser
+content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: media_responsive_thumbnail
+    label: hidden
+    settings:
+      responsive_image_style: third_column_hq
+      image_link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  field_component_item: true
+  field_components: true
+  field_metatags: true
+  field_summary: true
+  langcode: true
+  links: true
