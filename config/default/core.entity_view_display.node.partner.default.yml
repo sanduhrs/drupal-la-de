@@ -1,0 +1,29 @@
+uuid: e3129927-d079-40ce-9eb0-5fc0838b18b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.partner.body
+    - node.type.partner
+  module:
+    - text
+    - user
+id: node.partner.default
+targetEntityType: node
+bundle: partner
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

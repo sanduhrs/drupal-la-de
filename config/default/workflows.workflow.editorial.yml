@@ -6,6 +6,7 @@ dependencies:
     - node.type.case
     - node.type.component_page
     - node.type.page
+    - node.type.partner
   module:
     - content_moderation
 _core:
@@ -68,4 +69,5 @@ type_settings:
       - case
       - component_page
       - page
+      - partner
   default_moderation_state: draft
