@@ -5,27 +5,48 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.partner.body
+    - field.field.node.partner.field_category
+    - field.field.node.partner.field_components
+    - field.field.node.partner.field_count
+    - field.field.node.partner.field_image
+    - field.field.node.partner.field_metatags
+    - field.field.node.partner.field_related
+    - field.field.node.partner.field_summary
     - node.type.partner
+    - responsive_image.styles.third_column_hq
   module:
-    - text
+    - media_responsive_thumbnail
     - user
 id: node.partner.teaser
 targetEntityType: node
 bundle: partner
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: media_responsive_thumbnail
     label: hidden
     settings:
-      trim_length: 600
+      responsive_image_style: third_column_hq
+      image_link: ''
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
+  body: true
+  field_category: true
+  field_components: true
+  field_count: true
+  field_metatags: true
+  field_related: true
+  field_summary: true
   langcode: true

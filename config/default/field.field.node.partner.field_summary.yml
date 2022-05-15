@@ -1,9 +1,9 @@
-uuid: 55876f0a-60e5-4f0d-a8e2-39462d78e92a
+uuid: 31f2cacb-b5de-4470-8d35-566c72ac6cd2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_summary
     - node.type.partner
   module:
     - allowed_formats
@@ -12,17 +12,15 @@ third_party_settings:
   allowed_formats:
     allowed_formats:
       - basic_html
-id: node.partner.body
-field_name: body
+id: node.partner.field_summary
+field_name: field_summary
 entity_type: node
 bundle: partner
-label: Body
+label: Summary
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: true
-  required_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

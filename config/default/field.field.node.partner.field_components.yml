@@ -1,0 +1,47 @@
+uuid: 264bfa2f-f2f1-41e7-a182-4c6e19278817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.partner
+  module:
+    - entity_reference_revisions
+id: node.partner.field_components
+field_name: field_components
+entity_type: node
+bundle: partner
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      detail_item:
+        weight: 8
+        enabled: false
+      details_list:
+        weight: 9
+        enabled: false
+      header_banner_basic:
+        weight: 10
+        enabled: false
+      image_slider:
+        weight: 11
+        enabled: false
+      link_default:
+        weight: 12
+        enabled: false
+      link_file:
+        weight: 13
+        enabled: false
+      logo_with_link:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

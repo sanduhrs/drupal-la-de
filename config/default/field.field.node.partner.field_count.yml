@@ -1,0 +1,25 @@
+uuid: 8b3c5551-e359-40d4-b59d-5c0f27a27d83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_count
+    - node.type.partner
+id: node.partner.field_count
+field_name: field_count
+entity_type: node
+bundle: partner
+label: 'Splash Awards'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 3
+  prefix: ''
+  suffix: ''
+field_type: integer
