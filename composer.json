@@ -99,6 +99,7 @@
     "drupal/swiftmailer": "^2.0",
     "drupal/system_status": "^2.0",
     "drupal/twig_field_value": "~2.0.0",
+    "drupal/twig_tweak": "^3.1",
     "drupal/ultimate_cron": "^2.0",
     "drupal/username_enumeration_prevention": "^1.1",
     "drupal/views_bulk_edit": "^2.0",
