@@ -1,13 +1,13 @@
-uuid: 31e7cc78-5202-463b-8b0a-02446d9cfe50
+uuid: 6e690e23-66f9-4ae6-a0b1-950e5137332b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_media
+    - field.storage.node.field_logo
     - media.type.image
     - node.type.case
-id: node.case.field_media
-field_name: field_media
+id: node.case.field_logo
+field_name: field_logo
 entity_type: node
 bundle: case
 label: Partner

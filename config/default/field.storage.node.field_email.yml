@@ -1,16 +1,15 @@
-uuid: 83ba2355-8d7a-4366-9c64-73e2a8053a6c
+uuid: dbd6b174-a482-4843-b845-c721ff383f00
 langcode: en
 status: true
 dependencies:
   module:
-    - block_field
     - node
-id: node.field_related
-field_name: field_related
+id: node.field_email
+field_name: field_email
 entity_type: node
-type: block_field
+type: email
 settings: {  }
-module: block_field
+module: core
 locked: false
 cardinality: 1
 translatable: true

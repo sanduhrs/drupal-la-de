@@ -1,17 +1,16 @@
-uuid: 9025cd6a-58e1-46ae-8f83-408cf63afcb4
+uuid: 6256c6a8-92bb-45f2-bbe8-c0db59a7ae05
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_count
-field_name: field_count
+    - telephone
+id: node.field_phone
+field_name: field_phone
 entity_type: node
-type: integer
-settings:
-  unsigned: false
-  size: normal
-module: core
+type: telephone
+settings: {  }
+module: telephone
 locked: false
 cardinality: 1
 translatable: true
