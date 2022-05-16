@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.details_list.field_heading
     - field.field.paragraph.details_list.field_p_items
     - paragraphs.paragraphs_type.details_list
   module:
@@ -13,14 +12,6 @@ targetEntityType: paragraph
 bundle: details_list
 mode: default
 content:
-  field_heading:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_p_items:
     type: entity_reference_revisions_entity_view
     label: hidden

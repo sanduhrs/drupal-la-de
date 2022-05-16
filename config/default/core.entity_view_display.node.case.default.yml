@@ -9,11 +9,14 @@ dependencies:
     - field.field.node.case.field_components
     - field.field.node.case.field_image
     - field.field.node.case.field_intro
+    - field.field.node.case.field_link
+    - field.field.node.case.field_media
     - field.field.node.case.field_metatags
     - node.type.case
     - responsive_image.styles.half_column_hq
   module:
     - entity_reference_revisions
+    - link
     - media_responsive_thumbnail
     - text
     - user
@@ -75,6 +78,27 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 9
     region: content
   links:
     settings: {  }

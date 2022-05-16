@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.details_list.field_heading
     - field.field.paragraph.details_list.field_p_items
     - paragraphs.paragraphs_type.details_list
   module:
@@ -13,14 +12,6 @@ targetEntityType: paragraph
 bundle: details_list
 mode: default
 content:
-  field_heading:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_p_items:
     type: paragraphs
     weight: 1

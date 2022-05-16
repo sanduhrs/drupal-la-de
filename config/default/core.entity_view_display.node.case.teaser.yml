@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.case.field_components
     - field.field.node.case.field_image
     - field.field.node.case.field_intro
+    - field.field.node.case.field_link
+    - field.field.node.case.field_media
     - field.field.node.case.field_metatags
     - node.type.case
     - responsive_image.styles.third_column_hq
@@ -44,6 +46,8 @@ hidden:
   field_component_item: true
   field_components: true
   field_intro: true
+  field_link: true
+  field_media: true
   field_metatags: true
   langcode: true
   links: true

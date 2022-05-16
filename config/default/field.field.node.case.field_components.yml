@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_components
     - node.type.case
     - paragraphs.paragraphs_type.details_list
-    - paragraphs.paragraphs_type.logo_with_link
   module:
     - entity_reference_revisions
 id: node.case.field_components
@@ -24,7 +23,6 @@ settings:
   handler_settings:
     target_bundles:
       details_list: details_list
-      logo_with_link: logo_with_link
     negate: 0
     target_bundles_drag_drop:
       detail_item:
@@ -47,8 +45,5 @@ settings:
         enabled: false
       logo_with_link:
         weight: 9
-        enabled: true
-      text:
-        weight: 10
         enabled: false
 field_type: entity_reference_revisions

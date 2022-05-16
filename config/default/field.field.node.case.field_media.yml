@@ -1,18 +1,18 @@
-uuid: e673946b-234b-461c-82b0-a0a597da077f
+uuid: 31e7cc78-5202-463b-8b0a-02446d9cfe50
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_media
+    - field.storage.node.field_media
     - media.type.image
-    - paragraphs.paragraphs_type.logo_with_link
-id: paragraph.logo_with_link.field_media
+    - node.type.case
+id: node.case.field_media
 field_name: field_media
-entity_type: paragraph
-bundle: logo_with_link
-label: Logo
+entity_type: node
+bundle: case
+label: Partner
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
