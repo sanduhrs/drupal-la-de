@@ -9,9 +9,9 @@ dependencies:
     - field.field.node.partner.field_components
     - field.field.node.partner.field_count
     - field.field.node.partner.field_image
+    - field.field.node.partner.field_intro
     - field.field.node.partner.field_metatags
     - field.field.node.partner.field_related
-    - field.field.node.partner.field_summary
     - node.type.partner
     - responsive_image.styles.third_column_hq
   module:
@@ -46,7 +46,7 @@ hidden:
   field_category: true
   field_components: true
   field_count: true
+  field_intro: true
   field_metatags: true
   field_related: true
-  field_summary: true
   langcode: true

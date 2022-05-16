@@ -8,9 +8,9 @@ dependencies:
     - field.field.node.partner.field_components
     - field.field.node.partner.field_count
     - field.field.node.partner.field_image
+    - field.field.node.partner.field_intro
     - field.field.node.partner.field_metatags
     - field.field.node.partner.field_related
-    - field.field.node.partner.field_summary
     - node.type.partner
     - workflows.workflow.editorial
   module:
@@ -47,7 +47,8 @@ third_party_settings:
     group_image:
       children:
         - field_image
-      label: Image
+        - field_intro
+      label: Banner
       region: content
       parent_name: group_tabs
       weight: 21
@@ -61,7 +62,6 @@ third_party_settings:
         required_fields: true
     group_content:
       children:
-        - field_summary
         - body
         - field_related
       label: Content
@@ -127,7 +127,7 @@ content:
         hide_guidelines: '1'
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -170,6 +170,17 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_intro:
+    type: text_textarea
+    weight: 18
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
   field_metatags:
     type: metatag_firehose
     weight: 16
@@ -187,20 +198,9 @@ content:
       settings: {  }
       configuration_form: full
     third_party_settings: {  }
-  field_summary:
-    type: text_textarea
-    weight: 3
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings:
-      allowed_formats:
-        hide_help: '1'
-        hide_guidelines: '1'
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
@@ -213,20 +213,20 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -245,7 +245,7 @@ content:
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -260,7 +260,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS

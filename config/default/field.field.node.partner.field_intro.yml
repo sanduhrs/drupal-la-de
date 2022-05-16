@@ -1,9 +1,9 @@
-uuid: 31f2cacb-b5de-4470-8d35-566c72ac6cd2
+uuid: 8a0b7e0d-745e-4f5a-8afc-4c920faa6760
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_summary
+    - field.storage.node.field_intro
     - node.type.partner
   module:
     - allowed_formats
@@ -11,12 +11,12 @@ dependencies:
 third_party_settings:
   allowed_formats:
     allowed_formats:
-      - basic_html
-id: node.partner.field_summary
-field_name: field_summary
+      - full_html
+id: node.partner.field_intro
+field_name: field_intro
 entity_type: node
 bundle: partner
-label: Summary
+label: Intro
 description: ''
 required: false
 translatable: true

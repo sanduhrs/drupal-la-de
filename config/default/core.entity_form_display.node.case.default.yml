@@ -8,8 +8,8 @@ dependencies:
     - field.field.node.case.field_component_item
     - field.field.node.case.field_components
     - field.field.node.case.field_image
+    - field.field.node.case.field_intro
     - field.field.node.case.field_metatags
-    - field.field.node.case.field_summary
     - node.type.case
     - workflows.workflow.editorial
   module:
@@ -31,7 +31,7 @@ third_party_settings:
         - group_contents
         - group_sidebar
         - group_category
-      label: Wrapper
+      label: Tabs
       region: content
       parent_name: ''
       weight: 1
@@ -44,7 +44,6 @@ third_party_settings:
         width_breakpoint: 640
     group_contents:
       children:
-        - field_summary
         - body
         - field_component_item
       label: Content
@@ -77,7 +76,8 @@ third_party_settings:
     group_image:
       children:
         - field_image
-      label: Image
+        - field_intro
+      label: Banner
       region: content
       parent_name: group_content
       weight: 18
@@ -147,7 +147,7 @@ content:
       closed_mode_threshold: 0
       add_mode: button
       form_display_mode: default
-      default_paragraph_type: image_slider
+      default_paragraph_type: _none
       features:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
@@ -174,22 +174,14 @@ content:
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 17
+    weight: 9
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_metatags:
-    type: metatag_firehose
-    weight: 16
-    region: content
-    settings:
-      sidebar: true
-      use_details: true
-    third_party_settings: {  }
-  field_summary:
+  field_intro:
     type: text_textarea
-    weight: 5
+    weight: 10
     region: content
     settings:
       rows: 5
@@ -198,6 +190,14 @@ content:
       allowed_formats:
         hide_help: '1'
         hide_guidelines: '1'
+  field_metatags:
+    type: metatag_firehose
+    weight: 16
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 5
@@ -207,7 +207,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -232,7 +232,7 @@ content:
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

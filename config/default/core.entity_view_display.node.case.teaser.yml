@@ -9,8 +9,8 @@ dependencies:
     - field.field.node.case.field_component_item
     - field.field.node.case.field_components
     - field.field.node.case.field_image
+    - field.field.node.case.field_intro
     - field.field.node.case.field_metatags
-    - field.field.node.case.field_summary
     - node.type.case
     - responsive_image.styles.third_column_hq
   module:
@@ -43,7 +43,7 @@ hidden:
   content_moderation_control: true
   field_component_item: true
   field_components: true
+  field_intro: true
   field_metatags: true
-  field_summary: true
   langcode: true
   links: true

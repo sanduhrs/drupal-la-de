@@ -8,9 +8,9 @@ dependencies:
     - field.field.node.partner.field_components
     - field.field.node.partner.field_count
     - field.field.node.partner.field_image
+    - field.field.node.partner.field_intro
     - field.field.node.partner.field_metatags
     - field.field.node.partner.field_related
-    - field.field.node.partner.field_summary
     - node.type.partner
     - responsive_image.styles.half_column_hq
   module:
@@ -71,19 +71,19 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_intro:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_related:
     type: block_field
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 6
-    region: content
-  field_summary:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
     region: content
   links:
     settings: {  }
