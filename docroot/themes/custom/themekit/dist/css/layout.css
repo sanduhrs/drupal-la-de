@@ -29,21 +29,21 @@
 /******* End Drupal Defaults *******/
 .layout:last-child {
   padding-bottom: 3.75rem; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     .layout:last-child {
       padding-bottom: 2.5rem; } }
 
 .layout > .layout-content {
-  max-width: 84.25rem;
+  max-width: 84rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem; }
-  @media print, screen and (min-width: 40em) {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media print, screen and (min-width: 48em) {
     .layout > .layout-content {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
-  @media print, screen and (min-width: 40em) {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media print, screen and (min-width: 48em) {
     .layout > .layout-content > .layout__region {
       -ms-flex-negative: 0;
           flex-shrink: 0; } }
@@ -59,7 +59,7 @@
 .layout.section-padding--default {
   padding-top: 2.8125rem;
   padding-bottom: 2.8125rem; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     .layout.section-padding--default {
       padding-top: 2.8125rem;
       padding-bottom: 2.8125rem; } }
@@ -67,7 +67,7 @@
 .layout.section-padding--small {
   padding-top: 1.875rem;
   padding-bottom: 1.875rem; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     .layout.section-padding--small {
       padding-top: 1.875rem;
       padding-bottom: 1.875rem; } }
@@ -75,7 +75,7 @@
 .layout.section-padding--none {
   padding-top: 0;
   padding-bottom: 0; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     .layout.section-padding--none {
       padding-top: 0;
       padding-bottom: 0; } }

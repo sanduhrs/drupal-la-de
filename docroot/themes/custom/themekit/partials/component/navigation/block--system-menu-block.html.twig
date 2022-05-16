@@ -56,6 +56,11 @@
   <h2{{ title_attributes.setAttribute('id', heading_id).addClass('navigation__heading') }}>{{ configuration.label }}</h2>
   {{ title_suffix }}
 
+  {# open/close button for the mobile main navigation #}
+  {% if derivative_plugin_id == 'main' %}
+    <button class="{{ 'menu--' ~ derivative_plugin_id|clean_class ~ '__toggle' }}" aria-expanded="true">{{ 'Close menu'|t }}</button>
+  {% endif %}
+
   {# Menu. #}
   {% block content %}
     {{ content }}

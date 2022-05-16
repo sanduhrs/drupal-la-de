@@ -3,8 +3,9 @@
 ////
 
 .region-header {
+  @include top-bottom(padding, rem-calc(20));
   @include breakpoint(medium) {
-    @include top-bottom(padding, rem-calc(32))
+    @include top-bottom(padding, rem-calc(32));
     height: rem-calc(104);
   }
 
@@ -14,11 +15,9 @@
 
   .content {
     @include content-width(default);
-    @include breakpoint(medium) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .block--system-branding-block {

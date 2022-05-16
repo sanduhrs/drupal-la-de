@@ -70,7 +70,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1348);
+$global-width: rem-calc(1344);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1779ba,
@@ -93,7 +93,7 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
-$global-weight-medium: medium;
+$global-weight-medium: 500;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
@@ -163,7 +163,7 @@ $icons: (
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
+  medium: 768px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
@@ -177,8 +177,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 32px,
-  medium: 32px,
+  small: 16px,
+  medium: 16px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -197,19 +197,21 @@ $header-margin-bottom: 0;
 $font-sizes: (
   small: (
     'body': ('font-size': 16, 'line-height': 1.75em),
-    'text-large': ('font-size': 20, 'line-height': 1.75em),
+    'text-large': ('font-size': 16, 'line-height': 1.75em),
     'text-card': ('font-size': 15, 'line-height': 1.6em),
     'text-small': ('font-size': 13, 'line-height': 1.5385em),
     'kicker-large': ('font-size': 14, 'line-height': 1.7143em, 'font-weight': $global-weight-medium, 'text-transform': uppercase, 'letter-spacing': .2em),
     'kicker-small': ('font-size': 12, 'line-height': 1.5em, 'text-transform': uppercase, 'letter-spacing': .3em),
+    'main-menu-item': ('font-size': 20, 'line-height': 2em, 'font-weight': $global-weight-medium),
   ),
   medium: (
     'body': ('font-size': 18, 'line-height': 1.6667em),
-    'text-large': ('font-size': 16, 'line-height': 1.8em),
+    'text-large': ('font-size': 20, 'line-height': 1.8em),
     'text-card': ('font-size': 16, 'line-height': 1.5em),
     'text-small': ('font-size': 14, 'line-height': 1.7143em),
     'kicker-large': ('font-size': 15, 'line-height': 1.6em, 'font-weight': $global-weight-medium, 'text-transform': uppercase, 'letter-spacing': .2em),
     'kicker-small': ('font-size': 12, 'line-height': 1.5em, 'text-transform': uppercase, 'letter-spacing': .3em),
+    'main-menu-item': ('font-size': 16, 'line-height': 2em, 'font-weight': $global-weight-medium),
   ),
 );
 $header-styles: (

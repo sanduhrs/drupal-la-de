@@ -81,7 +81,7 @@ body {
   font-size: 1rem;
   line-height: 1.75em;
   min-width: 320px; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body {
       font-size: 1.125rem;
       line-height: 1.6667em; } }
@@ -97,7 +97,7 @@ body.cke_editable h1,
 body.cke_editable h2,
 .text-formatted h2 {
   margin-bottom: 1rem; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body.cke_editable h2,
     .text-formatted h2 {
       margin-bottom: 1.5rem; } }
@@ -121,6 +121,7 @@ body.cke_editable a,
   color: #53b0eb;
   font-weight: normal;
   text-decoration: underline;
+  will-change: color;
   -webkit-transition: color 0.15s ease;
   transition: color 0.15s ease; }
   body.cke_editable a:hover, body.cke_editable a:focus, body.cke_editable a:active,
@@ -135,7 +136,7 @@ body.cke_editable ol,
 .text-formatted ol {
   margin-left: 1rem;
   line-height: inherit; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body.cke_editable ul,
     body.cke_editable ol,
     .text-formatted ul,
@@ -146,7 +147,7 @@ body.cke_editable ol,
   .text-formatted ul li + li,
   .text-formatted ol li + li {
     margin-top: 0.5rem; }
-    @media print, screen and (min-width: 40em) {
+    @media print, screen and (min-width: 48em) {
       body.cke_editable ul li + li,
       body.cke_editable ol li + li,
       .text-formatted ul li + li,
@@ -174,21 +175,21 @@ body.cke_editable ul,
     body.cke_editable ul li:nth-child(3n+1)::before,
     .text-formatted ul li:nth-child(3n+1)::before {
       background-color: #0da40c; }
-      @media print, screen and (min-width: 40em) {
+      @media print, screen and (min-width: 48em) {
         body.cke_editable ul li:nth-child(3n+1)::before,
         .text-formatted ul li:nth-child(3n+1)::before {
           background: linear-gradient(329.09deg, #15be11 16.38%, #098147 87.71%); } }
     body.cke_editable ul li:nth-child(3n+2)::before,
     .text-formatted ul li:nth-child(3n+2)::before {
       background-color: #8017b3; }
-      @media print, screen and (min-width: 40em) {
+      @media print, screen and (min-width: 48em) {
         body.cke_editable ul li:nth-child(3n+2)::before,
         .text-formatted ul li:nth-child(3n+2)::before {
           background: linear-gradient(330.66deg, #009cde -108.22%, #9a41b9 87.07%); } }
     body.cke_editable ul li:nth-child(3n+3)::before,
     .text-formatted ul li:nth-child(3n+3)::before {
       background-color: #0678be; }
-      @media print, screen and (min-width: 40em) {
+      @media print, screen and (min-width: 48em) {
         body.cke_editable ul li:nth-child(3n+3)::before,
         .text-formatted ul li:nth-child(3n+3)::before {
           background: linear-gradient(328.35deg, #009cde 14.89%, #9a41b9 158.67%); } }
@@ -205,7 +206,7 @@ body.cke_editable blockquote,
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.2; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body.cke_editable blockquote,
     .text-formatted blockquote {
       margin-left: 1.5rem;
@@ -265,10 +266,10 @@ body.cke_editable h6, body.cke_editable .h6,
 .text-formatted h6,
 .text-formatted .h6 {
   font-size: 0.875rem;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 1.7143; }
 
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: 48em) {
   body.cke_editable h1, body.cke_editable .h1,
   .text-formatted h1,
   .text-formatted .h1 {
@@ -314,7 +315,7 @@ body.cke_editable hr,
   height: 0.25rem;
   max-width: 5rem;
   border: none; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body.cke_editable hr,
     .text-formatted hr {
       margin-top: 2rem;
@@ -337,7 +338,7 @@ body.cke_editable table th,
   line-height: 1.375;
   -webkit-box-shadow: inset 0 -2px 0 #0678be;
           box-shadow: inset 0 -2px 0 #0678be; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body.cke_editable table th,
     .text-formatted table th {
       font-size: 1.125rem;
@@ -349,7 +350,7 @@ body.cke_editable table td,
   line-height: 1.5;
   font-size: 0.8125rem;
   line-height: 1.5385em; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 48em) {
     body.cke_editable table td,
     .text-formatted table td {
       font-size: 0.875rem;
@@ -524,7 +525,7 @@ template {
   -webkit-user-select: none; }
 
 .foundation-mq {
-  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
+  font-family: "small=0em&medium=48em&large=64em&xlarge=75em&xxlarge=90em"; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -702,7 +703,7 @@ h6, .h6 {
   margin-top: 0;
   margin-bottom: 0; }
 
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: 48em) {
   h1, .h1 {
     font-size: 3.125rem;
     line-height: 1; }
@@ -734,7 +735,7 @@ a {
 
 hr {
   clear: both;
-  max-width: 84.25rem;
+  max-width: 84rem;
   height: 0;
   margin: 1.25rem auto;
   border-top: 0;
@@ -855,7 +856,7 @@ code, .code-inline {
 .text-justify {
   text-align: justify; }
 
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: 48em) {
   .medium-text-left {
     text-align: left; }
   .medium-text-right {

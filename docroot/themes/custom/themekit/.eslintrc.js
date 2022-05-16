@@ -19,6 +19,7 @@ module.exports = {
     'func-names': 0,            // require function expressions to have a name (off by default)
     'no-new': 0,
     'consistent-return': 0,
+    'no-debugger': 'off',
   },
   settings: {
     'import/resolver': {

@@ -27,42 +27,40 @@
  * Colors
  */
 /******* End Drupal Defaults *******/
-@media print, screen and (min-width: 40em) {
-  .region-header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    height: 6.5rem; } }
-
-.region-header:not(.is-front) {
-  border-bottom: 1px solid #eee; }
-
-.region-header .content {
-  max-width: 84.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem; }
-  @media print, screen and (min-width: 40em) {
-    .region-header .content {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
-  @media print, screen and (min-width: 40em) {
-    .region-header .content {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; } }
-
-.region-header .block--system-branding-block img {
-  height: 2rem; }
-  @media print, screen and (min-width: 40em) {
-    .region-header .block--system-branding-block img {
-      height: 2.5rem; } }
+.region-header {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+  @media print, screen and (min-width: 48em) {
+    .region-header {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      height: 6.5rem; } }
+  .region-header:not(.is-front) {
+    border-bottom: 1px solid #eee; }
+  .region-header .content {
+    max-width: 84rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media print, screen and (min-width: 48em) {
+      .region-header .content {
+        padding-left: 1rem;
+        padding-right: 1rem; } }
+  .region-header .block--system-branding-block img {
+    height: 2rem; }
+    @media print, screen and (min-width: 48em) {
+      .region-header .block--system-branding-block img {
+        height: 2.5rem; } }
 
 
 /*# sourceMappingURL=header.css.map*/

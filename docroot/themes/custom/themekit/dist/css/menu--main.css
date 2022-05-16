@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Base Styles
  * - 01 - Foundation
@@ -17,6 +18,20 @@
 /*------------------------------------*\
   02 - Utilities
 \*------------------------------------*/
+.menu--main__toggle:before, .menu--main__toggle[aria-expanded="true"]:before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smoothing: antialiased; }
+
 /*------------------------------------*\
   03 - Framework
 \*------------------------------------*/
@@ -27,36 +42,129 @@
  * Colors
  */
 /******* End Drupal Defaults *******/
-.menu--main.contextual-region {
-  position: static; }
-  .menu--main.contextual-region .contextual {
-    display: none; }
+@media print, screen and (max-width: 47.99875em) {
+  .menu--main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20.375rem;
+    height: 100vh;
+    max-width: 90vw;
+    padding: 9.5rem 2rem 2rem;
+    background-color: #0678be;
+    color: #fff;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    z-index: 850;
+    will-change: transform;
+    -webkit-transition: -webkit-transform 0.15s ease;
+    transition: -webkit-transform 0.15s ease;
+    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, -webkit-transform 0.15s ease; } }
+
+@media print, screen and (max-width: 47.99875em) {
+  .menu--main.is-active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@media print, screen and (min-width: 48em) {
+  .menu--main.contextual-region {
+    position: static; } }
+
+.menu--main.contextual-region .contextual {
+  display: none; }
 
 .menu--main .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media print, screen and (min-width: 40em) {
-    .menu--main .menu__item:not(:last-child) {
-      margin-right: 1.5rem; } }
-  .menu--main .menu__item a {
-    display: inline-block;
-    font-weight: medium;
+  @media print, screen and (max-width: 47.99875em) {
+    .menu--main .menu {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: right; } }
+  .menu--main .menu__item {
     line-height: 1.5;
-    color: #1b1c1e; }
-    @media print, screen and (min-width: 40em) {
-      .menu--main .menu__item a {
-        -webkit-transition: border-bottom-color 0.15s ease;
-        transition: border-bottom-color 0.15s ease;
-        padding-top: 0.25rem;
-        padding-bottom: 0.125rem;
-        border-bottom: 2px solid transparent; } }
-    @media print, screen and (min-width: 40em) {
-      .menu--main .menu__item a:hover, .menu--main .menu__item a:focus, .menu--main .menu__item a:active {
-        border-bottom-color: #0678be; } }
-    @media print, screen and (min-width: 40em) {
-      .menu--main .menu__item a.is-active {
-        border-bottom-color: #0678be; } }
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2em; }
+    @media print, screen and (min-width: 48em) {
+      .menu--main .menu__item {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 2em; } }
+    @media print, screen and (max-width: 47.99875em) {
+      .menu--main .menu__item {
+        width: 100%; } }
+    @media print, screen and (max-width: 47.99875em) {
+      .menu--main .menu__item:not(:last-child) {
+        margin-bottom: 0.75rem; } }
+    @media print, screen and (min-width: 48em) {
+      .menu--main .menu__item:not(:last-child) {
+        margin-right: 1.5rem; } }
+    .menu--main .menu__item a {
+      display: block;
+      padding-right: 3.5rem;
+      color: inherit; }
+      @media print, screen and (min-width: 48em) {
+        .menu--main .menu__item a {
+          position: relative;
+          padding-right: 0;
+          color: #1b1c1e; } }
+      .menu--main .menu__item a::after {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #0678be;
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+        -webkit-transform-origin: right;
+                transform-origin: right;
+        will-change: transform;
+        -webkit-transition: -webkit-transform 0.15s ease;
+        transition: -webkit-transform 0.15s ease;
+        transition: transform 0.15s ease;
+        transition: transform 0.15s ease, -webkit-transform 0.15s ease; }
+        @media print, screen and (min-width: 48em) {
+          .menu--main .menu__item a::after {
+            content: ''; } }
+      @media print, screen and (min-width: 48em) {
+        .menu--main .menu__item a:not(.is-active):hover::after, .menu--main .menu__item a:not(.is-active):focus::after, .menu--main .menu__item a:not(.is-active):active::after {
+          -webkit-transform: scaleX(1);
+                  transform: scaleX(1);
+          -webkit-transform-origin: left;
+                  transform-origin: left; } }
+      @media print, screen and (min-width: 48em) {
+        .menu--main .menu__item a.is-active::after {
+          -webkit-transform: scaleX(1);
+                  transform: scaleX(1); } }
+
+.menu--main__toggle {
+  font: 0/0 transparent;
+  text-decoration: none;
+  cursor: pointer; }
+  .menu--main__toggle:before {
+    content: "";
+    font-size: 1.5rem; }
+  @media print, screen and (min-width: 48em) {
+    .menu--main__toggle {
+      display: none; } }
+  .menu--main__toggle[aria-expanded="true"] {
+    font: 0/0 transparent;
+    text-decoration: none;
+    position: fixed;
+    top: 1.5rem;
+    right: 1rem;
+    z-index: 851;
+    color: #fff; }
+    .menu--main__toggle[aria-expanded="true"]:before {
+      content: "";
+      font-size: 1.5rem; }
 
 
 /*# sourceMappingURL=menu--main.css.map*/

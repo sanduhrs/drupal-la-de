@@ -1,1 +1,6 @@
 // Styles for the general custom blocks
+
+// Overflow body (for the opened menu/popup/etc.)
+body.is-overflow {
+  overflow: hidden;
+}

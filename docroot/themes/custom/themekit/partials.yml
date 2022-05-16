@@ -7,6 +7,8 @@ component:
 component--navigation--main:
   dependencies:
     - themekit/themekit
+  js:
+    dist/js/menu--main.js: {}
   css:
     theme:
       dist/css/menu--main.css: {}
@@ -22,6 +24,12 @@ layout:
   css:
     theme:
       dist/css/layout.css: {}
+layout--twocol:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/twocol-layout.css: {}
 node--type--page--full:
   dependencies:
     - themekit/themekit

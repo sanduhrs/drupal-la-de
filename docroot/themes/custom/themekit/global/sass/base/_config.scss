@@ -33,6 +33,10 @@ $z-layers: (
   bottomless-pit: -9999,
   dropdown: 800,
   popup: 900,
+  menu: (
+    block: 850,
+    icon: 851,
+  ),
 );
 
 /// Button config
