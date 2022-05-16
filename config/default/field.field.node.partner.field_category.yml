@@ -10,9 +10,9 @@ id: node.partner.field_category
 field_name: field_category
 entity_type: node
 bundle: partner
-label: Level
+label: 'Sponsorship Level'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

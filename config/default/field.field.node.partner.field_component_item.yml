@@ -1,0 +1,52 @@
+uuid: 9d31a020-1226-45f4-9815-9bd539c201bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component_item
+    - node.type.partner
+    - paragraphs.paragraphs_type.splash_awards
+  module:
+    - entity_reference_revisions
+id: node.partner.field_component_item
+field_name: field_component_item
+entity_type: node
+bundle: partner
+label: 'Splash Awards'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      splash_awards: splash_awards
+    negate: 0
+    target_bundles_drag_drop:
+      detail_item:
+        weight: 10
+        enabled: false
+      details_list:
+        weight: 9
+        enabled: false
+      header_banner_basic:
+        weight: 11
+        enabled: false
+      image_slider:
+        weight: 12
+        enabled: false
+      link_default:
+        weight: 13
+        enabled: false
+      link_file:
+        weight: 14
+        enabled: false
+      social_media:
+        weight: 15
+        enabled: false
+      splash_awards:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

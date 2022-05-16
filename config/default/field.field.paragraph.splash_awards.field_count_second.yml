@@ -1,0 +1,25 @@
+uuid: da1de52c-3c82-441b-a5cd-488a0304865e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_count_second
+    - paragraphs.paragraphs_type.splash_awards
+id: paragraph.splash_awards.field_count_second
+field_name: field_count_second
+entity_type: paragraph
+bundle: splash_awards
+label: Winner
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: x
+field_type: integer

@@ -1,0 +1,25 @@
+uuid: 50b4dc87-0aa7-4a98-b085-0d1f87a59788
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_count
+    - paragraphs.paragraphs_type.splash_awards
+id: paragraph.splash_awards.field_count
+field_name: field_count
+entity_type: paragraph
+bundle: splash_awards
+label: 'Website of the year'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: x
+field_type: integer
