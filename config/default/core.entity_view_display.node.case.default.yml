@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.case.field_link
     - field.field.node.case.field_logo
     - field.field.node.case.field_metatags
+    - field.field.node.case.field_reference
     - node.type.case
     - responsive_image.styles.fourth_column_hq
   module:
@@ -99,6 +100,15 @@ content:
       image_link: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_reference:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: small_teaser
+      link: false
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     settings: {  }

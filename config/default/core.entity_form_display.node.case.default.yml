@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.case.field_link
     - field.field.node.case.field_logo
     - field.field.node.case.field_metatags
+    - field.field.node.case.field_reference
     - node.type.case
     - workflows.workflow.editorial
   module:
@@ -94,10 +95,10 @@ third_party_settings:
         required_fields: true
     group_sidebar:
       children:
-        - field_media
         - field_logo
         - field_link
         - field_components
+        - field_reference
       label: Sidebar
       region: content
       parent_name: group_content
@@ -219,9 +220,19 @@ content:
       sidebar: true
       use_details: true
     third_party_settings: {  }
+  field_reference:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 5
     region: content
     settings:
       include_locked: true
