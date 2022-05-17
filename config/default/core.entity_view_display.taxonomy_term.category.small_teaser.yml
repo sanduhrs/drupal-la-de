@@ -1,0 +1,41 @@
+uuid: fa9b47ef-2aa4-4b80-ba1b-f9800e0c76bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.small_teaser
+    - field.field.taxonomy_term.category.field_description
+    - field.field.taxonomy_term.category.field_media
+    - responsive_image.styles.fourth_column_hq
+    - taxonomy.vocabulary.category
+  module:
+    - layout_builder
+    - media_responsive_thumbnail
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.category.small_teaser
+targetEntityType: taxonomy_term
+bundle: category
+mode: small_teaser
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media:
+    type: media_responsive_thumbnail
+    label: hidden
+    settings:
+      responsive_image_style: fourth_column_hq
+      image_link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true

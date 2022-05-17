@@ -1,0 +1,19 @@
+uuid: 24ee7795-7c01-4482-98b8-df14b1b17763
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_references_limit
+field_name: field_references_limit
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 6
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

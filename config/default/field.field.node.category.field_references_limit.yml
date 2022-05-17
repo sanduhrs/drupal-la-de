@@ -1,0 +1,29 @@
+uuid: c090bbcc-d317-4fd6-8508-70d5acb40856
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_references_limit
+    - node.type.case
+    - node.type.category
+id: node.category.field_references_limit
+field_name: field_references_limit
+entity_type: node
+bundle: category
+label: Cases
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      case: case
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

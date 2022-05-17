@@ -1,0 +1,18 @@
+uuid: 0d1f85eb-d936-413a-9a7d-77b6c567aea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.category.field_description
+    - field.field.taxonomy_term.category.field_media
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.default
+targetEntityType: taxonomy_term
+bundle: category
+mode: default
+content: {  }
+hidden:
+  description: true
+  field_description: true
+  field_media: true
+  langcode: true
