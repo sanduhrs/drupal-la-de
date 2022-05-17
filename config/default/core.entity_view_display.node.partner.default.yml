@@ -19,6 +19,7 @@ dependencies:
     - responsive_image.styles.fourth_column_hq
   module:
     - address
+    - address_map_link
     - entity_reference_revisions
     - link
     - media_responsive_thumbnail
@@ -46,7 +47,13 @@ content:
     type: address_default
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      address_map_link:
+        link_address: '1'
+        map_link_type: google_maps
+        map_link_position: address
+        map_link_text: 'Open Map'
+        map_link_new_window: '1'
     weight: 13
     region: content
   field_category:
