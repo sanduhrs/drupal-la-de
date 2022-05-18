@@ -205,6 +205,11 @@
           "path": "assets/scaffold/files/settings.lando.php",
           "overwrite": false
         },
+        "[web-root]/sites/default/settings.platformsh.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/settings.platformsh.php",
+          "overwrite": false
+        },
         "[web-root]/sites/default/settings.fast404.php": {
           "mode": "replace",
           "path": "assets/scaffold/files/settings.fast404.php",
