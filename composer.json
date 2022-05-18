@@ -107,7 +107,8 @@
     "drupal/views_bulk_operations": "^4.0",
     "drush/drush": "^11",
     "npm-asset/jquery-ui-touch-punch": "dev-master",
-    "oomphinc/composer-installers-extender": "^2.0"
+    "oomphinc/composer-installers-extender": "^2.0",
+    "platformsh/config-reader": "^2.4"
   },
   "conflict": {
     "drupal/drupal": "*"
