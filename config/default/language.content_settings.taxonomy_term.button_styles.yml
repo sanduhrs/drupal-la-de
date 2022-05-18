@@ -1,0 +1,11 @@
+uuid: b880a12b-8a84-4de6-899b-c4aacd4856a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.button_styles
+id: taxonomy_term.button_styles
+target_entity_type_id: taxonomy_term
+target_bundle: button_styles
+default_langcode: site_default
+language_alterable: false

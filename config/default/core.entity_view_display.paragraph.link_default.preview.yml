@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.link_default.field_button_styling
     - field.field.paragraph.link_default.field_link
     - paragraphs.paragraphs_type.link_default
   module:
@@ -27,4 +28,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_button_styling: true
