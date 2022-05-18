@@ -122,22 +122,12 @@
     ]
   },
   "scripts": {
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
     "post-install-cmd": [
       "DrupalProject\\composer\\ScriptHandler::createRequiredDirectories",
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-      "DrupalProject\\composer\\ScriptHandler::removeGitSubmodules",
       "DrupalProject\\composer\\ScriptHandler::themeStartkitCopy"
     ],
     "post-update-cmd": [
       "DrupalProject\\composer\\ScriptHandler::createRequiredDirectories",
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-      "DrupalProject\\composer\\ScriptHandler::removeGitSubmodules",
       "DrupalProject\\composer\\ScriptHandler::themeStartkitCopy"
     ]
   },
