@@ -79,6 +79,15 @@ if(isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 }
 
 /**
+ * If $_ENV['PLATFORM_APPLICATION'], load Platform.sh settings.
+ */
+elseif(isset($_ENV['PLATFORM_APPLICATION'])) {
+  if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
+    include $app_root . '/' . $site_path . '/settings.platformsh.php';
+  }
+}
+
+/**
  * If $_ENV['LANDO_APP_NAME'], load docker settings.
  */
 elseif(isset($_ENV['LANDO_APP_NAME'])) {
