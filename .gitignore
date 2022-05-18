@@ -21,6 +21,7 @@
 /docroot/.eslintrc.json
 /docroot/.gitattributes
 /docroot/.htaccess
+/docroot/.ht.router.php
 /docroot/autoload.php
 /docroot/example.gitignore
 /docroot/index.php

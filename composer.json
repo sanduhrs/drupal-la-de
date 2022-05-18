@@ -105,11 +105,9 @@
     "drupal/username_enumeration_prevention": "^1.1",
     "drupal/views_bulk_edit": "^2.0",
     "drupal/views_bulk_operations": "^4.0",
-    "drush/drush": "~10.0",
+    "drush/drush": "^11",
     "npm-asset/jquery-ui-touch-punch": "dev-master",
-    "oomphinc/composer-installers-extender": "^2.0",
-    "symfony/css-selector": "~3.3",
-    "zaporylie/composer-drupal-optimizations": "^1.1"
+    "oomphinc/composer-installers-extender": "^2.0"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -175,11 +173,6 @@
           "path": "assets/scaffold/files/default.services.yml",
           "overwrite": false
         },
-        "[web-root]/sites/default/local.services.yml": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/local.services.yml",
-          "overwrite": false
-        },
         "[web-root]/sites/default/cloud-memcache-d8+.php": {
           "mode": "replace",
           "path": "assets/scaffold/files/cloud-memcache-d8+.php",
@@ -238,7 +231,6 @@
       "cweagans/composer-patches": true,
       "drupal/core-composer-scaffold": true,
       "composer/installers": true,
-      "zaporylie/composer-drupal-optimizations": true,
       "oomphinc/composer-installers-extender": true
     }
   }
