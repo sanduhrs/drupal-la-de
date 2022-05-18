@@ -83,6 +83,7 @@
     "drupal/purge": "^3.0@beta",
     "drupal/quicklink": "^2.0",
     "drupal/redirect": "^1.0",
+    "drupal/redis": "^1.5",
     "drupal/robotstxt": "^1.4",
     "drupal/scheduler": "^1.0",
     "drupal/scheduler_content_moderation_integration": "^1.3",
