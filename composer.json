@@ -219,10 +219,6 @@
       "drupal/paragraphs": {
         "Affix correct langcode to paragraph in layout builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
         "Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess(": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
-      },
-      "drupal/layout_builder_limit": {
-          "Render callback must implement TrustedCallbackInterface": "patches/layout-builder-limit-trusted-callback.patch",
-          "Fix layout builder browser AJAX error: section storage returns null": "patches/layout-builder-limit-section-storage.patch"
       }
     }
   },
