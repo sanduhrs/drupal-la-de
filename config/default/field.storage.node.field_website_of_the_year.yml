@@ -1,12 +1,12 @@
-uuid: 57ccc6c0-baf0-400f-87bd-e0a10f0eecfe
+uuid: 62ceea5a-fab5-4034-a836-a74759e5d12e
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_count_third
-field_name: field_count_third
-entity_type: paragraph
+    - node
+id: node.field_website_of_the_year
+field_name: field_website_of_the_year
+entity_type: node
 type: integer
 settings:
   unsigned: false

@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.partner.body
     - field.field.node.partner.field_address
     - field.field.node.partner.field_category
-    - field.field.node.partner.field_component_item
     - field.field.node.partner.field_components
     - field.field.node.partner.field_email
     - field.field.node.partner.field_image
@@ -15,6 +14,9 @@ dependencies:
     - field.field.node.partner.field_logo
     - field.field.node.partner.field_metatags
     - field.field.node.partner.field_phone
+    - field.field.node.partner.field_runner_up
+    - field.field.node.partner.field_website_of_the_year
+    - field.field.node.partner.field_winner
     - node.type.partner
     - responsive_image.styles.fourth_column_hq
   module:
@@ -49,11 +51,11 @@ content:
     settings: {  }
     third_party_settings:
       address_map_link:
-        link_address: '1'
+        link_address: true
         map_link_type: google_maps
         map_link_position: address
         map_link_text: 'Open Map'
-        map_link_new_window: '1'
+        map_link_new_window: true
     weight: 13
     region: content
   field_category:
@@ -63,15 +65,6 @@ content:
       link: false
     third_party_settings: {  }
     weight: 7
-    region: content
-  field_component_item:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 16
     region: content
   field_components:
     type: entity_reference_revisions_entity_view
@@ -133,6 +126,33 @@ content:
       title: ''
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_runner_up:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_website_of_the_year:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_winner:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
     region: content
   links:
     settings: {  }

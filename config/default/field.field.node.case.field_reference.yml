@@ -10,7 +10,7 @@ id: node.case.field_reference
 field_name: field_reference
 entity_type: node
 bundle: case
-label: 'Node Partner'
+label: 'Related Partner'
 description: ''
 required: false
 translatable: false

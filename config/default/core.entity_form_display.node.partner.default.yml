@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.partner.body
     - field.field.node.partner.field_address
     - field.field.node.partner.field_category
-    - field.field.node.partner.field_component_item
     - field.field.node.partner.field_components
     - field.field.node.partner.field_email
     - field.field.node.partner.field_image
@@ -15,6 +14,9 @@ dependencies:
     - field.field.node.partner.field_logo
     - field.field.node.partner.field_metatags
     - field.field.node.partner.field_phone
+    - field.field.node.partner.field_runner_up
+    - field.field.node.partner.field_website_of_the_year
+    - field.field.node.partner.field_winner
     - node.type.partner
     - workflows.workflow.editorial
   module:
@@ -90,6 +92,7 @@ third_party_settings:
         - field_components
         - field_link
         - field_component_item
+        - group_splash_awards
       label: Sidebar
       region: content
       parent_name: group_tabs
@@ -108,13 +111,30 @@ third_party_settings:
       label: Category
       region: content
       parent_name: group_tabs
-      weight: 24
+      weight: 28
       format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
         formatter: closed
+        description: ''
+        required_fields: true
+    group_splash_awards:
+      children:
+        - field_website_of_the_year
+        - field_winner
+        - field_runner_up
+      label: 'Splash Awards'
+      region: content
+      parent_name: group_sidebar
+      weight: 25
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
         description: ''
         required_fields: true
 id: node.partner.default
@@ -137,7 +157,7 @@ content:
         hide_guidelines: '1'
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -149,28 +169,9 @@ content:
     third_party_settings: {  }
   field_category:
     type: options_select
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_component_item:
-    type: paragraphs
-    weight: 24
-    region: content
-    settings:
-      title: 'Splash Award'
-      title_plural: 'Splash Awards'
-      edit_mode: open
-      closed_mode: preview
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: button
-      form_display_mode: default
-      default_paragraph_type: splash_awards
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
     third_party_settings: {  }
   field_components:
     type: paragraphs
@@ -247,6 +248,27 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_runner_up:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_website_of_the_year:
+    type: number
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_winner:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -262,20 +284,20 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 6
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -294,7 +316,7 @@ content:
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 7
+    weight: 6
     region: content
     settings:
       display_label: true
@@ -319,7 +341,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
