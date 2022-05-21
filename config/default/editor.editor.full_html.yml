@@ -37,6 +37,7 @@ settings:
             - HorizontalRule
             - Blockquote
             - Table
+            - DrupalMediaLibrary
         -
           name: 'Block Formatting'
           items:
