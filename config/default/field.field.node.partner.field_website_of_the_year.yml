@@ -1,14 +1,14 @@
-uuid: 50b4dc87-0aa7-4a98-b085-0d1f87a59788
+uuid: 54c67e20-efb0-41e3-913d-37f9a450405e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_count
-    - paragraphs.paragraphs_type.splash_awards
-id: paragraph.splash_awards.field_count
-field_name: field_count
-entity_type: paragraph
-bundle: splash_awards
+    - field.storage.node.field_website_of_the_year
+    - node.type.partner
+id: node.partner.field_website_of_the_year
+field_name: field_website_of_the_year
+entity_type: node
+bundle: partner
 label: 'Website of the year'
 description: ''
 required: false

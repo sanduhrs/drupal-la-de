@@ -1,12 +1,12 @@
-uuid: 313a02cf-dff0-4824-950f-e283c1ee897f
+uuid: 2c0a2e78-8830-43b7-a671-5a23de1d47aa
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_count
-field_name: field_count
-entity_type: paragraph
+    - node
+id: node.field_runner_up
+field_name: field_runner_up
+entity_type: node
 type: integer
 settings:
   unsigned: false
