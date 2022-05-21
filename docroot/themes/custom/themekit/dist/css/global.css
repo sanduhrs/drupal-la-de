@@ -19,8 +19,8 @@
 /*------------------------------------*\
   02 - Utilities
 \*------------------------------------*/
-body.cke_editable blockquote:before,
-.text-formatted blockquote:before, div[data-drupal-messages] .messages:before, div[data-drupal-messages] .messages.messages--error:before, .link--more:after, .link--more-big:after, .link--back:after, .link--external:after {
+body.cke_editable blockquote:after,
+.text-formatted blockquote:after, div[data-drupal-messages] .messages:before, div[data-drupal-messages] .messages.messages--error:before, .link--more:after, .link--more-big:after, .link--back:after, .link--external:after {
   font-family: "icomoon";
   font-style: normal;
   font-weight: normal;
@@ -63,8 +63,8 @@ body.cke_editable blockquote:before,
 /*------------------------------------*\
   02 - Utilities
 \*------------------------------------*/
-body.cke_editable blockquote:before,
-.text-formatted blockquote:before, div[data-drupal-messages] .messages:before, div[data-drupal-messages] .messages.messages--error:before, .link--more:after, .link--more-big:after, .link--back:after, .link--external:after {
+body.cke_editable blockquote:after,
+.text-formatted blockquote:after, div[data-drupal-messages] .messages:before, div[data-drupal-messages] .messages.messages--error:before, .link--more:after, .link--more-big:after, .link--back:after, .link--external:after {
   font-family: "icomoon";
   font-style: normal;
   font-weight: normal;
@@ -773,6 +773,39 @@ body.cke_editable p:last-child,
 .text-formatted p:last-child {
   margin-bottom: 0; }
 
+body.cke_editable p.text-large,
+.text-formatted p.text-large {
+  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.75em; }
+  @media print, screen and (min-width: 48em) {
+    body.cke_editable p.text-large,
+    .text-formatted p.text-large {
+      font-size: 1.25rem;
+      line-height: 1.8em; } }
+
+body.cke_editable p.text-card,
+.text-formatted p.text-card {
+  line-height: 1.5;
+  font-size: 0.9375rem;
+  line-height: 1.6em; }
+  @media print, screen and (min-width: 48em) {
+    body.cke_editable p.text-card,
+    .text-formatted p.text-card {
+      font-size: 1rem;
+      line-height: 1.5em; } }
+
+body.cke_editable p.text-small,
+.text-formatted p.text-small {
+  line-height: 1.5;
+  font-size: 0.8125rem;
+  line-height: 1.5385em; }
+  @media print, screen and (min-width: 48em) {
+    body.cke_editable p.text-small,
+    .text-formatted p.text-small {
+      font-size: 0.875rem;
+      line-height: 1.7143em; } }
+
 body.cke_editable h1,
 .text-formatted h1 {
   margin-bottom: 1.5rem; }
@@ -799,25 +832,24 @@ body.cke_editable h6,
 .text-formatted h6 {
   margin-bottom: 0.75rem; }
 
-body.cke_editable a,
-.text-formatted a {
+body.cke_editable a:not([class*="btn"]):not([class*="link"]),
+.text-formatted a:not([class*="btn"]):not([class*="link"]) {
   color: #53b0eb;
   font-weight: normal;
   text-decoration: underline;
   will-change: color;
   -webkit-transition: color 0.15s ease;
   transition: color 0.15s ease; }
-  body.cke_editable a:hover, body.cke_editable a:focus, body.cke_editable a:active,
-  .text-formatted a:hover,
-  .text-formatted a:focus,
-  .text-formatted a:active {
+  body.cke_editable a:not([class*="btn"]):not([class*="link"]):hover, body.cke_editable a:not([class*="btn"]):not([class*="link"]):focus, body.cke_editable a:not([class*="btn"]):not([class*="link"]):active,
+  .text-formatted a:not([class*="btn"]):not([class*="link"]):hover,
+  .text-formatted a:not([class*="btn"]):not([class*="link"]):focus,
+  .text-formatted a:not([class*="btn"]):not([class*="link"]):active {
     color: #0678be; }
 
 body.cke_editable ul,
 body.cke_editable ol,
 .text-formatted ul,
 .text-formatted ol {
-  margin-left: 1rem;
   line-height: inherit; }
   @media print, screen and (min-width: 48em) {
     body.cke_editable ul,
@@ -839,6 +871,7 @@ body.cke_editable ol,
 
 body.cke_editable ul,
 .text-formatted ul {
+  margin-left: 1rem;
   list-style-type: none; }
   body.cke_editable ul li,
   .text-formatted ul li {
@@ -877,9 +910,15 @@ body.cke_editable ul,
         .text-formatted ul li:nth-child(3n+3)::before {
           background: linear-gradient(328.35deg, #009cde 14.89%, #9a41b9 158.67%); } }
 
-body.cke_editable ol li::marker,
-.text-formatted ol li::marker {
-  display: inline-block; }
+body.cke_editable ol,
+.text-formatted ol {
+  margin-left: 2rem; }
+  body.cke_editable ol li,
+  .text-formatted ol li {
+    padding-left: 0.625rem; }
+    body.cke_editable ol li::marker,
+    .text-formatted ol li::marker {
+      display: inline-block; }
 
 body.cke_editable blockquote,
 .text-formatted blockquote {
@@ -895,8 +934,8 @@ body.cke_editable blockquote,
       margin-left: 1.5rem;
       font-size: 1.375rem;
       line-height: 1.1819; } }
-  body.cke_editable blockquote:before,
-  .text-formatted blockquote:before {
+  body.cke_editable blockquote:after,
+  .text-formatted blockquote:after {
     content: "";
     position: absolute;
     top: 0;
@@ -909,6 +948,9 @@ body.cke_editable blockquote,
   .text-formatted blockquote cite {
     margin-top: 0.5rem;
     font-weight: normal; }
+  body.cke_editable blockquote::before,
+  .text-formatted blockquote::before {
+    display: none; }
 
 body.cke_editable h1, body.cke_editable .h1,
 .text-formatted h1,
@@ -1507,6 +1549,7 @@ ul.layout-selection {
   color: #0678be;
   font-weight: 500;
   position: relative;
+  display: inline-block;
   padding-right: 3.25rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1518,13 +1561,19 @@ ul.layout-selection {
     position: absolute;
     top: 0;
     right: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 2rem;
     font-size: 2.5rem;
     line-height: inherit;
     overflow: hidden;
-    will-change: width;
-    -webkit-transition: width 0.15s ease;
-    transition: width 0.15s ease; }
+    will-change: all;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease; }
   .link--more:hover, .link--more:focus {
     color: #0678be; }
     .link--more:hover::after, .link--more:focus::after {

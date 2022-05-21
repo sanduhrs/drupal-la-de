@@ -11,16 +11,20 @@
 @import '../global/sass/framework/buttons';
 @import '../global/sass/framework/layout';
 @import '../global/sass/framework/links';
+@import '../global/sass/framework/links';
 @import '../global/sass/framework/custom-styles';
 
 @import '../global/sass/base/settings';
 @import '../global/sass/base/config';
 @import '../global/sass/base/typography';
+@import '../global/sass/components/buttons';
+@import '../global/sass/components/links';
 
 // print our base foundation styles
 @include foundation-global-styles();
 @include foundation-typography();
 @include foundation-table();
+@include themekit-icons();
 
 // Add any partials that have relevant WYSIWYG styles
 

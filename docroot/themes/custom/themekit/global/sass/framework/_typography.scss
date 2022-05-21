@@ -27,7 +27,7 @@
     line-height: 1.1819;
   }
 
-  @include icon-before(quote) {
+  @include icon-after(quote) {
     position: absolute;
     top: 0;
     left: 0;

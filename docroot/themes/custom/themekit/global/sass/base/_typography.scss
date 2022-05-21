@@ -28,6 +28,19 @@ body.cke_editable,
     &:last-child {
       margin-bottom: 0;
     }
+
+    // Text sizes
+    &.text-large {
+      @include font-sizes(text-large)
+    }
+
+    &.text-card {
+      @include font-sizes(text-card)
+    }
+
+    &.text-small {
+      @include font-sizes(text-small)
+    }
   }
 
   h1 {
@@ -54,13 +67,12 @@ body.cke_editable,
     margin-bottom: rem-calc(12);
   }
 
-  a {
+  a:not([class*="btn"]):not([class*="link"]) {
     @include link(default);
   }
 
   ul,
   ol {
-    margin-left: rem-calc(16);
     line-height: inherit;
     @include breakpoint(medium) {
       margin-left: rem-calc(24);
@@ -75,6 +87,7 @@ body.cke_editable,
   }
 
   ul {
+    margin-left: rem-calc(16);
     list-style-type: none;
 
     li {
@@ -116,7 +129,11 @@ body.cke_editable,
   }
 
   ol {
+    margin-left: rem-calc(32);
+
     li {
+      padding-left: rem-calc(10);
+
       &::marker {
         display: inline-block;
       }
@@ -125,6 +142,10 @@ body.cke_editable,
 
   blockquote {
     @include blockquote;
+
+    &::before {
+      display: none;
+    }
   }
 
   // Heading styles
