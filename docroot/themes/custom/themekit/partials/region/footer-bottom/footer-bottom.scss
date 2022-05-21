@@ -1,0 +1,49 @@
+////
+/// Footer Bottom
+////
+
+.region-footer-bottom {
+  border-top: 1px solid $color-gray-200;
+  @include top-bottom(padding, rem-calc(24));
+  @include breakpoint(medium) {
+    padding-top: rem-calc(48);
+    padding-bottom: rem-calc(64);
+  }
+
+  .content {
+    @include content-width(default);
+    @include flex-grid-row($behavior: nest);
+    @include breakpoint(medium) {
+      align-items: center;
+    }
+
+    &--primary {
+      @include breakpoint(medium) {
+        @include flex-grid-column(6);
+      }
+      @include breakpoint(large) {
+        @include flex-grid-column(4);
+      }
+    }
+  }
+
+  .menu--footer {
+    @include breakpoint(small down) {
+      margin-top: rem-calc(16);
+    }
+    @include breakpoint(medium) {
+      margin-left: rem-calc(24);
+    }
+  }
+
+  .block-copyright {
+    margin-top: rem-calc(24);
+    @include breakpoint(medium) {
+      @include flex-grid-column(6);
+      margin-top: rem-calc(10);
+    }
+    @include breakpoint(large) {
+      @include flex-grid-column(4);
+    }
+  }
+}

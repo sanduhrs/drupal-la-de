@@ -4,6 +4,18 @@ component:
   css:
     theme:
       dist/css/block.css: {}
+component--copyright:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block-copyright.css: {}
+component--navigation--footer:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/menu--footer.css: {}
 component--navigation--main:
   dependencies:
     - themekit/themekit
@@ -42,12 +54,18 @@ node--type--page--full:
   css:
     theme:
       dist/css/node--page--full.css: {}
-region--footer:
+region--footer-bottom:
   dependencies:
     - themekit/themekit
   css:
     theme:
-      dist/css/footer.css: {}
+      dist/css/footer-bottom.css: {}
+region--footer-top:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/footer-top.css: {}
 region--header:
   dependencies:
     - themekit/themekit

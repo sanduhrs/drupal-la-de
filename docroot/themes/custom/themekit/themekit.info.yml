@@ -29,4 +29,5 @@ regions:
   header: Header
   highlighted: Highlighted
   content: Content
-  footer: Footer
+  footer-top: 'Footer Top'
+  footer-bottom: 'Footer Bottom'

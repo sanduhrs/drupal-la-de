@@ -1,0 +1,14 @@
+{% extends "@partials/region/region.html.twig" %}
+
+{% block region %}
+  <div class="content">
+    <div class="content--primary">
+      <div class="text">
+        <h3>{{ 'Meld je aan voor de nieuwsbrief'|t }}</h3>
+        <p>{{ 'En blijf op de hoogte van Drupal Nederland'|t }}</p>
+      </div>
+      <a href="#" class="btn btn--primary">{{ 'Aanmelden'|t }}</a>
+    </div>
+    {{ content }}
+  </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+/**
+ * Base Styles
+ * - 01 - Foundation
+ * - 02 - Utilities
+ * - 03 - Framework
+ * - 04 - Settings
+ */
+/*------------------------------------*\
+  01 - Foundation
+\*------------------------------------*/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+/*------------------------------------*\
+  02 - Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+  03 - Framework
+\*------------------------------------*/
+/*------------------------------------*\
+  04 - Settings
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
+.block-copyright {
+  color: #929292; }
+  @media print, screen and (max-width: 47.99875em) {
+    .block-copyright {
+      line-height: 1.5;
+      font-size: 0.9375rem;
+      line-height: 1.6em; } }
+  @media print, screen and (max-width: 47.99875em) and (min-width: 48em) {
+    .block-copyright {
+      font-size: 1rem;
+      line-height: 1.5em; } }
+  @media print, screen and (min-width: 48em) {
+    .block-copyright {
+      line-height: 1.5;
+      font-size: 0.8125rem;
+      line-height: 1.5385em; } }
+  @media print, screen and (min-width: 48em) and (min-width: 48em) {
+    .block-copyright {
+      font-size: 0.875rem;
+      line-height: 1.7143em; } }
+  .block-copyright p {
+    margin: 0; }
+    .block-copyright p a {
+      color: #53b0eb;
+      font-weight: normal;
+      text-decoration: underline;
+      will-change: color;
+      -webkit-transition: color 0.15s ease;
+      transition: color 0.15s ease; }
+      .block-copyright p a:hover, .block-copyright p a:focus, .block-copyright p a:active {
+        color: #0678be; }
+
+
+/*# sourceMappingURL=block-copyright.css.map*/
