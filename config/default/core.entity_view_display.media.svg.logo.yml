@@ -1,8 +1,9 @@
-uuid: 5528c6f9-b24e-4943-849f-10d34e260983
+uuid: e32202b3-ae6a-4a40-8bb9-694d5f120721
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.logo
     - field.field.media.svg.field_file_mime_type
     - field.field.media.svg.field_file_size
     - field.field.media.svg.field_media_svg
@@ -10,28 +11,33 @@ dependencies:
     - field.field.media.svg.field_tags
     - media.type.svg
   module:
+    - layout_builder
     - svg_image_field
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: QQ7LeJYjkYSLlh2iNBiXvCGykTf-15H5OGK0B-e9HYc
-id: media.svg.default
+id: media.svg.logo
 targetEntityType: media
 bundle: svg
-mode: default
+mode: logo
 content:
   field_media_svg:
     type: svg_image_field_formatter
     label: hidden
     settings:
-      inline: true
+      inline: false
       apply_dimensions: false
       width: null
       height: null
-      enable_alt: true
-      enable_title: true
+      enable_alt: false
+      enable_title: false
       link: ''
       force_fill: false
-      sanitize: true
-      sanitize_remote: false
+      sanitize: '1'
+      sanitize_remote: 0
     third_party_settings: {  }
     weight: 0
     region: content
