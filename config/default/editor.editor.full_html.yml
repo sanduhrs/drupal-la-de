@@ -55,7 +55,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "a.btn--primary|Button\r\na.link--more|More link\r\nhr.green|Green separator\r\nhr.purple|Purple separator\r\nhr.blue|Blue separator\r\np.text-large|Large\r\np.text-card|Card\r\np.text-small|Small"
+      styles: "a.btn--primary|Button\r\na.link--more|More link\r\nhr.green|Green separator\r\nhr.purple|Purple separator\r\nhr.blue|Blue separator\r\np.text-large|Text Large\r\np.text-card|Text Card\r\np.text-small|Text Small"
 image_upload:
   status: true
   scheme: public
