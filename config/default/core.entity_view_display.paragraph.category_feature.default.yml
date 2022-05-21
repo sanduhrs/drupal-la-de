@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.category_feature.field_media
     - paragraphs.paragraphs_type.category_feature
   module:
-    - media_responsive_thumbnail
     - text
 id: paragraph.category_feature.default
 targetEntityType: paragraph
@@ -31,11 +30,11 @@ content:
     weight: 1
     region: content
   field_media:
-    type: media_responsive_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      responsive_image_style: ''
-      image_link: ''
+      view_mode: logo
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

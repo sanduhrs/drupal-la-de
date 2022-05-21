@@ -1,26 +1,26 @@
-uuid: c090bbcc-d317-4fd6-8508-70d5acb40856
+uuid: 2ba008c0-dac9-4340-a086-04b5948d143d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_references_limit
-    - node.type.case
-    - node.type.category
-id: node.category.field_references_limit
-field_name: field_references_limit
-entity_type: node
+    - field.storage.taxonomy_term.field_image
+    - media.type.image
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.field_image
+field_name: field_image
+entity_type: taxonomy_term
 bundle: category
-label: Cases
+label: Image
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      case: case
+      image: image
     sort:
       field: _none
       direction: ASC
