@@ -1,0 +1,60 @@
+/**
+ * Base Styles
+ * - 01 - Foundation
+ * - 02 - Utilities
+ * - 03 - Framework
+ * - 04 - Settings
+ */
+/*------------------------------------*\
+  01 - Foundation
+\*------------------------------------*/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+/*------------------------------------*\
+  02 - Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+  03 - Framework
+\*------------------------------------*/
+/*------------------------------------*\
+  04 - Settings
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
+.block--basic-banner {
+  max-width: 84rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2.5rem; }
+  @media print, screen and (min-width: 48em) {
+    .block--basic-banner {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media print, screen and (min-width: 48em) {
+    .block--basic-banner {
+      padding-top: 6.875rem; } }
+  .block--basic-banner .field--name-field-heading {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.1667;
+    margin-bottom: 1.25rem; }
+    @media print, screen and (min-width: 48em) {
+      .block--basic-banner .field--name-field-heading {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1; } }
+    @media print, screen and (min-width: 48em) {
+      .block--basic-banner .field--name-field-heading {
+        margin-bottom: 1.5rem; } }
+
+
+/*# sourceMappingURL=block--basic-banner.css.map*/

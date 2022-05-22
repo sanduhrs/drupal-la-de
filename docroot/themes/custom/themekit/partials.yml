@@ -1,3 +1,9 @@
+component--basic-banner:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--basic-banner.css: {}
 component:
   dependencies:
     - themekit/themekit
