@@ -13,11 +13,12 @@
 
 {% set classes = [
   'layout',
+  'twocol-layout',
   'section-padding--' ~ settings.padding,
 ] %}
 
 {{ attach_library('themekit/layout') }}
-{{ attach_library('themekit/layout--onecol') }}
+{{ attach_library('themekit/layout--twocol') }}
 
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
