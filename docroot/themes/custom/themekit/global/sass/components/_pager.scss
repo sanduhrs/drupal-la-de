@@ -47,7 +47,7 @@
       }
 
       &:disabled {
-        opacity: .6;
+        opacity: 0.6;
       }
     }
 
@@ -57,7 +57,6 @@
       a {
         @include icon-before(angle-left) {
           font-size: rem-calc(24);
-          color: ;
           text-align: center;
         }
       }

@@ -1,0 +1,17 @@
+// Full view mode
+
+.node--type-page,
+.node--type-case {
+  &.node--view-mode-full {
+    @include content-width(default);
+    margin-top: rem-calc(40);
+    margin-bottom: rem-calc(110);
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(160);
+    }
+
+    .node__title {
+      margin-bottom: rem-calc(24);
+    }
+  }
+}
