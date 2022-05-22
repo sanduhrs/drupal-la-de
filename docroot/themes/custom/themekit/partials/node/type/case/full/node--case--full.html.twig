@@ -1,0 +1,44 @@
+{% extends "@partials/node/node-wrapper.html.twig" %}
+{% block node %}
+  {% set rendered_content = content|without(
+    'field_category',
+    'field_intro',
+    'field_image',
+    'field_logo',
+    'field_components',
+    'field_link',
+    'field_reference'
+  )
+  %}
+
+  <div class="field-banner">
+    <div class="field-text">
+      <h1 class="heading">{{ label.0 }}</h1>
+      <div class="field-category">
+        {{ content.field_category.0 }}
+      </div>
+      {{ content.field_intro }}
+    </div>
+    {{ content.field_image }}
+  </div>
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="field-content">
+      {{ rendered_content }}
+    </div>
+    <div class="field-info">
+      <div class="field-item">
+        {{ content.field_logo }}
+        <h4 class="heading">{{ label.0 }}</h4>
+        {{ content.field_link }}
+      </div>
+
+      <div class="field-item">
+        {{ content.field_components }}
+      </div>
+      <div class="field-item">
+        {{ content.field_reference }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
