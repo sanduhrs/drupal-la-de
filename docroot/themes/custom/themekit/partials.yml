@@ -54,6 +54,12 @@ node--type--page--full:
   css:
     theme:
       dist/css/node--page--full.css: {}
+node--view-mode--full:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--full.css: {}
 region--footer-bottom:
   dependencies:
     - themekit/themekit

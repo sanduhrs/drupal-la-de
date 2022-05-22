@@ -27,23 +27,6 @@
  * Colors
  */
 /******* End Drupal Defaults *******/
-.node--type-page.node--view-mode-full {
-  max-width: 84rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 2.5rem;
-  margin-bottom: 6.875rem; }
-  @media print, screen and (min-width: 48em) {
-    .node--type-page.node--view-mode-full {
-      padding-left: 1rem;
-      padding-right: 1rem; } }
-  @media print, screen and (min-width: 48em) {
-    .node--type-page.node--view-mode-full {
-      margin-bottom: 10rem; } }
-  .node--type-page.node--view-mode-full .node__title {
-    margin-bottom: 1.5rem; }
 
 
 /*# sourceMappingURL=node--page--full.css.map*/
