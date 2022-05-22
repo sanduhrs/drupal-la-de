@@ -51,36 +51,26 @@
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      text-align: right; } }
+              flex-direction: column; } }
   .menu--footer .menu__item {
     line-height: 1.5;
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 2em; }
+    font-size: 0.8125rem;
+    line-height: 1.5385em; }
     @media print, screen and (min-width: 48em) {
       .menu--footer .menu__item {
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 2em; } }
-    @media print, screen and (max-width: 47.99875em) {
-      .menu--footer .menu__item {
-        width: 100%; } }
+        font-size: 0.875rem;
+        line-height: 1.7143em; } }
     @media print, screen and (max-width: 47.99875em) {
       .menu--footer .menu__item:not(:last-child) {
-        margin-bottom: 0.75rem; } }
+        margin-bottom: 0.5rem; } }
     @media print, screen and (min-width: 48em) {
       .menu--footer .menu__item:not(:last-child) {
-        margin-right: 1.5rem; } }
+        margin-right: 1rem; } }
     .menu--footer .menu__item a {
       display: block;
-      padding-right: 3.5rem;
-      color: inherit; }
-      @media print, screen and (min-width: 48em) {
-        .menu--footer .menu__item a {
-          position: relative;
-          padding-right: 0;
-          color: #1b1c1e; } }
+      color: inherit;
+      position: relative;
+      color: #1b1c1e; }
       .menu--footer .menu__item a::after {
         position: absolute;
         z-index: -1;
@@ -98,19 +88,11 @@
         transition: -webkit-transform 0.15s ease;
         transition: transform 0.15s ease;
         transition: transform 0.15s ease, -webkit-transform 0.15s ease; }
-        @media print, screen and (min-width: 48em) {
-          .menu--footer .menu__item a::after {
-            content: ''; } }
-      @media print, screen and (min-width: 48em) {
-        .menu--footer .menu__item a:not(.is-active):hover::after, .menu--footer .menu__item a:not(.is-active):focus::after, .menu--footer .menu__item a:not(.is-active):active::after {
-          -webkit-transform: scaleX(1);
-                  transform: scaleX(1);
-          -webkit-transform-origin: left;
-                  transform-origin: left; } }
-      @media print, screen and (min-width: 48em) {
-        .menu--footer .menu__item a.is-active::after {
-          -webkit-transform: scaleX(1);
-                  transform: scaleX(1); } }
+      .menu--footer .menu__item a:not(.is-active):hover::after, .menu--footer .menu__item a:not(.is-active):focus::after, .menu--footer .menu__item a:not(.is-active):active::after {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+        -webkit-transform-origin: left;
+                transform-origin: left; }
 
 .menu--footer__toggle {
   font: 0/0 transparent;

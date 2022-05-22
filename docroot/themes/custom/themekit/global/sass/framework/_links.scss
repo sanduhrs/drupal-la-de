@@ -168,3 +168,68 @@ $links: (
     }
   }
 }
+
+// Main navigation mouseover behavior
+@mixin main-menu-item($mobile: false, $active-class: 'is-active') {
+  display: block;
+  color: inherit;
+
+  @if ($mobile == true) {
+    position: relative;
+    color: $color-gray-900;
+  } @else {
+    @include breakpoint(medium) {
+      position: relative;
+      color: $color-gray-900;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    z-index: z(under);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-primary-600;
+    transform: scaleX(0);
+    transform-origin: right;
+    @include global-transition(transform);
+    @if ($mobile == false) {
+      @include breakpoint(medium) {
+        content: '';
+      }
+    }
+  }
+
+  &:not(.is-active) {
+    @include selectors(active) {
+      &::after {
+        @if ($mobile == true) {
+          transform: scaleX(1);
+          transform-origin: left;
+        } @else {
+          @include breakpoint(medium) {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+
+  // Active state
+  @if ($active-class != false) {
+    &.#{$active-class} {
+      &::after {
+        @if ($mobile == true) {
+          transform: scaleX(1);
+        } @else {
+          @include breakpoint(medium) {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}

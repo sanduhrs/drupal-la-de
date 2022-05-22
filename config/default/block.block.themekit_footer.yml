@@ -12,8 +12,8 @@ _core:
   default_config_hash: CEMzRVcMOz2IAFPC4jibTZXq3eGpntypWvjCYcMWLh4
 id: themekit_footer
 theme: themekit
-region: footer_top
-weight: -6
+region: footer_bottom
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

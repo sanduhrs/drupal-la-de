@@ -24,6 +24,12 @@ component--navigation--main:
   css:
     theme:
       dist/css/menu--main.css: {}
+component--navigation--social:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/menu--social.css: {}
 component--simple-banner:
   dependencies:
     - themekit/themekit

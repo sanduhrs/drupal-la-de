@@ -95,9 +95,10 @@
     {% endif %}
   </main>
 
-  {% if page.footer %}
+  {% if page.footer_top or page.footer_bottom %}
     <footer role="contentinfo">
-      {{ page.footer }}
+      {{ page.footer_top }}
+      {{ page.footer_bottom }}
     </footer>
   {% endif %}
 

@@ -11,18 +11,44 @@
   }
 
   .content {
-    @include content-width(default);
-    @include flex-grid-row($behavior: nest);
+    @include flex-grid-row();
     @include breakpoint(medium) {
       align-items: center;
     }
 
     &--primary {
+      @include flex-grid-column(12);
       @include breakpoint(medium) {
-        @include flex-grid-column(6);
+        display: flex;
+        align-items: center;
       }
       @include breakpoint(large) {
+        @include flex-grid-column(7);
+      }
+      @include breakpoint(xlarge) {
+        @include flex-grid-column(8);
+      }
+    }
+
+    &--secondary {
+      @include flex-grid-column(12);
+      @include font-sizes(text-small);
+      margin-top: rem-calc(24);
+      color: $color-gray-500;
+      @include breakpoint(large) {
+        @include flex-grid-column(5);
+        margin-top: 0;
+      }
+      @include breakpoint(xlarge) {
         @include flex-grid-column(4);
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        @include link(default);
       }
     }
   }

@@ -2,6 +2,14 @@
 
 {% block region %}
   <div class="content">
-    {{ content }}
+    <div class="content--primary">
+      <a href="{{ front_page }}" title="{{ site_name }}">
+        <img src="{{ base_path ~ '/themes/custom/themekit/logo-icon.svg' }}">
+      </a>
+      {{ content }}
+    </div>
+    <div class="content--secondary">
+      {{ site_settings.content.footer_copyright.value|raw }}
+    </div>
   </div>
 {% endblock %}
