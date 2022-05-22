@@ -14,7 +14,7 @@ dependencies:
     - field.field.node.case.field_metatags
     - field.field.node.case.field_reference
     - node.type.case
-    - responsive_image.styles.fourth_column_hq
+    - responsive_image.styles.half_column_hq
   module:
     - entity_reference_revisions
     - link
@@ -93,11 +93,11 @@ content:
     weight: 8
     region: content
   field_logo:
-    type: media_responsive_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      responsive_image_style: fourth_column_hq
-      image_link: ''
+      view_mode: logo
+      link: false
     third_party_settings: {  }
     weight: 6
     region: content
