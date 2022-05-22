@@ -170,7 +170,13 @@ $links: (
 }
 
 // Main navigation mouseover behavior
-@mixin main-menu-item($mobile: false, $active-class: 'is-active') {
+@mixin main-menu-item($mobile: false, $active-class: is-active) {
+  $active-class-: '';
+
+  @if (not $active-class == false) {
+    $active-class-: ':not(.' + $active-class + ')';
+  }
+
   display: block;
   color: inherit;
 
@@ -195,14 +201,16 @@ $links: (
     transform: scaleX(0);
     transform-origin: right;
     @include global-transition(transform);
-    @if ($mobile == false) {
+    @if ($mobile == true) {
+      content: '';
+    } @else {
       @include breakpoint(medium) {
         content: '';
       }
     }
   }
 
-  &:not(.is-active) {
+  &#{$active-class-} {
     @include selectors(active) {
       &::after {
         @if ($mobile == true) {
@@ -219,7 +227,7 @@ $links: (
   }
 
   // Active state
-  @if ($active-class != false) {
+  @if (not $active-class == false) {
     &.#{$active-class} {
       &::after {
         @if ($mobile == true) {

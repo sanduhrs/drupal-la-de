@@ -27,20 +27,14 @@
     }
   }
 
-  &__toggle {
-    @include replace-text-with-icon(menu, rem-calc(24));
-    cursor: pointer;
+  // Adjust Drupal admin styles
+  &.contextual-region {
     @include breakpoint(medium) {
-      display: none;
+      position: static;
     }
 
-    &[aria-expanded="true"] {
-      @include replace-text-with-icon(close, rem-calc(24));
-      position: fixed;
-      top: rem-calc(24);
-      right: rem-calc(16);
-      z-index: z(menu, icon);
-      color: $color-white;
+    .contextual {
+      display: none;
     }
   }
 }

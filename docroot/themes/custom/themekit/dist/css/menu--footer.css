@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Base Styles
  * - 01 - Foundation
@@ -18,20 +17,6 @@
 /*------------------------------------*\
   02 - Utilities
 \*------------------------------------*/
-.menu--footer__toggle:before, .menu--footer__toggle[aria-expanded="true"]:before {
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-smoothing: antialiased; }
-
 /*------------------------------------*\
   03 - Framework
 \*------------------------------------*/
@@ -87,34 +72,20 @@
         -webkit-transition: -webkit-transform 0.15s ease;
         transition: -webkit-transform 0.15s ease;
         transition: transform 0.15s ease;
-        transition: transform 0.15s ease, -webkit-transform 0.15s ease; }
-      .menu--footer .menu__item a:not(.is-active):hover::after, .menu--footer .menu__item a:not(.is-active):focus::after, .menu--footer .menu__item a:not(.is-active):active::after {
+        transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+        content: ''; }
+      .menu--footer .menu__item a:hover::after, .menu--footer .menu__item a:focus::after, .menu--footer .menu__item a:active::after {
         -webkit-transform: scaleX(1);
                 transform: scaleX(1);
         -webkit-transform-origin: left;
                 transform-origin: left; }
 
-.menu--footer__toggle {
-  font: 0/0 transparent;
-  text-decoration: none;
-  cursor: pointer; }
-  .menu--footer__toggle:before {
-    content: "";
-    font-size: 1.5rem; }
-  @media print, screen and (min-width: 48em) {
-    .menu--footer__toggle {
-      display: none; } }
-  .menu--footer__toggle[aria-expanded="true"] {
-    font: 0/0 transparent;
-    text-decoration: none;
-    position: fixed;
-    top: 1.5rem;
-    right: 1rem;
-    z-index: 851;
-    color: #fff; }
-    .menu--footer__toggle[aria-expanded="true"]:before {
-      content: "";
-      font-size: 1.5rem; }
+@media print, screen and (min-width: 48em) {
+  .menu--footer.contextual-region {
+    position: static; } }
+
+.menu--footer.contextual-region .contextual {
+  display: none; }
 
 
 /*# sourceMappingURL=menu--footer.css.map*/
