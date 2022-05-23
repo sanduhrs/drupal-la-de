@@ -1,0 +1,61 @@
+/**
+ * Base Styles
+ * - 01 - Foundation
+ * - 02 - Utilities
+ * - 03 - Framework
+ * - 04 - Settings
+ */
+/*------------------------------------*\
+  01 - Foundation
+\*------------------------------------*/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+/*------------------------------------*\
+  02 - Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+  03 - Framework
+\*------------------------------------*/
+/*------------------------------------*\
+  04 - Settings
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
+.node--type-partner.node--view-mode-small-teaser .field--name-field-category {
+  line-height: 1.5;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #929292;
+  margin-bottom: 20px; }
+  @media print, screen and (min-width: 48em) {
+    .node--type-partner.node--view-mode-small-teaser .field--name-field-category {
+      font-size: 0.75rem;
+      line-height: 1.5em;
+      text-transform: uppercase;
+      letter-spacing: 0.3em; } }
+
+.node--type-partner.node--view-mode-small-teaser a.link-secondary {
+  color: #0678be;
+  font-weight: 500;
+  will-change: color;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+  font-size: 1rem;
+  padding-bottom: 4px; }
+  .node--type-partner.node--view-mode-small-teaser a.link-secondary:hover, .node--type-partner.node--view-mode-small-teaser a.link-secondary:focus {
+    color: #0678be;
+    -webkit-box-shadow: 0 -1px 0 0 #0678be inset, 0 -2px 0 0 #0678be inset;
+            box-shadow: 0 -1px 0 0 #0678be inset, 0 -2px 0 0 #0678be inset; }
+  .node--type-partner.node--view-mode-small-teaser a.link-secondary:active {
+    color: #0678be; }
+
+
+/*# sourceMappingURL=node--small-teaser.css.map*/

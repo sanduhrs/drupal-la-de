@@ -19,6 +19,7 @@
     @include heading(h1);
 
     line-height: 1;
+    margin-bottom: 12px;
     max-width: 625px;
   }
 
@@ -40,12 +41,16 @@
   .field-text {
     width: 60%;
     max-width: 632px;
-    margin-bottom: 80px;
   }
 
   .field-banner {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  .link-small-external {
+    @include link(small-external);
   }
 
   > .node__content {
@@ -53,13 +58,19 @@
     justify-content: space-between;
 
     .field-content {
-      width: 66%;
-      max-width: 864px;
+      padding-right: 36px;
+      max-width: calc(100% - 304px);
+      width: $global-width-narrow;
     }
 
     .field-info {
-      width: 34%;
-      max-width: 304px;
+      width: 304px;
+
+      > .field-item {
+        border-left: 4px solid $color-gray-100;
+        margin-bottom: 48px;
+        padding-left: 48px;
+      }
 
       .field--name-field-logo {
         margin-bottom: 16px;

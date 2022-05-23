@@ -1,0 +1,8 @@
+{% extends "@partials/node/node-wrapper.html.twig" %}
+{% block node %}
+  {% set rendered_content = content|without('') %}
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ rendered_content }}
+    <a class="link-secondary" href="{{ url }}">{{ 'Bekijk partner'|t }}</a>
+  </div>
+{% endblock %}

@@ -7,15 +7,15 @@
 $drupal-tabs: (
   wrap: (
     background: #fafafa,
-    border: #efefef
+    border: #efefef,
   ),
   link: (
     color: #251923,
     background: #efefef,
     hover-color: #ffffff,
-    hover-background: #251923
+    hover-background: #251923,
   ),
-  alt-colors: #b6c4c5 #575642 #4c4650 #251923
+  alt-colors: #b6c4c5 #575642 #4c4650 #251923,
 );
 
 /// z-index organization.
@@ -51,11 +51,11 @@ $buttons: (
   ),
   primary: (
     extend: _base,
-  )
+  ),
 );
 
 /// Animations variables
-$global-transition-duration: .15s;
+$global-transition-duration: 0.15s;
 $global-transition-timing-function: ease;
 
 /// Links config
@@ -63,6 +63,12 @@ $links: (
   default: (
     color: $color-primary-400,
     font-weight: $global-weight-normal,
+    hover-color: $color-primary-600,
+    active-color: $color-primary-600,
+  ),
+  secondary: (
+    color: $color-primary-600,
+    font-weight: $global-weight-medium,
     hover-color: $color-primary-600,
     active-color: $color-primary-600,
   ),
@@ -108,10 +114,10 @@ $labels: (
 $layouts: (
   _base: (
     width: $global-width,
-    gutters: $grid-column-gutter
+    gutters: $grid-column-gutter,
   ),
   default: (
-    extend: _base
+    extend: _base,
   ),
 );
 

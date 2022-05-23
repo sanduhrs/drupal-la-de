@@ -27,16 +27,21 @@
  * Colors
  */
 /******* End Drupal Defaults *******/
-.block__title {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1.75rem;
-  font-weight: bold;
-  line-height: 0.9334; }
+.paragraph--type--detail-item.paragraph--view-mode--default {
+  line-height: 1.5;
+  font-size: 0.9375rem;
+  line-height: 1.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   @media print, screen and (min-width: 48em) {
-    .block__title {
-      font-size: 2.5rem;
-      font-weight: bold;
-      line-height: 1; } }
+    .paragraph--type--detail-item.paragraph--view-mode--default {
+      font-size: 1rem;
+      line-height: 1.5em; } }
+  .paragraph--type--detail-item.paragraph--view-mode--default .field--name-field-label {
+    padding-right: 5px; }
+  .paragraph--type--detail-item.paragraph--view-mode--default .field--name-field-value {
+    font-weight: bold; }
 
 
-/*# sourceMappingURL=block.css.map*/
+/*# sourceMappingURL=detail-item.css.map*/

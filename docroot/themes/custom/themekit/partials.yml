@@ -16,6 +16,12 @@ component--copyright:
   css:
     theme:
       dist/css/block-copyright.css: {}
+component--detail-item:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/detail-item.css: {}
 component--navigation--community:
   dependencies:
     - themekit/themekit
@@ -84,6 +90,12 @@ node--view-mode--full:
   css:
     theme:
       dist/css/node--full.css: {}
+node--view-mode--small-teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--small-teaser.css: {}
 region--footer-bottom:
   dependencies:
     - themekit/themekit

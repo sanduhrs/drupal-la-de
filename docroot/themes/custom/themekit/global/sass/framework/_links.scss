@@ -7,8 +7,8 @@ $links: (
   default: (
     color: navy,
     font-weight: 400,
-    active-color: skyblue
-  )
+    active-color: skyblue,
+  ),
 ) !default;
 
 /// Standard link style mixin
@@ -30,6 +30,24 @@ $links: (
 
   @if ($link-key == default) {
     @include global-transition(color);
+  }
+
+  @if ($link-key == secondary) {
+    @include global-transition(color);
+
+    font-size: rem-calc(16);
+    padding-bottom: 4px;
+
+    &:hover,
+    &:focus {
+      color: key($link-conf, hover-color);
+      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset,
+        0 -2px 0 0 key($link-conf, hover-color) inset;
+    }
+
+    &:active {
+      color: key($link-conf, active-color);
+    }
   }
 
   @if ($link-key == more) {
@@ -146,21 +164,23 @@ $links: (
   }
 
   @if ($link-key == external) {
+    font-size: rem-calc(16);
     position: relative;
-    padding-right: rem-calc(24);
-    padding-bottom: rem-calc(4);
+    padding-right: 22px;
+    padding-bottom: 4px;
     @include global-transition(box-shadow);
-    @include icon-after(arrow-right) {
+    @include icon-after(externallink) {
       position: absolute;
-      top: 0;
+      top: 1px;
       right: 0;
-      font-size: rem-calc(16);
+      font-size: rem-calc(15);
     }
 
     &:hover,
     &:focus {
       color: key($link-conf, hover-color);
-      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset, 0 -2px 0 0 key($link-conf, hover-color) inset;
+      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset,
+        0 -2px 0 0 key($link-conf, hover-color) inset;
     }
 
     &:active {
@@ -171,10 +191,10 @@ $links: (
 
 // Main navigation mouseover behavior
 @mixin main-menu-item($mobile: false, $active-class: is-active) {
-  $active-class-: '';
+  $active-class-: "";
 
   @if (not $active-class == false) {
-    $active-class-: ':not(.' + $active-class + ')';
+    $active-class-: ":not(." + $active-class + ")";
   }
 
   display: block;
@@ -202,10 +222,10 @@ $links: (
     transform-origin: right;
     @include global-transition(transform);
     @if ($mobile == true) {
-      content: '';
+      content: "";
     } @else {
       @include breakpoint(medium) {
-        content: '';
+        content: "";
       }
     }
   }

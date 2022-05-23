@@ -30,15 +30,23 @@
       <div class="field-item">
         {{ content.field_logo }}
         <h4 class="heading">{{ node.label }}</h4>
-        {{ content.field_link }}
+        {% if node.field_link.uri %}
+          <a class="link--external" target="_blank" href="{{ node.field_link.uri }}"> {{ 'Bekijk website'|t }}</a>
+        {% endif %}
       </div>
 
-      <div class="field-item">
-        {{ content.field_components }}
-      </div>
-      <div class="field-item">
-        {{ content.field_reference }}
-      </div>
+      {% if node.field_components.entity.field_p_items %}
+        <div class="field-item">
+          <h4 class="heading">{{ 'Technische details'|t }}</h4>
+          {{ content.field_components }}
+        </div>
+      {% endif %}
+
+      {% if content.field_reference.0 %}
+        <div class="field-item">
+          {{ content.field_reference }}
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endblock %}
