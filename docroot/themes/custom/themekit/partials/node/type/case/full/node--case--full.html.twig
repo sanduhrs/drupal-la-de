@@ -13,9 +13,9 @@
 
   <div class="field-banner">
     <div class="field-text">
-      <h1 class="heading">{{ label.0 }}</h1>
+      <h1 class="heading">{{ node.label }}</h1>
       <div class="field-category">
-        {{ content.field_category.0 }}
+        {{ node.field_category.entity.label }}
       </div>
       {{ content.field_intro }}
     </div>
@@ -29,7 +29,7 @@
     <div class="field-info">
       <div class="field-item">
         {{ content.field_logo }}
-        <h4 class="heading">{{ label.0 }}</h4>
+        <h4 class="heading">{{ node.label }}</h4>
         {{ content.field_link }}
       </div>
 
