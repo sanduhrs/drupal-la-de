@@ -4,4 +4,4 @@ status: true
 dependencies: {  }
 id: structured
 label: Structured
-weight: null
+weight: -8
