@@ -26,15 +26,4 @@
       }
     }
   }
-
-  // Adjust Drupal admin styles
-  &.contextual-region {
-    @include breakpoint(medium) {
-      position: static;
-    }
-
-    .contextual {
-      display: none;
-    }
-  }
 }

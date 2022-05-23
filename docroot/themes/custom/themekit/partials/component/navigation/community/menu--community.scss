@@ -1,0 +1,27 @@
+////
+/// Community navigation
+////
+
+.menu--community {
+  .menu {
+    display: flex;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: rem-calc(16);
+      }
+
+      a {
+        display: block;
+
+        &[href*="splash"] {
+          color: #120b47;
+        }
+
+        &[href*="drupaljam"] {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

@@ -33,6 +33,7 @@ $buttons: (
   letter-spacing: 0.2em;
   text-transform: uppercase;
   appearance: none;
+  @include global-transition;
 
   @if ($size == small) {
     padding: rem-calc(8) rem-calc(12);

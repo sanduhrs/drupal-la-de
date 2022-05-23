@@ -16,6 +16,12 @@ component--copyright:
   css:
     theme:
       dist/css/block-copyright.css: {}
+component--navigation--community:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/menu--community.css: {}
 component--navigation--footer:
   dependencies:
     - themekit/themekit
@@ -30,6 +36,12 @@ component--navigation--main:
   css:
     theme:
       dist/css/menu--main.css: {}
+component--navigation:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/menu.css: {}
 component--navigation--social:
   dependencies:
     - themekit/themekit
