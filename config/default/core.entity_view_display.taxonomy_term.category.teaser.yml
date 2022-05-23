@@ -1,9 +1,9 @@
-uuid: fa9b47ef-2aa4-4b80-ba1b-f9800e0c76bd
+uuid: 8184f677-c238-47ce-abdf-29f003ad41de
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.taxonomy_term.small_teaser
+    - core.entity_view_mode.taxonomy_term.teaser
     - field.field.taxonomy_term.category.field_description
     - field.field.taxonomy_term.category.field_heading
     - field.field.taxonomy_term.category.field_image
@@ -18,10 +18,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: taxonomy_term.category.small_teaser
+id: taxonomy_term.category.teaser
 targetEntityType: taxonomy_term
 bundle: category
-mode: small_teaser
+mode: teaser
 content:
   field_description:
     type: text_default
