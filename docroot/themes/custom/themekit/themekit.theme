@@ -287,6 +287,14 @@ function themekit_theme_suggestions_form_alter(array &$suggestions, array $varia
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for taxonomies.
+ *
+ */
+function themekit_theme_suggestions_taxonomy_term_alter(&$suggestions, $variables) {
+  $suggestions[] = 'taxonomy_term__' . $variables['elements']['#taxonomy_term']->bundle() . '__' . $variables['elements']['#view_mode'];
+}
+
 // *********************************************
 // 3. Utility functions
 // *********************************************
