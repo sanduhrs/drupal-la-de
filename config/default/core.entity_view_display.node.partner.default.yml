@@ -18,7 +18,7 @@ dependencies:
     - field.field.node.partner.field_website_of_the_year
     - field.field.node.partner.field_winner
     - node.type.partner
-    - responsive_image.styles.fourth_column_hq
+    - responsive_image.styles.half_column_hq
   module:
     - address
     - address_map_link
@@ -113,11 +113,11 @@ content:
     weight: 20
     region: content
   field_logo:
-    type: media_responsive_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      responsive_image_style: fourth_column_hq
-      image_link: ''
+      view_mode: logo
+      link: false
     third_party_settings: {  }
     weight: 10
     region: content
