@@ -2,15 +2,15 @@
 "><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Themekit - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="configuration"><a href="#configuration">Configuration</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="configuration-variable"><a href="#configuration-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="drupal-tabs" data-type="variable"><a href="#configuration-variable-drupal-tabs">drupal-tabs</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="z-layers" data-type="variable"><a href="#configuration-variable-z-layers">z-layers</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="buttons" data-type="variable"><a href="#configuration-variable-buttons">buttons</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="global-transition-duration" data-type="variable"><a href="#configuration-variable-global-transition-duration">global-transition-duration</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="links" data-type="variable"><a href="#configuration-variable-links">links</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="labels" data-type="variable"><a href="#configuration-variable-labels">labels</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="layouts" data-type="variable"><a href="#configuration-variable-layouts">layouts</a></li><li class="sidebar__item sassdoc__item" data-group="configuration" data-name="hr-styles" data-type="variable"><a href="#configuration-variable-hr-styles">hr-styles</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="frameworkcomponents"><a href="#frameworkcomponents">Framework Components</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="frameworkcomponents-mixin"><a href="#frameworkcomponents-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="frameworkcomponents" data-name="btn" data-type="mixin"><a href="#frameworkcomponents-mixin-btn">btn</a></li><li class="sidebar__item sassdoc__item" data-group="frameworkcomponents" data-name="set-gutters" data-type="mixin"><a href="#frameworkcomponents-mixin-set-gutters">set-gutters</a></li><li class="sidebar__item sassdoc__item" data-group="frameworkcomponents" data-name="content-width" data-type="mixin"><a href="#frameworkcomponents-mixin-content-width">content-width</a></li><li class="sidebar__item sassdoc__item" data-group="frameworkcomponents" data-name="link" data-type="mixin"><a href="#frameworkcomponents-mixin-link">link</a></li><li class="sidebar__item sassdoc__item" data-group="frameworkcomponents" data-name="font-vw-max" data-type="mixin"><a href="#frameworkcomponents-mixin-font-vw-max">font-vw-max</a></li><li class="sidebar__item sassdoc__item" data-group="frameworkcomponents" data-name="blockquote" data-type="mixin"><a href="#frameworkcomponents-mixin-blockquote">blockquote</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">Ungrouped</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="label" data-type="mixin"><a href="#undefined-mixin-label">label</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="configuration"><div class="container">Configuration</div></h1><section class="main__sub-section" id="configuration-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="configuration-variable-drupal-tabs"><h3 class="item__heading"><a class="item__name" href="#variable-drupal-tabs">drupal-tabs</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$drupal-tabs: (
   wrap: (
     background: #fafafa,
-    border: #efefef
+    border: #efefef,
   ),
   link: (
     color: #251923,
     background: #efefef,
     hover-color: #ffffff,
-    hover-background: #251923
+    hover-background: #251923,
   ),
-  alt-colors: #b6c4c5 #575642 #4c4650 #251923
+  alt-colors: #b6c4c5 #575642 #4c4650 #251923,
 );</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L7-L19" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Configuration for Drupal Admin tabs.</p></div></section><section class="main__item container item" id="configuration-variable-z-layers"><h3 class="item__heading"><a class="item__name" href="#variable-z-layers">z-layers</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$z-layers: (
   skip-link: 8000,
   ajax-throbber: 7000,
@@ -36,11 +36,17 @@
   ),
   primary: (
     extend: _base,
-  )
-);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L43-L55" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Button config</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#frameworkcomponents-mixin-btn"><code>btn</code></a></li></ul></section><section class="main__item container item" id="configuration-variable-global-transition-duration"><h3 class="item__heading"><a class="item__name" href="#variable-global-transition-duration">global-transition-duration</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$global-transition-duration: .15s;</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L58-L58" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Animations variables</p></div></section><section class="main__item container item" id="configuration-variable-links"><h3 class="item__heading"><a class="item__name" href="#variable-links">links</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$links: (
+  ),
+);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L43-L55" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Button config</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#frameworkcomponents-mixin-btn"><code>btn</code></a></li></ul></section><section class="main__item container item" id="configuration-variable-global-transition-duration"><h3 class="item__heading"><a class="item__name" href="#variable-global-transition-duration">global-transition-duration</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$global-transition-duration: 0.15s;</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L58-L58" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Animations variables</p></div></section><section class="main__item container item" id="configuration-variable-links"><h3 class="item__heading"><a class="item__name" href="#variable-links">links</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$links: (
   default: (
     color: $color-primary-400,
     font-weight: $global-weight-normal,
+    hover-color: $color-primary-600,
+    active-color: $color-primary-600,
+  ),
+  secondary: (
+    color: $color-primary-600,
+    font-weight: $global-weight-medium,
     hover-color: $color-primary-600,
     active-color: $color-primary-600,
   ),
@@ -68,7 +74,7 @@
     hover-color: $color-primary-600,
     active-color: $color-primary-600,
   ),
-);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L62-L93" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Links config</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#frameworkcomponents-mixin-link"><code>link</code></a></li></ul></section><section class="main__item container item" id="configuration-variable-labels"><h3 class="item__heading"><a class="item__name" href="#variable-labels">labels</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$labels: (
+);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L62-L99" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Links config</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#frameworkcomponents-mixin-link"><code>link</code></a></li></ul></section><section class="main__item container item" id="configuration-variable-labels"><h3 class="item__heading"><a class="item__name" href="#variable-labels">labels</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$labels: (
   default: (
     color: $color-gray-900,
     border-color: $color-primary-600,
@@ -77,19 +83,19 @@
     active-border-color: $color-primary-600,
     active-background-color: $color-gray-300,
   ),
-);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L96-L105" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Labels config</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-label"><code>label</code></a></li></ul></section><section class="main__item container item" id="configuration-variable-layouts"><h3 class="item__heading"><a class="item__name" href="#variable-layouts">layouts</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$layouts: (
+);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L102-L111" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Labels config</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-label"><code>label</code></a></li></ul></section><section class="main__item container item" id="configuration-variable-layouts"><h3 class="item__heading"><a class="item__name" href="#variable-layouts">layouts</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$layouts: (
   _base: (
     width: $global-width,
-    gutters: $grid-column-gutter
+    gutters: $grid-column-gutter,
   ),
   default: (
-    extend: _base
+    extend: _base,
   ),
-);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L108-L116" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Layouts</p></div></section><section class="main__item container item" id="configuration-variable-hr-styles"><h3 class="item__heading"><a class="item__name" href="#variable-hr-styles">hr-styles</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$hr-styles: (
+);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L114-L122" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Layouts</p></div></section><section class="main__item container item" id="configuration-variable-hr-styles"><h3 class="item__heading"><a class="item__name" href="#variable-hr-styles">hr-styles</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$hr-styles: (
   green: $color-linear-horizontal-green,
   purple: $color-linear-horizontal-purple,
   blue: $color-linear-horizontal-blue,
-);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L119-L123" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hr styles</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="frameworkcomponents"><div class="container">Framework Components</div></h1><section class="main__sub-section" id="frameworkcomponents-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="frameworkcomponents-mixin-btn"><h3 class="item__heading"><a class="item__name" href="#mixin-btn">btn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin btn($button-key, $size: small) { 
+);</code></pre><a href="https://github.com/SassDoc/sassdoc/_config.scss#L125-L129" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hr styles</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="frameworkcomponents"><div class="container">Framework Components</div></h1><section class="main__sub-section" id="frameworkcomponents-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="frameworkcomponents-mixin-btn"><h3 class="item__heading"><a class="item__name" href="#mixin-btn">btn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin btn($button-key, $size: small) { 
   $button: extend-in-map($buttons, $button-key);
 
   @include disable-mouse-outline;
@@ -182,6 +188,24 @@
 
   @if ($link-key == default) {
     @include global-transition(color);
+  }
+
+  @if ($link-key == secondary) {
+    @include global-transition(color);
+
+    font-size: rem-calc(16);
+    padding-bottom: 4px;
+
+    &amp;:hover,
+    &amp;:focus {
+      color: key($link-conf, hover-color);
+      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset,
+        0 -2px 0 0 key($link-conf, hover-color) inset;
+    }
+
+    &amp;:active {
+      color: key($link-conf, active-color);
+    }
   }
 
   @if ($link-key == more) {
@@ -298,28 +322,30 @@
   }
 
   @if ($link-key == external) {
+    font-size: rem-calc(16);
     position: relative;
-    padding-right: rem-calc(24);
-    padding-bottom: rem-calc(4);
+    padding-right: 22px;
+    padding-bottom: 4px;
     @include global-transition(box-shadow);
-    @include icon-after(arrow-right) {
+    @include icon-after(externallink) {
       position: absolute;
-      top: 0;
+      top: 1px;
       right: 0;
-      font-size: rem-calc(16);
+      font-size: rem-calc(15);
     }
 
     &amp;:hover,
     &amp;:focus {
       color: key($link-conf, hover-color);
-      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset, 0 -2px 0 0 key($link-conf, hover-color) inset;
+      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset,
+        0 -2px 0 0 key($link-conf, hover-color) inset;
     }
 
     &amp;:active {
       color: key($link-conf, active-color);
     }
   }
- }" data-collapsed="@mixin link($link-key) { ... }"><code>@mixin link($link-key) { ... }</code></pre><a href="https://github.com/SassDoc/sassdoc/_links.scss#L18-L170" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Standard link style mixin</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$link-key</code></th><td data-label="desc"><p>the key in the $buttons map to use from config</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include link(inline)</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#configuration-variable-links"><code>links</code></a></li></ul></section><section class="main__item container item" id="frameworkcomponents-mixin-font-vw-max"><h3 class="item__heading"><a class="item__name" href="#mixin-font-vw-max">font-vw-max</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin font-vw-max($size, $breakpoint: large, $breakpoint-map: $breakpoints) { 
+ }" data-collapsed="@mixin link($link-key) { ... }"><code>@mixin link($link-key) { ... }</code></pre><a href="https://github.com/SassDoc/sassdoc/_links.scss#L18-L190" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Standard link style mixin</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$link-key</code></th><td data-label="desc"><p>the key in the $buttons map to use from config</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include link(inline)</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#configuration-variable-links"><code>links</code></a></li></ul></section><section class="main__item container item" id="frameworkcomponents-mixin-font-vw-max"><h3 class="item__heading"><a class="item__name" href="#mixin-font-vw-max">font-vw-max</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin font-vw-max($size, $breakpoint: large, $breakpoint-map: $breakpoints) { 
   @include vw-with-max($size, $breakpoint: large, $breakpoint-map: $breakpoints, $property: font-size)
  }" data-collapsed="@mixin font-vw-max($size, $breakpoint: large, $breakpoint-map: $breakpoints) { ... }"><code>@mixin font-vw-max($size, $breakpoint: large, $breakpoint-map: $breakpoints) { ... }</code></pre><a href="https://github.com/SassDoc/sassdoc/_typography.scss#L12-L14" class="item__source-link" target="_blank">View source</a></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Font VW Max - Converts a max size at a breakpoint to a VW that scales up to that max size</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>The target max size in px</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$breakpoint</code></th><td data-label="desc"><p>The key of the bp at which max size is reached, or a specific value (ie - 1000px)</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>large</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$breakpoint-map</code></th><td data-label="desc"><p>A breakpoint map</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>$breakpoints</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include font-vw-max(20px, large)</code></pre></div></section><section class="main__item container item" id="frameworkcomponents-mixin-blockquote"><h3 class="item__heading"><a class="item__name" href="#mixin-blockquote">blockquote</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin blockquote() { 
   position: relative;

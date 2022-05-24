@@ -50,7 +50,7 @@
   }
 
   .link-small-external {
-    @include link(small-external);
+    @include link(external);
   }
 
   > .node__content {

@@ -114,9 +114,21 @@ region--header:
   css:
     theme:
       dist/css/header.css: {}
+taxonomy--category--teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/taxonomy--category--teaser.css: {}
 user:
   dependencies:
     - themekit/themekit
   css:
     theme:
       dist/css/user.css: {}
+views--categories:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/view--categories.css: {}
