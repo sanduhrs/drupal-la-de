@@ -49,10 +49,6 @@
     margin-bottom: 80px;
   }
 
-  .link-small-external {
-    @include link(external);
-  }
-
   > .node__content {
     display: flex;
     justify-content: space-between;

@@ -170,14 +170,13 @@ $links: (
   @if ($link-key == external) {
     font-size: rem-calc(16);
     position: relative;
-    padding-right: 22px;
+    padding-right: 24px;
     padding-bottom: 4px;
     @include global-transition(box-shadow);
     @include icon-after(externallink) {
       position: absolute;
-      top: 1px;
+      top: 6px;
       right: 0;
-      font-size: rem-calc(15);
     }
 
     &:hover,
