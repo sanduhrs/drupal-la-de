@@ -1,29 +1,23 @@
-uuid: 192935a2-2713-4f51-8430-0af80848ec00
+uuid: 9adc27bb-b353-4fa7-9b59-ff6079a42a09
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_button_styling
     - paragraphs.paragraphs_type.link_default
-    - taxonomy.vocabulary.button_styles
+  module:
+    - options
 id: paragraph.link_default.field_button_styling
 field_name: field_button_styling
 entity_type: paragraph
 bundle: link_default
-label: Style
+label: 'Link style'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: primary
 default_value_callback: ''
-settings:
-  handler: 'default:taxonomy_term'
-  handler_settings:
-    target_bundles:
-      button_styles: button_styles
-    sort:
-      field: name
-      direction: asc
-    auto_create: false
-    auto_create_bundle: ''
-field_type: entity_reference
+settings: {  }
+field_type: list_string

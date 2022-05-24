@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.link_default
   module:
     - link
+    - options
 _core:
   default_config_hash: ERg-5zhNJMDxwgelvnVD2FT-71fxbrIFsl-PBMVLCPM
 id: paragraph.link_default.preview
@@ -16,6 +17,13 @@ targetEntityType: paragraph
 bundle: link_default
 mode: preview
 content:
+  field_button_styling:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_link:
     type: link
     label: above
@@ -28,5 +36,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_button_styling: true
+hidden: {  }

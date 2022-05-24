@@ -1,17 +1,24 @@
-uuid: 610c4fd1-56e3-487b-80bc-322c1bebe24b
+uuid: fa85afe9-600c-41cb-bed2-8e2c665a08b0
 langcode: en
 status: true
 dependencies:
   module:
+    - options
     - paragraphs
-    - taxonomy
 id: paragraph.field_button_styling
 field_name: field_button_styling
 entity_type: paragraph
-type: entity_reference
+type: list_string
 settings:
-  target_type: taxonomy_term
-module: core
+  allowed_values:
+    -
+      value: primary
+      label: Primary
+    -
+      value: secondary
+      label: Secondary
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.link_default
   module:
     - link
+    - options
 _core:
   default_config_hash: f47NCespMMeBGa48xUxw-_eU4hu6ytXvx8xfQYezECY
 id: paragraph.link_default.default
@@ -16,12 +17,11 @@ bundle: link_default
 mode: default
 content:
   field_button_styling:
-    type: entity_reference_label
+    type: list_key
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_link:
     type: link
@@ -33,6 +33,6 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden: {  }
