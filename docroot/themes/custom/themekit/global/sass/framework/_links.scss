@@ -18,6 +18,7 @@ $links: (
 @mixin link($link-key: default) {
   $link-conf: extend-in-map($links, $link-key);
 
+  display: inline-block;
   color: key($link-conf, color);
   font-weight: key($link-conf, font-weight);
   @if ($link-key == default) {
@@ -52,7 +53,6 @@ $links: (
 
   @if ($link-key == more) {
     position: relative;
-    display: inline-block;
     padding-right: rem-calc(52);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -67,7 +67,7 @@ $links: (
       font-size: rem-calc(40);
       line-height: inherit;
       overflow: hidden;
-      @include global-transition();
+      @include global-transition;
     }
 
     &:hover,
@@ -92,6 +92,8 @@ $links: (
 
   @if ($link-key == more-big) {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     padding-right: rem-calc(52);
     font-size: rem-calc(22);
     line-height: rem-calc(26);
@@ -100,11 +102,13 @@ $links: (
       position: absolute;
       top: 0;
       right: rem-calc(8);
+      display: flex;
+      justify-content: flex-end;
       width: rem-calc(32);
       font-size: rem-calc(40);
       line-height: inherit;
       overflow: hidden;
-      @include global-transition(width);
+      @include global-transition;
     }
 
     &:hover,
