@@ -1,17 +1,18 @@
-uuid: 85a41e3b-58b4-4031-b6ff-247373d49e3b
+uuid: d726abe0-112f-4413-b497-0a938fabc7fd
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic_banner
-    - field.field.block_content.basic_banner.field_description
-    - field.field.block_content.basic_banner.field_heading
-    - field.field.block_content.basic_banner.field_media
-    - field.field.block_content.basic_banner.field_p_link
+    - block_content.type.home_banner
+    - field.field.block_content.home_banner.field_description
+    - field.field.block_content.home_banner.field_heading
+    - field.field.block_content.home_banner.field_logo_type
+    - field.field.block_content.home_banner.field_media
+    - field.field.block_content.home_banner.field_p_link
   module:
     - field_group
     - media_library
-    - paragraphs
+    - paragraphs_browser
     - text
 third_party_settings:
   field_group:
@@ -23,7 +24,7 @@ third_party_settings:
       label: 'Text content'
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         classes: ''
@@ -32,14 +33,14 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
-id: block_content.basic_banner.default
+id: block_content.home_banner.default
 targetEntityType: block_content
-bundle: basic_banner
+bundle: home_banner
 mode: default
 content:
   field_description:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 1
     region: content
     settings:
       rows: 9
@@ -49,37 +50,39 @@ content:
     third_party_settings: {  }
   field_heading:
     type: string_textfield
-    weight: 2
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_logo_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_media:
     type: media_library_widget
-    weight: 0
+    weight: 1
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_p_link:
-    type: paragraphs
-    weight: 4
+    type: entity_reference_paragraphs_browser
+    weight: 2
     region: content
     settings:
       title: Link
       title_plural: Links
-      edit_mode: open
-      closed_mode: preview
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: button
+      edit_mode: preview
+      add_mode: paragraphs_browser
       form_display_mode: default
       default_paragraph_type: link_default
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+      paragraphs_browser: _na
+      modal_width: 80%
+      modal_height: auto
     third_party_settings: {  }
 hidden:
   info: true
