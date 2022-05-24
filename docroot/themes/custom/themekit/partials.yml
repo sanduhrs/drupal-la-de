@@ -22,6 +22,12 @@ component--detail-item:
   css:
     theme:
       dist/css/detail-item.css: {}
+component--link-default:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/paragraph-link-default.css: {}
 component--navigation--community:
   dependencies:
     - themekit/themekit

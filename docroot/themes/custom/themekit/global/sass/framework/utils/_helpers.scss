@@ -290,6 +290,8 @@ $selector-groups: (
 /// Transition helper mixin
 /// @param {List} $list - A list
 @mixin global-transition($property: all, $duration: $global-transition-duration, $timing-function: $global-transition-timing-function) {
-  will-change: $property;
+  @if ($property != all) {
+    will-change: $property;
+  }
   transition: $property $duration $timing-function;
 }
