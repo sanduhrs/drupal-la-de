@@ -38,34 +38,65 @@
     @include font-sizes(text-large);
   }
 
-  .field-text {
-    width: 60%;
-    max-width: 632px;
-  }
-
   .field-banner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
+
+    @include breakpoint(medium down) {
+      flex-wrap: wrap;
+    }
+
+    .field-text {
+      width: 100%;
+
+      @include breakpoint(medium up) {
+        width: 60%;
+        max-width: 632px;
+      }
+
+      @include breakpoint(medium down) {
+        order: 2;
+      }
+    }
+
+    .field--name-field-image {
+      @include breakpoint(medium down) {
+        margin-bottom: 52px;
+        order: 1;
+      }
+    }
   }
 
   > .node__content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     .field-content {
-      padding-right: 36px;
-      max-width: calc(100% - 304px);
-      width: $global-width-narrow;
+      width: 100%;
+
+      @include breakpoint(medium up) {
+        padding-right: 36px;
+        max-width: calc(100% - 304px);
+        width: $global-width-narrow;
+      }
     }
 
     .field-info {
       width: 304px;
 
+      @include breakpoint(medium down) {
+        margin-top: 32px;
+      }
+
       > .field-item {
-        border-left: 4px solid $color-gray-100;
         margin-bottom: 48px;
-        padding-left: 48px;
+
+        @include breakpoint(medium up) {
+          border-left: 4px solid $color-gray-100;
+          padding-left: 48px;
+        }
       }
 
       .field--name-field-logo {

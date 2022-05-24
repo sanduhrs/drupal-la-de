@@ -53,6 +53,7 @@
     "write-yaml": "^1.0.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "ajv": "^7.0.3",
     "ajv-keywords": "^4.0.0",
     "babel-polyfill": "^6.26.0",

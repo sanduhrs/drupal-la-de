@@ -1,3 +1,11 @@
+common--glide:
+  dependencies:
+    - themekit/themekit
+  js:
+    dist/js/glide.js: {}
+  css:
+    theme:
+      dist/css/glide.css: {}
 component--basic-banner:
   dependencies:
     - themekit/themekit
@@ -22,6 +30,10 @@ component--detail-item:
   css:
     theme:
       dist/css/detail-item.css: {}
+component--image-slider:
+  dependencies:
+    - themekit/common--glide
+    - themekit/themekit
 component--link-default:
   dependencies:
     - themekit/themekit

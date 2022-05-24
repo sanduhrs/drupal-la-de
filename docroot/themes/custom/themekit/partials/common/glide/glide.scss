@@ -1,0 +1,91 @@
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.glide__slides {
+  margin: 0;
+}
+.glide--slider {
+  img {
+    width: 100%;
+  }
+}
+.glide__arrows {
+  align-items: center;
+  display: flex;
+  height: 1px;
+  justify-content: space-between;
+  position: static;
+  transform: translate(0px, 28px);
+
+  .glide__arrow {
+    @include icon-before(arrow-right) {
+      display: block;
+      color: $color-primary-600;
+      font-size: rem-calc(36);
+    }
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    position: static;
+    transform: translate(0);
+
+    &--disabled {
+      opacity: 1;
+      &:before {
+        color: $color-gray-200;
+      }
+    }
+
+    &.glide__arrow--left {
+      left: 0;
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.glide__arrow--right {
+      right: 0;
+      &:before {
+      }
+    }
+  }
+}
+
+.glide__bullets {
+  display: flex;
+  margin: 25px auto;
+  position: static;
+  transform: translate(0);
+  width: calc(100% - 110px);
+  .glide__bullet {
+    @include selectors(active) {
+      background: $color-primary-600;
+      border: none;
+    }
+
+    box-shadow: none;
+    background: $color-primary-600;
+    border-radius: 0;
+    border: none;
+    flex-grow: 1;
+    margin: 0;
+    height: 5px;
+  }
+  .glide__bullet--active {
+    @include selectors(active) {
+      background: $color-primary-600;
+    }
+
+    background-color: $color-primary-600;
+
+    & ~ .glide__bullet {
+      background-color: $color-gray-200;
+    }
+  }
+}
