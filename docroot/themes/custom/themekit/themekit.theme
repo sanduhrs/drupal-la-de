@@ -256,7 +256,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
     switch ($bundle) {
       case 'simple_banner':
       case 'basic_banner':
-      case 'hero_banner':
+      case 'home_banner':
         array_unshift($suggestions, 'field__heading_1');
         break;
     }
