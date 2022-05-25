@@ -4,10 +4,14 @@
   <div class="content">
     <div class="block-subscribe">
       <div class="text">
-        <h3 class="block-subscribe__title">{{ 'Meld je aan voor de nieuwsbrief'|t }}</h3>
-        <p>{{ 'En blijf op de hoogte van Drupal Nederland'|t }}</p>
+        {% if site_settings.footer.subscribe_form.field_heading %}
+          <h3 class="block-subscribe__title">{{ site_settings.footer.subscribe_form.field_heading }}</h3>
+        {% endif %}
+        {{ site_settings.footer.subscribe_form.field_text.value|raw }}
       </div>
-      <a href="#" class="btn btn--primary">{{ 'Aanmelden'|t }}</a>
+      {% if site_settings.footer.subscribe_form.field_link %}
+        <a target="_blank" href="{{ site_settings.footer.subscribe_form.field_link['url'] }}" class="btn btn--primary" title="{{ site_settings.footer.subscribe_form.field_link['title'] }}">{{ site_settings.footer.subscribe_form.field_link['title'] }}</a>
+      {% endif %}
     </div>
     {{ content }}
   </div>

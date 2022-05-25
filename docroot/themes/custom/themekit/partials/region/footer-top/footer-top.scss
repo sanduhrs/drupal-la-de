@@ -29,8 +29,10 @@
     &::after {
       position: absolute;
       top: 0;
+      left: 0;
       width: rem-calc(1006);
       height: rem-calc(430);
+      margin-left: rem-calc(-200);
       content: '';
       z-index: z(under);
       @include breakpoint(medium) {
@@ -39,21 +41,18 @@
     }
 
     &::before {
-      left: 0;
-      margin-left: rem-calc(-200);
       background-color: $color-gray-100;
       clip-path: polygon(13% 0, 88% 6%, 100% 81%, 95% 100%, 8% 100%, 0% 50%);
       @include breakpoint(medium) {
-        margin-left: rem-calc(-125);
-        clip-path: polygon(23% 0, 85% 16%, 100% 86%, 24% 100%, 0% 50%);
+        margin-left: calc(50% - 50vw - #{rem-calc(125)});
+        clip-path: polygon(23% 0, 85% 16%, 100% 86%, 12% 100%, 0% 30%);
       }
     }
 
-    &::after {
-      border-width: 4px;
-      border-image: $color-linear-horizontal;
-      clip-path: polygon(15% 6%, 76% 0, 100% 71%, 92% 90%, 17% 100%, 0% 50%);
-    }
+    //&::after {
+    //  background: $color-linear-horizontal;
+    //  clip-path: polygon(16% 5%, 75% 0, 100% 68%, 96% 94%, 33% 100%, 0% 30%, 16% 5%, calc(16% + 4px) calc(5% + 4px), calc(0% + 4px) 30%, 33% calc(100% - 4px), 96% calc(94% - 4px), calc(100% - 4px) 68%, 75% calc(0% + 4px), 16% calc(5% + 4px));
+    //}
   }
 
   // Subscribe block
