@@ -113,6 +113,39 @@
 @mixin shape-image($inverse: false) {
   clip-path: polygon(12% 0, 87% 4%, 100% 61%, 79% 100%, 17% 95%, 0 42%);
   @if ($inverse == true) {
-    transform: scaleX(-1);
+    //transform: scaleX(-1);
+    clip-path: polygon(13% 3%, 89% 0, 100% 41%, 84% 95%, 21% 100%, 0 61%);
+  }
+}
+
+@mixin banner-image($home-banner: false) {
+  max-width: none;
+  @if ($home-banner == true) {
+    //margin: rem-calc(-62) rem-calc(-82) 0 0;
+  } @else {
+    margin: rem-calc(-62) rem-calc(-82) 0 0;
+  }
+  object-fit: cover;
+  @include breakpoint(small down) {
+    max-width: rem-calc(436);
+    max-height: rem-calc(322);
+    width: calc(100% + #{rem-calc(62)});
+    height: 73.8532%;
+  }
+  @include breakpoint(medium only) {
+    width: rem-calc(540);
+    height: rem-calc(400);
+    margin-right: 0;
+  }
+  @include breakpoint(large) {
+    @if ($home-banner == true) {
+      width: rem-calc(920);
+      height: rem-calc(816);
+      margin: rem-calc(-144) 0 0 rem-calc(-320);
+    } @else {
+      width: rem-calc(820);
+      height: rem-calc(590);
+      margin: rem-calc(-70) rem-calc(-236) 0 0;
+    }
   }
 }

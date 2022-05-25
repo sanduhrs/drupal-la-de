@@ -4,13 +4,16 @@
 
 .region-header {
   @include top-bottom(padding, rem-calc(20));
+  position: relative;
+  z-index: z(above);
   @include breakpoint(medium) {
     @include top-bottom(padding, rem-calc(32));
     height: rem-calc(104);
   }
 
-  &:not(.is-front) {
+  body:not(.path-frontpage) & {
     border-bottom: 1px solid $color-gray-300;
+    background-color: $color-white;
   }
 
   .content {

@@ -4,5 +4,13 @@
 
 .banner-layout {
   position: relative;
-  overflow: hidden;
+
+  body.is-home-banner & {
+    margin-top: rem-calc(-104);
+    //padding-top: rem-calc(104);
+  }
+
+  body:not(.is-home-banner) {
+    overflow: hidden;
+  }
 }

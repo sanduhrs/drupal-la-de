@@ -12,7 +12,7 @@ dependencies:
   module:
     - field_group
     - media_library
-    - paragraphs_browser
+    - paragraphs
     - text
 third_party_settings:
   field_group:
@@ -70,19 +70,23 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_p_link:
-    type: entity_reference_paragraphs_browser
+    type: paragraphs
     weight: 2
     region: content
     settings:
       title: Link
       title_plural: Links
-      edit_mode: preview
-      add_mode: paragraphs_browser
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: select
       form_display_mode: default
       default_paragraph_type: link_default
-      paragraphs_browser: _na
-      modal_width: 80%
-      modal_height: auto
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
 hidden:
   info: true

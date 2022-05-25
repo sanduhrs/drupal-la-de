@@ -13,7 +13,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - media_responsive_thumbnail
-    - options
     - text
 id: block_content.home_banner.default
 targetEntityType: block_content
@@ -35,13 +34,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_logo_type:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_media:
     type: media_responsive_thumbnail
     label: hidden
@@ -61,4 +53,5 @@ content:
     weight: 3
     region: content
 hidden:
+  field_logo_type: true
   langcode: true

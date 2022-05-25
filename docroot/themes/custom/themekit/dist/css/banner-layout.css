@@ -1,2 +1,2 @@
-.banner-layout{position:relative;overflow:hidden}
+.banner-layout{position:relative}body.is-home-banner .banner-layout{margin-top:-6.5rem}.banner-layout body:not(.is-home-banner){overflow:hidden}
 

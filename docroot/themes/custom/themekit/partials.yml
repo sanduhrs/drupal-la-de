@@ -30,6 +30,12 @@ component--detail-item:
   css:
     theme:
       dist/css/detail-item.css: {}
+component--home-banner:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--home-banner.css: {}
 component--image-slider:
   dependencies:
     - themekit/common--glide
