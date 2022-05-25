@@ -4,6 +4,44 @@
 
 .block--basic-banner {
   @include content-width(default);
+  @include breakpoint(large) {
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    @include breakpoint(large) {
+      @include flex-grid-size(6);
+    }
+  }
+
+  .field--name-field-media {
+    position: relative;
+    @include breakpoint(medium down) {
+      margin-bottom: rem-calc(48);
+    }
+    @include breakpoint(large) {
+      @include flex-grid-size(5);
+      @include grid-column-offset(1);
+      order: 2;
+    }
+
+    img {
+      @include shape-image;
+      max-width: none;
+      width: calc(100% + #{rem-calc(62)});
+      min-width: rem-calc(436);
+      height: 73.8532%;
+      min-height: rem-calc(322);
+      margin: rem-calc(-62) rem-calc(-82) 0 0;
+      object-fit: cover;
+      @include breakpoint(large) {
+        width: rem-calc(820);
+        height: rem-calc(590);
+        margin: rem-calc(-70) rem-calc(-236) 0 0;
+      }
+    }
+  }
 
   .field--name-field-heading {
     margin-bottom: rem-calc(24);
