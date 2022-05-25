@@ -7,8 +7,13 @@
   @include content-width(default);
   margin-top: rem-calc(40);
   margin-bottom: rem-calc(110);
+
   @include breakpoint(medium) {
     margin-bottom: rem-calc(160);
+  }
+
+  .link--back {
+    margin-bottom: 28px;
   }
 
   .node__title {
@@ -50,9 +55,10 @@
     .field-text {
       width: 100%;
 
-      @include breakpoint(medium up) {
+      @include breakpoint(large up) {
+        max-width: 668px;
+        padding-right: 36px;
         width: 60%;
-        max-width: 632px;
       }
 
       @include breakpoint(medium down) {
@@ -61,9 +67,29 @@
     }
 
     .field--name-field-image {
+      text-align: right;
+      overflow: hidden;
+      margin-top: -99px;
+
+      img {
+        @include shape-image;
+        @include banner-image;
+
+        @include breakpoint(medium down) {
+          transform: translate(18%, 0px);
+        }
+
+        @include breakpoint(small down) {
+          height: auto;
+          max-height: unset;
+          max-width: unset;
+        }
+      }
+
       @include breakpoint(medium down) {
         margin-bottom: 52px;
         order: 1;
+        width: 100%;
       }
     }
   }
@@ -73,39 +99,65 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .field-content {
+    > .field-content {
       width: 100%;
 
-      @include breakpoint(medium up) {
+      @include breakpoint(large up) {
         padding-right: 36px;
         max-width: calc(100% - 304px);
         width: $global-width-narrow;
       }
     }
 
-    .field-info {
+    > .field-info {
       width: 304px;
 
       @include breakpoint(medium down) {
         margin-top: 32px;
       }
 
-      > .field-item {
-        margin-bottom: 48px;
+      h4.heading {
+        margin-bottom: 20px;
+      }
+    }
 
-        @include breakpoint(medium up) {
-          border-left: 4px solid $color-gray-100;
-          padding-left: 48px;
-        }
+    .field-item-info {
+      border-left: 4px solid $color-gray-100;
+      margin-bottom: 48px;
+      padding-left: 24px;
+
+      &.mobile {
+        margin-top: 32px;
       }
 
       .field--name-field-logo {
         margin-bottom: 16px;
+        @include breakpoint(medium down) {
+          display: inline-block;
+          background-color: $color-gray-100;
+          padding: 22px 18px;
+        }
       }
 
-      h4.heading {
-        margin-bottom: 20px;
+      svg {
+        width: max-content;
+        height: max-content;
       }
+
+      @include breakpoint(large up) {
+        padding-left: 48px;
+      }
+    }
+  }
+
+  .mobile {
+    @include breakpoint(medium up) {
+      display: none;
+    }
+  }
+  .desktop {
+    @include breakpoint(small down) {
+      display: none;
     }
   }
 }

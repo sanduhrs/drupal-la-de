@@ -134,12 +134,16 @@ $links: (
     padding-left: rem-calc(52);
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    @include icon-after(arrow-left) {
+    font-size: rem-calc(14);
+    @include breakpoint(medium up) {
+      font-size: rem-calc(15);
+    }
+    @include icon-after(arrow-right) {
+      transform: rotate(180deg);
       position: absolute;
       top: 0;
       left: rem-calc(8);
-      width: rem-calc(32);
-      font-size: rem-calc(40);
+      font-size: rem-calc(32);
       line-height: inherit;
       overflow: hidden;
       @include global-transition(width);
@@ -151,7 +155,6 @@ $links: (
 
       &::after {
         left: 0;
-        width: rem-calc(40);
       }
     }
 

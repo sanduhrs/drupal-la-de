@@ -40,6 +40,9 @@ component--image-slider:
   dependencies:
     - themekit/common--glide
     - themekit/themekit
+  css:
+    theme:
+      dist/css/image-slider.css: {}
 component--link-default:
   dependencies:
     - themekit/themekit
