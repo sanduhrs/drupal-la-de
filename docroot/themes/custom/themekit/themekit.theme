@@ -303,6 +303,9 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
       case 'home_banner':
         array_unshift($suggestions, 'field__heading_1');
         break;
+      case 'partners':
+        array_unshift($suggestions, 'field__heading_2');
+        break;
     }
   }
 

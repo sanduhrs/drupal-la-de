@@ -78,6 +78,12 @@ component--navigation--social:
   css:
     theme:
       dist/css/menu--social.css: {}
+component--partners:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/partners.css: {}
 component--simple-banner:
   dependencies:
     - themekit/themekit
@@ -108,6 +114,12 @@ node--type--page--full:
   css:
     theme:
       dist/css/node--page--full.css: {}
+node--type--partner--teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--partner--teaser.css: {}
 node--view-mode--full:
   dependencies:
     - themekit/themekit
@@ -156,3 +168,11 @@ views--categories:
   css:
     theme:
       dist/css/view--categories.css: {}
+views--partners:
+  dependencies:
+    - themekit/themekit
+  js:
+    dist/js/view--partners.js: {}
+  css:
+    theme:
+      dist/css/view--partners.css: {}

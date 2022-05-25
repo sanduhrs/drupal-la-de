@@ -1,0 +1,39 @@
+.view-partners {
+  &.view-display-id-randomized {
+    .view-content {
+      display: flex;
+      flex-wrap: wrap;
+      @include breakpoint(small down) {
+        overflow: hidden;
+      }
+      > .views-row {
+        flex-shrink: 0;
+        @include breakpoint(small down) {
+          width: calc((100% - 24px) / 3);
+          margin-top: 12px;
+          &:not(:nth-child(3n)) {
+            margin-right: 12px;
+          }
+        }
+        @include breakpoint(medium) {
+          width: calc((100% - 64px) / 3);
+          margin-top: 32px;
+          &:not(:nth-child(3n)) {
+            margin-right: 32px;
+          }
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-top: 0;
+          @include breakpoint(small down) {
+            transform: translateX(calc(-100% - 12px));
+          }
+          @include breakpoint(medium) {
+            transform: translateX(calc(100% + 32px));
+          }
+        }
+      }
+    }
+  }
+}
