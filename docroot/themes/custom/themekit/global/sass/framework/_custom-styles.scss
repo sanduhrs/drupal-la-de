@@ -132,16 +132,12 @@
 
       .field--name-field-logo {
         margin-bottom: 16px;
+        max-width: 116px;
         @include breakpoint(medium down) {
           display: inline-block;
           background-color: $color-gray-100;
           padding: 22px 18px;
         }
-      }
-
-      svg {
-        width: max-content;
-        height: max-content;
       }
 
       @include breakpoint(large up) {

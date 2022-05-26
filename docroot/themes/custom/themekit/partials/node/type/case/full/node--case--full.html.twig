@@ -12,10 +12,10 @@
   )
   %}
 
-  <a class="link--back desktop" href="{{ path('entity.node.canonical', {'node': 3}) }}" >{{ 'Cases'|t }}</a>
+  <a class="link--back desktop" href="/cases" >{{ 'Cases'|t }}</a>
   <div class="field-banner">
     <div class="field-text">
-      <a class="link--back mobile" href="{{ path('entity.node.canonical', {'node': 3}) }}" >{{ 'Cases'|t }}</a>
+      <a class="link--back mobile" href="/cases" >{{ 'Cases'|t }}</a>
       <h1 class="heading">{{ node.label }}</h1>
       <div class="field-category">
         {{ node.field_category.entity.label }}

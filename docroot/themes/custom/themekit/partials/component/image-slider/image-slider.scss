@@ -19,8 +19,9 @@
       transform: translate(0, -50%);
       z-index: 1;
       img {
+        width: 100%;
         @include breakpoint(medium up) {
-          min-width: 160px;
+          max-width: 160px;
         }
         @include breakpoint(medium down) {
           max-width: 80px;
