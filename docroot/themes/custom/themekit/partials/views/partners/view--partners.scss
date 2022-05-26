@@ -6,8 +6,21 @@
       @include breakpoint(small down) {
         overflow: hidden;
       }
+      @include breakpoint(large) {
+        &:not(.processed) {
+          max-height: 640px;
+          overflow: hidden;
+        }
+      }
+      &.processed {
+        > .views-row {
+          opacity: 1;
+        }
+      }
       > .views-row {
         flex-shrink: 0;
+        opacity: 0;
+        @include global-transition(opacity);
         @include breakpoint(small down) {
           width: calc((100% - 24px) / 3);
           margin-top: 12px;
@@ -29,6 +42,11 @@
           @include breakpoint(small down) {
             transform: translateX(calc(-100% - 12px));
           }
+          @include breakpoint(medium) {
+            transform: translateX(calc(100% + 32px));
+          }
+        }
+        &:last-child {
           @include breakpoint(medium) {
             transform: translateX(calc(100% + 32px));
           }
