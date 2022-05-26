@@ -16,7 +16,7 @@
   "author": "Lemberg Solutions",
   "license": "ISC",
   "browserslist": [
-    "last 2 version",
+    "last 1 version",
     "> 1%"
   ],
   "sideEffects": false,

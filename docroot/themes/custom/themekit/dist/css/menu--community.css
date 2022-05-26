@@ -1,2 +1,2 @@
-.menu--community .menu{display:-webkit-box;display:-ms-flexbox;display:flex}.menu--community .menu__item:not(:last-child){margin-right:1rem}.menu--community .menu__item a{display:block}.menu--community .menu__item a[href*="splash"]{color:#120b47}.menu--community .menu__item a[href*="drupaljam"]{color:#000}
+.menu--community .menu{display:flex}.menu--community .menu__item:not(:last-child){margin-right:1rem}.menu--community .menu__item a{display:block}.menu--community .menu__item a[href*="splash"]{color:#120b47}.menu--community .menu__item a[href*="drupaljam"]{color:#000}
 
