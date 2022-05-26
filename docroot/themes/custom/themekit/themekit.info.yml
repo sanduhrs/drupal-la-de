@@ -26,8 +26,8 @@ components:
     partials: partials
 
 regions:
-  header: Header
   highlighted: Highlighted
+  header: Header
   content: Content
   footer_top: 'Footer Top'
   footer_bottom: 'Footer Bottom'
