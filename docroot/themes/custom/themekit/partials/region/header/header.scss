@@ -24,6 +24,32 @@
   }
 
   .block--system-branding-block {
+    a {
+      display: inline-block;
+      position: relative;
+
+      @at-root body.logo-type--light & {
+        img {
+          opacity: 0;
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: rem-calc(128.8);
+          height: rem-calc(32);
+          background: url(../../../logo-white.svg) 0 0 no-repeat;
+          background-size: contain;
+          content: '';
+          @include breakpoint(medium) {
+            width: rem-calc(161);
+            height: rem-calc(40);
+          }
+        }
+      }
+    }
+
     img {
       height: rem-calc(32);
       @include breakpoint(medium) {

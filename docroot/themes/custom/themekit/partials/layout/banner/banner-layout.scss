@@ -6,8 +6,10 @@
   position: relative;
 
   body.is-home-banner & {
-    margin-top: rem-calc(-104);
-    //padding-top: rem-calc(104);
+    margin-top: rem-calc(-72);
+    @include breakpoint(medium) {
+      margin-top: rem-calc(-104);
+    }
   }
 
   body:not(.is-home-banner) {
