@@ -52,9 +52,9 @@ function themekit_preprocess_html(array &$variables) {
         $blockId = $component->getPluginId();
         if ($component instanceof SectionComponent && $blockId === 'inline_block:home_banner') {
           $variables['attributes']['class'][] = 'is-home-banner';
-          $component_array = $component->toArray();
-          if (isset($component_array['configuration']['block_revision_id'])) {
-            $revision_id = $component_array['configuration']['block_revision_id'];
+          $component_config = $component->get('configuration');
+          if (isset($component_config['block_revision_id'])) {
+            $revision_id = $component_config['block_revision_id'];
             $block = \Drupal::entityTypeManager()->getStorage('block_content')->loadRevision($revision_id);
             if (is_null($block)) {
               return;
