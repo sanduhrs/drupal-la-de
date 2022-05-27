@@ -54,6 +54,7 @@ $links: (
   @if ($link-key == more) {
     position: relative;
     padding-right: rem-calc(52);
+    font-size: rem-calc(14);
     letter-spacing: 0.2em;
     text-transform: uppercase;
     @include global-transition(color);

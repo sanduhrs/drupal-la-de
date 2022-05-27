@@ -10,19 +10,25 @@
 /// @example
 ///   @include font-vw-max(20px, large)
 @mixin font-vw-max($size, $breakpoint: large, $breakpoint-map: $breakpoints) {
-  @include vw-with-max($size, $breakpoint: large, $breakpoint-map: $breakpoints, $property: font-size)
+  @include vw-with-max(
+    $size,
+    $breakpoint: large,
+    $breakpoint-map: $breakpoints,
+    $property: font-size
+  );
 }
 
 /// Blockquote styles
 @mixin blockquote() {
   position: relative;
-  margin: rem-calc(0 0 32 16);
-  padding-left: rem-calc(32);
+  max-width: 424px;
+  margin: 0 0 32px 16px;
+  padding-left: 32px;
   font-size: rem-calc(20);
   font-weight: $global-weight-bold;
   line-height: 1.2;
   @include breakpoint(medium) {
-    margin-left: rem-calc(24);
+    margin-left: 24px;
     font-size: rem-calc(22);
     line-height: 1.1819;
   }
@@ -39,7 +45,7 @@
   }
 
   cite {
-    margin-top: rem-calc(8);
+    margin-top: 8px;
     font-weight: $global-weight-normal;
   }
 

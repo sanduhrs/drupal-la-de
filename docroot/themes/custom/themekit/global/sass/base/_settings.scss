@@ -86,7 +86,7 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-font-color: $black;
+$body-font-color: $body-color;
 $body-font-family: "Ubuntu", sans-serif;
 $body-antialiased: true;
 $paragraphs-default-spacing: 70px;
@@ -294,12 +294,12 @@ $header-styles: (
       "font-weight": $global-weight-bold,
     ),
     "h5": (
-      "font-size": 16,
+      "font-size": 18,
       "line-height": 1.375,
       "font-weight": $global-weight-bold,
     ),
     "h6": (
-      "font-size": 14,
+      "font-size": 16,
       "line-height": 1.7143,
       "font-weight": $global-weight-medium,
     ),
