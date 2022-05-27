@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic_banner
     - core.entity_view_mode.node.full
     - field.field.node.component_page.field_metatags
     - field.field.node.component_page.layout_builder__layout
@@ -24,7 +25,22 @@ third_party_settings:
           context_mapping: {  }
           padding: default
           size: default
-        components: {  }
+          valign: top
+        components:
+          9bd52231-d3fa-43b0-9674-469bd6a906f2:
+            uuid: 9bd52231-d3fa-43b0-9674-469bd6a906f2
+            region: first
+            configuration:
+              id: 'inline_block:basic_banner'
+              label: 'Inline block'
+              label_display: ''
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 19
+              block_serialized: null
+            weight: 0
+            additional: {  }
         third_party_settings:
           layout_builder_lock:
             lock:
