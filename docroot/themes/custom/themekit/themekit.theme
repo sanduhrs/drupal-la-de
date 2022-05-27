@@ -52,13 +52,16 @@ function themekit_preprocess_html(array &$variables) {
         $blockId = $component->getPluginId();
         if ($component instanceof SectionComponent && $blockId === 'inline_block:home_banner') {
           $variables['attributes']['class'][] = 'is-home-banner';
-
-          $block = Block::load($blockId);
-          if (is_null($block)) {
-            return;
+          $component_array = $component->toArray();
+          if (isset($component_array['configuration']['block_revision_id'])) {
+            $revision_id = $component_array['configuration']['block_revision_id'];
+            $block = \Drupal::entityTypeManager()->getStorage('block_content')->loadRevision($revision_id);
+            if (is_null($block)) {
+              return;
+            }
+            $logo_type = $block->get('field_logo_type')->value;
+            $variables['attributes']['class'][] = 'logo-type--' . $logo_type;
           }
-          $logo_type = $block->get('field_logo_type')->value;
-          $variables['attributes']['class'][] = 'logo-type--' . $logo_type;
         }
       }
     }

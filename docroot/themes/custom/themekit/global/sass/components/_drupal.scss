@@ -440,3 +440,9 @@ ul.layout-selection {
   05 - Site Specific
   Improvements that are specific to this site
 \*------------------------------------*/
+
+.region-highlighted {
+  background: $body-background;
+  position: relative;
+  z-index: z(above);
+}

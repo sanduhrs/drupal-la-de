@@ -12,6 +12,11 @@
     }
   }
 
+  body.is-home-banner .layout-builder & {
+    margin-top: 0;
+    overflow: hidden;
+  }
+
   body:not(.is-home-banner) {
     overflow: hidden;
   }

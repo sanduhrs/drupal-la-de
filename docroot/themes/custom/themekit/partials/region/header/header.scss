@@ -11,7 +11,7 @@
     height: rem-calc(104);
   }
 
-  body:not(.path-frontpage) & {
+  body:not(.is-home-banner) & {
     border-bottom: 1px solid $color-gray-300;
     background-color: $color-white;
   }

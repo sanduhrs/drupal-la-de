@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "find node_modules/ -name '*.info' -type f -delete",
-    "build": "webpack --config webpack.config.js --mode=production && sassdoc global/sass/**/*.scss --config sassdoc.config.yml",
+    "build": "webpack --config webpack.config.js --mode=production",
     "dev": "webpack --config webpack.config.js --watch --mode=development"
   },
   "author": "Lemberg Solutions",
