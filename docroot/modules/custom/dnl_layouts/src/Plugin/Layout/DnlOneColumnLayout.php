@@ -17,6 +17,7 @@ class DnlOneColumnLayout extends BaseLayout {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $parentForm = parent::buildConfigurationForm($form, $form_state);
+    $parentForm['valign']['#access'] = FALSE;
     return $parentForm;
   }
 

@@ -3,7 +3,6 @@
 ////
 
 .layout {
-
   // Bottom space for the page content
   &:last-child {
     padding-bottom: rem-calc(60);
@@ -54,6 +53,31 @@
     @include top-bottom(padding, 0);
     @include breakpoint(medium) {
       @include top-bottom(padding, 0);
+    }
+  }
+
+  // Vertical alignment section blocks
+  &.section-valign--top {
+    > .layout-content {
+      @include breakpoint(medium) {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &.section-valign--middle {
+    > .layout-content {
+      @include breakpoint(medium) {
+        align-items: center;
+      }
+    }
+  }
+
+  &.section-valign--bottom {
+    > .layout-content {
+      @include breakpoint(medium) {
+        align-items: flex-end;
+      }
     }
   }
 }

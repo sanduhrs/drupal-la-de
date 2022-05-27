@@ -18,27 +18,6 @@
     }
   }
 
-  // Default text block
-  &:not(.shape-background) {
-    @at-root .twocol-layout .layout__region--first & {
-      @include breakpoint(medium) {
-        padding-right: 10%;
-      }
-      @include breakpoint(large) {
-        padding-right: 20%;
-      }
-    }
-
-    @at-root .twocol-layout .layout__region--second & {
-      @include breakpoint(medium) {
-        padding-left: 10%;
-      }
-      @include breakpoint(large) {
-        padding-left: 20%;
-      }
-    }
-  }
-
   // Enabled shape background
   &.shape-background {
     @include top-bottom(padding, 74px);

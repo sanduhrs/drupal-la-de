@@ -20,6 +20,7 @@ class BaseLayout extends LayoutDefault {
     return parent::defaultConfiguration() + [
       'padding' => 'default',
       'size' => 'default',
+      'valign' => 'top',
     ];
   }
 
@@ -39,6 +40,18 @@ class BaseLayout extends LayoutDefault {
       ],
       '#default_value' => $configuration['padding'],
     ];
+
+    $form['valign'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Layout Vertical alignment (alignment inner blocks)'),
+      '#options' => [
+        'top' => 'Top',
+        'middle' => 'Middle',
+        'bottom' => 'Bottom',
+      ],
+      '#default_value' => $configuration['valign'],
+    ];
+
     return $form;
   }
 
@@ -47,5 +60,6 @@ class BaseLayout extends LayoutDefault {
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     $this->configuration['padding'] = $form_state->getValue('padding');
+    $this->configuration['valign'] = $form_state->getValue('valign');
   }
 }

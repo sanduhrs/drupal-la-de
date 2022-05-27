@@ -30,6 +30,7 @@ class DnlBannerLayout extends BaseLayout {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $parentForm = parent::buildConfigurationForm($form, $form_state);
     $parentForm['padding']['#access'] = FALSE;
+    $parentForm['valign']['#access'] = FALSE;
     return $parentForm;
   }
 
