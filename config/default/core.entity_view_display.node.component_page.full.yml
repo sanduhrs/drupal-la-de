@@ -57,7 +57,6 @@ third_party_settings:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       allowed_layouts:
-        - dnl_layout_banner_section
         - dnl_layout_onecol_section
         - dnl_layout_twocol_section
       blacklisted_blocks: {  }
@@ -65,12 +64,36 @@ third_party_settings:
       restricted_categories: {  }
     entity_view_mode_restriction_by_region:
       allowed_layouts:
-        - dnl_layout_banner_section
         - dnl_layout_onecol_section
         - dnl_layout_twocol_section
+      whitelisted_blocks:
+        dnl_layout_banner_section:
+          all_regions:
+            'Inline blocks':
+              - 'inline_block:basic_banner'
+              - 'inline_block:home_banner'
+              - 'inline_block:simple_banner'
+        dnl_layout_twocol_section:
+          all_regions:
+            'Inline blocks':
+              - 'inline_block:text'
+      blacklisted_blocks:
+        dnl_layout_onecol_section:
+          all_regions:
+            'Inline blocks':
+              - 'inline_block:basic_banner'
+              - 'inline_block:home_banner'
+              - 'inline_block:simple_banner'
+        dnl_layout_twocol_section:
+          all_regions:
+            'Inline blocks':
+              - 'inline_block:basic_banner'
+              - 'inline_block:home_banner'
+              - 'inline_block:simple_banner'
       restricted_categories:
         dnl_layout_banner_section:
           all_regions:
+            - 'Custom block types'
             - 'Lists (Views)'
 id: node.component_page.full
 targetEntityType: node
