@@ -197,3 +197,56 @@
     }
   }
 }
+
+@mixin cta-list() {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: rem-calc(16);
+  @include breakpoint(medium) {
+    row-gap: rem-calc(24);
+  }
+
+  > .field__item {
+    &:not(:last-child) {
+      margin-right: rem-calc(24);
+      @include breakpoint(medium) {
+        margin-right: rem-calc(48);
+      }
+    }
+  }
+}
+
+$shapes: (
+  default: (
+    width: auto,
+    height: auto,
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%),
+  ),
+) !default;
+
+@mixin brand-shape($shape-name: default, $shape-el: true) {
+  $shape-properties: extend-in-map($shapes, $shape-name);
+
+  @if $shape-el == true {
+    &::before {
+      position: absolute;
+      width: key($shape-properties, width);
+      height: key($shape-properties, height);
+      clip-path: key($shape-properties, path);
+      content: '';
+      z-index: z(under);
+      @if map-has-key($shape-properties, color) {
+        background: key($shape-properties, color);
+      }
+
+      @content;
+    }
+  } @else {
+    clip-path: key($shape-properties, path);
+    @if map-has-key($shape-properties, color) {
+      background: key($shape-properties, color);
+    }
+    @content;
+  }
+}

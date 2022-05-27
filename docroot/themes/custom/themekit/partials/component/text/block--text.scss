@@ -1,0 +1,97 @@
+////
+/// Text block
+////
+
+.block--text {
+  .field--name-field-heading {
+    margin-bottom: rem-calc(8);
+    @include breakpoint(large) {
+      margin-bottom: rem-calc(24);
+    }
+  }
+
+  .field--name-field-p-link {
+    @include cta-list;
+    margin-top: rem-calc(12);
+    @include breakpoint(medium) {
+      margin-top: rem-calc(24);
+    }
+  }
+
+  // Enabled shape background
+  &.shape-background {
+    @include top-bottom(padding, 74px);
+    position: relative;
+    min-height: 360px;
+    @include breakpoint(medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 560px;
+    }
+
+    &::before {
+      top: 0;
+      min-height: 100%;
+      @include breakpoint(large) {
+        @include top-bottom(margin, rem-calc(26));
+      }
+
+      @at-root .onecol-layout & {
+        min-width: 150vw;
+        transform: translate3d(-33vw, 0, 0);
+        @include breakpoint(medium) {
+          min-width: 125%;
+          transform: translate3d(-15%, 0, 0);
+        }
+      }
+
+      @at-root .twocol-layout & {
+        @include breakpoint(medium down) {
+          right: auto;
+          left: 0;
+          min-width: 125%;
+          transform: translate3d(-15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          min-width: 150vw;
+          transform: translate3d(-33vw, 0, 0);
+        }
+      }
+    }
+
+    &--default {
+      @include brand-shape(text) {
+        right: 0;
+        @at-root .onecol-layout .layout__region & {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+
+    &--inverse {
+      @include brand-shape(text-inverse) {
+        left: 0;
+      }
+    }
+
+    @at-root .twocol-layout .layout__region--first & {
+      @include breakpoint(medium) {
+        padding-right: rem-calc(64);
+      }
+      @include breakpoint(large) {
+        padding-right: rem-calc(112);
+      }
+    }
+
+    @at-root .twocol-layout .layout__region--second & {
+      @include breakpoint(medium) {
+        padding-left: rem-calc(64);
+      }
+      @include breakpoint(large) {
+        padding-left: rem-calc(112);
+      }
+    }
+  }
+}

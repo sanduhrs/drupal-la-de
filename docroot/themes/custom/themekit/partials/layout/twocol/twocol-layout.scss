@@ -13,14 +13,12 @@
         &--first {
           @include breakpoint(large) {
             @include flex-grid-column(6);
-            padding-left: 0 !important;
           }
         }
 
         &--second {
           @include breakpoint(large) {
             @include flex-grid-column(6);
-            padding-right: 0 !important;
           }
         }
       }

@@ -1,0 +1,13 @@
+{% extends "@partials/component/block.html.twig" %}
+
+{% set block = content['#block_content'] %}
+{% set classes = [
+  block.field_enable_background.value == 0 or block.field_enable_background.value == 1 ? 'shape-background',
+  block.field_enable_background.value == 1 ? 'shape-background--default',
+  block.field_enable_background.value == 0 ? 'shape-background--inverse',
+] %}
+{% set attributes = attributes.addClass(classes) %}
+
+{% block content %}
+  {{ content }}
+{% endblock %}

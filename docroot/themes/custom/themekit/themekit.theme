@@ -304,6 +304,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
         array_unshift($suggestions, 'field__heading_1');
         break;
       case 'partners':
+      case 'text':
         array_unshift($suggestions, 'field__heading_2');
         break;
     }

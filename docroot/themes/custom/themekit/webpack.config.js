@@ -3,13 +3,10 @@
  * Webpack file for compiling JS and CSS files.
  */
 
-const vmName = 'drupal.nl.lndo.site';
 const webpack = require('webpack');
 const path = require('path');
-const fs = require('fs');
 const chalk = require('chalk');
 const yaml = require('js-yaml');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const globImporter = require('node-sass-glob-importer');
@@ -126,15 +123,6 @@ module.exports = (env, argv) => {
         jQuery: 'jquery',
         'window.jQuery': 'jquery',
       }),
-
-      new BrowserSyncPlugin({
-          host: 'localhost',
-          port: 3000,
-          proxy: vmName,
-        },
-        {
-          injectCss: true,
-        }),
 
       new FixStyleOnlyEntriesPlugin(),
       new MiniCssExtractPlugin({ filename: '[name].css' }),

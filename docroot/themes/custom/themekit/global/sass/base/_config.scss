@@ -127,3 +127,25 @@ $hr-styles: (
   purple: $color-linear-horizontal-purple,
   blue: $color-linear-horizontal-blue,
 );
+
+/// Brand shapes
+$shapes: (
+  footer: (
+    width: 1100px,
+    height: 431px,
+    color: $color-gray-100,
+    path: polygon(29% 0, 91% 14%, 100% 60%, 90% 97%, 17% 100%, 0 48%, 9% 28%),
+  ),
+  text: (
+    width: 867px,
+    height: 507px,
+    color: $color-gray-100,
+    path: polygon(18% 0, 94% 7%, 100% 36%, 94% 91%, 16% 100%, 0 58%),
+  ),
+  text-inverse: (
+    width: 867px,
+    height: 507px,
+    color: $color-gray-100,
+    path: polygon(6% 6%, 82% 0, 100% 58%, 84% 100%, 6% 91%, 0 36%),
+  ),
+)

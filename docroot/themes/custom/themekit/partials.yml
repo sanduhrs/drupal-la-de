@@ -93,6 +93,12 @@ component--simple-banner:
   css:
     theme:
       dist/css/block--simple-banner.css: {}
+component--text:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--text.css: {}
 layout--banner:
   dependencies:
     - themekit/themekit
