@@ -1,5 +1,11 @@
 {% extends "@partials/region/region.html.twig" %}
 
+{% set formatted_text = {
+  '#type':   'processed_text',
+  '#text':    site_settings.footer.subscribe_form.field_text.value,
+  '#format':  site_settings.footer.subscribe_form.field_text.format,
+} %}
+
 {% block region %}
   <div class="content">
     <div class="block-subscribe">
@@ -7,7 +13,7 @@
         {% if site_settings.footer.subscribe_form.field_heading %}
           <h3 class="block-subscribe__title">{{ site_settings.footer.subscribe_form.field_heading }}</h3>
         {% endif %}
-        {{ site_settings.footer.subscribe_form.field_text.value|raw }}
+        {{ formatted_text }}
       </div>
       {% if site_settings.footer.subscribe_form.field_link %}
         <a target="_blank" href="{{ site_settings.footer.subscribe_form.field_link['url'] }}" class="btn btn--primary" title="{{ site_settings.footer.subscribe_form.field_link['title'] }}">{{ site_settings.footer.subscribe_form.field_link['title'] }}</a>

@@ -1,5 +1,11 @@
 {% extends "@partials/region/region.html.twig" %}
 
+{% set formatted_text = {
+  '#type':   'processed_text',
+  '#text':    site_settings.footer.footer_copyright.field_text.value,
+  '#format':  site_settings.footer.footer_copyright.field_text.format,
+} %}
+
 {% block region %}
   <div class="content">
     <div class="content--primary">
@@ -9,7 +15,7 @@
       {{ content }}
     </div>
     <div class="content--secondary">
-      {{ site_settings.footer.footer_copyright.value|raw }}
+      {{ formatted_text }}
     </div>
   </div>
 {% endblock %

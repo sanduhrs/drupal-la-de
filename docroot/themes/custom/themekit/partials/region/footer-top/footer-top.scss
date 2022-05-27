@@ -10,8 +10,8 @@
     position: relative;
     padding-top: rem-calc(56);
     padding-bottom: rem-calc(40);
-    @include breakpoint(medium) {
-      padding-top: rem-calc(52);
+    @include breakpoint(large) {
+      padding-top: rem-calc(69);
       padding-bottom: rem-calc(32);
     }
     @include breakpoint(large) {
@@ -19,37 +19,25 @@
       grid-template-columns: grid-column(7) grid-column(5);
       align-items: center;
     }
-
     @include breakpoint(xlarge) {
       grid-template-columns: grid-column(8) grid-column(4);
     }
-
-    // Shape block
-    &::before,
-    &::after {
-      position: absolute;
+    @include brand-shape(footer) {
       top: 0;
-      left: 0;
-      width: rem-calc(1006);
-      height: rem-calc(430);
-      margin-left: rem-calc(-200);
-      content: '';
-      z-index: z(under);
+      min-width: 200vw;
+      transform: translate3d(-100vw, 0, 0);
       @include breakpoint(medium) {
-        height: rem-calc(354);
+        transform: translate3d(-65vw, 0, 0);
       }
-    }
-
-    &::before {
-      background-color: $color-gray-100;
-      clip-path: polygon(13% 0, 88% 6%, 100% 81%, 95% 100%, 8% 100%, 0% 50%);
-      @include breakpoint(medium) {
-        margin-left: calc(50% - 50vw - #{rem-calc(125)});
-        clip-path: polygon(23% 0, 85% 16%, 100% 86%, 12% 100%, 0% 30%);
+      @include breakpoint(large) {
+        display: none;
       }
     }
 
     //&::after {
+    //width: rem-calc(1006);
+    //height: rem-calc(430);
+    //margin-left: rem-calc(-200);
     //  background: $color-linear-horizontal;
     //  clip-path: polygon(16% 5%, 75% 0, 100% 68%, 96% 94%, 33% 100%, 0% 30%, 16% 5%, calc(16% + 4px) calc(5% + 4px), calc(0% + 4px) 30%, 33% calc(100% - 4px), 96% calc(94% - 4px), calc(100% - 4px) 68%, 75% calc(0% + 4px), 16% calc(5% + 4px));
     //}
@@ -57,6 +45,7 @@
 
   // Subscribe block
   .block-subscribe {
+    position: relative;
     display: flex;
     align-items: center;
     @include breakpoint(small down) {
@@ -70,6 +59,14 @@
       @include grid-column-gutter;
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
+      height: 100%;
+    }
+    @include brand-shape(footer) {
+      top: rem-calc(-69);
+      right: rem-calc(18);
+      @include breakpoint(medium down) {
+        display: none;
+      }
     }
 
     .text {
