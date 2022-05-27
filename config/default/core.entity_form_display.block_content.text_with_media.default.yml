@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.text_with_media.field_media_position
     - field.field.block_content.text_with_media.field_p_link
   module:
+    - allowed_formats
     - field_group
     - media_library
     - paragraphs
@@ -59,11 +60,14 @@ content:
     weight: 1
     region: content
     settings:
-      rows: 9
+      rows: 3
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
   field_heading:
     type: string_textfield
     weight: 0
@@ -98,7 +102,7 @@ content:
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: link_default
+      default_paragraph_type: _none
       features:
         add_above: '0'
         collapse_edit_all: collapse_edit_all

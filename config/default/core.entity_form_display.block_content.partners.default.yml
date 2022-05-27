@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.partners.field_heading
     - field.field.block_content.partners.field_p_link
   module:
+    - allowed_formats
     - paragraphs
     - text
 id: block_content.partners.default
@@ -20,11 +21,14 @@ content:
     weight: 2
     region: content
     settings:
-      rows: 9
+      rows: 3
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
   field_heading:
     type: string_textfield
     weight: 1
