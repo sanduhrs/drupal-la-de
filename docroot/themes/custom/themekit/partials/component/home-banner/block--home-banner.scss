@@ -44,21 +44,6 @@
   }
 
   .field--name-field-p-link {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: rem-calc(16);
-    @include breakpoint(medium) {
-      row-gap: rem-calc(24);
-    }
-
-    > .field__item {
-      &:not(:last-child) {
-        margin-right: rem-calc(24);
-        @include breakpoint(medium) {
-          margin-right: rem-calc(48);
-        }
-      }
-    }
+    @include cta-list;
   }
 }
