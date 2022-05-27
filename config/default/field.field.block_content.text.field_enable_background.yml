@@ -13,11 +13,9 @@ label: 'Frame background'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    value: 0
+default_value: {  }
 default_value_callback: ''
 settings:
-  on_label: Enable
-  off_label: Disable
+  on_label: 'Enable frame'
+  off_label: 'Enable frame (rotated to 180°)'
 field_type: boolean
