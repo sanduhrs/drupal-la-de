@@ -4,22 +4,34 @@
 
 .block--home-banner {
   @include content-width(default);
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     display: flex;
     align-items: center;
   }
 
   .content {
+    @include breakpoint(medium) {
+      @include flex-grid-size(6);
+      padding-top: 104px;
+    }
     @include breakpoint(large) {
       @include flex-grid-size(5);
+      @include top-bottom(padding, 104px);
+      padding-left: 48px;
+    }
+    @include breakpoint(xlarge) {
       @include grid-column-offset(1);
     }
   }
 
   .field--name-field-media {
     position: relative;
-    @include breakpoint(medium down) {
-      margin-bottom: rem-calc(40);
+    @include breakpoint(small down) {
+      margin-bottom: 40px;
+    }
+    @include breakpoint(medium) {
+      @include flex-grid-size(5);
+      align-self: stretch;
     }
     @include breakpoint(large) {
       @include flex-grid-size(6);
@@ -32,14 +44,14 @@
   }
 
   .field--name-field-heading {
-    margin-bottom: rem-calc(24);
+    margin-bottom: 24px;
   }
 
   .field--name-field-description {
     @include font-sizes(text-large);
 
     &:not(:last-child) {
-      margin-bottom: rem-calc(24);
+      margin-bottom: 24px;
     }
   }
 

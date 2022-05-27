@@ -169,31 +169,48 @@
 @mixin banner-image($home-banner: false) {
   max-width: none;
   @if ($home-banner == true) {
-    //margin: rem-calc(-62) rem-calc(-82) 0 0;
+    margin: -16px 0 0 -132px;
   } @else {
-    margin: rem-calc(-62) rem-calc(-82) 0 0;
+    margin: -62px -82px 0 0;
   }
   object-fit: cover;
   @include breakpoint(small down) {
-    max-width: rem-calc(436);
-    max-height: rem-calc(322);
-    width: calc(100% + #{rem-calc(62)});
+    @if ($home-banner == true) {
+      max-width: 620px;
+      max-height: 400px;
+    } @else {
+      max-width: 436px;
+      max-height: 322px;
+    }
+    width: calc(100% + 62px);
     height: 73.8532%;
   }
   @include breakpoint(medium only) {
-    width: rem-calc(540);
-    height: rem-calc(400);
-    margin-right: 0;
+    @if ($home-banner == true) {
+      width: 640px;
+      height: 500px;
+      min-height: calc(100% + 72px);
+      margin: -72px 0 0;
+    } @else {
+      width: 540px;
+      height: 400px;
+      margin-right: 0;
+    }
+  }
+  @include breakpoint(medium) {
+    @if ($home-banner == true) {
+      float: right;
+    }
   }
   @include breakpoint(large) {
     @if ($home-banner == true) {
-      width: rem-calc(920);
-      height: rem-calc(816);
-      margin: rem-calc(-144) 0 0 rem-calc(-320);
+      width: 920px;
+      height: 816px;
+      margin: -144px 0 0 -320px;
     } @else {
-      width: rem-calc(820);
-      height: rem-calc(590);
-      margin: rem-calc(-70) rem-calc(-236) 0 0;
+      width: 820px;
+      height: 590px;
+      margin: -70px -236px 0 0;
     }
   }
 }
@@ -202,16 +219,16 @@
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  row-gap: rem-calc(16);
+  row-gap: 16px;
   @include breakpoint(medium) {
-    row-gap: rem-calc(24);
+    row-gap: 24px;
   }
 
   > .field__item {
     &:not(:last-child) {
-      margin-right: rem-calc(24);
+      margin-right: 24px;
       @include breakpoint(medium) {
-        margin-right: rem-calc(48);
+        margin-right: 48px;
       }
     }
   }
@@ -234,7 +251,7 @@ $shapes: (
       width: key($shape-properties, width);
       height: key($shape-properties, height);
       clip-path: key($shape-properties, path);
-      content: '';
+      content: "";
       z-index: z(under);
       @if map-has-key($shape-properties, color) {
         background: key($shape-properties, color);

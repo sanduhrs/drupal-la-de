@@ -10,8 +10,10 @@
   }
 
   .content {
+    @include top-bottom(padding, 48px);
     @include breakpoint(large) {
       @include flex-grid-size(5);
+      @include top-bottom(padding, 100px);
     }
     @include breakpoint(xlarge) {
       @include flex-grid-size(6);
