@@ -8,3 +8,21 @@
     @include node--full;
   }
 }
+
+.node--type-partner {
+  &.node--view-mode-full {
+    > .node__content {
+      > .field-content {
+        @include breakpoint(large up) {
+          padding-right: 36px;
+          max-width: calc(100% - 417px);
+          width: $global-width-middle;
+        }
+      }
+      > .field-info {
+        max-width: 100%;
+        width: 417px;
+      }
+    }
+  }
+}

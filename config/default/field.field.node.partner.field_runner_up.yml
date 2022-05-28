@@ -18,8 +18,8 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  min: null
-  max: 0
+  min: 0
+  max: null
   prefix: ''
   suffix: x
 field_type: integer
