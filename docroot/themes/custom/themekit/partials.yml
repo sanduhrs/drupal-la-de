@@ -18,6 +18,12 @@ component:
   css:
     theme:
       dist/css/block.css: {}
+component--category-feature:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/category-feature.css: {}
 component--copyright:
   dependencies:
     - themekit/themekit
@@ -123,6 +129,12 @@ layout--twocol:
   css:
     theme:
       dist/css/twocol-layout.css: {}
+node--type--case--simple-teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--case--simple-teaser.css: {}
 node--type--page--full:
   dependencies:
     - themekit/themekit
@@ -165,6 +177,12 @@ region--header:
   css:
     theme:
       dist/css/header.css: {}
+taxonomy--category--full:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/taxonomy--category--full.css: {}
 taxonomy--category--teaser:
   dependencies:
     - themekit/themekit

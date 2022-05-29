@@ -294,6 +294,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
     switch ($bundle) {
       case 'banner_standard':
       case 'single_heading':
+      case 'category_feature':
         array_unshift($suggestions, 'field__heading_3');
         break;
     }

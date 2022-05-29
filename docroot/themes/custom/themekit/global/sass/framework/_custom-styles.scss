@@ -5,11 +5,11 @@
 
 @mixin node--full {
   @include content-width(default);
-  margin-top: rem-calc(40);
-  margin-bottom: rem-calc(110);
+  margin-top: 40px;
+  margin-bottom: 110px;
 
   @include breakpoint(medium) {
-    margin-bottom: rem-calc(160);
+    margin-bottom: 160px;
   }
 
   .link--back {
@@ -20,7 +20,7 @@
   }
 
   .node__title {
-    margin-bottom: rem-calc(24);
+    margin-bottom: 24px;
   }
 
   h1.heading {
@@ -44,6 +44,8 @@
 
   .field--name-field-intro {
     @include font-sizes(text-large);
+
+    margin-top: 24px;
   }
 
   .field-banner {
