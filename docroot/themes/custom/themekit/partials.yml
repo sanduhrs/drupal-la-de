@@ -18,6 +18,12 @@ component:
   css:
     theme:
       dist/css/block.css: {}
+component--categories:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/categories.css: {}
 component--category-feature:
   dependencies:
     - themekit/themekit
@@ -195,6 +201,12 @@ region--header:
   css:
     theme:
       dist/css/header.css: {}
+taxonomy--category--featured-teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/taxonomy--category--featured-teaser.css: {}
 taxonomy--category--full:
   dependencies:
     - themekit/themekit

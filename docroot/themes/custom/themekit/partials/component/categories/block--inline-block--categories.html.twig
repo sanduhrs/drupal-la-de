@@ -1,0 +1,18 @@
+{% extends "@partials/component/block.html.twig" %}
+
+{% set rendered_content = content|without('field_categories', 'field_p_link') %}
+{% set block = content['#block_content'] %}
+{% block content %}
+  <div class="block-content">
+    <div class="shape-wrapper">
+      {{ rendered_content }}
+      <div class="categories-links">
+        <h4>{{ 'Drupal voor'|t }}</h4>
+
+      </div>
+      {{ content.field_p_link }}
+    </div>
+  </div>
+  {{ content.field_categories }}
+
+{% endblock %}
