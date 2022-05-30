@@ -3,16 +3,14 @@
 ////
 
 .region-footer-top {
-  overflow: hidden; // Hide shape block
-
   .content {
     @include flex-grid-row();
     position: relative;
-    padding-top: rem-calc(56);
-    padding-bottom: rem-calc(40);
+    padding-top: 56px;
+    padding-bottom: 40px;
     @include breakpoint(large) {
-      padding-top: rem-calc(69);
-      padding-bottom: rem-calc(32);
+      padding-top: 52px;
+      padding-bottom: 32px;
     }
     @include breakpoint(large) {
       display: grid;
@@ -27,15 +25,22 @@
       min-width: 200vw;
       transform: translate3d(-100vw, 0, 0);
       @include breakpoint(medium) {
-        transform: translate3d(-65vw, 0, 0);
+        transform: translate3d(-65%, 0, 0);
       }
       @include breakpoint(large) {
         display: none;
       }
     }
-
-    &::after {
-      @include brand-shape(footer-frame);
+    @include brand-shape(footer-frame, after) {
+      top: 0;
+      min-width: 200vw;
+      transform: translate3d(-100vw, 0, 0);
+      @include breakpoint(medium) {
+        transform: translate3d(-65%, 0, 0);
+      }
+      @include breakpoint(large) {
+        display: none;
+      }
     }
   }
 
@@ -49,7 +54,7 @@
     }
     @include breakpoint(medium down) {
       @include flex-grid-column(12);
-      margin-bottom: rem-calc(40);
+      margin-bottom: 40px;
     }
     @include breakpoint(large) {
       @include grid-column-gutter;
@@ -58,8 +63,15 @@
       height: 100%;
     }
     @include brand-shape(footer) {
-      top: rem-calc(-69);
-      right: rem-calc(18);
+      top: -52px;
+      right: 18px;
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+    @include brand-shape(footer-frame, after) {
+      top: -52px;
+      right: 36px;
       @include breakpoint(medium down) {
         display: none;
       }
@@ -68,13 +80,13 @@
     .text {
       @include breakpoint(small down) {
         flex: 1 100%;
-        margin-bottom: rem-calc(16);
+        margin-bottom: 16px;
       }
       @include breakpoint(medium) {
-        margin-right: rem-calc(32);
+        margin-right: 32px;
       }
       @include breakpoint(xlarge) {
-        margin-right: rem-calc(60);
+        margin-right: 60px;
       }
     }
 
@@ -92,15 +104,15 @@
       display: inline-flex;
       align-items: center;
       @include icon-before(mail-add) {
-        margin-right: rem-calc(16);
-        font-size: rem-calc(24);
+        margin-right: 16px;
+        font-size: 24px;
       }
     }
   }
 
   .navigation__heading {
     @include font-sizes(kicker-small);
-    margin-bottom: rem-calc(12);
+    margin-bottom: 12px;
     color: $color-gray-500;
     @include breakpoint(medium) {
       @include font-sizes(kicker-large);
@@ -121,9 +133,9 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: rem-calc(32);
+      margin-bottom: 32px;
       @include breakpoint(medium) {
-        margin-bottom: rem-calc(24);
+        margin-bottom: 24px;
       }
     }
   }
