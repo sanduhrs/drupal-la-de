@@ -1,5 +1,6 @@
 {% extends "@partials/component/block.html.twig" %}
 
+{% set rendered_content = content|without('field_media') %}
 {% set block = content['#block_content'] %}
 {% set classes = [
   block.field_media_position.value ? 'media-position--' ~ block.field_media_position.value,
@@ -7,5 +8,11 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-  {{ content }}
+  <div class="mobile-heading">
+    {{ content.field_heading }}
+  </div>
+  {{ content.field_media }}
+  <div class="content">
+    {{ rendered_content }}
+  </div>
 {% endblock %}

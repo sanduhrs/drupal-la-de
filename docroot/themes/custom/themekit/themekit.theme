@@ -309,6 +309,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
         break;
       case 'partners':
       case 'text':
+      case 'text_with_media':
         array_unshift($suggestions, 'field__heading_2');
         break;
     }

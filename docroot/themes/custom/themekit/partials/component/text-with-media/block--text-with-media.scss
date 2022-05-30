@@ -3,18 +3,100 @@
 ////
 
 .block--text-with-media {
-  .field--name-field-heading {
-    margin-bottom: rem-calc(8);
+  @include breakpoint(medium) {
+    @include flex-grid-row(nest);
+    align-items: center;
+  }
+
+  .mobile-heading {
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  .content {
+    @include breakpoint(medium) {
+      @include flex-grid-column(6);
+    }
     @include breakpoint(large) {
-      margin-bottom: rem-calc(24);
+      @include flex-grid-column(5);
+    }
+    .field--name-field-heading {
+      @include breakpoint(small down) {
+        display: none;
+      }
+    }
+  }
+
+  &.media-position--left {
+    .content {
+      @include breakpoint(large) {
+        @include grid-column-offset(1);
+      }
+    }
+
+    .field--name-field-media {
+      img {
+        @include brand-shape(text-with-media, false);
+      }
+    }
+  }
+
+  &.media-position--right {
+    .content {
+      @include breakpoint(medium) {
+        order: -1;
+      }
+    }
+
+    .field--name-field-media {
+      @include breakpoint(large) {
+        @include grid-column-offset(1);
+      }
+
+      img {
+        @include brand-shape(text-with-media-inverse, false);
+      }
+    }
+  }
+
+  .field--name-field-heading {
+    margin-bottom: 16px;
+    @include breakpoint(large) {
+      margin-bottom: 24px;
     }
   }
 
   .field--name-field-p-link {
     @include cta-list;
-    margin-top: rem-calc(12);
+    margin-top: 24px;
+  }
+
+  .field--name-field-media {
+    @include breakpoint(small down) {
+      @include left-right(margin, -48px);
+      margin-bottom: 16px;
+    }
     @include breakpoint(medium) {
-      margin-top: rem-calc(24);
+      @include flex-grid-column(6);
+    }
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+    @include breakpoint(medium) {
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      @include breakpoint(small down) {
+        display: inline-block;
+        max-width: 436px;
+      }
+      @include breakpoint(medium) {
+        height: 470px;
+      }
     }
   }
 }

@@ -328,6 +328,7 @@ $shapes: (
   default: (
     width: auto,
     height: auto,
+    background: transparent,
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%),
   ),
 ) !default;
