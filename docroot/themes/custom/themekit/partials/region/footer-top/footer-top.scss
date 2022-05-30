@@ -34,13 +34,9 @@
       }
     }
 
-    //&::after {
-    //width: rem-calc(1006);
-    //height: rem-calc(430);
-    //margin-left: rem-calc(-200);
-    //  background: $color-linear-horizontal;
-    //  clip-path: polygon(16% 5%, 75% 0, 100% 68%, 96% 94%, 33% 100%, 0% 30%, 16% 5%, calc(16% + 4px) calc(5% + 4px), calc(0% + 4px) 30%, 33% calc(100% - 4px), 96% calc(94% - 4px), calc(100% - 4px) 68%, 75% calc(0% + 4px), 16% calc(5% + 4px));
-    //}
+    &::after {
+      @include brand-shape(footer-frame);
+    }
   }
 
   // Subscribe block
