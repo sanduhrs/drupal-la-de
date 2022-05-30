@@ -76,12 +76,14 @@ third_party_settings:
         dnl_layout_twocol_section:
           all_regions:
             'Inline blocks':
+              - 'inline_block:community_features'
               - 'inline_block:text'
       blacklisted_blocks:
         dnl_layout_onecol_section:
           all_regions:
             'Inline blocks':
               - 'inline_block:basic_banner'
+              - 'inline_block:community_features'
               - 'inline_block:home_banner'
               - 'inline_block:simple_banner'
         dnl_layout_twocol_section:

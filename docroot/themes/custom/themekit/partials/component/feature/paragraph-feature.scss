@@ -1,13 +1,21 @@
 ////
-/// Link Default paragraph
+/// Feature paragraph
 ////
 
-.paragraph--type--link-default {
-  &.button-style--primary a {
-    @include btn(primary);
+.paragraph--type--feature {
+  .field--name-field-media {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    svg {
+      width: auto;
+      max-width: 200px;
+      height: 32px;
+    }
   }
 
-  &.button-style--secondary a {
-    @include link(more);
+  .field--name-field-description {
+    @include font-sizes(text-card);
   }
 }

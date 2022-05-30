@@ -24,6 +24,12 @@ component--category-feature:
   css:
     theme:
       dist/css/category-feature.css: {}
+component--community-features:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--community-features.css: {}
 component--copyright:
   dependencies:
     - themekit/themekit
@@ -36,6 +42,12 @@ component--detail-item:
   css:
     theme:
       dist/css/detail-item.css: {}
+component--feature:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/paragraph-feature.css: {}
 component--home-banner:
   dependencies:
     - themekit/themekit
