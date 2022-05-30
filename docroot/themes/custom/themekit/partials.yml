@@ -55,6 +55,12 @@ component--link-default:
   css:
     theme:
       dist/css/paragraph-link-default.css: {}
+component--links:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--links.css: {}
 component--navigation--community:
   dependencies:
     - themekit/themekit

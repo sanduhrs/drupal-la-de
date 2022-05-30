@@ -333,11 +333,11 @@ $shapes: (
   ),
 ) !default;
 
-@mixin brand-shape($shape-name: default, $shape-el: true) {
+@mixin brand-shape($shape-name: default, $shape-el: before) {
   $shape-properties: extend-in-map($shapes, $shape-name);
 
-  @if $shape-el == true {
-    &::before {
+  @if $shape-el != false {
+    &::#{$shape-el} {
       position: absolute;
       width: key($shape-properties, width);
       height: key($shape-properties, height);
@@ -355,6 +355,7 @@ $shapes: (
     @if map-has-key($shape-properties, color) {
       background: key($shape-properties, color);
     }
+
     @content;
   }
 }

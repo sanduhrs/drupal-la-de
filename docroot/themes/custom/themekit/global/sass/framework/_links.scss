@@ -181,15 +181,37 @@ $links: (
       right: 0;
     }
 
+    &::before {
+      position: absolute;
+      z-index: z(under);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: key($link-conf, hover-color);
+      transform: scaleX(0);
+      transform-origin: right;
+      content: "";
+      @include global-transition(transform);
+    }
+
     &:hover,
     &:focus {
       color: key($link-conf, hover-color);
-      box-shadow: 0 -1px 0 0 key($link-conf, hover-color) inset,
-        0 -2px 0 0 key($link-conf, hover-color) inset;
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
 
     &:active {
       color: key($link-conf, active-color);
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
   }
 }
