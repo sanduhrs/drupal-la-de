@@ -39,8 +39,8 @@
     }
   }
 
-  // Enabled shape background
-  &.shape-background {
+  // Enabled frame background
+  &.frame-background {
     @include top-bottom(padding, 74px);
     position: relative;
     min-height: 360px;
@@ -91,7 +91,7 @@
       }
     }
 
-    &--inverse {
+    &--rotated {
       @include brand-shape(text-inverse) {
         left: 0;
       }
