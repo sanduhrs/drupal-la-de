@@ -3,6 +3,8 @@
 ////
 
 .region-footer-top {
+  overflow: hidden;
+
   .content {
     @include flex-grid-row();
     position: relative;

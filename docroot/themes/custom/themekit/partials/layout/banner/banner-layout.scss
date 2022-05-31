@@ -4,6 +4,7 @@
 
 .banner-layout {
   position: relative;
+  overflow: hidden;
 
   body.is-home-banner & {
     margin-top: rem-calc(-72);

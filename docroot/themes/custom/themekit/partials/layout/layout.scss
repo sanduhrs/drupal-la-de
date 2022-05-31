@@ -3,6 +3,8 @@
 ////
 
 .layout {
+  overflow: hidden;
+
   // Bottom space for the page content
   &:last-child {
     padding-bottom: rem-calc(60);
