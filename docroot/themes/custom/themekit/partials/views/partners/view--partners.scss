@@ -46,7 +46,7 @@
             transform: translateX(calc(100% + 32px));
           }
         }
-        &:last-child {
+        &:nth-child(7) {
           @include breakpoint(medium) {
             transform: translateX(calc(100% + 32px));
           }
