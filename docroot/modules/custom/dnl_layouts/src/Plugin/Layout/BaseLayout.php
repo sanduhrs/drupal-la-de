@@ -35,7 +35,6 @@ class BaseLayout extends LayoutDefault {
       '#title' => $this->t('Layout Padding (space between sections)'),
       '#options' => [
         'default' => 'Default',
-        'small' => 'Small',
         'none' => 'None',
       ],
       '#default_value' => $configuration['padding'],

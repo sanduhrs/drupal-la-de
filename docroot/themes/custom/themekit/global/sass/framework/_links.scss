@@ -217,27 +217,25 @@ $links: (
 }
 
 // Main navigation mouseover behavior
-@mixin main-menu-item($mobile: false, $active-class: is-active) {
-  $active-class-: "";
+@mixin main-menu-item($mobile: false, $active-class: true) {
+  > a {
+    display: block;
+    color: inherit;
 
-  @if (not $active-class == false) {
-    $active-class-: ":not(." + $active-class + ")";
-  }
-
-  display: block;
-  color: inherit;
-
-  @if ($mobile == true) {
-    position: relative;
-    color: $color-gray-900;
-  } @else {
-    @include breakpoint(medium) {
+    @if ($mobile == true) {
       position: relative;
       color: $color-gray-900;
+      z-index: z(above);
+    } @else {
+      @include breakpoint(medium) {
+        position: relative;
+        color: $color-gray-900;
+        z-index: z(above);
+      }
     }
   }
 
-  &::after {
+  > a::after {
     position: absolute;
     z-index: z(under);
     bottom: 0;
@@ -257,7 +255,7 @@ $links: (
     }
   }
 
-  &#{$active-class-} {
+  &:not(.menu__item--active-trail) > a {
     @include selectors(active) {
       &::after {
         @if ($mobile == true) {
@@ -274,15 +272,13 @@ $links: (
   }
 
   // Active state
-  @if (not $active-class == false) {
-    &.#{$active-class} {
-      &::after {
-        @if ($mobile == true) {
+  @if ($active-class == true) {
+    &.menu__item--active-trail > a::after {
+      @if ($mobile == true) {
+        transform: scaleX(1);
+      } @else {
+        @include breakpoint(medium) {
           transform: scaleX(1);
-        } @else {
-          @include breakpoint(medium) {
-            transform: scaleX(1);
-          }
         }
       }
     }
