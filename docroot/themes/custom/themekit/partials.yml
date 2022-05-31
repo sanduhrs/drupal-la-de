@@ -36,12 +36,6 @@ component--community-features:
   css:
     theme:
       dist/css/block--community-features.css: {}
-component--copyright:
-  dependencies:
-    - themekit/themekit
-  css:
-    theme:
-      dist/css/block-copyright.css: {}
 component--detail-item:
   dependencies:
     - themekit/themekit

@@ -46,6 +46,30 @@
 
       p {
         margin: 0;
+
+        &.register {
+          @include icon-before(register) {
+            margin-right: 4px;
+            font-size: 12px;
+            line-height: inherit;
+          }
+        }
+
+        &.cc {
+          @include icon-before(cc) {
+            margin-right: 4px;
+            font-size: 12px;
+            line-height: inherit;
+          }
+        }
+
+        &.copyright {
+          @include icon-before(copyright) {
+            margin-right: 4px;
+            font-size: 12px;
+            line-height: inherit;
+          }
+        }
       }
 
       a {
@@ -60,17 +84,6 @@
     }
     @include breakpoint(medium) {
       margin-left: rem-calc(24);
-    }
-  }
-
-  .block-copyright {
-    margin-top: rem-calc(24);
-    @include breakpoint(medium) {
-      @include flex-grid-column(6);
-      margin-top: rem-calc(10);
-    }
-    @include breakpoint(large) {
-      @include flex-grid-column(4);
     }
   }
 }
