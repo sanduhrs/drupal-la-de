@@ -14,8 +14,8 @@
       padding-left: 112px;
     }
     .shape-wrapper {
-      padding-top: 74px;
-      padding-bottom: 74px;
+      padding-top: 56px;
+      padding-bottom: 64px;
       position: relative;
       z-index: z(above);
       min-height: 360px;
@@ -35,11 +35,12 @@
         @include breakpoint(medium down) {
           left: 0;
           min-width: 125%;
-          transform: translate3d(-15%, 0, 0);
+          transform: translate3d(-18%, 0, 0);
         }
         @include breakpoint(small down) {
           min-width: 150vw;
-          transform: translate3d(-33vw, 0, 0);
+          transform: translate3d(-45vw, 0, 0);
+          height: 100%;
         }
         @include breakpoint(large) {
           right: -112px;
@@ -55,11 +56,33 @@
       }
     }
     .field--name-field-p-link {
-      margin-top: 40px;
+      margin-top: 24px;
+      @include breakpoint(large) {
+        margin-top: 40px;
+      }
     }
     .categories-links {
+      margin-top: 24px;
       @include breakpoint(large) {
         display: none;
+      }
+      h4 {
+        font-size: rem-calc(15);
+        line-height: 1.5;
+        font-weight: $global-weight-medium;
+        color: $color-gray-500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          margin-top: 4px;
+          a {
+            @include link(more);
+          }
+        }
       }
     }
   }
@@ -74,11 +97,13 @@
         }
         &:first-child {
           top: 0;
-          right: 0;
+          right: -16px;
           width: 280px;
         }
         &:last-child {
-
+          bottom: 0;
+          left: -16px;
+          width: 280px;
         }
       }
       @include breakpoint(large) {
