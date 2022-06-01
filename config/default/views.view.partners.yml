@@ -305,7 +305,7 @@ display:
           grouping:
             -
               field: field_category
-              rendered: true
+              rendered: false
               rendered_strip: false
           row_class: ''
           default_row_class: true

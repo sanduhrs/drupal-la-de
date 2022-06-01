@@ -4,6 +4,9 @@
     max-width: 220px;
     padding-bottom: 100%;
     position: relative;
+    .view-partners.view-display-id-listing & {
+      max-width: 305px;
+    }
     > a {
       position: absolute;
       width: 100%;
