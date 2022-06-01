@@ -57,7 +57,7 @@
 
   &.view-display-id-listing {
     .view-content {
-      .category-wrapper {
+      .level-wrapper {
         > h3 {
           font-size: rem-calc(15);
           line-height: 1.5;
@@ -73,12 +73,12 @@
             margin-bottom: 64px;
           }
         }
-        .category-items {
+        .level-items {
           display: flex;
           flex-wrap: wrap;
           margin-left: -8px;
           margin-right: -8px;
-          @include breakpoint(medium) {
+          @include breakpoint(large) {
             margin-left: -16px;
             margin-right: -16px;
           }
@@ -87,26 +87,74 @@
             width: calc((100% - (16px * 4)) / 4);
             margin: 0 8px 16px;
             @include breakpoint(medium) {
+              width: calc((100% - (16px * 8)) / 8);
+            }
+            @include breakpoint(large) {
               width: calc((100% - (32px * 8)) / 8);
               margin: 0 16px 32px;
+            }
+            .become-partner {
+              display: block;
+              padding-bottom: 100%;
+              position: relative;
+              overflow: hidden;
+              span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border: 2px solid $color-gray-100;
+                background: $body-background;
+                padding: 4px;
+                font-size: rem-calc(10);
+                line-height: 1.25;
+                letter-spacing: 0.2em;
+                color: $color-gray-500;
+                text-transform: uppercase;
+                @include global-transition(background-color);
+                @include breakpoint(medium) {
+                  padding: 8px;
+                }
+                @include breakpoint(large) {
+                  font-size: rem-calc(12);
+                  padding: 15px;
+                  letter-spacing: 0.3em;
+                }
+                @include breakpoint(xlarge) {
+                  padding: 25px 15px;
+                  line-height: 1.5;
+                }
+              }
+              @include selectors(active) {
+                span {
+                  background: $color-gray-100;
+                }
+              }
             }
           }
         }
         &:nth-child(1) {
-          .category-items {
+          .level-items {
             > .views-row {
               width: calc((100% - (16px * 2)) / 2);
               @include breakpoint(medium) {
+                width: calc((100% - (16px * 4)) / 4);
+              }
+              @include breakpoint(large) {
                 width: calc((100% - (32px * 4)) / 4);
               }
             }
           }
         }
         &:nth-child(2) {
-          .category-items {
+          .level-items {
             > .views-row {
               width: calc((100% - (16px * 3)) / 3);
               @include breakpoint(medium) {
+                width: calc((100% - (16px * 6)) / 6);
+              }
+              @include breakpoint(large) {
                 width: calc((100% - (32px * 6)) / 6);
               }
             }

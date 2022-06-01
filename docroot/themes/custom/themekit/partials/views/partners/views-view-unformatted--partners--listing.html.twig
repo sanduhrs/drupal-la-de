@@ -15,11 +15,11 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-<div class="category-wrapper">
+<div class="level-wrapper">
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
-  <div class="category-items">
+  <div class="level-items">
     {% for row in rows %}
       {%
         set row_classes = [
@@ -30,5 +30,15 @@
         {{- row.content -}}
       </div>
     {% endfor %}
+    {% if title %}
+      {% set level = title|striptags|trim|clean_class %}
+      {% if level == 'zilver' %}
+        <div class="views-row">
+          <a class="become-partner" href="/ons-partnerprogramma">
+            <span>{{ 'Jouw logo kan hier staan'|t }}</span>
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
   </div>
 </div>
