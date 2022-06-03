@@ -37,6 +37,7 @@
     "drupal/core-recommended": "^9.3",
     "drupal/csv_serialization": "^2.0@beta",
     "drupal/devel": "^4.0",
+    "drupal/draggableviews": "^2.0",
     "drupal/embed": "^1.0",
     "drupal/entity": "^1.0",
     "drupal/entity_browser": "^2.5",
