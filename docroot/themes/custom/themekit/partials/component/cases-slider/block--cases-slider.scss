@@ -1,0 +1,29 @@
+////
+/// Cases Slider block
+////
+
+.block--cases-slider {
+  @include breakpoint(medium) {
+    display: flex;
+    align-items: center;
+  }
+
+  .block-content {
+    margin-bottom: 40px;
+    @include breakpoint(medium) {
+      @include flex-grid-size(6);
+      margin-bottom: 56px;
+      flex-shrink: 0;
+    }
+    @include breakpoint(large) {
+      @include flex-grid-size(4);
+    }
+  }
+
+  .block-view {
+    @include breakpoint(medium) {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+}

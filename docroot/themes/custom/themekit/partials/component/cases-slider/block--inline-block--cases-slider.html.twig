@@ -1,0 +1,10 @@
+{% extends "@partials/component/block.html.twig" %}
+
+{% set block = content['#block_content'] %}
+
+{% block content %}
+  {{ rendered_content }}
+  <div class="block-view">
+    {{ drupal_view('cases', 'slider') }}
+  </div>
+{% endblock %}
