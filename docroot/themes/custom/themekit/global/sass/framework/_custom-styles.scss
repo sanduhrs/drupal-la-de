@@ -73,8 +73,7 @@
 
     .field--name-field-image {
       text-align: right;
-      overflow: hidden;
-      margin-top: -99px;
+      margin-top: -80px;
 
       img {
         @include shape-image;
@@ -89,6 +88,10 @@
           max-height: unset;
           max-width: unset;
         }
+      }
+
+      @include breakpoint(medium up) {
+        transform: translate(9%, 0);
       }
 
       @include breakpoint(medium down) {
