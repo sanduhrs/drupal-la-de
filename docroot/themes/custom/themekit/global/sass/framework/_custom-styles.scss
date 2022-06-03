@@ -262,6 +262,12 @@
         @include breakpoint(medium up) {
           margin-bottom: 56px;
         }
+
+        @include breakpoint(small down) {
+          br {
+            display: none;
+          }
+        }
       }
       &.node__title {
         margin-bottom: 12px;
