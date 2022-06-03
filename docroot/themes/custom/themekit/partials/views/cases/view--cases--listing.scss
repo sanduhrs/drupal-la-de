@@ -1,0 +1,21 @@
+.view-cases-listing {
+  @include content-width(default);
+
+  > .view-content {
+    @include breakpoint(medium) {
+      @include flex-grid-row(nest);
+    }
+
+    > .views-row {
+      margin-top: 16px;
+      @include breakpoint(medium) {
+        @include flex-grid-column(6);
+        margin-top: 0;
+      }
+
+      @include breakpoint(large) {
+        @include flex-grid-column(4);
+      }
+    }
+  }
+}

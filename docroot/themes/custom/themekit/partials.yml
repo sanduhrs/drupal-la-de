@@ -18,6 +18,12 @@ component:
   css:
     theme:
       dist/css/block.css: {}
+component--cases:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--cases.css: {}
 component--categories:
   dependencies:
     - themekit/themekit

@@ -312,6 +312,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
       case 'text':
       case 'text_with_media':
       case 'links':
+      case 'cases_slider':
         array_unshift($suggestions, 'field__heading_2');
         break;
     }
