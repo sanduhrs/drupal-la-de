@@ -18,12 +18,13 @@ component:
   css:
     theme:
       dist/css/block.css: {}
-      component--cases:
+component--cases-slider:
   dependencies:
+    - themekit/common--glide
     - themekit/themekit
   css:
     theme:
-      dist/css/block--cases.css: {}
+      dist/css/block--cases-slider.css: {}
 component--categories:
   dependencies:
     - themekit/themekit
@@ -159,6 +160,12 @@ node--type--case--simple-teaser:
   css:
     theme:
       dist/css/node--case--simple-teaser.css: {}
+node--type--case--teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--case--teaser.css: {}
 node--type--page--full:
   dependencies:
     - themekit/themekit
