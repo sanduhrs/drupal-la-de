@@ -2,24 +2,24 @@
 @import "base/base";
 
 // Foundation App
-@import 'base/app';
+@import "base/app";
 
 // Typography
 @import "base/typography";
 
 // Animations
-@import 'base/animation';
+@import "base/animation";
 
 // Drupal admin helpers
-@import 'components/drupal';
+@import "components/drupal";
 
 // Sitewide styles
-@import 'components/accessibility';
-@import 'components/buttons';
-@import 'components/links';
+@import "components/accessibility";
+@import "components/buttons";
+@import "components/links";
 //@import 'components/forms';
-@import 'components/tabs';
-@import 'components/custom-blocks';
-@import 'components/navigations';
-@import 'components/svg';
-//@import 'components/pager';
+@import "components/tabs";
+@import "components/custom-blocks";
+@import "components/navigations";
+@import "components/svg";
+@import "components/pager";

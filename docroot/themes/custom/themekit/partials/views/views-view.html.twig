@@ -36,6 +36,7 @@
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
+    'view-' ~ id|clean_class ~ '-' ~ display_id|clean_class,
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}

@@ -18,7 +18,7 @@ component:
   css:
     theme:
       dist/css/block.css: {}
-component--cases:
+      component--cases:
   dependencies:
     - themekit/themekit
   css:
@@ -225,6 +225,12 @@ user:
   css:
     theme:
       dist/css/user.css: {}
+views--cases:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/view--cases--listing.css: {}
 views--categories:
   dependencies:
     - themekit/themekit

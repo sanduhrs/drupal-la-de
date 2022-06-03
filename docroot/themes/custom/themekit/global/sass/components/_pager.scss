@@ -3,46 +3,57 @@
 ////
 
 .pager {
-  margin-top: rem-calc(36);
-  margin-bottom: rem-calc(110);
+  margin-top: 6px;
+  margin-bottom: 32px;
   @include breakpoint(medium) {
-    margin-top: rem-calc(64);
+    margin-top: 32px;
   }
 
   &__items {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     list-style-type: none;
-    line-height: rem-calc(48);
   }
 
   &__item {
-    @include left-right(margin, rem-calc(8));
+    @include left-right(margin, 8px);
+    @include breakpoint(medium) {
+      @include left-right(margin, 13px);
+    }
 
     a {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: rem-calc(48);
-      padding: 0 rem-calc(20);
-      line-height: 1.5em;
+      min-width: 48px;
+      padding: 0 16px;
+      line-height: 48px;
       color: $color-black;
       @include breakpoint(medium) {
-        height: rem-calc(56);
+        min-width: 56px;
+        line-height: 56px;
       }
     }
 
-    &.pager__item--first,
     &.pager__item--previous,
-    &.pager__item--next,
-    &.pager__item--last {
+    &.pager__item--next {
       a {
-        width: rem-calc(48);
         background-color: $color-primary-600;
-        color: $color-black;
-        @include breakpoint(medium) {
-          width: rem-calc(56);
+        color: $color-white;
+        @include global-transition;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 4px 20px rgba($color-black, 0.25);
+          background-color: $color-primary-700;
+          color: $color-white;
+        }
+
+        &:active {
+          background-color: $color-primary-400;
+          color: $color-gray-900;
         }
       }
 
@@ -55,102 +66,41 @@
       margin-left: 0;
 
       a {
-        @include icon-before(angle-left) {
-          font-size: rem-calc(24);
-          text-align: center;
+        height: 48px;
+        @include breakpoint(medium) {
+          height: 56px;
+        }
+        @include replace-text-with-icon(angle-left, rem-calc(24)) {
+          line-height: inherit;
         }
       }
     }
 
     &.pager__item--next {
-      margin-left: auto;
       margin-right: 0;
-      @include breakpoint(small down) {
-        margin-right: rem-calc(-16);
-      }
-      @include breakpoint(xmedium) {
-        margin-left: rem-calc(8);
-      }
 
       a {
-        @include icon-after(chevron-right) {
-          margin-left: rem-calc(6);
-          font-size: rem-calc(16);
-          color: $gray-darker;
+        height: 48px;
+        @include breakpoint(medium) {
+          height: 56px;
+        }
+        @include replace-text-with-icon(angle-right, rem-calc(24)) {
+          line-height: inherit;
         }
       }
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      padding: 0 rem-calc(16);
-    }
-
-    &--link {
-      &:not(.is-active) {
-        @include breakpoint(small down) {
-          display: none;
-        }
-      }
-    }
-
-    &:not(.is-active) {
-      a {
-        color: inherit;
-
-        &:hover,
-        &:focus {
-          background-color: $color-secondary-light;
-          color: inherit;
-        }
-
-        &:active {
-          background-color: $color-secondary;
-          color: $white;
-        }
-
-        &:disabled {
-          background-color: #e2e4e7;
-          color: $white;
-        }
-      }
-    }
-
-    &:not(.is-active) {
-      @include breakpoint(small down);
     }
 
     &.is-active {
-      a {
-        background-color: $color-secondary;
-        color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      min-width: 48px;
+      padding: 0 16px;
+      background-color: $color-gray-100;
+      @include breakpoint(medium) {
+        min-width: 56px;
       }
     }
   }
-}
-
-// Infinite scroll pager
-//.pager__items--infinite {
-//  margin: rem-calc(20) 0 rem-calc(40);
-//  list-style-type: none;
-//  @include breakpoint(medium) {
-//    margin-top: rem-calc(40);
-//    margin-bottom: rem-calc(80);
-//    text-align: center;
-//  }
-//
-//  .btn {
-//    display: block;
-//    text-align: center;
-//    @include breakpoint(medium) {
-//      display: inline-block;
-//    }
-//  }
-//}
-
-// Adjustments for the First and last links
-.pager__item--first,
-.pager__item--last {
-  display: none;
 }
