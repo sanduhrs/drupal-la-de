@@ -8,8 +8,13 @@
       margin: 100px 0;
     }
 
+    @include breakpoint(medium down) {
+      margin-left: -32px;
+      margin-right: -32px;
+    }
+
     @include breakpoint(small down) {
-      margin: 50px -16px 0 -16px;
+      margin: 50px -16px 0 -32px;
     }
 
     .field--name-field-media {
