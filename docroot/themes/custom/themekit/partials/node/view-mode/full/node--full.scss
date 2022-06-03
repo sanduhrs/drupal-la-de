@@ -14,9 +14,15 @@
     > .node__content {
       > .field-content {
         @include breakpoint(large up) {
-          padding-right: 36px;
+          padding-right: 32px;
           max-width: calc(100% - 417px);
-          width: $global-width-middle;
+        }
+
+        .field-content-items {
+          @include breakpoint(large up) {
+            max-width: 100%;
+            width: $global-width-middle;
+          }
         }
       }
       > .field-info {

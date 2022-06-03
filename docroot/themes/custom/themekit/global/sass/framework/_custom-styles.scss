@@ -169,7 +169,7 @@
       width: 100%;
 
       @include breakpoint(large up) {
-        padding-right: 36px;
+        padding-right: 32px;
         max-width: calc(100% - 304px);
         width: $global-width-narrow;
       }
@@ -247,6 +247,25 @@
   .desktop {
     @include breakpoint(small down) {
       display: none;
+    }
+  }
+
+  .field-view {
+    margin-top: 32px;
+    @include breakpoint(medium) {
+      margin-top: 63px;
+    }
+    h2 {
+      &.heading {
+        margin-bottom: 40px;
+
+        @include breakpoint(medium up) {
+          margin-bottom: 56px;
+        }
+      }
+      &.node__title {
+        margin-bottom: 12px;
+      }
     }
   }
 }

@@ -237,6 +237,7 @@ views--cases:
     - themekit/themekit
   css:
     theme:
+      dist/css/view--cases--cases.css: {}
       dist/css/view--cases--listing.css: {}
 views--categories:
   dependencies:
