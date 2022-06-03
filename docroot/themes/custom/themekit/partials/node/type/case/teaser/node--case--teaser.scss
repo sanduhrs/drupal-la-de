@@ -3,6 +3,7 @@
     > a {
       display: block;
       min-height: 330px;
+      background-color: $color-white;
       will-change: transform, box-shadow;
       transition: transform $global-transition-duration
           $global-transition-timing-function,
@@ -28,20 +29,25 @@
     }
 
     .node__intro {
-      padding: 24px 32px 32px;
-      background-color: $color-white;
+      padding: 20px 24px;
+      @include breakpoint(medium) {
+        padding: 24px 32px 32px;
+      }
     }
 
-    .node__summary {
-      margin-top: 12px;
+    .field--name-body {
       @include font-sizes(text-card);
+      margin-top: 12px;
     }
 
     .field--name-field-image {
       img {
         width: 100%;
-        height: 190px;
+        height: 212px;
         object-fit: cover;
+        @include breakpoint(large) {
+          height: 190px;
+        }
       }
     }
 
