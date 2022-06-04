@@ -26,6 +26,36 @@ const sliders = {
       },
     },
   },
+  'glide-wrapper-multiple': {
+    selector: '.glide__slide',
+    options: {
+      type: 'slider',
+      startAt: 0,
+      perView: 4,
+      gap: 32,
+      keyboard: false,
+      bound: false,
+      rewind: false,
+      peek: { before: 0, after: -80 },
+      breakpoints: {
+        480: {
+          perView: 1,
+          gap: 20,
+          peek: { before: 0, after: 50 },
+        },
+        680: {
+          perView: 2,
+          gap: 20,
+          peek: { before: 0, after: -80 },
+        },
+        1024: {
+          perView: 3,
+          gap: 20,
+          peek: { before: 0, after: -70 },
+        },
+      },
+    },
+  },
 };
 
 Drupal.behaviors.slider = {

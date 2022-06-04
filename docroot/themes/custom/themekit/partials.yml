@@ -234,6 +234,7 @@ user:
       dist/css/user.css: {}
 views--cases:
   dependencies:
+    - themekit/common--glide
     - themekit/themekit
   css:
     theme:
