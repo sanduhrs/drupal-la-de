@@ -274,6 +274,12 @@
       }
     }
   }
+
+  .field--name-field-date-range {
+    background: $color-linear-vertical-blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @mixin shape-image($inverse: false) {

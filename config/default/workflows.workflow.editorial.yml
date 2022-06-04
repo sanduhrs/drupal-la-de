@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.case
     - node.type.component_page
+    - node.type.event
     - node.type.page
     - node.type.partner
   module:
@@ -68,6 +69,7 @@ type_settings:
     node:
       - case
       - component_page
+      - event
       - page
       - partner
   default_moderation_state: draft

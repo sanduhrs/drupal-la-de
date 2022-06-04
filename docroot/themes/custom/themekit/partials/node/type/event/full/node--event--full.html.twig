@@ -1,0 +1,29 @@
+{% extends "@partials/node/node-wrapper.html.twig" %}
+{% block node %}
+  {% set rendered_content = content|without(
+    'field_image',
+    'field_date_range',
+    'field_intro',
+  )
+  %}
+
+  <a class="link--back desktop" href="/events" >{{ 'Events'|t }}</a>
+  <div class="field-banner">
+    <div class="field-text">
+      <a class="link--back mobile" href="/events" >{{ 'Events'|t }}</a>
+      <h1 class="heading">{{ node.label }}</h1>
+      {{ content.field_date_range }}
+      {{ content.field_intro }}
+    </div>
+    {{ content.field_image }}
+  </div>
+
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="field-content">
+      {{ rendered_content }}
+    </div>
+    <div class="field-info">
+    </div>
+  </div>
+{% endblock %}

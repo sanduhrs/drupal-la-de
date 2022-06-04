@@ -27,7 +27,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_address:
     type: address_default
@@ -40,17 +45,17 @@ content:
         map_link_position: address
         map_link_text: 'Open Map'
         map_link_new_window: true
-    weight: 104
+    weight: 6
     region: content
   field_date_range:
     type: daterange_default
     label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: short
       separator: '-'
     third_party_settings: {  }
-    weight: 103
+    weight: 5
     region: content
   field_image:
     type: media_responsive_thumbnail
@@ -59,19 +64,19 @@ content:
       responsive_image_style: half_column_hq
       image_link: ''
     third_party_settings: {  }
-    weight: 102
+    weight: 3
     region: content
   field_intro:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
   langcode: true
