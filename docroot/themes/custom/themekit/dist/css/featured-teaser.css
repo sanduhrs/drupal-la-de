@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/**
+ * Base Styles
+ * - 01 - Foundation
+ * - 02 - Utilities
+ * - 03 - Framework
+ * - 04 - Settings
+ */
+/*------------------------------------*\
+  01 - Foundation
+\*------------------------------------*/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+/*------------------------------------*\
+  02 - Utilities
+\*------------------------------------*/
+.node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:after {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smoothing: antialiased; }
+
+/*------------------------------------*\
+  03 - Framework
+\*------------------------------------*/
+/*------------------------------------*\
+  04 - Settings
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
+.node--type-event.node--view-mode-featured-teaser > .node__content {
+  position: relative;
+  font-size: 1rem;
+  padding: 25px 0; }
+  @media print, screen and (min-width: 48em) {
+    .node--type-event.node--view-mode-featured-teaser > .node__content {
+      padding: 35px 120px 40px 97px; } }
+  .node--type-event.node--view-mode-featured-teaser > .node__content:before {
+    -webkit-clip-path: polygon(11% 2%, 84% 3%, 96% 44%, 88% 100%, 10% 98%, 0 40%);
+            clip-path: polygon(11% 2%, 84% 3%, 96% 44%, 88% 100%, 10% 98%, 0 40%);
+    content: "";
+    background: #f8f8f8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    z-index: 1; }
+    @media print, screen and (min-width: 48em) {
+      .node--type-event.node--view-mode-featured-teaser > .node__content:before {
+        width: 100%;
+        height: 100%;
+        margin: 0; } }
+    @media print, screen and (max-width: 47.99875em) {
+      .node--type-event.node--view-mode-featured-teaser > .node__content:before {
+        width: calc(100% + 300px);
+        margin-left: -150px; } }
+  .node--type-event.node--view-mode-featured-teaser > .node__content:after {
+    -webkit-clip-path: polygon(evenodd, 11% 2%, 84% 3%, 96% 44%, 88% 100%, 10% 98%, 0 40%);
+            clip-path: polygon(evenodd, 11% 2%, 84% 3%, 96% 44%, 88% 100%, 10% 98%, 0 40%);
+    content: "";
+    z-index: 2;
+    background: linear-gradient(259.21deg, #009cde 4.15%, #9a41b9 41.9%, #15be11 73.27%, #098147 92.87%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .node--type-event.node--view-mode-featured-teaser > .node__content .field-node-content {
+    position: relative;
+    z-index: 3; }
+  .node--type-event.node--view-mode-featured-teaser > .node__content .date-wrapper {
+    letter-spacing: 8px;
+    margin-bottom: 30px; }
+    .node--type-event.node--view-mode-featured-teaser > .node__content .date-wrapper .date {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1; }
+      @media print, screen and (min-width: 48em) {
+        .node--type-event.node--view-mode-featured-teaser > .node__content .date-wrapper .date {
+          font-size: 4.25rem; } }
+    .node--type-event.node--view-mode-featured-teaser > .node__content .date-wrapper .month {
+      font-size: 0.75rem;
+      text-transform: uppercase; }
+      @media print, screen and (min-width: 48em) {
+        .node--type-event.node--view-mode-featured-teaser > .node__content .date-wrapper .month {
+          font-size: 0.875rem; } }
+  .node--type-event.node--view-mode-featured-teaser > .node__content .field-content {
+    line-height: 1.4; }
+    .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading {
+      margin-bottom: 7px; }
+      .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a {
+        display: inline-block;
+        color: #0678be;
+        font-weight: 700;
+        position: relative;
+        padding-right: 3.25rem;
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+        will-change: color;
+        transition: color 0.15s ease;
+        color: #1b1c1e; }
+        .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0.5rem;
+          display: flex;
+          justify-content: flex-end;
+          width: 2rem;
+          font-size: 2.5rem;
+          line-height: inherit;
+          overflow: hidden;
+          transition: all 0.15s ease; }
+        .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:hover, .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:focus {
+          color: #0678be; }
+          .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:hover::after, .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:focus::after {
+            right: 0;
+            width: 2.5rem; }
+        .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:active {
+          color: #1b1c1e; }
+          .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:active::after {
+            right: 0;
+            width: 2.5rem; }
+        .node--type-event.node--view-mode-featured-teaser > .node__content .field-content h4.heading a:after {
+          color: #0678be; }
+
+
+/*# sourceMappingURL=featured-teaser.css.map*/

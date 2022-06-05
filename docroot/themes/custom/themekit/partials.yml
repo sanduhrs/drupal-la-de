@@ -166,6 +166,18 @@ node--type--case--teaser:
   css:
     theme:
       dist/css/node--case--teaser.css: {}
+node--type--event--featured-teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/featured-teaser.css: {}
+node--type--event--teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/teaser.css: {}
 node--type--page--full:
   dependencies:
     - themekit/themekit
@@ -246,6 +258,12 @@ views--categories:
   css:
     theme:
       dist/css/view--categories.css: {}
+views--events:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/view--events--events.css: {}
 views--partners:
   dependencies:
     - themekit/themekit

@@ -290,6 +290,10 @@
   }
 }
 
+@mixin shape-content {
+  clip-path: polygon(11% 2%, 84% 3%, 96% 44%, 88% 100%, 10% 98%, 0 40%);
+}
+
 @mixin banner-image($home-banner: false) {
   max-width: none;
   @if ($home-banner == true) {

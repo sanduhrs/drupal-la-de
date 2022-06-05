@@ -1,2 +1,54 @@
-@media print, screen and (min-width: 48em){.block--cases-slider{display:flex;align-items:center}}.block--cases-slider .block-content{margin-bottom:40px}@media print, screen and (min-width: 48em){.block--cases-slider .block-content{flex:0 0 50%;max-width:50%;margin-bottom:56px;flex-shrink:0}}@media print, screen and (min-width: 64em){.block--cases-slider .block-content{flex:0 0 33.33333%;max-width:33.33333%}}@media print, screen and (min-width: 48em){.block--cases-slider .block-view{width:100%;flex-shrink:0}}
+/**
+ * Base Styles
+ * - 01 - Foundation
+ * - 02 - Utilities
+ * - 03 - Framework
+ * - 04 - Settings
+ */
+/*------------------------------------*\
+  01 - Foundation
+\*------------------------------------*/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+/*------------------------------------*\
+  02 - Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+  03 - Framework
+\*------------------------------------*/
+/*------------------------------------*\
+  04 - Settings
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/******* End Drupal Defaults *******/
+@media print, screen and (min-width: 48em) {
+  .block--cases-slider {
+    display: flex;
+    align-items: center; } }
 
+.block--cases-slider .block-content {
+  margin-bottom: 40px; }
+  @media print, screen and (min-width: 48em) {
+    .block--cases-slider .block-content {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 56px;
+      flex-shrink: 0; } }
+  @media print, screen and (min-width: 64em) {
+    .block--cases-slider .block-content {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%; } }
+
+@media print, screen and (min-width: 48em) {
+  .block--cases-slider .block-view {
+    width: 100%;
+    flex-shrink: 0; } }
+
+
+/*# sourceMappingURL=block--cases-slider.css.map*/
