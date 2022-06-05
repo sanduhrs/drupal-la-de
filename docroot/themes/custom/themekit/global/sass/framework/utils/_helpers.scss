@@ -3,7 +3,6 @@
 /// @group utility
 ////
 
-
 /// Return a map from the specified key. Optionally specify a sub key.
 /// Works similarly to map-get but with support for sub keys.
 /// @param {map} $map
@@ -26,7 +25,6 @@
   @warn "Unknown '#{$key}' in '#{$map}'.";
   @return null;
 }
-
 
 /// Allows for sub-maps of configuration maps to extend other sub-maps.
 ///
@@ -51,18 +49,20 @@
     $key-of-map-to-extend: map-get($map-to-merge, extend);
 
     @if (map-has-key($map-to-search, $key-of-map-to-extend)) {
-      @return map-merge(key($map-to-search, $key-of-map-to-extend), $map-to-merge);
+      @return map-merge(
+        key($map-to-search, $key-of-map-to-extend),
+        $map-to-merge
+      );
     }
   }
 
   @return $map-to-merge;
 }
 
-
 $z-layers: (
   bottomless-pit: -9999,
   default: 0,
-  debug: 1000
+  debug: 1000,
 ) !default;
 
 /// Retrieve the z-index from $z-layers.
@@ -72,7 +72,6 @@ $z-layers: (
 @function z($key, $sub-key: null) {
   @return key($z-layers, $key, $sub-key);
 }
-
 
 /// Store groups of commonly used selectors
 $selector-groups: (
@@ -91,44 +90,44 @@ $selector-groups: (
     time: "[type='time']",
     url: "[type='url']",
     color: "[type='color']",
-    textarea: "textarea"
+    textarea: "textarea",
   ),
   headers: (
-    h1: 'h1',
-    h2: 'h2',
-    h3: 'h3',
-    h4: 'h4',
-    h5: 'h5',
-    h6: 'h6'
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    h6: "h6",
   ),
   buttons: (
     input: '[type="button"]',
     submit: '[type="submit"]',
-    button: 'button'
+    button: "button",
   ),
   body-text: (
-    p: 'p',
-    ul: 'ul',
-    ol: 'ol',
-    div: 'div'
+    p: "p",
+    ul: "ul",
+    ol: "ol",
+    div: "div",
   ),
   active: (
     hover: "&:hover",
     focus: "&:focus",
-    active: "&:active"
-  )
+    active: "&:active",
+  ),
 ) !default;
 
 /// Include a group of selectors defined in the $selector-groups map.
 /// @see $selector-groups
-@function selectors($selector-key, $exclude: '') {
+@function selectors($selector-key, $exclude: "") {
   $selectors: map-get($selector-groups, $selector-key);
-  $selector-string: '';
-  $postfix: '';
+  $selector-string: "";
+  $postfix: "";
 
   @each $key, $selector in $selectors {
     @if str-length($selector-string) > 0 {
-      $postfix: ', ';
+      $postfix: ", ";
     }
     @if index($exclude, $key) == null {
       $selector-string: $selector-string + $postfix + $selector;
@@ -144,52 +143,53 @@ $selector-groups: (
 ///   @include selectors(active) {
 ///     text-decoration: underline;
 ///   }
-@mixin selectors($selector-key, $exclude: '') {
+@mixin selectors($selector-key, $exclude: "") {
   #{selectors($selector-key, $exclude)} {
     @content;
   }
 }
-
 
 /// Helper function to replace characters in a string
 /// Explanation found - https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
 /// @param {String} $string - The string to search (haystack).
 /// @param {String} $search - The string to search for (needle).
 /// @param {String} $replace - The string to replace with each instance of the needle.
-@function str-replace($string, $search, $replace: '') {
+@function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
   @if $index {
     @return str-slice($string, 1, $index - 1) + $replace +
-            str-replace(str-slice($string, $index +
-            str-length($search)), $search, $replace);
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
   }
   @return $string;
 }
 
-
 /// Function to create an optimized svg url
 /// @param {String} $svg - The svg to optimize.
-@function svg-url($svg){
+@function svg-url($svg) {
   //
   //  Chunk up string in order to avoid
   //  "stack level too deep" error
   //
-  $encoded:'';
+  $encoded: "";
   $slice: 2000;
   $index: 0;
-  $loops: ceil(str-length($svg)/$slice);
+  $loops: ceil(str-length($svg) / $slice);
   @for $i from 1 through $loops {
     $chunk: str-slice($svg, $index, $index + $slice - 1);
     //
     //   Encode (may need a few extra replacements)
     //
-    $chunk: str-replace($chunk,'"','\'');
-    $chunk: str-replace($chunk,'<','%3C');
-    $chunk: str-replace($chunk,'>','%3E');
-    $chunk: str-replace($chunk,'&','%26');
-    $chunk: str-replace($chunk,'#','%23');
-    $chunk: str-replace($chunk,'(','%28');
-    $chunk: str-replace($chunk,')','%29');
+    $chunk: str-replace($chunk, '"', "'");
+    $chunk: str-replace($chunk, "<", "%3C");
+    $chunk: str-replace($chunk, ">", "%3E");
+    $chunk: str-replace($chunk, "&", "%26");
+    $chunk: str-replace($chunk, "#", "%23");
+    $chunk: str-replace($chunk, "(", "%28");
+    $chunk: str-replace($chunk, ")", "%29");
     $encoded: #{$encoded}#{$chunk};
     $index: $index + $slice;
   }
@@ -207,7 +207,7 @@ $selector-groups: (
 ///   @include clear()
 @mixin clear() {
   &:after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
   }
@@ -231,8 +231,7 @@ $selector-groups: (
   } @else {
     @content;
   }
-};
-
+}
 
 /// Get a vw value based on the target max px size and the @include breakpoint
 /// at which you want that max px size to be reached
@@ -244,10 +243,9 @@ $selector-groups: (
   @if type-of($screen-width) != number {
     @error '$screen-width must be a number!';
   }
-  $vw-context: ($screen-width * .01) + 0px;
+  $vw-context: ($screen-width * 0.01) + 0px;
   @return ($target/$vw-context) * 1vw;
 }
-
 
 /// @param {Number} $size - The target max size in px
 /// @param {String} $breakpoint [large] - The key of the bp at which max size is reached, or a specific value (ie - 1000px)
@@ -255,8 +253,13 @@ $selector-groups: (
 /// @param {String} $property [font-size] - The property to set these values for. Defaults to `font-size` and most often will be used for that
 /// @example
 ///   @include vw-with-max(15px, large, $property: padding);
-@mixin vw-with-max($size, $breakpoint: large, $breakpoint-map: $breakpoints, $property: font-size) {
-  $target-bp: '';
+@mixin vw-with-max(
+  $size,
+  $breakpoint: large,
+  $breakpoint-map: $breakpoints,
+  $property: font-size
+) {
+  $target-bp: "";
   @if (type-of($breakpoint) == string) {
     @if (type-of($breakpoint-map) != map) {
       $breakpoint-map: $breakpoints;
@@ -265,7 +268,7 @@ $selector-groups: (
   } @else if (type-of($breakpoint) == number) {
     $target-bp: $breakpoint + 0px;
   } @else {
-    @error "Sorry, `#{$breakpoint}` is not an appropriate value for $breakpoint. :("
+    @error "Sorry, `#{$breakpoint}` is not an appropriate value for $breakpoint. :(";
   }
 
   #{$property}: get-vw($size, $target-bp);
@@ -273,7 +276,6 @@ $selector-groups: (
     #{$property}: $size;
   }
 }
-
 
 /// Get first element of list
 /// @param {List} $list - A list
@@ -289,9 +291,23 @@ $selector-groups: (
 
 /// Transition helper mixin
 /// @param {List} $list - A list
-@mixin global-transition($property: all, $duration: $global-transition-duration, $timing-function: $global-transition-timing-function) {
+@mixin global-transition(
+  $property: all,
+  $duration: $global-transition-duration,
+  $timing-function: $global-transition-timing-function
+) {
   @if ($property != all) {
     will-change: $property;
   }
   transition: $property $duration $timing-function;
+}
+
+/// Visually Hidden helper mixin
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
 }

@@ -108,6 +108,14 @@ $labels: (
     active-border-color: $color-primary-600,
     active-background-color: $color-gray-300,
   ),
+  default-active: (
+    color: $color-white,
+    border-color: $color-primary-600,
+    background-color: $color-primary-600,
+    active-color: $color-gray-900,
+    active-border-color: $color-primary-400,
+    active-background-color: $color-primary-400,
+  ),
 );
 
 /// Layouts

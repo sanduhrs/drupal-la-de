@@ -12,6 +12,7 @@
 
 use Drupal\block\Entity\Block;
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Render\Element;
 use Drupal\Component\Utility\NestedArray;
@@ -535,4 +536,11 @@ function themekit_preprocess_views_mini_pager(&$variables) {
 
   // Total page items.
   $variables['items']['total'] = $pager->getTotalPages();
+}
+
+function themekit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-cases-listing') {
+    $form['title']['#prefix'] = '<div class="form-item__wrapper">';
+    $form['title']['#suffix'] = t('<span class="toggle-filters">@title</span></div>', array('@title' => 'Categorie'));
+  }
 }
