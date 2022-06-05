@@ -1,5 +1,7 @@
 .node--type-case {
   &.node--view-mode-teaser {
+    white-space: normal;
+
     > a {
       display: block;
       min-height: 330px;
@@ -38,6 +40,11 @@
     .field--name-body {
       @include font-sizes(text-card);
       margin-top: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .field--name-field-image {

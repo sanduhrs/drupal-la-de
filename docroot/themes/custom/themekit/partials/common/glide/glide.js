@@ -27,7 +27,7 @@ const sliders = {
     },
   },
   'glide-wrapper-multiple': {
-    selector: '.glide__slide',
+    selector: '.views-row',
     options: {
       type: 'slider',
       startAt: 0,
