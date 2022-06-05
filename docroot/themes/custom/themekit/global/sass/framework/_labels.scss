@@ -11,8 +11,7 @@
   padding: rem-calc(8) rem-calc(12);
   background-color: key($label-conf, background-color);
   color: key($label-conf, color);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  @include font-sizes(kicker-small);
   @include global-transition(background-color);
   @include selectors(active) {
     border-color: key($label-conf, active-border-color);

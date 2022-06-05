@@ -240,6 +240,8 @@ views--cases:
     theme:
       dist/css/view--cases--cases.css: {}
       dist/css/view--cases--listing.css: {}
+  js:
+    dist/js/view--cases-listing.js: {}
 views--categories:
   dependencies:
     - themekit/themekit

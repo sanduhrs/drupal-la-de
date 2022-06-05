@@ -489,7 +489,7 @@ display:
               autosubmit_textfield_delay: 500
               autosubmit_hide: false
               input_required: false
-              allow_secondary: true
+              allow_secondary: false
               secondary_label: Categorie
               secondary_open: false
             filter:
@@ -506,7 +506,7 @@ display:
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
-                  is_secondary: true
+                  is_secondary: false
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: true

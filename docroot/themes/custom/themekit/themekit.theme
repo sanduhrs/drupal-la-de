@@ -540,16 +540,7 @@ function themekit_preprocess_views_mini_pager(&$variables) {
 
 function themekit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form['#id'] === 'views-exposed-form-cases-listing') {
-    $form['toggle_filter'] = array(
-      '#type' => 'html_tag',
-      '#tag' => 'span',
-      '#value' => t('Categorie'),
-      '#attributes' => [
-        'class' => [
-          'toggle-filters',
-        ]
-      ],
-      '#weight' => 0,
-    );
+    $form['title']['#prefix'] = '<div class="form-item__wrapper">';
+    $form['title']['#suffix'] = t('<span class="toggle-filters">@title</span></div>', array('@title' => 'Categorie'));
   }
 }
