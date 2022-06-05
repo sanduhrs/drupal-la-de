@@ -95,4 +95,12 @@
   .glide__slides {
     padding: 20px 0;
   }
+
+  .glide__track {
+    margin-right: -32px;
+
+    @include breakpoint(medium down) {
+      margin-right: -16px;
+    }
+  }
 }
