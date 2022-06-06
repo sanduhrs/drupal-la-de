@@ -11,6 +11,9 @@
     @include breakpoint(large up) {
       width: 45%;
     }
+    @include breakpoint(medium down) {
+      order: 2;
+    }
     @include breakpoint(small down) {
       background: $color-linear-vertical;
       padding-left: 4px;
@@ -34,6 +37,10 @@
     width: 100%;
     @include breakpoint(large up) {
       width: 43%;
+    }
+    @include breakpoint(medium down) {
+      order: 1;
+      margin-bottom: 32px;
     }
   }
 }
