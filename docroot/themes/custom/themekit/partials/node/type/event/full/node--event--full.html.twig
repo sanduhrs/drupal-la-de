@@ -13,7 +13,9 @@
     <div class="field-text">
       <a class="link--back mobile" href="/events" >{{ 'Events'|t }}</a>
       <h1 class="heading">{{ node.label }}</h1>
-      {{ content.field_date_range }}
+      <div class="field-category">
+        {{ content.field_date_range }}
+      </div>
 
       {{ content.field_intro }}
     </div>
