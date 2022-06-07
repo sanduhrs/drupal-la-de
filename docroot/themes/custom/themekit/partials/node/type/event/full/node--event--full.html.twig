@@ -28,8 +28,9 @@
       {{ rendered_content }}
     </div>
     <div class="field-info">
-      {% if node.field_address|length %}
-        <h4 class="heading">{{ 'LOCATED AT' }}</h4>
+      {% set address = node.field_address.value|first %}
+      {% if address.address_line1 or address.administrative_area or address.locality %}
+        <h4 class="heading">{{ 'LOCATED AT'|t }}</h4>
         <div class="field-contact">
           {{ content.field_address }}
         </div>
