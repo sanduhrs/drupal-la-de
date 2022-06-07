@@ -222,6 +222,9 @@
       "drupal/paragraphs": {
         "Affix correct langcode to paragraph in layout builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
         "Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess(": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
+      },
+      "drupal/draggableviews": {
+        "Error adding or editing the field Draggableviews: Content": "https://www.drupal.org/files/issues/2022-01-13/error-adding-or-editing-the-field-draggableviews-content-1.patch"
       }
     }
   },
