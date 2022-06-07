@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_category
     - node.type.partner
   module:
+    - draggableviews
     - node
     - user
 id: partners
@@ -283,22 +284,22 @@ display:
           hide_alter_empty: true
           view_mode: teaser
       sorts:
-        publish_on:
-          id: publish_on
-          table: node_field_data
-          field: publish_on
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: publish_on
-          plugin_id: date
+          plugin_id: draggable_views_sort_default
           order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
+          draggable_views_reference: 'partners:order'
+          draggable_views_null_order: after
+          draggable_views_pass_arguments: false
       style:
         type: default
         options:
@@ -339,13 +340,225 @@ display:
         - 'config:core.entity_view_display.node.component_page.full'
         - 'config:core.entity_view_display.node.component_page.teaser'
         - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.featured_teaser'
         - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.news.default'
+        - 'config:core.entity_view_display.node.news.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.partner.default'
         - 'config:core.entity_view_display.node.partner.small_teaser'
         - 'config:core.entity_view_display.node.partner.teaser'
         - 'config:field.storage.node.field_category'
+  order:
+    id: order
+    display_title: Order
+    display_plugin: page
+    position: 1
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        draggableviews:
+          id: draggableviews
+          table: node_field_data
+          field: draggableviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: draggable_views_field
+          label: Content
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+      access:
+        type: perm
+        options:
+          perm: 'access draggableviews'
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: draggable_views_sort_default
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          draggable_views_reference: 'partners:order'
+          draggable_views_null_order: after
+          draggable_views_pass_arguments: false
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            draggableviews: draggableviews
+            title: title
+          default: '-1'
+          info:
+            draggableviews:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        access: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+      display_description: ''
+      display_extenders: {  }
+      path: admin/content/partners-order
+      menu:
+        type: tab
+        title: 'Partners Order'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: admin
+        parent: ''
+        context: '0'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   randomized:
     id: randomized
     display_title: Randomized
