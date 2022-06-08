@@ -261,15 +261,17 @@ display:
     position: 1
     display_options:
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
           items_per_page: 6
           total_pages: null
           id: 0
           tags:
-            next: '>'
-            previous: '<'
+            next: ''
+            previous: ''
+            first: ''
+            last: ''
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -278,6 +280,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 3
       arguments:
         field_reference_target_id:
           id: field_reference_target_id
@@ -411,15 +414,17 @@ display:
     position: 2
     display_options:
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
-          items_per_page: 16
+          items_per_page: 6
           total_pages: null
           id: 0
           tags:
             next: ''
             previous: ''
+            first: ''
+            last: ''
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -428,6 +433,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 3
       exposed_form:
         type: bef
         options:
