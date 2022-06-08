@@ -11,29 +11,26 @@ Drupal.behaviors.themekitPartners = {
     const filtersWrapper = view.querySelector('.bef-checkboxes');
     if (!filtersWrapper) return;
 
-    const filtersArray = filtersWrapper.querySelectorAll('.form-type-checkbox');
+    const filtersArray = filtersWrapper.querySelectorAll('.form-checkbox');
     if (!filtersArray.length) return;
 
-    const toggleFilters = () => {
-      debugger;
-      const activeFilters = [...filtersArray].filter((input) => input.checked);
+    const form = view.querySelector('.views-exposed-form');
+    if (!form) return;
 
-      if (activeFilters.length > 0) {
-        toggleFiltersButton.classList.add('active');
-        filtersWrapper.classList.add('opened');
-      } else {
-        toggleFiltersButton.classList.remove('active');
-        filtersWrapper.classList.remove('opened');
-      }
-    };
-
-    toggleFilters();
     toggleFiltersButton.addEventListener('click', (event) => {
       event.target.classList.toggle('active');
       filtersWrapper.classList.toggle('opened');
     });
-    filtersArray.forEach((checkbox) => {
-      checkbox.addEventListener('change', toggleFilters);
-    });
+
+    const handleFilters = () => {
+      const activeFilters = [...filtersArray].filter((input) => input.checked);
+      if (activeFilters.length > 0) {
+        toggleFiltersButton.classList.add('active');
+        filtersWrapper.classList.add('opened');
+      }
+    };
+
+    handleFilters();
+    form.addEventListener('submit', handleFilters);
   },
 };
