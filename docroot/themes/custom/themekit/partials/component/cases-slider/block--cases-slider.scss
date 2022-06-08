@@ -3,41 +3,5 @@
 ////
 
 .block--cases-slider {
-  @include breakpoint(medium) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .field--name-field-heading {
-    margin-bottom: 40px;
-    @include breakpoint(medium) {
-      @include flex-grid-size(6);
-      order: -2;
-      margin-bottom: 56px;
-      flex-shrink: 0;
-    }
-    @include breakpoint(large) {
-      @include flex-grid-size(4);
-    }
-  }
-
-  .field--name-field-link {
-    margin-top: 8px;
-    @include breakpoint(medium) {
-      order: -1;
-      margin-top: 12px;
-    }
-
-    a {
-      @include btn(primary);
-    }
-  }
-
-  .block-view {
-    @include breakpoint(medium) {
-      width: 100%;
-      flex-shrink: 0;
-    }
-  }
+  @include block-slider;
 }

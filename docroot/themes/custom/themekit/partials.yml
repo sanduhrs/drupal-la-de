@@ -112,6 +112,13 @@ component--navigation--social:
   css:
     theme:
       dist/css/menu--social.css: {}
+component--news-slider:
+  dependencies:
+    - themekit/common--glide
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/block--news-slider.css: {}
 component--partners:
   dependencies:
     - themekit/themekit
