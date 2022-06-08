@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.links
     - field.field.block_content.links.field_heading
-    - field.field.block_content.links.field_link
+    - field.field.block_content.links.field_links
   module:
     - link_attributes
 id: block_content.links.default
@@ -21,9 +21,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_link:
+  field_links:
     type: link_attributes
-    weight: 1
+    weight: 26
     region: content
     settings:
       placeholder_url: ''

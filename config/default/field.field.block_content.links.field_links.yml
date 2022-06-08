@@ -1,17 +1,17 @@
-uuid: a5dedb57-b0fc-4bdb-b5d6-6a26cb5e7706
+uuid: aa020b1d-e88d-466b-8631-f3b57e5c1942
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.links
-    - field.storage.block_content.field_link
+    - field.storage.block_content.field_links
   module:
     - link
-id: block_content.links.field_link
-field_name: field_link
+id: block_content.links.field_links
+field_name: field_links
 entity_type: block_content
 bundle: links
-label: Link
+label: Links
 description: ''
 required: true
 translatable: false

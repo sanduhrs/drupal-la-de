@@ -11,7 +11,7 @@
     }
   }
 
-  .field--name-field-link {
+  .field--name-field-links {
     @include breakpoint(medium) {
       columns: 2;
       column-gap: map-get($grid-column-gutter, medium);
