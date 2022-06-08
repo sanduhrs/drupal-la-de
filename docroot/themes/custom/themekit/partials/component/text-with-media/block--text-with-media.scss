@@ -3,18 +3,23 @@
 ////
 
 .block--text-with-media {
+  @include flex-grid-row(nest);
+  @include breakpoint(small down) {
+    justify-content: center;
+  }
   @include breakpoint(medium) {
-    @include flex-grid-row(nest);
     align-items: center;
   }
 
   .mobile-heading {
+    @include flex-grid-column(12);
     @include breakpoint(medium) {
       display: none;
     }
   }
 
   .content {
+    @include flex-grid-column(12);
     @include breakpoint(medium) {
       @include flex-grid-column(6);
     }
@@ -36,6 +41,16 @@
     }
 
     .field--name-field-media {
+      @include brand-shape(text-with-media-frame) {
+        top: 0;
+        left: -4px;
+        right: 14px;
+        bottom: 0;
+        @include breakpoint(medium) {
+          left: 10px;
+          right: 16px;
+        }
+      }
       img {
         @include brand-shape(text-with-media, false);
       }
@@ -52,6 +67,16 @@
     .field--name-field-media {
       @include breakpoint(large) {
         @include grid-column-offset(1);
+      }
+      @include brand-shape(text-with-media-inverse-frame) {
+        top: 0;
+        left: 14px;
+        right: -4px;
+        bottom: 0;
+        @include breakpoint(medium) {
+          left: 16px;
+          right: 10px;
+        }
       }
 
       img {
@@ -73,12 +98,16 @@
   }
 
   .field--name-field-media {
+    padding-top: 14px;
+    padding-bottom: 12px;
     @include breakpoint(small down) {
       @include left-right(margin, -48px);
       margin-bottom: 16px;
     }
     @include breakpoint(medium) {
       @include flex-grid-column(6);
+      padding-top: 36px;
+      padding-bottom: 12px;
     }
     @include breakpoint(small down) {
       text-align: center;
@@ -88,10 +117,12 @@
     }
 
     img {
+      position: relative;
+      z-index: z(under);
       width: 100%;
       object-fit: cover;
       @include breakpoint(small down) {
-        display: inline-block;
+        min-height: 320px;
         max-width: 436px;
       }
       @include breakpoint(medium) {

@@ -194,7 +194,49 @@ $shapes: (
   text-with-media: (
     path: polygon(11% 0, 87% 4%, 100% 61%, 79% 100%, 16% 95%, 0 42%),
   ),
+  text-with-media-frame: (
+    color: $color-linear-horizontal,
+    path:
+    polygon(
+        evenodd,
+        72% 0,
+        96% 28%,
+        97% 79%,
+        35% 100%,
+        1% 62%,
+        15% 16%,
+        calc(15% + 4px) calc(16% + 2px),
+        calc(72% - 1px) calc(0% + 5px),
+        calc(96% - 4px) calc(28% + 2px),
+        calc(97% - 4px) calc(79% - 3px),
+        calc(35% + 1.5px) calc(100% - 4.5px),
+        calc(1% + 5px) calc(62% - 1.5px),
+        calc(15% + 4px) calc(16% + 2px),
+        15% 16%,
+      ),
+  ),
   text-with-media-inverse: (
     path: polygon(13% 4%, 88% 0, 100% 42%, 83% 95%, 21% 100%, 0 61%),
+  ),
+  text-with-media-inverse-frame: (
+    color: $color-linear-horizontal,
+    path:
+      polygon(
+        evenodd,
+        28% 0,
+        85% 15%,
+        100% 62%,
+        64% 100%,
+        3% 79%,
+        4% 28%,
+        calc(4% + 4.5px) calc(28% + 2px),
+        calc(28% + 1px) calc(0% + 5px),
+        calc(85% - 3px) calc(15% + 4px),
+        calc(100% - 5px) calc(62% - 1px),
+        calc(64% - 1px) calc(100% - 5px),
+        calc(3% + 4.5px) calc(79% - 4px),
+        calc(4% + 4.5px) calc(28% + 2px),
+        4% 28%,
+      ),
   ),
 );

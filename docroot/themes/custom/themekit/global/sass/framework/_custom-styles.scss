@@ -433,13 +433,19 @@ $shapes: (
   $shape-properties: extend-in-map($shapes, $shape-name);
 
   @if $shape-el != false {
+    position: relative;
+
     &::#{$shape-el} {
       position: absolute;
-      width: key($shape-properties, width);
-      height: key($shape-properties, height);
+      @if map-has-key($shape-properties, width) {
+        width: key($shape-properties, width);
+      }
+      @if map-has-key($shape-properties, height) {
+        height: key($shape-properties, height);
+      }
       clip-path: key($shape-properties, path);
       content: "";
-      z-index: z(under);
+      z-index: z(default);
       @if map-has-key($shape-properties, color) {
         background: key($shape-properties, color);
       }
