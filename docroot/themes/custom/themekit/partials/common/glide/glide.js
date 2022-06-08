@@ -34,7 +34,7 @@ const sliders = {
       perView: 4,
       gap: 32,
       keyboard: false,
-      bound: false,
+      bound: true,
       rewind: false,
       peek: { before: 0, after: -80 },
       breakpoints: {
@@ -66,6 +66,29 @@ Drupal.behaviors.slider = {
           ? [context] : context.querySelectorAll(`.${component}`);
         if (sliderWrapper.length === 0) { return; }
 
+        const FixBoundPeek = function (_Glide, Components) {
+          return {
+            // Fix peek 'after' with 'bound' option.
+            modify(translate) {
+              let { isBound } = Components.Run;
+              if (typeof isBound !== 'function') {
+                isBound = function () {
+                  return _Glide.isType('slider') && _Glide.settings.focusAt !== 'center' && _Glide.settings.bound;
+                };
+              }
+
+              if (isBound() && Components.Run.isEnd()) {
+                const peek = Components.Peek.value;
+                if (typeof peek === 'object' && peek.after) {
+                  return translate - peek.after;
+                }
+                return translate - peek;
+              }
+              return translate;
+            },
+          };
+        };
+
         sliderWrapper.forEach((element) => {
           const elGlide = element.querySelector('.glide');
           const glide = new Glide(elGlide, sliders[component].options);
@@ -76,7 +99,7 @@ Drupal.behaviors.slider = {
             if (e.keyCode === 37) glide.go('<');
           });
 
-          glide.mount();
+          glide.mutate([FixBoundPeek]).mount();
         });
       });
     }

@@ -18,7 +18,10 @@
   height: 1px;
   justify-content: space-between;
   position: static;
-  transform: translate(0px, 28px);
+  transform: translate(0px, 25px);
+  @include breakpoint(small down) {
+    display: none;
+  }
 
   .glide__arrow {
     @include icon-before(arrow-right) {
@@ -47,6 +50,7 @@
       left: 0;
       &:before {
         transform: rotate(180deg);
+        margin-top: 4px;
       }
     }
 
@@ -64,6 +68,10 @@
   position: static;
   transform: translate(0);
   width: calc(100% - 110px);
+  @include breakpoint(small down) {
+    display: none;
+  }
+
   .glide__bullet {
     @include selectors(active) {
       background: $color-primary-600;
@@ -76,7 +84,7 @@
     border: none;
     flex-grow: 1;
     margin: 0;
-    height: 5px;
+    height: 2px;
   }
   .glide__bullet--active {
     @include selectors(active) {
@@ -92,15 +100,26 @@
 }
 
 .glide-wrapper-multiple {
-  .glide__slides {
-    padding: 20px 0;
+  @include top-bottom(margin, -24px);
+  padding-bottom: 24px;
+  @include breakpoint(small down) {
+    @include left-right(margin, -#{map-get($grid-column-gutter, small)});
+    overflow: hidden;
   }
 
-  .glide__track {
-    margin-right: -32px;
-
-    @include breakpoint(medium down) {
-      margin-right: -16px;
+  > .glide {
+    @include breakpoint(small down) {
+      padding: 0 #{map-get($grid-column-gutter, small) / 2};
     }
+  }
+
+  // Adjust full visibility of the slider items
+  .glide__track,
+  .glide__slides {
+    overflow: visible;
+  }
+
+  .glide__slides {
+    padding: 24px 0 26px;
   }
 }
