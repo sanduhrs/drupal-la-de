@@ -167,12 +167,6 @@ node--type--case--simple-teaser:
   css:
     theme:
       dist/css/node--case--simple-teaser.css: {}
-node--type--case--teaser:
-  dependencies:
-    - themekit/themekit
-  css:
-    theme:
-      dist/css/node--case--teaser.css: {}
 node--type--event--featured-teaser:
   dependencies:
     - themekit/themekit
@@ -209,6 +203,12 @@ node--view-mode--small-teaser:
   css:
     theme:
       dist/css/node--small-teaser.css: {}
+node--view-mode--teaser:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--teaser.css: {}
 region--footer-bottom:
   dependencies:
     - themekit/themekit
@@ -273,6 +273,10 @@ views--events:
   css:
     theme:
       dist/css/view--events--events.css: {}
+views--news:
+  dependencies:
+    - themekit/common--glide
+    - themekit/themekit
 views--partners:
   dependencies:
     - themekit/themekit

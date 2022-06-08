@@ -10,7 +10,7 @@
     <div class="field-text">
       <h1 class="heading">{{ node.label }}</h1>
       <div class="field-category">
-        {{ node.getCreatedTime()|date('') }}
+        {{ node.getCreatedTime|format_date('short') }}
       </div>
       {{ content.field_intro }}
     </div>
