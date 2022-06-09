@@ -20,18 +20,15 @@
       z-index: z(above);
       min-height: 360px;
       @include breakpoint(large) {
+        @include top-bottom(padding, 110px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         min-height: 560px;
-        padding-top: 110px;
-        padding-bottom: 135px;
       }
-      @include brand-shape(text) {
+      @include brand-shape(categories) {
         top: 0;
         min-height: 100%;
-        width: 842px;
-        height: 579px;
         @include breakpoint(medium down) {
           left: 0;
           min-width: 125%;
@@ -46,8 +43,28 @@
           right: -112px;
         }
       }
+      @include brand-shape(categories-frame, after) {
+        top: -28px;
+        min-height: calc(100% + 28px);
+        @include breakpoint(medium down) {
+          left: 0;
+          min-width: 125%;
+          transform: translate3d(-18%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          bottom: -30px;
+          height: auto;
+          min-width: 150vw;
+          min-height: calc(100% + 28px + 30px);
+          transform: translate3d(-36vw, 0, 0);
+          width: auto;
+          z-index: -2;
+        }
+        @include breakpoint(large) {
+          right: -80px;
+        }
+      }
     }
-
 
     .field--name-field-heading {
       margin-bottom: 16px;
