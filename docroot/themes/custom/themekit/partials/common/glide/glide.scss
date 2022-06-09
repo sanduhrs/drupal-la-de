@@ -74,12 +74,12 @@
 
   .glide__bullet {
     @include selectors(active) {
-      background: $color-primary-600;
+      background: $color-gray-200;
       border: none;
     }
 
     box-shadow: none;
-    background: $color-primary-600;
+    background: $color-gray-200;
     border-radius: 0;
     border: none;
     flex-grow: 1;
@@ -92,10 +92,6 @@
     }
 
     background-color: $color-primary-600;
-
-    & ~ .glide__bullet {
-      background-color: $color-gray-200;
-    }
   }
 }
 
@@ -121,5 +117,17 @@
 
   .glide__slides {
     padding: 24px 0 26px;
+  }
+
+  &.disable-navigation {
+    .glide--swipeable {
+      cursor: default;
+    }
+
+    .wrapper-control {
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
   }
 }

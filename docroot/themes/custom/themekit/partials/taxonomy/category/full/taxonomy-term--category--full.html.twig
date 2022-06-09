@@ -30,9 +30,12 @@
     </div>
   </div>
 
-  <div class="block-slider-cases field-view">
-    <h2 class="heading">{{ 'Deze cases tonen de kracht'|t }} <br> {{ 'van'|t }} {{ term.field_heading.value }}</h2>
-    {{ drupal_view('cases', 'slider') }}
-  </div>
+  {% set view = drupal_view_result('cases', 'category')|length %}
+  {% if view > 0 %}
+    <div class="block-slider-cases field-view">
+      <h2 class="heading">{{ 'Deze cases tonen de kracht'|t }} <br> {{ 'van'|t }} {{ term.field_heading.value }}</h2>
+      {{ drupal_view('cases', 'category') }}
+    </div>
+  {% endif %}
 
 {% endblock %}

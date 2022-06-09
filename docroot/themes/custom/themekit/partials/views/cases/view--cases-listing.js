@@ -1,4 +1,4 @@
-Drupal.behaviors.themekitPartners = {
+Drupal.behaviors.themekitCasesListing = {
   attach(context) {
     const FILTER_ACTIVE_CLASS = 'active-filter';
     const { body } = document;

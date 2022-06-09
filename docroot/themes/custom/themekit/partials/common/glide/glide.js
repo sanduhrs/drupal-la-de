@@ -1,4 +1,5 @@
 import Glide from '@glidejs/glide';
+import { siblings } from '@glidejs/glide/src/utils/dom';
 
 const sliders = {
   'glide-wrapper': {
@@ -77,7 +78,7 @@ Drupal.behaviors.slider = {
                 };
               }
 
-              if (isBound() && Components.Run.isEnd()) {
+              if (isBound() && Components.Run.isEnd() && Components.Html.slides.length > 1) {
                 const peek = Components.Peek.value;
                 if (typeof peek === 'object' && peek.after) {
                   return translate - peek.after;
@@ -87,6 +88,52 @@ Drupal.behaviors.slider = {
               return translate;
             },
           };
+        };
+
+        const CustomActiveClass = function (_Glide, Components, Events) {
+          const Component = {
+            mount() {
+              this.changeActiveSlide();
+            },
+
+            changeActiveSlide() {
+              let { isBound } = Components.Run;
+              if (typeof isBound !== 'function') {
+                isBound = function () {
+                  return _Glide.isType('slider') && _Glide.settings.focusAt !== 'center' && _Glide.settings.bound;
+                };
+              }
+
+              if (isBound() && Components.Run.isEnd() && Components.Html.slides.length > 1) {
+                // const lastIndex = Components.Html.slides.length - 1;
+                const lastIndex = _Glide.index;
+                const activeBulletClassName = _Glide.settings.classes.nav.active;
+                const activeSlideClassName = _Glide.settings.classes.slide.active;
+                const lastSlide = Components.Html.slides[lastIndex];
+
+                const bullets = Components.Controls.items[1];
+                const lastBullet = [...bullets.children].find(
+                  (bullet) => bullet.getAttribute('data-glide-dir') === `=${lastIndex}`,
+                );
+
+                lastBullet.classList.add(activeBulletClassName);
+                lastSlide.classList.add(activeSlideClassName);
+
+                siblings(lastBullet).forEach((sibling) => {
+                  sibling.classList.remove(activeBulletClassName);
+                });
+                siblings(lastSlide).forEach((sibling) => {
+                  sibling.classList.remove(activeSlideClassName);
+                });
+              }
+            },
+          };
+
+          Events.on('run', () => {
+            Component.changeActiveSlide();
+          });
+
+          return Component;
         };
 
         sliderWrapper.forEach((element) => {
@@ -99,7 +146,9 @@ Drupal.behaviors.slider = {
             if (e.keyCode === 37) glide.go('<');
           });
 
-          glide.mutate([FixBoundPeek]).mount();
+          glide.mutate([FixBoundPeek]).mount({
+            CustomActiveClass,
+          });
         });
       });
     }
