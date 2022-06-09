@@ -74,7 +74,7 @@
         background-color: $color-gray-200;
       }
 
-      &.active::after {
+      body.active-filter &::after {
         transform: scaleY(-1);
       }
     }
@@ -118,25 +118,21 @@
       display: none;
       float: none;
       @include breakpoint(small down) {
+        flex-direction: column;
+        justify-content: flex-start;
         margin: 20px 20px 0;
       }
       @include breakpoint(medium) {
+        flex-wrap: wrap;
         margin-top: 24px;
       }
-      @include breakpoint(small down) {
-        flex-direction: column;
-        justify-content: flex-start;
-      }
 
-      &.opened {
+      body.active-filter & {
         display: flex;
-        @include breakpoint(medium) {
-          display: block;
-        }
       }
 
       > .form-item {
-        display: inline-block;
+        float: none;
         margin: 0 12px 12px 0;
       }
     }
