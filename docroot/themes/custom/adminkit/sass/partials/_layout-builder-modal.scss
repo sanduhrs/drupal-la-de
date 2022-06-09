@@ -90,3 +90,15 @@
     max-width: 100px;
   }
 }
+
+// Hide blocks for path-layout-builder iframe
+.path-layout-builder {
+  .page-wrapper {
+    > .region-meta,
+    > .region-sticky,
+    > .content-header,
+    > .sticky-shadow {
+      display: none;
+    }
+  }
+}

@@ -25,6 +25,10 @@ $transition-time: 0.15s;
     padding-right: 0;
     margin-bottom: 20px;
     flex: 1;
+
+    .form-actions {
+      display: none;
+    }
   }
 
   &.layout-region-node-secondary {
@@ -176,4 +180,10 @@ $transition-time: 0.15s;
 
 .description {
   font-size: 80%;
+}
+
+.region-sticky__items__inner {
+  .form-submit {
+    display: none;
+  }
 }
