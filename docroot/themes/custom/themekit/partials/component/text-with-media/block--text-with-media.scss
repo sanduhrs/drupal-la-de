@@ -41,7 +41,7 @@
     }
 
     .field--name-field-media {
-      @include brand-shape(text-with-media-frame) {
+      @include brand-shape(text-with-media-frame, $shape-z: z(default)) {
         top: 0;
         left: -4px;
         right: 14px;
@@ -68,7 +68,7 @@
       @include breakpoint(large) {
         @include grid-column-offset(1);
       }
-      @include brand-shape(text-with-media-inverse-frame) {
+      @include brand-shape(text-with-media-inverse-frame, $shape-z: z(default)) {
         top: 0;
         left: 14px;
         right: -4px;

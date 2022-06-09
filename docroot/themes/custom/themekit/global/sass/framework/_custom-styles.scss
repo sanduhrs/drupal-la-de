@@ -429,7 +429,7 @@ $shapes: (
   ),
 ) !default;
 
-@mixin brand-shape($shape-name: default, $shape-el: before) {
+@mixin brand-shape($shape-name: default, $shape-el: before, $shape-z: z(under)) {
   $shape-properties: extend-in-map($shapes, $shape-name);
 
   @if $shape-el != false {
@@ -445,7 +445,7 @@ $shapes: (
       }
       clip-path: key($shape-properties, path);
       content: "";
-      z-index: z(default);
+      z-index: $shape-z;
       @if map-has-key($shape-properties, color) {
         background: key($shape-properties, color);
       }

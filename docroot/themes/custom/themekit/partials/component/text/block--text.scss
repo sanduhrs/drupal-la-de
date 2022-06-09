@@ -4,17 +4,17 @@
 
 .block--text {
   .field--name-field-heading {
-    margin-bottom: rem-calc(8);
+    margin-bottom: 8px;
     @include breakpoint(large) {
-      margin-bottom: rem-calc(24);
+      margin-bottom: 24px;
     }
   }
 
   .field--name-field-p-link {
     @include cta-list;
-    margin-top: rem-calc(12);
+    margin-top: 12px;
     @include breakpoint(medium) {
-      margin-top: rem-calc(24);
+      margin-top: 24px;
     }
   }
 
@@ -43,75 +43,136 @@
   &.frame-background {
     @include top-bottom(padding, 74px);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 360px;
     @include breakpoint(medium) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       min-height: 560px;
     }
 
+    @at-root .onecol-layout & {
+      max-width: 832px;
+      @include breakpoint(medium) {
+        @include left-right(margin, auto);
+        @include left-right(padding, 64px);
+      }
+      @include breakpoint(large) {
+        @include left-right(padding, 120px);
+      }
+    }
+
     &::before {
+      top: 16px;
+      bottom: 16px;
+      min-height: calc(100% - 32px);
+      @include breakpoint(medium) {
+        top: 26px;
+        bottom: 26px;
+        min-height: calc(100% - 52px);
+      }
+      @include breakpoint(medium only) {
+        right: auto;
+        left: 0;
+        min-width: 125%;
+      }
+      @include breakpoint(small down) {
+        width: calc(100% + 108px + 40px);
+      }
+    }
+
+    &::after {
       top: 0;
       min-height: 100%;
-      @include breakpoint(large) {
-        @include top-bottom(margin, rem-calc(26));
+      @include breakpoint(medium only) {
+        right: auto;
+        left: 0;
+        min-width: 125%;
       }
-
-      @at-root .onecol-layout & {
-        min-width: 150vw;
-        transform: translate3d(-33vw, 0, 0);
-        @include breakpoint(medium) {
-          min-width: 125%;
-          transform: translate3d(-15%, 0, 0);
-        }
-      }
-
-      @at-root .twocol-layout & {
-        @include breakpoint(medium down) {
-          right: auto;
-          left: 0;
-          min-width: 125%;
-          transform: translate3d(-15%, 0, 0);
-        }
-        @include breakpoint(small down) {
-          min-width: 150vw;
-          transform: translate3d(-33vw, 0, 0);
-        }
+      @include breakpoint(small down) {
+        width: calc(100% + 108px + 20px);
       }
     }
 
     &--default {
+      @include breakpoint(medium) {
+        padding-right: 64px;
+      }
+      @include breakpoint(large) {
+        padding-right: 112px;
+      }
       @include brand-shape(text) {
         right: 0;
-        @at-root .onecol-layout .layout__region & {
-          right: auto;
-          left: 0;
+        @include breakpoint(medium down) {
+          width: auto;
+          height: auto;
+        }
+        @include breakpoint(medium only) {
+          transform: translate3d(-15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          left: -108px;
+          right: -40px;
+        }
+      }
+      @include brand-shape(text-frame, after) {
+        bottom: 0;
+        right: 0;
+        @include breakpoint(medium) {
+          right: 34px;
+        }
+        @include breakpoint(medium down) {
+          width: auto;
+          height: auto;
+        }
+        @include breakpoint(medium only) {
+          transform: translate3d(-15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          left: -108px;
+          right: -20px;
         }
       }
     }
 
     &--rotated {
+      @include breakpoint(medium) {
+        padding-left: 64px;
+      }
+      @include breakpoint(large) {
+        padding-left: 112px;
+      }
       @include brand-shape(text-inverse) {
         left: 0;
+        @include breakpoint(medium down) {
+          width: auto;
+          height: auto;
+        }
+        @include breakpoint(medium only) {
+          transform: translate3d(15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          left: -40px;
+          right: -108px;
+        }
       }
-    }
-
-    @at-root .twocol-layout .layout__region--first & {
-      @include breakpoint(medium) {
-        padding-right: rem-calc(64);
-      }
-      @include breakpoint(large) {
-        padding-right: rem-calc(112);
-      }
-    }
-
-    @at-root .twocol-layout .layout__region--second & {
-      @include breakpoint(medium) {
-        padding-left: rem-calc(64);
-      }
-      @include breakpoint(large) {
-        padding-left: rem-calc(112);
+      @include brand-shape(text-inverse-frame, after) {
+        left: 0;
+        bottom: 0;
+        @include breakpoint(medium) {
+          left: 34px;
+        }
+        @include breakpoint(medium down) {
+          width: auto;
+          height: auto;
+        }
+        @include breakpoint(medium only) {
+          transform: translate3d(15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          left: -20px;
+          right: -108px;
+        }
       }
     }
   }

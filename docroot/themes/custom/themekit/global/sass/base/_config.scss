@@ -177,7 +177,24 @@ $shapes: (
     width: 832px,
     height: 560px,
     color: $color-linear-horizontal,
-    path: polygon(20% 11%, 91% 0, 100% 42%, 87% 94%, 41% 100%, 0 78%),
+    path:
+      polygon(
+        evenodd,
+        91% 0%,
+        99% 43%,
+        86% 94%,
+        41% 100%,
+        0% 78%,
+        20% 12%,
+        calc(20% + 4px) calc(12% + 3px),
+        calc(91% - 3px) calc(0% + 5px),
+        calc(99% - 4.5px) 43%,
+        calc(86% - 3.5px) calc(94% - 4px),
+        calc(41% + 1px) calc(100% - 4.5px),
+        calc(0% + 6px) calc(78% - 3px),
+        calc(20% + 4px) calc(12% + 3px),
+        20% 12%,
+      ),
   ),
   text-inverse: (
     width: 867px,
@@ -188,8 +205,25 @@ $shapes: (
   text-inverse-frame: (
     width: 832px,
     height: 560px,
-    color: $color-linear-horizontal,
-    path: polygon(20% 11%, 91% 0, 100% 42%, 87% 94%, 41% 100%, 0 78%),
+    color: $color-linear-horizontal-inverse,
+    path:
+      polygon(
+        evenodd,
+        80% 12%,
+        99% 78%,
+        58% 100%,
+        14% 94%,
+        0% 43%,
+        9% 1%,
+        calc(9% + 4px) calc(1% + 5px),
+        calc(80% - 3px) calc(12% + 4.5px),
+        calc(99% - 6px) calc(78% - 3px),
+        calc(58% - 2px) calc(100% - 5px),
+        calc(14% + 3px) calc(94% - 4.5px),
+        calc(0% + 5px) 43%,
+        calc(9% + 4px) calc(1% + 5px),
+        9% 1%,
+      ),
   ),
   text-with-media: (
     path: polygon(11% 0, 87% 4%, 100% 61%, 79% 100%, 16% 95%, 0 42%),
@@ -219,7 +253,7 @@ $shapes: (
     path: polygon(13% 4%, 88% 0, 100% 42%, 83% 95%, 21% 100%, 0 61%),
   ),
   text-with-media-inverse-frame: (
-    color: $color-linear-horizontal,
+    color: $color-linear-horizontal-inverse,
     path:
       polygon(
         evenodd,
