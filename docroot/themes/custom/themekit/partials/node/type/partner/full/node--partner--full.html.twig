@@ -34,10 +34,12 @@
       <div class="field-content-items">
         {{ rendered_content }}
       </div>
-      <div class="field-view">
-        <h2 class="heading">{{ 'Cases van'|t }} {{ node.label }} <br> {{ 'waar wij trots op zijn'|t }}</h2>
-        {{ drupal_view('cases', 'cases') }}
-      </div>
+      {% if drupal_view_result('cases', 'cases')|length %}
+        <div class="field-view">
+          <h2 class="heading">{{ 'Cases van'|t }} {{ node.label }} <br> {{ 'waar wij trots op zijn'|t }}</h2>
+          {{ drupal_view('cases', 'cases') }}
+        </div>
+      {% endif %}
     </div>
     <div class="field-info">
       <div class="field-item-info">
