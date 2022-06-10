@@ -4,3 +4,7 @@
 body {
   overflow-x: hidden;
 }
+
+body.splash-active {
+  overflow: hidden;
+}
