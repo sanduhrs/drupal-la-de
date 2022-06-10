@@ -150,9 +150,11 @@
         margin-top: 0;
         margin-bottom: 32px;
       }
-
       @include breakpoint(large) {
         @include flex-grid-column(4);
+      }
+      @include breakpoint(xlarge) {
+        @include flex-grid-column(3);
       }
     }
   }
