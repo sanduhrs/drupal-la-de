@@ -251,7 +251,9 @@ function themekit_preprocess_pager(&$variables) {
   }
 
   // Total page items.
-  $variables['items']['total'] = $pager->getTotalPages();
+  if ($pager->getTotalPages() > 1) {
+    $variables['items']['total'] = $pager->getTotalPages();
+  }
 
  // Unset: first, last and ellipsis items
   unset($variables['items']['first']);
