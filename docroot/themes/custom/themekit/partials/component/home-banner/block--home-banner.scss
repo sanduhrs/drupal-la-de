@@ -25,7 +25,7 @@
   }
 
   .field--name-field-media {
-    position: relative;
+    @include banner-image($home-banner: true);
     @include breakpoint(small down) {
       margin-bottom: 40px;
     }
@@ -35,11 +35,6 @@
     }
     @include breakpoint(large) {
       @include flex-grid-size(6);
-    }
-
-    img {
-      @include shape-image($inverse: true);
-      @include banner-image($home-banner: true);
     }
   }
 

@@ -5,15 +5,15 @@
 
 @mixin node--full {
   @include content-width(default);
-  margin-top: 40px;
   margin-bottom: 110px;
-
   @include breakpoint(medium) {
     margin-bottom: 160px;
   }
 
   .link--back {
+    margin-top: 40px;
     margin-bottom: 28px;
+
     &:after {
       transition: left 0.3s ease-in-out;
     }
@@ -46,6 +46,9 @@
     @include font-sizes(text-large);
 
     margin-top: 24px;
+    @include breakpoint(large) {
+      margin-bottom: 48px;
+    }
   }
 
   .field-banner {
@@ -72,30 +75,13 @@
     }
 
     .field--name-field-image {
-      text-align: right;
-      margin-top: -80px;
-
-      img {
-        @include shape-image;
-        @include banner-image;
-
-        @include breakpoint(medium down) {
-          transform: translate(18%, 0px);
-        }
-
-        @include breakpoint(small down) {
-          height: auto;
-          max-height: unset;
-          max-width: unset;
-        }
+      @include banner-image;
+      @include breakpoint(large) {
+        align-self: flex-start;
+        text-align: right;
       }
-
-      @include breakpoint(medium up) {
-        transform: translate(9%, 0);
-      }
-
       @include breakpoint(medium down) {
-        margin-bottom: 52px;
+        margin-bottom: 12px;
         order: 1;
         width: 100%;
       }
@@ -337,6 +323,10 @@
   .field--name-field-category {
     @include font-sizes(kicker-small);
     margin-bottom: 12px;
+
+    .taxonomy-term--type-category & {
+      display: none;
+    }
   }
 }
 
@@ -353,50 +343,72 @@
 }
 
 @mixin banner-image($home-banner: false) {
-  max-width: none;
+  position: relative;
+
   @if ($home-banner == true) {
-    margin: -16px 0 0 -132px;
+    @include brand-shape(banner-frame);
   } @else {
-    margin: -62px -82px 0 0;
-  }
-  object-fit: cover;
-  @include breakpoint(small down) {
-    @if ($home-banner == true) {
-      max-width: 620px;
-      max-height: 400px;
-    } @else {
-      max-width: 436px;
-      max-height: 322px;
-    }
-    width: calc(100% + 62px);
-    height: 73.8532%;
-  }
-  @include breakpoint(medium only) {
-    @if ($home-banner == true) {
-      width: 640px;
-      height: 500px;
-      min-height: calc(100% + 72px);
-      margin: -72px 0 0;
-    } @else {
-      width: 540px;
-      height: 400px;
-      margin-right: 0;
+    @include brand-shape(banner-frame, after) {
+      left: -4px;
+      z-index: z(default);
+      @include breakpoint(medium down) {
+        top: -86px;
+        bottom: -8px;
+        width: 428px;
+        height: auto;
+      }
+      @include breakpoint(medium only) {
+        width: 538px;
+      }
+      @include breakpoint(large) {
+        left: 0;
+        bottom: 0;
+      }
     }
   }
-  @include breakpoint(medium) {
+
+  img {
     @if ($home-banner == true) {
-      float: right;
-    }
-  }
-  @include breakpoint(large) {
-    @if ($home-banner == true) {
-      width: 920px;
-      height: 816px;
-      margin: -144px 0 0 -320px;
+      @include brand-shape(home-banner, false);
+      margin: -16px 0 0 -132px;
     } @else {
-      width: 820px;
-      height: 590px;
-      margin: -70px -236px 0 0;
+      @include brand-shape(banner, false);
+      margin: -62px -82px 0 0;
+    }
+    max-width: none;
+    object-fit: cover;
+    @include breakpoint(small down) {
+      @if ($home-banner == true) {
+        width: 620px;
+        height: 400px;
+      } @else {
+        width: 436px;
+        height: 322px;
+      }
+    }
+    @include breakpoint(medium only) {
+      @if ($home-banner == true) {
+        width: 640px;
+        height: 500px;
+        min-height: calc(100% + 72px);
+        margin: -72px 0 0;
+      } @else {
+        width: 540px;
+        height: 400px;
+        margin-right: 0;
+      }
+    }
+    @include breakpoint(medium) {
+      @if ($home-banner == true) {
+        float: right;
+      }
+    }
+    @include breakpoint(large) {
+      @if ($home-banner == true) {
+        margin: -144px 0 0 -320px;
+      } @else {
+        margin: -86px -236px 16px 8px;
+      }
     }
   }
 }
@@ -453,6 +465,12 @@ $shapes: (
       @content;
     }
   } @else {
+    @if map-has-key($shape-properties, width) {
+      width: key($shape-properties, width);
+    }
+    @if map-has-key($shape-properties, height) {
+      height: key($shape-properties, height);
+    }
     clip-path: key($shape-properties, path);
     @if map-has-key($shape-properties, color) {
       background: key($shape-properties, color);

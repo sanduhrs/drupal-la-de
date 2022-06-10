@@ -10,9 +10,7 @@
   }
 
   .content {
-    @include breakpoint(medium) {
-      @include top-bottom(padding, 48px);
-    }
+    padding-top: 40px;
     @include breakpoint(large) {
       @include flex-grid-size(5);
       @include top-bottom(padding, 100px);
@@ -23,10 +21,7 @@
   }
 
   .field--name-field-media {
-    position: relative;
-    @include breakpoint(medium down) {
-      margin-bottom: rem-calc(48);
-    }
+    @include banner-image;
     @include breakpoint(large) {
       @include flex-grid-size(5);
       order: 2;
@@ -35,17 +30,12 @@
       @include flex-grid-size(6);
       @include grid-column-offset(1);
     }
-
-    img {
-      @include shape-image;
-      @include banner-image;
-    }
   }
 
   .field--name-field-heading {
-    margin-bottom: rem-calc(24);
+    margin-bottom: 24px;
     @include breakpoint(large) {
-      margin-top: rem-calc(20);
+      margin-top: 20px;
     }
   }
 
@@ -53,7 +43,7 @@
     @include font-sizes(text-large);
 
     &:not(:last-child) {
-      margin-bottom: rem-calc(24);
+      margin-bottom: 24px;
     }
   }
 
@@ -61,3 +51,4 @@
     @include cta-list;
   }
 }
+
