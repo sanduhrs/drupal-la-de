@@ -11,3 +11,13 @@
     transform: rotate(360deg);
   }
 }
+
+/// Splash animations
+@keyframes splashOverlay {
+  0% {
+    clip-path: circle(100% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(50% at 50% 0%);
+  }
+}

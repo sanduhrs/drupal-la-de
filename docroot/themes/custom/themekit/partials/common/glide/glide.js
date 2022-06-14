@@ -105,8 +105,7 @@ Drupal.behaviors.slider = {
               }
 
               if (isBound() && Components.Run.isEnd() && Components.Html.slides.length > 1) {
-                // const lastIndex = Components.Html.slides.length - 1;
-                const lastIndex = _Glide.index;
+                const lastIndex = Components.Html.slides.length - 1;
                 const activeBulletClassName = _Glide.settings.classes.nav.active;
                 const activeSlideClassName = _Glide.settings.classes.slide.active;
                 const lastSlide = Components.Html.slides[lastIndex];
