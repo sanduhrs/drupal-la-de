@@ -128,7 +128,7 @@ Drupal.behaviors.slider = {
             },
           };
 
-          Events.on('run', () => {
+          Events.on('run.after', () => {
             Component.changeActiveSlide();
           });
 
