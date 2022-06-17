@@ -10,6 +10,7 @@
         letter-spacing: 8px;
 
         @include breakpoint(medium up) {
+          min-width: 194px;
           text-align: right;
         }
 

@@ -35,7 +35,7 @@ content:
     settings:
       trim_length: 100
       trim_type: chars
-      trim_suffix: ''
+      trim_suffix: '&hellip;'
       wrap_output: false
       wrap_class: trimmed
       more_link: false
