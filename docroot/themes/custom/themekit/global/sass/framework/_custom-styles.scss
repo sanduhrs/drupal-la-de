@@ -29,6 +29,10 @@
     line-height: 1;
     margin-bottom: 12px;
     max-width: 625px;
+
+    &:first-child {
+      margin-top: 40px;
+    }
   }
 
   h4.heading {
