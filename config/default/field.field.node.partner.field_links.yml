@@ -12,7 +12,7 @@ field_name: field_links
 entity_type: node
 bundle: partner
 label: 'Social Item'
-description: ''
+description: 'Add a link to the social network (for Facebook and Linkedin are implemented icons)'
 required: false
 translatable: false
 default_value: {  }
