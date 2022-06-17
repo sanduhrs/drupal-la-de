@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.text
     - field.field.block_content.text.field_description
-    - field.field.block_content.text.field_frame_background
+    - field.field.block_content.text.field_frame
     - field.field.block_content.text.field_heading
     - field.field.block_content.text.field_p_link
   module:
@@ -41,5 +41,5 @@ content:
     weight: 2
     region: content
 hidden:
-  field_frame_background: true
+  field_frame: true
   langcode: true

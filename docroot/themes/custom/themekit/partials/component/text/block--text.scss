@@ -94,7 +94,7 @@
       }
     }
 
-    &--default {
+    @at-root .twocol-layout .layout__region--first & {
       @include breakpoint(medium) {
         padding-right: 64px;
       }
@@ -135,7 +135,7 @@
       }
     }
 
-    &--rotated {
+    @at-root .twocol-layout .layout__region--second & {
       @include breakpoint(medium) {
         padding-left: 64px;
       }

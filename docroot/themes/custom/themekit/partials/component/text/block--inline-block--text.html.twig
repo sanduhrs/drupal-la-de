@@ -2,8 +2,7 @@
 
 {% set block = content['#block_content'] %}
 {% set classes = [
-  block.field_frame_background.value ? 'frame-background',
-  block.field_frame_background.value ? 'frame-background--' ~ block.field_frame_background.value|clean_class,
+  block.field_frame.value ? 'frame-background',
 ] %}
 {% set attributes = attributes.addClass(classes) %}
 
