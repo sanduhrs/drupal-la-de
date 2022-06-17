@@ -78,6 +78,7 @@ third_party_settings:
             'Inline blocks':
               - 'inline_block:community_features'
               - 'inline_block:text'
+            'Lists (Views)': {  }
       blacklisted_blocks:
         dnl_layout_onecol_section:
           all_regions:
