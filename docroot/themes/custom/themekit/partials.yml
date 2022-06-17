@@ -209,6 +209,12 @@ node--view-mode--teaser:
   css:
     theme:
       dist/css/node--teaser.css: {}
+page:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/page.css: {}
 region--footer-bottom:
   dependencies:
     - themekit/themekit
