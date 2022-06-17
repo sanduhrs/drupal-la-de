@@ -11,7 +11,7 @@ dependencies:
 third_party_settings:
   allowed_formats:
     allowed_formats:
-      - plain_text
+      - restricted_html
 id: node.event.field_intro
 field_name: field_intro
 entity_type: node
