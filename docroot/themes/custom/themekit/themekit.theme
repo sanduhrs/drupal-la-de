@@ -417,6 +417,27 @@ function themekit_block_to_renderable_array($block_id, $weight = NULL) {
   }
 }
 
+/**
+ * Implements hook_form_alter().
+ */
+function themekit_layouts_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'node_component_page_layout_builder_form') {
+    /**
+     * When using the moderation_sidebar module, let's avoid redundant clutter and remove moderation state
+     * from the vanilla LB display.
+     */
+    if (isset($form['moderation_state'])) {
+      $form['moderation_state']['#access'] = FALSE;
+    }
+    if (isset($form['revision_information'])) {
+      $form['revision_information']['#access'] = FALSE;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
 function themekit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form['#id'] === 'views-exposed-form-cases-listing') {
     $form['title']['#prefix'] = '<div class="form-item__wrapper">';
