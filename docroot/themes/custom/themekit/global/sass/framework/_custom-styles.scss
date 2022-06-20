@@ -342,7 +342,23 @@
   position: relative;
 
   @if ($home-banner == true) {
-    @include brand-shape(banner-frame);
+    @include brand-shape(home-banner-frame, after) {
+      z-index: z(default);
+      @include breakpoint(medium down) {
+        left: -128px;
+        top: -96px;
+        bottom: -8px;
+        width: 620px;
+        height: auto;
+      }
+      @include breakpoint(medium only) {
+        width: 538px;
+      }
+      @include breakpoint(large) {
+        right: -23px;
+        bottom: -21px;
+      }
+    }
   } @else {
     @include brand-shape(banner-frame, after) {
       left: -4px;
@@ -445,18 +461,21 @@ $shapes: (
 
     &::#{$shape-el} {
       position: absolute;
+      z-index: $shape-z;
       @if map-has-key($shape-properties, width) {
         width: key($shape-properties, width);
       }
       @if map-has-key($shape-properties, height) {
         height: key($shape-properties, height);
       }
+      @if map-has-key($shape-properties, color) {
+        background: key($shape-properties, color) 0 0 no-repeat;
+      }
+      @if map-has-key($shape-properties, animation) {
+        animation: key($shape-properties, animation);
+      }
       clip-path: key($shape-properties, path);
       content: "";
-      z-index: $shape-z;
-      @if map-has-key($shape-properties, color) {
-        background: key($shape-properties, color);
-      }
 
       @content;
     }

@@ -13,6 +13,7 @@
     @include breakpoint(medium) {
       @include flex-grid-size(6);
       padding-top: 104px;
+      padding-left: 32px;
     }
     @include breakpoint(large) {
       @include flex-grid-size(5);
@@ -31,6 +32,7 @@
     }
     @include breakpoint(medium) {
       @include flex-grid-size(5);
+      margin-bottom: 21px;
       align-self: stretch;
     }
     @include breakpoint(large) {

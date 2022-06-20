@@ -172,6 +172,29 @@ $shapes: (
     height: 816px,
     path: polygon(13% 3%, 89% 0, 100% 41%, 84% 95%, 21% 100%, 0 61%),
   ),
+  home-banner-frame: (
+    width: 919px,
+    height: 883px,
+    color: $color-linear-horizontal,
+    path:
+    polygon(
+        evenodd,
+        25% 0%,
+        76% 0,
+        100% 61%,
+        67% 100%,
+        7% 91%,
+        0% 40%,
+        calc(0% + 5.5px) calc(40% + 4px),
+        calc(25% + 2px) calc(0% + 4px),
+        calc(76% - 3px) calc(0% + 5px),
+        calc(100% - 5px) 61%,
+        calc(67% - 2px) calc(100% - 5px),
+        calc(7% + 5px) calc(91% - 4px),
+        calc(0% + 5.5px) calc(40% + 4px),
+        0% 40%
+      ),
+  ),
   footer: (
     width: 1100px,
     height: 431px,
