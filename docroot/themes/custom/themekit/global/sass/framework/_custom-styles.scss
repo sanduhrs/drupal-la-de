@@ -475,7 +475,7 @@ $shapes: (
         animation: key($shape-properties, animation);
       }
       clip-path: key($shape-properties, path);
-      content: "";
+      content: '';
 
       @content;
     }
@@ -533,6 +533,29 @@ $shapes: (
     @include breakpoint(medium) {
       width: 100%;
       flex-shrink: 0;
+    }
+  }
+}
+
+// Animations
+$animations: (
+  default: (
+    '.field-1': 2s linear rotate,
+    '.field-2': 2s linear rotate,
+    '.field-3': 2s linear rotate,
+  ),
+) !default;
+
+@mixin themekit-animations($animations, $animation-status: '.animated') {
+  @each $block-name, $values in $animations {
+    $block-elements: extend-in-map($animations, $block-name);
+
+    #{$block-name + $animation-status} {
+      @each $key, $value in $block-elements {
+        #{$key} {
+          animation: $value;
+        }
+      }
     }
   }
 }

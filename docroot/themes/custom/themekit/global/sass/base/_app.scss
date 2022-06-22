@@ -120,3 +120,6 @@
 @include foundation-table();
 
 @include themekit-icons();
+
+// Init all declared animations
+@include themekit-animations($animations);

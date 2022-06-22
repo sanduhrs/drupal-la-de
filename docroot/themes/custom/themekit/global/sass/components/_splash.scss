@@ -2,14 +2,17 @@
 /// Splash screen
 ////
 
+$_splash-background: $color-gray-300;
+
 .splash {
   position: fixed;
+  z-index: z(under);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: $color-gray-300;
-  z-index: z(splash);
+  background: $_splash-background;
+  visibility: hidden;
 
   display: none;
 
@@ -26,15 +29,13 @@
     // Logo Overlay
     &::before {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $color-gray-300;
+      top: 50%;
+      left: 50%;
+      width: 200%;
+      height: 200%;
+      transform: translate3d(-50%, -50%, 0);
+      background: $_splash-background;
       content: '';
-      animation-duration: 1.5s;
-      animation-name: splashOverlay;
-      animation-delay: 1s;
       z-index: z(above);
     }
   }
@@ -42,5 +43,31 @@
   // Hide splash for non-support browsers
   html.no-js & {
     display: none;
+  }
+
+  html.no-js body {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Show animation for relevant state
+body {
+  //visibility: hidden;
+  //opacity: 0;
+}
+
+body.initialised-splash {
+  visibility: visible;
+  opacity: 1;
+
+  .splash {
+    &__logo {
+      z-index: z(splash);
+
+      &::before {
+        animation: splashOverlay 1.5s linear 1s forwards;
+      }
+    }
   }
 }

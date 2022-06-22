@@ -389,3 +389,12 @@ $shapes: (
       ),
   ),
 );
+
+/// Animations
+$animations: (
+  '.block--home-banner': (
+    '.heading': blockTitle 1.5s linear 1 forwards,
+    '.field--name-field-description': blockDescription 2.5s linear 1 forwards,
+    '.field--name-field-p-link': blockCta 2s linear 1 forwards,
+  ),
+);

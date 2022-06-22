@@ -4,3 +4,4 @@
  */
 require('./skip-link');
 require('./splash');
+require('./animation');

@@ -135,6 +135,36 @@ Drupal.behaviors.slider = {
           return Component;
         };
 
+        const AnimationPerSlide = function (_Glide, Components, Events) {
+          const Component = {
+            mount() {
+              this.handleSLiderAnimation();
+            },
+
+            handleSLiderAnimation() {
+              if (Components.Html.slides.length > 1) {
+                for (let i = 0; i < Components.Html.slides.length; i += 1) {
+                  const delay = 250;
+                  const duration = 300;
+                  const slide = Components.Html.slides[i];
+                  slide.style.animation = `${duration}ms linear ${delay * i}ms 1 slideLeft`;
+                }
+              }
+            },
+          };
+
+          Events.on('run.before', () => {
+            // add transitiong or class
+            Component.handleSLiderAnimation();
+          });
+
+          // Events.on('run.after', () => {
+          //   // remove transitiong or class
+          // });
+
+          return Component;
+        };
+
         sliderWrapper.forEach((element) => {
           const elGlide = element.querySelector('.glide');
           const glide = new Glide(elGlide, sliders[component].options);
@@ -145,9 +175,12 @@ Drupal.behaviors.slider = {
             if (e.keyCode === 37) glide.go('<');
           });
 
-          glide.mutate([FixBoundPeek]).mount({
-            CustomActiveClass,
-          });
+          glide
+            .mutate([FixBoundPeek])
+            .mount({
+              CustomActiveClass,
+              AnimationPerSlide,
+            });
         });
       });
     }
