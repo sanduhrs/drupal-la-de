@@ -13,7 +13,7 @@ dependencies:
   module:
     - datetime_range
     - layout_builder
-    - text
+    - smart_trim
     - user
 third_party_settings:
   layout_builder:
@@ -35,9 +35,21 @@ content:
     weight: 0
     region: content
   field_intro:
-    type: text_default
+    type: smart_trim
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 100
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
     third_party_settings: {  }
     weight: 1
     region: content
