@@ -39,7 +39,7 @@ domain: ''
 domains_option: 1
 domains_list: ''
 exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
-exclude_admin_theme: false
+exclude_admin_theme: true
 cookie_session: 0
 set_cookie_session_zero_on_disagree: 0
 cookie_lifetime: 100
@@ -50,7 +50,7 @@ reload_page: false
 reload_options: 0
 reload_routes_list: ''
 cookie_name: ''
-exclude_uid_1: false
+exclude_uid_1: true
 better_support_for_screen_readers: false
 method: opt_in
 disabled_javascripts: ''
