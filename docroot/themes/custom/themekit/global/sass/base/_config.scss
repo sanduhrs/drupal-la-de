@@ -393,8 +393,24 @@ $shapes: (
 /// Animations
 $animations: (
   '.block--home-banner': (
-    '.heading': blockTitle 1.5s linear 1 forwards,
+    '.heading': blockTitle 1s linear 1 forwards,
+    '.field--name-field-description': blockDescription 1.25s linear 1 forwards,
+    '.field--name-field-p-link': blockCta 1.5s linear 1 forwards,
+  ),
+  '.block--news-slider': (
+    '.field--name-field-heading': blockSliderTitle 1s linear forwards,
+    '.field--name-field-link': blockSliderCta 1s linear forwards,
+    '.block-view': blockSliderList 1s linear,
+  ),
+  '.block--text': (
+    '.field--name-field-heading': blockTitle 1.5s linear 1 forwards,
     '.field--name-field-description': blockDescription 2.5s linear 1 forwards,
-    '.field--name-field-p-link': blockCta 2s linear 1 forwards,
+    '.field--name-field-p-link': blockCta 2s 1 linear  forwards,
+  ),
+  '.block--text-with-media': (
+    '.field--name-field-heading': blockTitle 1.5s linear 1 forwards,
+    '.field--name-field-description': blockDescription 2.5s linear 1 forwards,
+    '.field--name-field-p-link': blockCta 2s 1 linear  forwards,
+    '.field--name-field-media': blockMedia 2s 1 linear  forwards,
   ),
 );

@@ -2,26 +2,6 @@
 /// Animation declarations
 ////
 
-/// Simple rotation
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/// Simple slide-left
-@keyframes slideLeft {
-  0% {
-    transform: translate3d(10%, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 /// Splash animations
 @keyframes splashOverlay {
   0% {
@@ -45,11 +25,19 @@
 @keyframes shapeFrameRotate {
   0% {
     transform: rotateZ(0deg);
-    background-position: 0% 0%;
+    background-position: 100% 0%;
+  }
+  5% {
+    transform: rotateZ(0deg);
+    background-position: 100% 0%;
+  }
+  95% {
+    transform: rotateZ(3deg);
+    background-position: 0% 100%;
   }
   100% {
     transform: rotateZ(3deg);
-    background-position: 100% 100%;
+    background-position: 100% 0%;
   }
 }
 
@@ -80,8 +68,39 @@
     transform: translateY(40px);
     opacity: 0;
   }
+  40% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blockMedia {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Slider keyframes
+@keyframes blockSliderList {
+  0% {
+    transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+  60% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.75;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -89,24 +108,21 @@
 @keyframes blockSliderTitle {
   0% {
     transform: translateY(40px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes blockSliderCta {
   0% {
-    transform: translateY(80px);
+    transform: translateY(40px);
+    opacity: 0;
   }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes blockSliderSlides {
-  0% {
-    transform: translateY(140px);
+  40% {
+    transform: translateY(40px);
     opacity: 0;
   }
   100% {
