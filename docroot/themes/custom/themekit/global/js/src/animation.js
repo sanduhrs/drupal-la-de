@@ -8,17 +8,21 @@ Drupal.behaviors.themekitAnimations = {
     const page = context.classList && context.classList.contains('page-node-type-component-page') ? context : context.querySelector('.page-node-type-component-page');
     if (!page) { return; }
 
-    const elements = page.querySelectorAll('.layout-content .block');
+    const elements = page.querySelectorAll('.layout__region > .block');
     if (!elements.length) { return; }
 
     const options = {
-      threshold: 0.1,
+      threshold: [0.1, 0.8],
     };
 
     const inViewCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
+          if (entry.target.classList.contains('animation-in')) {
+            entry.target.classList.add('animation-out');
+          } else {
+            entry.target.classList.add('animation-in');
+          }
         }
       });
     };

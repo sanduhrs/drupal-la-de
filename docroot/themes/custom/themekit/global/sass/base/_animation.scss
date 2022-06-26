@@ -41,35 +41,14 @@
   }
 }
 
-@keyframes blockTitle {
+// Block keyframes
+@keyframes blockFadeIn {
   0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes blockDescription {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes blockCta {
-  0% {
-    transform: translateY(40px);
+    transform: translateY(#{$animations-translate-position});
     opacity: 0;
   }
   40% {
-    transform: translateY(40px);
+    transform: translateY(#{$animations-translate-position});
     opacity: 0;
   }
   100% {
@@ -78,51 +57,42 @@
   }
 }
 
-@keyframes blockMedia {
+@keyframes blockFadeAngleIn {
   0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Slider keyframes
-@keyframes blockSliderList {
-  0% {
-    transform: translate3d(40px, 0, 0);
+    transform: translate3d(#{$animations-translate-position}, #{$animations-translate-position / 2}, 0);
     opacity: 0;
   }
   60% {
+    transform: translate3d(#{$animations-translate-position / 2}, 0, 0);
+    opacity: 0.8;
+  }
+  100% {
     transform: translate3d(0, 0, 0);
-    opacity: 0.75;
-  }
-  100% {
     opacity: 1;
   }
 }
 
-@keyframes blockSliderTitle {
+@keyframes blockSlideIn {
   0% {
-    transform: translateY(40px);
-    opacity: 0;
+    margin-top: #{$animations-translate-position * 2};
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    margin-top: 0;
   }
 }
 
-@keyframes blockSliderCta {
+@keyframes blockShowIn {
   0% {
-    transform: translateY(40px);
-    opacity: 0;
+    margin-top: #{$animations-translate-position * 2};
   }
-  40% {
-    transform: translateY(40px);
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes blockTitle {
+  0% {
+    transform: translateY(#{$animations-translate-position});
     opacity: 0;
   }
   100% {

@@ -229,7 +229,6 @@ $shapes: (
     height: 507px,
     color: $color-gray-100,
     path: polygon(18% 0, 94% 7%, 100% 36%, 94% 91%, 16% 100%, 0 58%),
-    animation: 4s linear 1s infinite alternate shapeRotate,
   ),
   text-frame: (
     width: 832px,
@@ -253,14 +252,12 @@ $shapes: (
         calc(20% + 4px) calc(12% + 3px),
         20% 12%,
       ),
-    animation: 4s linear 1s infinite alternate shapeFrameRotate,
   ),
   text-inverse: (
     width: 867px,
     height: 507px,
     color: $color-gray-100,
     path: polygon(6% 6%, 82% 0, 100% 58%, 84% 100%, 6% 91%, 0 36%),
-    animation: 4s linear 1s infinite alternate-reverse shapeRotate,
   ),
   text-inverse-frame: (
     width: 832px,
@@ -284,7 +281,6 @@ $shapes: (
         calc(9% + 4px) calc(1% + 5px),
         9% 1%,
       ),
-    animation: 4s linear 1s infinite alternate-reverse shapeFrameRotate,
   ),
   text-with-media: (
     path: polygon(11% 0, 87% 4%, 100% 61%, 79% 100%, 16% 95%, 0 42%),
@@ -390,27 +386,120 @@ $shapes: (
   ),
 );
 
+$animations-easing: cubic-bezier(0.45, 0, 0.55, 1);
+$animations-translate-position: 35px;
+
 /// Animations
 $animations: (
   '.block--home-banner': (
-    '.heading': blockTitle 1s linear 1 forwards,
-    '.field--name-field-description': blockDescription 1.25s linear 1 forwards,
-    '.field--name-field-p-link': blockCta 1.5s linear 1 forwards,
+    '.heading': blockTitle 1s $animations-easing both,
+    '.field--name-field-description': blockFadeIn 1s .15s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .25s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .35s $animations-easing both,
   ),
-  '.block--news-slider': (
-    '.field--name-field-heading': blockSliderTitle 1s linear forwards,
-    '.field--name-field-link': blockSliderCta 1s linear forwards,
-    '.block-view': blockSliderList 1s linear,
+  '.block--basic-banner': (
+    '.heading': blockTitle 1s $animations-easing both,
+    '.field--name-field-description': blockFadeIn 1s .1s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .2s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .3s $animations-easing both,
+  ),
+  '.block--simple-banner': (
+    '.heading': blockTitle 1s $animations-easing both,
   ),
   '.block--text': (
-    '.field--name-field-heading': blockTitle 1.5s linear 1 forwards,
-    '.field--name-field-description': blockDescription 2.5s linear 1 forwards,
-    '.field--name-field-p-link': blockCta 2s 1 linear  forwards,
+    '&::before': (
+      blockSlideIn 1s $animations-easing both,
+      shapeRotate 4s $animations-easing infinite alternate
+    ),
+    '&::after': (
+      shapeFrameRotate 4s $animations-easing infinite alternate-reverse
+    ),
+    '.heading': blockTitle 1s .5s $animations-easing both,
+    '.field--name-field-description': blockFadeIn 1s .6s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .8s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .9s $animations-easing both,
   ),
   '.block--text-with-media': (
-    '.field--name-field-heading': blockTitle 1.5s linear 1 forwards,
-    '.field--name-field-description': blockDescription 2.5s linear 1 forwards,
-    '.field--name-field-p-link': blockCta 2s 1 linear  forwards,
-    '.field--name-field-media': blockMedia 2s 1 linear  forwards,
+    '.field--name-field-media img': blockSlideIn 1s $animations-easing both,
+    '.heading': blockTitle 1s .5s $animations-easing both,
+    '.field--name-field-description': blockFadeIn 1s .6s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .8s $animations-easing both,
+    '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .9s $animations-easing both,
+  ),
+  '.block--links': (
+    '.heading': blockTitle 1s $animations-easing both,
+    '.field--name-field-links': blockFadeIn 1s .2s $animations-easing both,
+  ),
+  '.block--community-features': (
+    '&': blockFadeIn 1s .2s $animations-easing both,
+  ),
+  '.block--partners': (
+    '.views-row:nth-child(1)': blockFadeIn .5s $animations-easing both,
+    '.views-row:nth-child(2)': blockFadeIn .5s .15s $animations-easing both,
+    '.views-row:nth-child(3)': blockFadeIn .5s .3s $animations-easing both,
+    '.views-row:nth-child(4)': blockFadeIn .5s .45s $animations-easing both,
+    '.views-row:nth-child(5)': blockFadeIn .5s .6s $animations-easing both,
+    '.views-row:nth-child(6)': blockFadeIn .5s .75s $animations-easing both,
+    '.views-row:nth-child(7)': blockFadeIn .5s .9s $animations-easing both,
+    '.heading': blockTitle 1s .1s $animations-easing both,
+    '.block-content .field--name-field-description': blockFadeIn 1s .2s $animations-easing both,
+    '.block-content .field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .3s $animations-easing both,
+    '.block-content .field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .4s $animations-easing both,
+  ),
+  '.block--views-blockevents-events': (
+    '.view-events-events > .view-content > .views-row:nth-child(1)': blockFadeIn 1s .2s $animations-easing both,
+    '.view-events-events > .view-content > .views-row:nth-child(2)': blockFadeIn 1s .25s $animations-easing both,
+    '.view-events-events > .view-content > .views-row:nth-child(3)': blockFadeIn 1s .3s $animations-easing both,
+    '.node--view-mode-featured-teaser .node__content::before': blockSlideIn 1s $animations-easing both,
+    '.node--view-mode-featured-teaser .date-wrapper': blockFadeIn 1s .2s $animations-easing both,
+    '.node--view-mode-featured-teaser .field-content': blockFadeIn 1s .3s $animations-easing both,
+  ),
+  '.block--views-blockcases-listing': (
+    '.view-filters': blockFadeIn 1s $animations-easing both,
+    '.views-row:nth-child(1)': blockFadeIn .5s $animations-easing both,
+    '.views-row:nth-child(2)': blockFadeIn .5s .1s $animations-easing both,
+    '.views-row:nth-child(3)': blockFadeIn .5s .2s $animations-easing both,
+    '.views-row:nth-child(4)': blockFadeIn .5s .3s $animations-easing both,
+    '.views-row:nth-child(5)': blockFadeIn .5s .4s $animations-easing both,
+    '.views-row:nth-child(6)': blockFadeIn .5s .5s $animations-easing both,
+    '.views-row:nth-child(7)': blockFadeIn .5s .6s $animations-easing both,
+    '.views-row:nth-child(8)': blockFadeIn .5s .7s $animations-easing both,
+    '.views-row:nth-child(9)': blockFadeIn .5s .8s $animations-easing both,
+    '.views-row:nth-child(10)': blockFadeIn .5s .9s $animations-easing both,
+    '.views-row:nth-child(11)': blockFadeIn .5s 1s $animations-easing both,
+    '.views-row:nth-child(12)': blockFadeIn .5s 1.1s $animations-easing both,
+    '.pager': blockFadeIn .5s 1.2s $animations-easing both,
+  ),
+  '.block--views-blockpartners-listing': (
+    '.heading': blockTitle 1s $animations-easing both,
+    '.level-wrapper:nth-child(1)': blockFadeIn 1s $animations-easing both,
+    '.level-wrapper:nth-child(2)': blockFadeIn 1s .5s $animations-easing both,
+    '.level-wrapper:nth-child(3)': blockFadeIn 1s 1s $animations-easing both,
+  ),
+  '.block--categories': (
+    '.field--name-field-categories .field__item:nth-child(1) .field--name-field-image img': blockShowIn .5s $animations-easing both,
+    '.field--name-field-categories .field__item:nth-child(1) .term-content': blockFadeIn .7s .2s $animations-easing both,
+    '.field--name-field-categories .field__item:nth-child(2) .field--name-field-image img': blockShowIn .5s .9s $animations-easing both,
+    '.field--name-field-categories .field__item:nth-child(2) .term-content': blockFadeIn .7s 1.1s $animations-easing both,
+    '.field--name-field-categories .field__item:nth-child(3) .field--name-field-image img': blockShowIn .5s $animations-easing both,
+    '.field--name-field-categories .field__item:nth-child(3) .term-content': blockFadeIn .7s .2s $animations-easing both,
+    '.shape-wrapper::before': (
+      blockSlideIn 1s $animations-easing both,
+    ),
+    '.block-content .heading': blockTitle 1s .5s $animations-easing both,
+    '.block-content .field--name-field-description': blockFadeIn 1s .6s $animations-easing both,
+    '.block-content .categories-links': blockFadeIn 1s .7s $animations-easing both,
+    '.block-content .field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .8s $animations-easing both,
+    '.block-content .field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .9s $animations-easing both,
+  ),
+  '.block--cases-slider': (
+    '.field--name-field-heading': blockTitle 1s $animations-easing both,
+    '.field--name-field-link': blockFadeIn 1s .1s $animations-easing both,
+    '.block-view': blockFadeAngleIn 1s $animations-easing,
+  ),
+  '.block--news-slider': (
+    '.field--name-field-heading': blockTitle 1s $animations-easing both,
+    '.field--name-field-link': blockFadeIn 1s .1s $animations-easing both,
+    '.block-view': blockFadeAngleIn 1s $animations-easing,
   ),
 );

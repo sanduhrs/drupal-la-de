@@ -471,9 +471,6 @@ $shapes: (
       @if map-has-key($shape-properties, color) {
         background: key($shape-properties, color) 0 0 no-repeat;
       }
-      @if map-has-key($shape-properties, animation) {
-        animation: key($shape-properties, animation);
-      }
       clip-path: key($shape-properties, path);
       content: '';
 
@@ -546,14 +543,33 @@ $animations: (
   ),
 ) !default;
 
-@mixin themekit-animations($animations, $animation-status: '.animated') {
+@mixin themekit-animations($animations, $animations-state: 'animation-in') {
   @each $block-name, $values in $animations {
     $block-elements: extend-in-map($animations, $block-name);
 
-    #{$block-name + $animation-status} {
-      @each $key, $value in $block-elements {
-        #{$key} {
-          animation: $value;
+    #{$block-name} {
+      // Init default styles (before animation class will be added)
+      @if ($animations-state == 'animation-in') {
+        visibility: hidden;
+
+        &.#{$animations-state} {
+          visibility: visible;
+        }
+      }
+
+      &.#{$animations-state} {
+        // Init animation per each element of the block
+        @each $key, $value in $block-elements {
+          @if type-of($value) == 'map' {
+            $_value: '';
+            @each $single-value in $value {
+              $_value: $_value + $single-value;
+            }
+            $value: $_value;
+          }
+          #{$key} {
+            animation: $value;
+          }
         }
       }
     }
