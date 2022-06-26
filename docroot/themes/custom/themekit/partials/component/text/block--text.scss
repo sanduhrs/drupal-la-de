@@ -60,6 +60,38 @@
       @include breakpoint(large) {
         @include left-right(padding, 120px);
       }
+      @include brand-shape(text) {
+        right: 0;
+        @include breakpoint(medium down) {
+          width: auto;
+          height: auto;
+        }
+        @include breakpoint(medium only) {
+          transform: translate3d(-15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          left: -108px;
+          right: -40px;
+        }
+      }
+      @include brand-shape(text-frame, after) {
+        bottom: 0;
+        right: 0;
+        @include breakpoint(medium) {
+          right: 34px;
+        }
+        @include breakpoint(medium down) {
+          width: auto;
+          height: auto;
+        }
+        @include breakpoint(medium only) {
+          transform: translate3d(-15%, 0, 0);
+        }
+        @include breakpoint(small down) {
+          left: -108px;
+          right: -20px;
+        }
+      }
     }
 
     &::before {
