@@ -18,7 +18,7 @@ Drupal.behaviors.themekitSplash = {
       localStorage.setItem(key, JSON.stringify(item));
 
       const { body } = document;
-      body.classList.add('initialised-splash');
+      body.classList.add('initialized-splash');
     };
 
     const handleStorageKey = (key) => {

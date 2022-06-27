@@ -3,12 +3,25 @@
 ////
 
 /// Splash animations
+@keyframes splash {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
 @keyframes splashOverlay {
   0% {
     clip-path: circle(100% at 50% 50%);
   }
+  75% {
+    margin-top: 0;
+  }
   100% {
     clip-path: circle(50% at 50% 0%);
+    margin-top: -50%;
   }
 }
 
@@ -62,8 +75,8 @@
     transform: translate3d(#{$animations-translate-position}, #{$animations-translate-position / 2}, 0);
     opacity: 0;
   }
-  60% {
-    transform: translate3d(#{$animations-translate-position / 2}, 0, 0);
+  50% {
+    transform: translate3d(#{$animations-translate-position / 2}, #{$animations-translate-position / 4}, 0);
     opacity: 0.8;
   }
   100% {

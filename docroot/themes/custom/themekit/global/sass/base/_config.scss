@@ -509,11 +509,11 @@ $animations: (
   '.block--cases-slider.animation-in': (
     '.field--name-field-heading': blockTitle 1s $animations-easing both,
     '.field--name-field-link': blockFadeIn 1s .1s $animations-easing both,
-    '.block-view': blockFadeAngleIn 1s $animations-easing both,
+    '.block-view': blockFadeAngleIn 1s linear both,
   ),
   '.block--news-slider.animation-in': (
     '.field--name-field-heading': blockTitle 1s $animations-easing both,
     '.field--name-field-link': blockFadeIn 1s .1s $animations-easing both,
-    '.block-view': blockFadeAngleIn 1s $animations-easing both,
+    '.block-view': blockFadeAngleIn 1s linear both,
   ),
 );
