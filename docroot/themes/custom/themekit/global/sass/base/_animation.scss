@@ -83,10 +83,10 @@
 
 @keyframes blockShowIn {
   0% {
-    margin-top: #{$animations-translate-position * 2};
+    clip-path: inset(0 100% 0 0);
   }
   100% {
-    margin-top: 0;
+    clip-path: inset(0 0 0 0);
   }
 }
 

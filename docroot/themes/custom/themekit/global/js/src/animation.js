@@ -11,6 +11,31 @@ Drupal.behaviors.themekitAnimations = {
     const elements = page.querySelectorAll('.layout__region > .block');
     if (!elements.length) { return; }
 
+    const isInViewport = (element) => {
+      const bounding = element.getBoundingClientRect();
+      return (
+        bounding.top >= 0
+        && bounding.left >= 0
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    const initAnimatedElements = () => {
+      let filtered = false;
+      elements.forEach((element) => {
+        if (!filtered) {
+          if (!isInViewport(element)) {
+            element.classList.add('animation-in', 'animation-out');
+          } else {
+            filtered = true;
+          }
+        }
+      });
+    };
+
+    initAnimatedElements();
+
     const options = {
       threshold: [0.1, 0.8],
     };
