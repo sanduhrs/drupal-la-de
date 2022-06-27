@@ -167,6 +167,12 @@ node--type--case--simple-teaser:
   css:
     theme:
       dist/css/node--case--simple-teaser.css: {}
+node--type--component-page--full:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--component-page--full.css: {}
 node--type--event--featured-teaser:
   dependencies:
     - themekit/themekit

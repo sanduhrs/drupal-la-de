@@ -543,33 +543,22 @@ $animations: (
   ),
 ) !default;
 
-@mixin themekit-animations($animations, $animations-state: 'animation-in') {
+@mixin themekit-animations($animations) {
   @each $block-name, $values in $animations {
     $block-elements: extend-in-map($animations, $block-name);
 
     #{$block-name} {
-      // Init default styles (before animation class will be added)
-      @if ($animations-state == 'animation-in') {
-        visibility: hidden;
-
-        &.#{$animations-state} {
-          visibility: visible;
+      // Init animation per each element of the block
+      @each $key, $value in $block-elements {
+        @if type-of($value) == 'map' {
+          $_value: '';
+          @each $single-value in $value {
+            $_value: $_value + $single-value;
+          }
+          $value: $_value;
         }
-      }
-
-      &.#{$animations-state} {
-        // Init animation per each element of the block
-        @each $key, $value in $block-elements {
-          @if type-of($value) == 'map' {
-            $_value: '';
-            @each $single-value in $value {
-              $_value: $_value + $single-value;
-            }
-            $value: $_value;
-          }
-          #{$key} {
-            animation: $value;
-          }
+        #{$key} {
+          animation: $value;
         }
       }
     }
