@@ -143,11 +143,17 @@ Drupal.behaviors.slider = {
 
             handleSLiderAnimation() {
               if (Components.Html.slides.length > 1) {
+                const transitionDuration = _Glide.settings.animationDuration;
                 for (let i = 0; i < Components.Html.slides.length; i += 1) {
-                  const delay = 250;
-                  const duration = 300;
+                  const delay = 50;
+                  // const duration = 300;
                   const slide = Components.Html.slides[i];
-                  slide.style.animation = `${duration}ms linear ${delay * i}ms 1 slideLeft`;
+                  const styles = {
+                    // transform: 'translate3d(30px, 0 ,0)',
+                    transition: `transform ${transitionDuration}ms ${delay * i}ms`,
+                  };
+                  Object.assign(slide.style, styles);
+                  console.log(Components.Peek);
                 }
               }
             },
