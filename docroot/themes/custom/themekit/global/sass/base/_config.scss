@@ -456,6 +456,7 @@ $animations: (
     '.block-content .field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .4s $animations-easing both,
   ),
   '.block--views-blockevents-events.animation-in': (
+    '.view-events-events > .view-content::before': blockFadeIn 1s $animations-easing both,
     '.view-events-events > .view-content > .views-row:nth-child(1)': blockFadeIn 1s .2s $animations-easing both,
     '.view-events-events > .view-content > .views-row:nth-child(2)': blockFadeIn 1s .25s $animations-easing both,
     '.view-events-events > .view-content > .views-row:nth-child(3)': blockFadeIn 1s .3s $animations-easing both,

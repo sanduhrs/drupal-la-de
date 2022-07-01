@@ -15,9 +15,20 @@
       order: 2;
     }
     @include breakpoint(small down) {
-      background: $color-linear-vertical;
+      position: relative;
       padding-left: 4px;
       margin-bottom: 20px;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: $color-linear-vertical;
+      @include breakpoint(small down) {
+        content: '';
+      }
     }
     > .views-row {
       @include breakpoint(medium up) {
