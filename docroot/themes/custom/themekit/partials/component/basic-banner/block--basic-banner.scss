@@ -20,7 +20,7 @@
     }
   }
 
-  .field--name-field-media {
+  .media {
     @include banner-image;
     @include breakpoint(large) {
       @include flex-grid-size(5);

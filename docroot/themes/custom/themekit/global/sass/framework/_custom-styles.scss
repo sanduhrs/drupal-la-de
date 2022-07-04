@@ -80,7 +80,7 @@
       }
     }
 
-    .field--name-field-image {
+    .media {
       @include banner-image;
       @include breakpoint(large) {
         align-self: flex-start;
@@ -342,8 +342,7 @@
   position: relative;
 
   @if ($home-banner == true) {
-    @include brand-shape(home-banner-frame, after) {
-      z-index: z(default);
+    @include brand-shape-frame(home-banner-frame, z(above)) {
       @include breakpoint(medium down) {
         left: -128px;
         top: -96px;
@@ -360,9 +359,8 @@
       }
     }
   } @else {
-    @include brand-shape(banner-frame, after) {
+    @include brand-shape-frame(banner-frame, z(above)) {
       left: -4px;
-      z-index: z(default);
       @include breakpoint(medium down) {
         top: -86px;
         bottom: -8px;
@@ -489,6 +487,53 @@ $shapes: (
     }
 
     @content;
+  }
+}
+
+@mixin brand-shape-frame($shape-name: default, $shape-z: z(under)) {
+  $shape-properties: extend-in-map($shapes, $shape-name);
+
+  position: relative;
+
+  .frame {
+    position: absolute;
+    z-index: $shape-z;
+    @if map-has-key($shape-properties, width) {
+      width: key($shape-properties, width);
+    }
+    @if map-has-key($shape-properties, height) {
+      height: key($shape-properties, height);
+    }
+    clip-path: key($shape-properties, path);
+
+    @content;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @if map-has-key($shape-properties, width) {
+        width: calc(#{key($shape-properties, width)} * 1.41);
+      } @else {
+        width: calc(500px * 1.8);
+      }
+      @if map-has-key($shape-properties, width) {
+        height: calc(#{key($shape-properties, width)} * 1.41);
+      } @else {
+        height: calc(500px * 1.8);
+      }
+      @if map-has-key($shape-properties, color) {
+        background: key($shape-properties, color);
+      }
+      @if map-has-key($shape-properties, width) {
+        margin-left: calc((#{key($shape-properties, width)} * 1.41) / -2);
+        margin-top: calc((#{key($shape-properties, width)} * 1.41) / -2);
+      } @else {
+        margin-left: calc((500px * 1.8) / -2);
+        margin-top: calc((500px * 1.8) / -2);
+      }
+      content: '';
+    }
   }
 }
 

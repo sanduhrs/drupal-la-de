@@ -25,7 +25,7 @@
     }
   }
 
-  .field--name-field-media {
+  .media {
     @include banner-image($home-banner: true);
     @include breakpoint(small down) {
       margin-bottom: 40px;

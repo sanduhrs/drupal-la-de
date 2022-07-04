@@ -5,10 +5,10 @@
 
 Drupal.behaviors.themekitAnimations = {
   attach(context) {
-    const page = context.classList && context.classList.contains('page-node-type-component-page') ? context : context.querySelector('.page-node-type-component-page');
+    const page = context.classList && context.classList.contains('region-content') ? context : context.querySelector('.region-content');
     if (!page) { return; }
 
-    const elements = page.querySelectorAll('.layout__region > .block');
+    const elements = page.querySelectorAll('.layout__region > .block, .field-banner');
     if (!elements.length) { return; }
 
     const isInViewport = (element) => {

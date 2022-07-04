@@ -54,6 +54,33 @@
   }
 }
 
+@keyframes shapeShake {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(0, #{$animations-translate-position / -4}, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  75% {
+    transform: translate3d(0, #{$animations-translate-position / 4}, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shapeFrameBackgroundRotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 // Block keyframes
 @keyframes blockFadeIn {
   0% {

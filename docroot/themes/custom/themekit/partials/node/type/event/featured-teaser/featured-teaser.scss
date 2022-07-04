@@ -1,7 +1,7 @@
 .node--type-event {
   &.node--view-mode-featured-teaser {
     padding-top: 33px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 
     > .node__content {
       position: relative;
@@ -18,7 +18,7 @@
           margin-left: -150px;
         }
       }
-      @include brand-shape(featured-event-frame, after) {
+      @include brand-shape-frame(featured-event-frame) {
         left: 0;
         top: -33px;
         bottom: -40px;

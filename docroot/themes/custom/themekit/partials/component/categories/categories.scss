@@ -43,7 +43,7 @@
           right: -112px;
         }
       }
-      @include brand-shape(categories-frame, after) {
+      @include brand-shape-frame(categories-frame) {
         top: -28px;
         min-height: calc(100% + 28px);
         @include breakpoint(medium down) {

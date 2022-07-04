@@ -74,7 +74,7 @@
           right: -40px;
         }
       }
-      @include brand-shape(text-frame, after) {
+      @include brand-shape-frame(text-frame) {
         bottom: 0;
         right: 0;
         @include breakpoint(medium) {
@@ -113,16 +113,13 @@
       }
     }
 
-    &::after {
+    .frame {
       top: 0;
       min-height: 100%;
       @include breakpoint(medium only) {
         right: auto;
         left: 0;
         min-width: 125%;
-      }
-      @include breakpoint(small down) {
-        width: calc(100% + 108px + 20px);
       }
     }
 
@@ -147,7 +144,8 @@
           right: -40px;
         }
       }
-      @include brand-shape(text-frame, after) {
+
+      @include brand-shape-frame(text-frame) {
         bottom: 0;
         right: 0;
         @include breakpoint(medium) {
@@ -188,7 +186,8 @@
           right: -108px;
         }
       }
-      @include brand-shape(text-inverse-frame, after) {
+
+      @include brand-shape-frame(text-inverse-frame) {
         left: 0;
         bottom: 0;
         @include breakpoint(medium) {

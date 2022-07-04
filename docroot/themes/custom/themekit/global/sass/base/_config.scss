@@ -391,23 +391,43 @@ $animations-translate-position: 35px;
 
 /// Animations
 $animations: (
+  '.field-banner.animation-in': (
+    '.field--name-field-image': (
+      shapeShake 10s linear infinite,
+    ),
+    '.frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
+    ),
+  ),
   '.block--home-banner.animation-in': (
     '.heading': blockTitle 1s $animations-easing both,
     '.field--name-field-description': blockFadeIn 1s .15s $animations-easing both,
     '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .25s $animations-easing both,
     '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .35s $animations-easing both,
+    '.field--name-field-media': (
+      shapeShake 10s linear infinite,
+    ),
+    '.frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
+    ),
   ),
   '.block--home-banner.animation-out': (
-    '.field--name-field-media::after': blockSlideOut 1s $animations-easing both,
+    '.frame': blockSlideOut 1s $animations-easing both,
   ),
   '.block--basic-banner.animation-in': (
     '.heading': blockTitle 1s $animations-easing both,
     '.field--name-field-description': blockFadeIn 1s .1s $animations-easing both,
     '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .2s $animations-easing both,
     '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .3s $animations-easing both,
+    '.field--name-field-media': (
+      shapeShake 10s linear infinite,
+    ),
+    '.frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
+    ),
   ),
   '.block--basic-banner.animation-out': (
-    '.field--name-field-media::after': blockSlideOut 1s $animations-easing both,
+    '.frame': blockSlideOut 1s $animations-easing both,
   ),
   '.block--simple-banner.animation-in': (
     '.heading': blockTitle 1s $animations-easing both,
@@ -415,10 +435,13 @@ $animations: (
   '.block--text.animation-in': (
     '&::before': (
       blockSlideIn 1s $animations-easing both,
-      shapeRotate 4s $animations-easing infinite alternate
+      shapeRotate 4s $animations-easing infinite alternate,
     ),
-    '&::after': (
-      shapeFrameRotate 4s $animations-easing infinite alternate-reverse
+    '.frame': (
+      shapeFrameRotate 4s $animations-easing infinite alternate-reverse,
+    ),
+    '.frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
     ),
     '.heading': blockTitle 1s .5s $animations-easing both,
     '.field--name-field-description': blockFadeIn 1s .6s $animations-easing both,
@@ -431,6 +454,9 @@ $animations: (
     '.field--name-field-description': blockFadeIn 1s .6s $animations-easing both,
     '.field--name-field-p-link .field__item:nth-child(1)': blockFadeIn 1s .8s $animations-easing both,
     '.field--name-field-p-link .field__item:nth-child(2)': blockFadeIn 1s .9s $animations-easing both,
+    '.frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
+    ),
   ),
   '.block--text-with-media.animation-out': (
     '.field--name-field-media img': blockSlideOut 1s $animations-easing both,
@@ -460,7 +486,16 @@ $animations: (
     '.view-events-events > .view-content > .views-row:nth-child(1)': blockFadeIn 1s .2s $animations-easing both,
     '.view-events-events > .view-content > .views-row:nth-child(2)': blockFadeIn 1s .25s $animations-easing both,
     '.view-events-events > .view-content > .views-row:nth-child(3)': blockFadeIn 1s .3s $animations-easing both,
-    '.node--view-mode-featured-teaser .node__content::before': blockSlideIn 1s $animations-easing both,
+    '.node--view-mode-featured-teaser .node__content::before': (
+      blockSlideIn 1s $animations-easing both,
+      shapeRotate 4s $animations-easing infinite alternate,
+    ),
+    '.node--view-mode-featured-teaser .node__content .frame': (
+      shapeFrameRotate 4s $animations-easing infinite alternate-reverse,
+    ),
+    '.node--view-mode-featured-teaser .node__content .frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
+    ),
     '.node--view-mode-featured-teaser .date-wrapper': blockFadeIn 1s .2s $animations-easing both,
     '.node--view-mode-featured-teaser .field-content': blockFadeIn 1s .3s $animations-easing both,
   ),
@@ -498,8 +533,13 @@ $animations: (
     '.field--name-field-categories .field__item:nth-child(2) .term-content': blockFadeIn .7s 1.1s $animations-easing both,
     '.field--name-field-categories .field__item:nth-child(3) .field--name-field-image img': blockShowIn .5s 1.1s $animations-easing both,
     '.field--name-field-categories .field__item:nth-child(3) .term-content': blockFadeIn .7s 1.3s $animations-easing both,
-    '.shape-wrapper::before': (
+    '.shape-wrapper:before': shapeFrameRotate 4s $animations-easing infinite alternate-reverse,
+    '.shape-wrapper .frame': (
       blockSlideIn 1s $animations-easing both,
+      shapeFrameRotate 4s $animations-easing infinite alternate-reverse,
+    ),
+    '.shape-wrapper .frame::before': (
+      shapeFrameBackgroundRotate 5s linear infinite,
     ),
     '.block-content .heading': blockTitle 1s .5s $animations-easing both,
     '.block-content .field--name-field-description': blockFadeIn 1s .6s $animations-easing both,
