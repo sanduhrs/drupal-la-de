@@ -505,6 +505,7 @@ $shapes: (
       height: key($shape-properties, height);
     }
     clip-path: key($shape-properties, path);
+    overflow: hidden;
 
     @content;
 
