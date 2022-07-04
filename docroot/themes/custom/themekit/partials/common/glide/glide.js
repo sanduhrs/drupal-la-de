@@ -114,6 +114,7 @@ Drupal.behaviors.slider = {
                 const lastBullet = [...bullets.children].find(
                   (bullet) => bullet.getAttribute('data-glide-dir') === `=${lastIndex}`,
                 );
+                if (!lastBullet) { return; }
 
                 lastBullet.classList.add(activeBulletClassName);
                 lastSlide.classList.add(activeSlideClassName);
@@ -135,38 +136,32 @@ Drupal.behaviors.slider = {
           return Component;
         };
 
-        const AnimationPerSlide = function (_Glide, Components, Events) {
+        const fixBullets = function (_Glide, Components, Events) {
           const Component = {
             mount() {
-              this.handleSLiderAnimation();
+              this.fixBullets();
             },
 
-            handleSLiderAnimation() {
-              if (Components.Html.slides.length > 1) {
-                const transitionDuration = _Glide.settings.animationDuration;
-                for (let i = 0; i < Components.Html.slides.length; i += 1) {
-                  const delay = 50;
-                  // const duration = 300;
-                  const slide = Components.Html.slides[i];
-                  const styles = {
-                    // transform: 'translate3d(30px, 0 ,0)',
-                    transition: `transform ${transitionDuration}ms ${delay * i}ms`,
-                  };
-                  Object.assign(slide.style, styles);
-                  console.log(Components.Peek);
+            fixBullets() {
+              const controlNav = Components.Controls.items[1];
+              if (controlNav) {
+                let inactiveNavItems = _Glide.settings.perView - 1;
+                if (window.innerWidth < 1024) {
+                  inactiveNavItems = _Glide.settings.breakpoints['1024'].perView - 1;
+                }
+                for (let i = 0; i <= inactiveNavItems; i += 1) {
+                  const removedIndex = controlNav.children.length - inactiveNavItems + i;
+                  if (controlNav.children[removedIndex]) {
+                    controlNav.removeChild(controlNav.children[removedIndex]);
+                  }
                 }
               }
             },
           };
 
-          Events.on('run.before', () => {
-            // add transitiong or class
-            Component.handleSLiderAnimation();
+          Events.on('mount.before', () => {
+            Component.fixBullets();
           });
-
-          // Events.on('run.after', () => {
-          //   // remove transitiong or class
-          // });
 
           return Component;
         };
@@ -185,7 +180,7 @@ Drupal.behaviors.slider = {
             .mutate([FixBoundPeek])
             .mount({
               CustomActiveClass,
-              AnimationPerSlide,
+              fixBullets,
             });
         });
       });
