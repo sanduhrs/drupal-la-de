@@ -35,9 +35,7 @@
           transform: translate3d(-18%, 0, 0);
         }
         @include breakpoint(small down) {
-          min-width: 150vw;
-          transform: translate3d(-45vw, 0, 0);
-          height: 100%;
+          display: none;
         }
         @include breakpoint(large) {
           right: -112px;
@@ -52,13 +50,7 @@
           transform: translate3d(-18%, 0, 0);
         }
         @include breakpoint(small down) {
-          bottom: -30px;
-          height: auto;
-          min-width: 150vw;
-          min-height: calc(100% + 28px + 30px);
-          transform: translate3d(-36vw, 0, 0);
-          width: auto;
-          z-index: -2;
+          display: none;
         }
         @include breakpoint(large) {
           right: -80px;
