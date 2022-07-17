@@ -21,10 +21,12 @@
       </div>
       {{ content.field_intro }}
     </div>
-    <div class="media">
-      <span class="frame"></span>
-      {{ content.field_image }}
-    </div>
+    {% if node.field_image.value %}
+      <div class="media">
+        <span class="frame"></span>
+        {{ content.field_image }}
+      </div>
+    {% endif %}
   </div>
 
 
