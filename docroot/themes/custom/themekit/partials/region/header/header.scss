@@ -5,7 +5,7 @@
 .region-header {
   @include top-bottom(padding, rem-calc(20));
   position: relative;
-  z-index: z(above);
+  z-index: 2;
   @include breakpoint(medium) {
     @include top-bottom(padding, rem-calc(32));
     height: rem-calc(104);
