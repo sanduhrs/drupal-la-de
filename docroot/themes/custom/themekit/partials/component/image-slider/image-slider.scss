@@ -11,6 +11,7 @@
     @include breakpoint(medium down) {
       margin-left: -32px;
       margin-right: -32px;
+      width: 100vw;
     }
 
     @include breakpoint(small down) {
