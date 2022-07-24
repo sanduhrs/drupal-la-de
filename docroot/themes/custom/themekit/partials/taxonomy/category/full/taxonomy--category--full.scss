@@ -54,6 +54,10 @@
 
     .block-slider-cases {
       margin-top: 25px;
+      max-width: calc(100vw - 2rem);
+      @include breakpoint(large) {
+        max-width: calc(100vw - 4rem);
+      }
     }
   }
 }
