@@ -17,7 +17,12 @@
       </div>
 
     </div>
-    {{ content.field_image }}
+    {% if term.field_image.value %}
+      <div class="media">
+        <span class="frame"></span>
+        {{ content.field_image }}
+      </div>
+    {% endif %}
   </div>
 
   <div{{ content_attributes.addClass('node__content') }}>
