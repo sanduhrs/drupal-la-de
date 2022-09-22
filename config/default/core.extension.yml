@@ -6,7 +6,6 @@ module:
   address: 0
   address_map_link: 0
   admin_toolbar: 0
-  admin_toolbar_tools: 0
   advagg: 0
   advagg_js_minify: 0
   allowed_formats: 0
@@ -24,6 +23,8 @@ module:
   color: 0
   components: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   config_translation: 0
   config_update: 0
   config_update_ui: 0
@@ -134,7 +135,6 @@ module:
   twig_field_value: 0
   twig_tweak: 0
   ultimate_cron: 0
-  update: 0
   user: 0
   username_enumeration_prevention: 0
   views_bulk_edit: 0

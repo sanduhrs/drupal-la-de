@@ -165,8 +165,7 @@ foreach ($platformsh->variables() as $name => $value) {
   }
 }
 
-/**
- * Disable CSS and JS aggregation.
- */
-$config['system.performance']['css']['preprocess'] = FALSE;
-$config['system.performance']['js']['preprocess'] = FALSE;
+if ($platformsh->branch === 'main') {
+  // Disable develop config split.
+  $config['config_split.config_split.develop']['status'] = FALSE;
+}

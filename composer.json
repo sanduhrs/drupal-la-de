@@ -19,11 +19,11 @@
         "drupal/chosen": "^3.0",
         "drupal/ckeditorheight": "^1.0",
         "drupal/components": "^2.2",
+        "drupal/config_split": "^1.9",
         "drupal/config_update": "^1.0",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/csv_serialization": "^2.0@beta",
-        "drupal/devel": "^4.0",
         "drupal/draggableviews": "^2.0",
         "drupal/embed": "^1.0",
         "drupal/entity": "^1.0",
@@ -208,6 +208,8 @@
         ]
     },
     "require-dev": {
+        "drupal/devel": "^4.1",
+        "drupal/stage_file_proxy": "^1.2",
         "lemberg/draft-environment": "^3.6"
     }
 }
