@@ -105,9 +105,6 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "require-dev": {
-    "drupal/drupal-extension": "^4.0"
-  },
   "config": {
     "allow-plugins": {
       "composer/installers": true,
