@@ -1,5 +1,5 @@
 uuid: aae68502-9d68-4892-b19f-c60a43467de2
-langcode: en
+langcode: nl
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primary admin actions'
+  label: 'Primaire beheeracties'
   label_display: '0'
   provider: core
 visibility: {  }

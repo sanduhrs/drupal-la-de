@@ -1,5 +1,5 @@
 uuid: d6bdb2a2-2b60-426c-82ad-5b23938520ab
-langcode: en
+langcode: nl
 status: true
 dependencies:
   module:
@@ -10,4 +10,4 @@ id: redirect.redirect
 target_entity_type_id: redirect
 target_bundle: redirect
 default_langcode: und
-language_alterable: true
+language_alterable: false

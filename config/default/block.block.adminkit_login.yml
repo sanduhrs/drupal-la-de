@@ -1,5 +1,5 @@
 uuid: c1f19347-c1a4-48af-b07a-a8aebd6acbaf
-langcode: en
+langcode: nl
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: user_login_block
 settings:
   id: user_login_block
-  label: 'User login'
+  label: Gebruikerslogin
   label_display: visible
   provider: user
 visibility: {  }

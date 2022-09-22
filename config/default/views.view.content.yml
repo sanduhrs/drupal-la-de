@@ -1,5 +1,5 @@
 uuid: 5000389e-111b-43e3-9c72-26b53182117e
-langcode: en
+langcode: nl
 status: true
 dependencies:
   module:
@@ -9,20 +9,20 @@ dependencies:
 _core:
   default_config_hash: iXMzh7nzn66AxKWdv4nH4MdTcA5LY_2r6D-YXXitEdg
 id: content
-label: Content
+label: Inhoud
 module: node
-description: 'Find and manage content.'
+description: 'Inhoud zoeken en beheren'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Standaard
     display_plugin: default
     position: 0
     display_options:
-      title: Content
+      title: Inhoud
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -124,7 +124,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Title
+          label: Titel
           exclude: false
           alter:
             alter_text: false
@@ -147,7 +147,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-          label: 'Content type'
+          label: Inhoudstype
           exclude: false
           alter:
             alter_text: false
@@ -210,7 +210,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: Author
+          label: Auteur
           exclude: false
           alter:
             alter_text: false
@@ -241,8 +241,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Unpublished
-            format_custom_true: Published
+            format_custom_false: 'Niet gepubliceerd'
+            format_custom_true: Gepubliceerd
         changed:
           id: changed
           table: node_field_data
@@ -250,7 +250,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Bijgewerkt
           exclude: false
           alter:
             alter_text: false
@@ -273,7 +273,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity_operations
-          label: Operations
+          label: Bewerkingen
           exclude: false
           alter:
             alter_text: false
@@ -320,20 +320,20 @@ display:
         options:
           items_per_page: 50
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: 'Volgende ›'
+            previous: '‹ Vorige'
+            first: '« Eerste'
+            last: 'Laatste »'
       exposed_form:
         type: basic
         options:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Sorteren op'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
       access:
         type: perm
         options:
@@ -347,7 +347,7 @@ display:
           field: area_text_custom
           plugin_id: text_custom
           empty: true
-          content: 'No content available.'
+          content: 'Geen inhoud beschikbaar.'
       sorts: {  }
       arguments: {  }
       filters:
@@ -393,7 +393,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: Publicatiestatus
             description: ''
             identifier: status
             optional: true
@@ -404,11 +404,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Gepubliceerd
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'Niet gepubliceerd'
                 operator: '='
                 value: '0'
         type:
@@ -427,7 +427,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: Inhoudstype
             description: ''
             use_operator: false
             operator: type_op
@@ -470,7 +470,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Titel
             description: ''
             use_operator: false
             operator: title_op
@@ -513,7 +513,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Taal
             description: ''
             use_operator: false
             operator: langcode_op
@@ -664,7 +664,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Pagina
     display_plugin: page
     position: 1
     display_options:
@@ -672,15 +672,15 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Content
+        title: Inhoud
         description: ''
         weight: -10
         menu_name: admin
         context: ''
       tab_options:
         type: normal
-        title: Content
-        description: 'Find and manage content'
+        title: Inhoud
+        description: 'Inhoud vinden en beheren'
         weight: -10
         menu_name: admin
     cache_metadata:

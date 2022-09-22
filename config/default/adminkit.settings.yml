@@ -16,3 +16,4 @@ icon_default: 1
 icon_upload: ''
 _core:
   default_config_hash: HE0v5fiWphCVj9H0PUGoy4xztt5f8utgAn63c8B2HCo
+langcode: nl
