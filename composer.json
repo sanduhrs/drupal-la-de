@@ -1,21 +1,8 @@
 {
   "name": "drupal/drupal.nl",
-  "description": "Drupal.nl project",
   "type": "project",
+  "description": "Drupal.nl project",
   "license": "GPL-2.0-or-later",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
-  "require-dev": {
-    "drupal/drupal-extension": "^4.0"
-  },
   "require": {
     "bower-asset/chosen": "^1.8",
     "bower-asset/lazysizes": "^5.2",
@@ -118,13 +105,141 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
+  "require-dev": {
+    "drupal/drupal-extension": "^4.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "oomphinc/composer-installers-extender": true
+    },
+    "platform-check": false,
+    "sort-packages": true
+  },
+  "extra": {
+    "composer-exit-on-patch-failure": true,
+    "drupal-scaffold": {
+      "file-mapping": {
+        "[web-root]/.editorconfig": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/editorconfig"
+        },
+        "[web-root]/.gitattributes": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/gitattributes"
+        },
+        "[web-root]/.htaccess": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/htaccess"
+        },
+        "[web-root]/robots.txt": false,
+        "[web-root]/sites/default/cloud-memcache-d8+.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/cloud-memcache-d8+.php"
+        },
+        "[web-root]/sites/default/services.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/default.services.yml"
+        },
+        "[web-root]/sites/default/settings.acquia.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/settings.acquia.php"
+        },
+        "[web-root]/sites/default/settings.fast404.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/settings.fast404.php"
+        },
+        "[web-root]/sites/default/settings.lando.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/settings.lando.php"
+        },
+        "[web-root]/sites/default/settings.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/settings.php"
+        },
+        "[web-root]/sites/default/settings.platformsh.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "assets/scaffold/files/settings.platformsh.php"
+        }
+      },
+      "locations": {
+        "web-root": "./docroot"
+      }
+    },
+    "enable-patching": true,
+    "installer-paths": {
+      "docroot/core": [
+        "type:drupal-core"
+      ],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "docroot/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "docroot/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "docroot/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/core": {
+        "Field Groups marked as required are missing red asterisk": "https://www.drupal.org/files/issues/2020-09-18/required-asterisk-missing--3171835--2.patch",
+        "Reverting entity revisions that contain custom blocks erroneously triggers EntityChangedConstraint": "https://www.drupal.org/files/issues/2021-04-06/3053881-3049332-45.patch"
+      },
+      "drupal/draggableviews": {
+        "Error adding or editing the field Draggableviews: Content": "https://www.drupal.org/files/issues/2022-01-13/error-adding-or-editing-the-field-draggableviews-content-1.patch",
+        "Not working with Group By feature": "https://www.drupal.org/files/issues/2021-10-11/not_working_with_group_by-draggableviews-2867348-48.patch"
+      },
+      "drupal/paragraphs": {
+        "Affix correct langcode to paragraph in layout builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
+        "Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess(": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
+      }
+    }
+  },
   "autoload": {
     "classmap": [
       "scripts/composer/ScriptHandler.php"
     ]
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "scripts": {
     "post-install-cmd": [
       "DrupalProject\\composer\\ScriptHandler::createRequiredDirectories",
@@ -134,110 +249,5 @@
       "DrupalProject\\composer\\ScriptHandler::createRequiredDirectories",
       "DrupalProject\\composer\\ScriptHandler::themeStartkitCopy"
     ]
-  },
-  "extra": {
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "installer-paths": {
-      "docroot/core": ["type:drupal-core"],
-      "docroot/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-      "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
-      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
-    },
-    "enable-patching": true,
-    "drupal-scaffold": {
-      "locations": {
-        "web-root": "./docroot"
-      },
-      "file-mapping": {
-        "[web-root]/robots.txt": false,
-        "[web-root]/.htaccess": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/htaccess",
-          "overwrite": false
-        },
-        "[web-root]/.editorconfig": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/editorconfig",
-          "overwrite": false
-        },
-        "[web-root]/.gitattributes": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/gitattributes",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/services.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/default.services.yml",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/cloud-memcache-d8+.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/cloud-memcache-d8+.php",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/settings.acquia.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/settings.acquia.php",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/settings.lando.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/settings.lando.php",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/settings.platformsh.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/settings.platformsh.php",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/settings.fast404.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/settings.fast404.php",
-          "overwrite": false
-        },
-        "[web-root]/sites/default/settings.php": {
-          "mode": "replace",
-          "path": "assets/scaffold/files/settings.php",
-          "overwrite": false
-        }
-      }
-    },
-    "composer-exit-on-patch-failure": true,
-    "patchLevel": {
-      "drupal/core": "-p2"
-    },
-    "patches": {
-      "drupal/core":{
-        "Field Groups marked as required are missing red asterisk": "https://www.drupal.org/files/issues/2020-09-18/required-asterisk-missing--3171835--2.patch",
-        "Reverting entity revisions that contain custom blocks erroneously triggers EntityChangedConstraint": "https://www.drupal.org/files/issues/2021-04-06/3053881-3049332-45.patch"
-      },
-      "drupal/paragraphs": {
-        "Affix correct langcode to paragraph in layout builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
-        "Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess(": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
-      },
-      "drupal/draggableviews": {
-        "Error adding or editing the field Draggableviews: Content": "https://www.drupal.org/files/issues/2022-01-13/error-adding-or-editing-the-field-draggableviews-content-1.patch",
-        "Not working with Group By feature": "https://www.drupal.org/files/issues/2021-10-11/not_working_with_group_by-draggableviews-2867348-48.patch"
-      }
-    }
-  },
-  "config": {
-    "sort-packages": true,
-    "platform-check": false,
-    "allow-plugins": {
-      "cweagans/composer-patches": true,
-      "drupal/core-composer-scaffold": true,
-      "composer/installers": true,
-      "oomphinc/composer-installers-extender": true
-    }
   }
 }
