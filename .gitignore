@@ -1,16 +1,19 @@
-# Drupal #
-##########
-# Ignore binaries.
-/bin
-
 # Ignore non-custom parts of Drupal.
 /docroot/core
 /docroot/modules/contrib
 /docroot/profiles/contrib
 /docroot/themes/contrib
-/docroot/sites/default/files
-/docroot/sites/simpletest
 /docroot/libraries
+/docroot/sites/development.*
+/docroot/sites/default/development.*
+/docroot/sites/example.*
+/docroot/sites/*/default.*
+/docroot/sites/*/*.local.php
+/docroot/sites/simpletest
+
+# Ignore uploads.
+/docroot/sites/default/files
+/private
 
 # Ignore Drupal scaffold.
 /.editorconfig
@@ -20,30 +23,21 @@
 /docroot/.eslintignore
 /docroot/.eslintrc.json
 /docroot/.gitattributes
-/docroot/.htaccess
+/docroot/.gitignore
 /docroot/.ht.router.php
+/docroot/.htaccess
 /docroot/autoload.php
+/docroot/INSTALL.txt
+/docroot/README.md
 /docroot/example.gitignore
 /docroot/index.php
-/docroot/INSTALL.txt
 /docroot/modules/README.txt
 /docroot/profiles/README.txt
-/docroot/README.md
-/docroot/README.txt
 /docroot/robots.txt
-/docroot/sites/default/default.services.yml
-/docroot/sites/default/default.settings.php
-/docroot/sites/example.settings.local.php
-/docroot/sites/development.services.yml
-/docroot/sites/example.sites.php
 /docroot/sites/README.txt
 /docroot/themes/README.txt
 /docroot/update.php
 /docroot/web.config
-
-# Ignore local setup.
-/docroot/sites/default/development.services.yml
-/docroot/sites/default/settings.local.php
 
 # Ignore Composer-managed dependencies.
 /vendor
@@ -54,18 +48,12 @@
 # Ignore local VM settings overrides.
 /vm-settings.local.yml
 
-# Logs and databases #
-######################
-*.log
-*.sql
-
-# Ignore Idea.
-.idea
-.DS_Store
-
-# Node modules #
-/node_modules/*
-
 # Ignore local Lando VM Settings
-.lando.local.yml
-.lando/
+/.lando.local.yml
+/.lando
+
+# Ignore Platform.sh local cache.
+.platform/local
+
+# Ignore .env files as they are personal
+/.env

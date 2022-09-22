@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77dca33a7ed4e032f5cf438756ddf4cb",
+    "content-hash": "67d84b3e0bc87af873b4b7787c27d150",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9822,18 +9822,15 @@
         },
         {
             "name": "npm-asset/jquery-ui-touch-punch",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:furf/jquery-ui-touch-punch.git",
-                "reference": "4bc009145202d9c7483ba85f3a236a8f3470354d"
-            },
+            "version": "0.2.3",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/furf/jquery-ui-touch-punch/zipball/4bc009145202d9c7483ba85f3a236a8f3470354d",
-                "reference": "4bc009145202d9c7483ba85f3a236a8f3470354d"
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery-ui-touch-punch/-/jquery-ui-touch-punch-0.2.3.tgz"
             },
-            "type": "npm-asset"
+            "type": "npm-asset",
+            "license": [
+                "Dual licensed under the MIT or GPL Version 2 licenses."
+            ]
         },
         {
             "name": "oomphinc/composer-installers-extender",
@@ -14039,7 +14036,345 @@
             "time": "2015-12-17T08:42:14+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "lemberg/draft-environment",
+            "version": "3.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lemberg/draft-environment.git",
+                "reference": "5db74c03a7514593a3923d7acf9fb316e8135398"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/5db74c03a7514593a3923d7acf9fb316e8135398",
+                "reference": "5db74c03a7514593a3923d7acf9fb316e8135398",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "nette/finder": "^2.5.2",
+                "nette/robot-loader": "^3.4.1",
+                "php": ">=7.4",
+                "symfony/filesystem": "^3.4.47 || ^4.4.27 || ^5.3.4 || ^6.0.9",
+                "symfony/yaml": "^3.4.41 || ^4.4.9 || ^5.3 || ^6.0.10",
+                "t2l/comments": "^1.1.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.1.9",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "dg/bypass-finals": "^1.3.1",
+                "drupal/coder": "^8.3.13",
+                "ergebnis/composer-normalize": "^2.15.0",
+                "ergebnis/phpstan-rules": "^1.0.0",
+                "mikey179/vfsstream": "^1.6.10",
+                "php-mock/php-mock-phpunit": "^2.5",
+                "php-parallel-lint/php-parallel-lint": "^1.3.1",
+                "phpro/grumphp": "^1.5.0",
+                "phpstan/extension-installer": "^1.1.0",
+                "phpstan/phpstan": "^1.8.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0.0",
+                "phpstan/phpstan-phpunit": "^1.1.1",
+                "phpstan/phpstan-strict-rules": "^1.3.0",
+                "phpunit/phpunit": "^9.5.10",
+                "symfony/process": "^3.4.47 || ^4.4.30 || ^5.3.7 || ^6.0.8",
+                "thecodingmachine/phpstan-strict-rules": "^1.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Lemberg\\Draft\\Environment\\Composer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lemberg\\Draft\\Environment\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Development environment for Draft Drupal.",
+            "support": {
+                "issues": "https://github.com/lemberg/draft-environment/issues",
+                "source": "https://github.com/lemberg/draft-environment/tree/3.6.3"
+            },
+            "time": "2022-07-24T22:23:17+00:00"
+        },
+        {
+            "name": "nette/finder",
+            "version": "v2.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/finder.git",
+                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/finder/zipball/64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
+                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^2.4 || ^3.0",
+                "php": ">=7.1"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "filesystem",
+                "glob",
+                "iterator",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/finder/issues",
+                "source": "https://github.com/nette/finder/tree/v2.5.3"
+            },
+            "time": "2021-12-12T17:43:24+00:00"
+        },
+        {
+            "name": "nette/robot-loader",
+            "version": "v3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/robot-loader.git",
+                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/robot-loader/zipball/e2adc334cb958164c050f485d99c44c430f51fe2",
+                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "nette/finder": "^2.5 || ^3.0",
+                "nette/utils": "^3.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "autoload",
+                "class",
+                "interface",
+                "nette",
+                "trait"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/robot-loader/issues",
+                "source": "https://github.com/nette/robot-loader/tree/v3.4.1"
+            },
+            "time": "2021-08-25T15:53:54+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2 <8.3"
+            },
+            "conflict": {
+                "nette/di": "<3.0.6"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "phpstan/phpstan": "^1.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/utils/issues",
+                "source": "https://github.com/nette/utils/tree/v3.2.8"
+            },
+            "time": "2022-09-12T23:36:20+00:00"
+        },
+        {
+            "name": "t2l/comments",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/T2L/comments.git",
+                "reference": "98dc7a97a275fd6326034d61bea1f7eb1d63b96c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/T2L/comments/zipball/98dc7a97a275fd6326034d61bea1f7eb1d63b96c",
+                "reference": "98dc7a97a275fd6326034d61bea1f7eb1d63b96c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.0",
+                "phpunit/phpunit": "^8.5 || ~9.0.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/yaml": "^3.4 || ^4.4 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Consolidation\\Comments\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
+                },
+                {
+                    "name": "Roman Paska",
+                    "email": "roman.paska@gmail.com"
+                }
+            ],
+            "description": "A tool for preserving comments, e.g. when parsing YAML files.",
+            "support": {
+                "issues": "https://github.com/T2L/comments/issues",
+                "source": "https://github.com/T2L/comments/tree/1.1.0"
+            },
+            "time": "2020-04-27T15:47:56+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
@@ -14064,12 +14399,14 @@
         "drupal/purge": 10,
         "drupal/seckit": 5,
         "drupal/sitemap": 10,
-        "drupal/svg_upload_sanitizer": 15,
-        "npm-asset/jquery-ui-touch-punch": 20
+        "drupal/svg_upload_sanitizer": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "8.0.2"
+    },
     "plugin-api-version": "2.3.0"
 }
