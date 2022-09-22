@@ -1,104 +1,58 @@
 <?php
 
-//@condingStandardsIgnoreFile
-
 /**
- * Config settings
+ * @file
+ * Default Drupal 9 settings.
+ *
+ * These are already explained with detailed comments in Drupal's
+ * default.settings.php file.
+ *
+ * See https://api.drupal.org/api/drupal/sites!default!default.settings.php/8
  */
+
+// Default Drupal settings.
+//
+// These are already explained with detailed comments in Drupal's
+// default.settings.php file.
+//
+// See https://api.drupal.org/api/drupal/sites!default!default.settings.php/9
+$databases = [];
+$config_directories = [];
+$settings['update_free_access'] = FALSE;
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['file_scan_ignore_directories'] = [
+  'node_modules',
+  'bower_components',
+];
+
+// The hash_salt should be a unique random value for each application.
+// If left unset, the settings.platformsh.php file will attempt to provide one.
+// You can also provide a specific value here if you prefer and it will be used
+// instead. In most cases it's best to leave this blank on Platform.sh. You
+// can configure a separate hash_salt in your settings.local.php file for
+// local development.
+// $settings['hash_salt'] = 'change_me';
+// Set up a config sync directory.
+//
+// This is defined inside the read-only "config" directory, deployed via Git.
 $settings['config_sync_directory'] = '../config/default';
 
-/**
- * Hash salt used for one-time login links, etc.
- */
-$settings['hash_salt'] = '';
-
-/**
- * Access control for update.php script.
- */
-$settings['update_free_access'] = FALSE;
-
-/**
- * Authorized file system operations.
- */
-$settings['allow_authorize_operations'] = FALSE;
-
-/**
- * Default mode for directories and files written by Drupal.
- */
-$settings['file_chmod_directory'] = 0775;
-$settings['file_chmod_file'] = 0664;
-
-/**
- * Load services definition file.
- */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-
-/**
- * Trusted host patterns for e3develop and e3stanging. Make sure to add appropriate variations for production domain
- * and any additional version thereof.
- * Additional env specific patterns can be added in the following files (lando, local)
- */
-$settings['trusted_host_patterns'] = [];
-
-/**
- * Set default paths to public, private and temp directories.
- */
-$settings['file_public_path'] = 'sites/default/files';
-$settings['file_private_path'] = '../private';
-$settings['file_temp_path'] = '../private/tmp';
-
-/**
- * Remove shield print message by default.
- */
-$config['shield.settings']['print'] = '';
-
-/**
- * Allow cli to bypass shield.
- */
-$config['shield.settings']['allow_cli'] = TRUE;
-
-/**
- * Set logging level default.
- */
-$config['system.logging']['error_level'] = 'all';
-
-/**
- * Add fast404 settings
- */
-if (file_exists($app_root . '/' . $site_path . '/settings.fast404.php')) {
-  include $app_root . '/' . $site_path . '/settings.fast404.php';
+// Automatic Platform.sh settings.
+if (getenv('PLATFORM_APPLICATION') && file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
+  include $app_root . '/' . $site_path . '/settings.platformsh.php';
+}
+// Include CI settings if available.
+elseif (getenv('CI') && file_exists($app_root . '/' . $site_path . '/settings.ci.php')) {
+  include $app_root . '/' . $site_path . '/settings.ci.php';
+}
+elseif (getenv('LANDO_APP_NAME') && file_exists($app_root . '/' . $site_path . '/settings.lando.php')) {
+  include $app_root . '/' . $site_path . '/settings.lando.php';
+}
+elseif (getenv('DRAFT_ENVIRONMENT') && file_exists($app_root . '/' . $site_path . '/settings.draft.php')) {
+  include $app_root . '/' . $site_path . '/settings.draft.php';
 }
 
-/**
- * If $_ENV['AH_SITE_ENVIRONMENT'], load Acquia settings.
- */
-if(isset($_ENV['AH_SITE_ENVIRONMENT'])) {
-  if (file_exists($app_root . '/' . $site_path . '/settings.acquia.php')) {
-    include $app_root . '/' . $site_path . '/settings.acquia.php';
-  }
-}
-
-/**
- * If $_ENV['PLATFORM_APPLICATION'], load Platform.sh settings.
- */
-elseif(isset($_ENV['PLATFORM_APPLICATION'])) {
-  if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
-    include $app_root . '/' . $site_path . '/settings.platformsh.php';
-  }
-}
-
-/**
- * If $_ENV['LANDO_APP_NAME'], load docker settings.
- */
-elseif(isset($_ENV['LANDO_APP_NAME'])) {
-    if (file_exists($app_root . '/' . $site_path . '/settings.lando.php')) {
-        include $app_root . '/' . $site_path . '/settings.lando.php';
-    }
-}
-
-/**
- * If local settings file exists, load it.
- */
-if(file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+// Local settings. These come last so that they can override anything.
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
