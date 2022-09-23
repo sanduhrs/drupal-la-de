@@ -64,7 +64,6 @@
         "drupal/paragraphs_browser": "^1.0",
         "drupal/path_redirect_import": "^1.0@beta",
         "drupal/pathauto": "^1.0",
-        "drupal/quick_node_clone": "^1.15",
         "drupal/quicklink": "^2.0",
         "drupal/redirect": "^1.0",
         "drupal/redis": "^1.5",
