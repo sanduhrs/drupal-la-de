@@ -64,8 +64,6 @@
         "drupal/metatag": "^1.0",
         "drupal/name": "^1.0",
         "drupal/node_revision_delete": "^1.0@RC",
-        "drupal/paragon_adminkit": "^1.0@alpha",
-        "drupal/paragon_themekit": "^1.0@alpha",
         "drupal/paragraphs": "^1.0",
         "drupal/paragraphs_browser": "^1.0",
         "drupal/path_redirect_import": "^1.0@beta",

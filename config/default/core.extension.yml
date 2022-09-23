@@ -152,6 +152,5 @@ theme:
   gin: 0
   paragon_adminkit: 0
   paragon_themekit: 0
-  adminkit: 0
   themekit: 0
 profile: minimal
