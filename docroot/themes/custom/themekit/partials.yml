@@ -161,6 +161,12 @@ layout--twocol:
   css:
     theme:
       dist/css/twocol-layout.css: {}
+media--type--remote-video:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/media--remote-video.css: {}
 node--type--case--simple-teaser:
   dependencies:
     - themekit/themekit
