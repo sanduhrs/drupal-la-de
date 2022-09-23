@@ -10,7 +10,6 @@ description: ''
 weight: 0
 folder: ../config/develop
 module:
-  admin_toolbar_tools: 0
   devel: 0
   devel_generate: 0
   stage_file_proxy: 0
@@ -20,7 +19,6 @@ theme: {  }
 blacklist:
   - system.menu.devel
   - ultimate_cron.job.update_cron
-graylist:
-  - system.mail
+graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
