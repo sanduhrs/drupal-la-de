@@ -1,5 +1,5 @@
 uuid: a15134cd-eb22-4773-871c-3d92699b1bbc
-langcode: en
+langcode: nl
 status: true
 dependencies:
   module:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: SX8u-vJRdPoxsmr9XLslHL9Kd7Ufcvp1FpcmthzL-yk
 id: media_edit_action
-label: 'Edit media'
+label: 'Media bewerken'
 type: media
 plugin: 'entity:edit_action:media'
 configuration: {  }

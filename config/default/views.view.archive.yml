@@ -1,5 +1,5 @@
 uuid: 1b66dd1b-567e-4c40-bc95-1528e1f2c2dc
-langcode: en
+langcode: nl
 status: false
 dependencies:
   config:
@@ -10,20 +10,20 @@ dependencies:
 _core:
   default_config_hash: gA3tLETtsrObWW1Uvb6Mh-fg0Qu_6uCEzgL9jKQgPgo
 id: archive
-label: Archive
+label: Archief
 module: node
-description: 'All content, by month.'
+description: 'Alle inhoud, op maand.'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Standaard
     display_plugin: default
     position: 0
     display_options:
-      title: 'Monthly archive'
+      title: 'Maandelijks archief'
       fields: {  }
       pager:
         type: mini
@@ -37,22 +37,22 @@ display:
             previous: ‹‹
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Items per pagina'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Startpunt
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Toepassen
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Sorteren op'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
       access:
         type: perm
         options:
@@ -188,7 +188,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Blok
     display_plugin: block
     position: 1
     display_options:
@@ -227,7 +227,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Pagina
     display_plugin: page
     position: 2
     display_options:

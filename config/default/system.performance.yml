@@ -1,8 +1,9 @@
 _core:
   default_config_hash: qrqSaBG4-uTqZfCs1L9VyTh3JHWgVQWwGcJwWXWm-zE
+langcode: nl
 cache:
   page:
-    max_age: 2764800
+    max_age: 3600
   http:
     max_age: '86400'
     404_max_age: '86400'

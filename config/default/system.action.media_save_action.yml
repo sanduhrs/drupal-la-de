@@ -1,5 +1,5 @@
 uuid: 157a69b1-04be-41f8-bdac-1596618c1fbd
-langcode: en
+langcode: nl
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: VVyUA6PIaVeGtcIbgEWqJ6SYDiJdReBeojFswURFpKs
 id: media_save_action
-label: 'Save media'
+label: 'Media opslaan'
 type: media
 plugin: 'entity:save_action:media'
 configuration: {  }

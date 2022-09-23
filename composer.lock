@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de2de5a7697421125a55bfe611b5c1bd",
+    "content-hash": "8840413595a9e2f88992ae4c2babdf18",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -85,7 +85,7 @@
             "version": "5.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/aFarkas/lazysizes.git",
+                "url": "git@github.com:aFarkas/lazysizes.git",
                 "reference": "81cf774c6a7f4d8f7f3909e225a65d8acb10cb20"
             },
             "dist": {
@@ -1199,105 +1199,6 @@
             "time": "2021-08-05T19:00:23+00:00"
         },
         {
-            "name": "doctrine/cache",
-            "version": "1.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/cache.git",
-                "reference": "56cd022adb5514472cb144c087393c1821911d09"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/56cd022adb5514472cb144c087393c1821911d09",
-                "reference": "56cd022adb5514472cb144c087393c1821911d09",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": ">2.2,<2.4"
-            },
-            "require-dev": {
-                "alcaeus/mongo-php-adapter": "^1.1",
-                "cache/integration-tests": "dev-master",
-                "doctrine/coding-standard": "^9",
-                "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "predis/predis": "~1.0",
-                "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "symfony/cache": "^4.4 || ^5.4 || ^6",
-                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
-            },
-            "suggest": {
-                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
-            "homepage": "https://www.doctrine-project.org/projects/cache.html",
-            "keywords": [
-                "abstraction",
-                "apcu",
-                "cache",
-                "caching",
-                "couchdb",
-                "memcached",
-                "php",
-                "redis",
-                "xcache"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.13.0"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-05-20T20:06:54+00:00"
-        },
-        {
             "name": "doctrine/collections",
             "version": "1.6.8",
             "source": {
@@ -1365,297 +1266,6 @@
                 "source": "https://github.com/doctrine/collections/tree/1.6.8"
             },
             "time": "2021-08-10T18:51:53+00:00"
-        },
-        {
-            "name": "doctrine/common",
-            "version": "2.13.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/common.git",
-                "reference": "f3812c026e557892c34ef37f6ab808a6b567da7f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/f3812c026e557892c34ef37f6ab808a6b567da7f",
-                "reference": "f3812c026e557892c34ef37f6ab808a6b567da7f",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "^1.0",
-                "doctrine/cache": "^1.0",
-                "doctrine/collections": "^1.0",
-                "doctrine/event-manager": "^1.0",
-                "doctrine/inflector": "^1.0",
-                "doctrine/lexer": "^1.0",
-                "doctrine/persistence": "^1.3.3",
-                "doctrine/reflection": "^1.0",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^1.0",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpunit/phpunit": "^7.0",
-                "squizlabs/php_codesniffer": "^3.0",
-                "symfony/phpunit-bridge": "^4.0.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.11.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, persistence interfaces, proxies, event system and much more.",
-            "homepage": "https://www.doctrine-project.org/projects/common.html",
-            "keywords": [
-                "common",
-                "doctrine",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/2.13.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-06-05T16:46:05+00:00"
-        },
-        {
-            "name": "doctrine/event-manager",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "41370af6a30faa9dc0368c4a6814d596e81aba7f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/41370af6a30faa9dc0368c4a6814d596e81aba7f",
-                "reference": "41370af6a30faa9dc0368c4a6814d596e81aba7f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": "<2.9@dev"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
-            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
-            "keywords": [
-                "event",
-                "event dispatcher",
-                "event manager",
-                "event system",
-                "events"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/event-manager/issues",
-                "source": "https://github.com/doctrine/event-manager/tree/1.1.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-05-29T18:28:51+00:00"
-        },
-        {
-            "name": "doctrine/inflector",
-            "version": "1.4.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9",
-                "reference": "4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^8.0",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector",
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
-            "homepage": "https://www.doctrine-project.org/projects/inflector.html",
-            "keywords": [
-                "inflection",
-                "inflector",
-                "lowercase",
-                "manipulation",
-                "php",
-                "plural",
-                "singular",
-                "strings",
-                "uppercase",
-                "words"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/1.4.4"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finflector",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-04-16T17:34:40+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1736,108 +1346,6 @@
                 }
             ],
             "time": "2020-05-25T17:44:05+00:00"
-        },
-        {
-            "name": "doctrine/persistence",
-            "version": "1.3.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/persistence.git",
-                "reference": "7a6eac9fb6f61bba91328f15aa7547f4806ca288"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/7a6eac9fb6f61bba91328f15aa7547f4806ca288",
-                "reference": "7a6eac9fb6f61bba91328f15aa7547f4806ca288",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "^1.0",
-                "doctrine/cache": "^1.0",
-                "doctrine/collections": "^1.0",
-                "doctrine/event-manager": "^1.0",
-                "doctrine/reflection": "^1.2",
-                "php": "^7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": "<2.10@dev"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan": "^0.11",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
-                "vimeo/psalm": "^3.11"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common",
-                    "Doctrine\\Persistence\\": "lib/Doctrine/Persistence"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.",
-            "homepage": "https://doctrine-project.org/projects/persistence.html",
-            "keywords": [
-                "mapper",
-                "object",
-                "odm",
-                "orm",
-                "persistence"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/1.3.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-06-20T12:56:16+00:00"
         },
         {
             "name": "doctrine/reflection",
@@ -1961,12 +1469,12 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
-                    "homepage": "https://www.drupal.org/user/3661446"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
                     "name": "dww",
@@ -2105,12 +1613,12 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "fethi.krout",
-                    "homepage": "https://www.drupal.org/user/3206765"
-                },
-                {
                     "name": "matio89",
                     "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "Musa.thomas",
+                    "homepage": "https://www.drupal.org/user/1213824"
                 },
                 {
                     "name": "romainj",
@@ -2183,12 +1691,8 @@
                     "role": "Contributors"
                 },
                 {
-                    "name": "iamcarrico",
-                    "homepage": "https://www.drupal.org/user/1300542"
-                },
-                {
-                    "name": "mikeytown2",
-                    "homepage": "https://www.drupal.org/user/282446"
+                    "name": "NickDickinsonWilde",
+                    "homepage": "https://www.drupal.org/user/3094661"
                 },
                 {
                     "name": "rupl",
@@ -2197,6 +1701,10 @@
                 {
                     "name": "thalles",
                     "homepage": "https://www.drupal.org/user/3589086"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
                 }
             ],
             "description": "Improved aggregation of CSS/JS files to speed up page load times.",
@@ -2384,12 +1892,16 @@
                     "homepage": "https://www.drupal.org/u/neslee-canil-pinto"
                 },
                 {
-                    "name": "jkopel",
-                    "homepage": "https://www.drupal.org/user/66207"
-                },
-                {
                     "name": "mikeker",
                     "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
                 },
                 {
                     "name": "rlhawk",
@@ -2437,12 +1949,12 @@
             ],
             "authors": [
                 {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
                     "name": "acbramley",
                     "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
                     "name": "fenstrat",
@@ -2637,6 +2149,7 @@
                 "shasum": "ccf98078866e89da0c62c055752bdf59822d4d4c"
             },
             "require": {
+                "drupal/ckeditor": "*",
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
@@ -2721,6 +2234,148 @@
             "homepage": "https://drupal.org/project/components",
             "support": {
                 "source": "https://git.drupalcode.org/project/components"
+            }
+        },
+        {
+            "name": "drupal/config_filter",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_filter.git",
+                "reference": "8.x-1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_filter-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "c5002f2b9dece3c684db754123936d1388b80b8d"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "suggest": {
+                "drupal/config_split": "Split site configuration for different environments."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.10",
+                    "datestamp": "1656936763",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Config Filter allows other modules to interact with a ConfigStorage through filter plugins.",
+            "homepage": "https://www.drupal.org/project/config_filter",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_filter",
+                "issues": "https://www.drupal.org/project/issues/config_filter",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
+            }
+        },
+        {
+            "name": "drupal/config_split",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_split.git",
+                "reference": "8.x-1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_split-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "cb2a17f590ae057ff8a1864f57e2e114b2395a86"
+            },
+            "require": {
+                "drupal/config_filter": "^1",
+                "drupal/core": "^9.3 || ^10"
+            },
+            "conflict": {
+                "drupal/console": "<1.3.2"
+            },
+            "suggest": {
+                "drupal/chosen": "Chosen uses the Chosen jQuery plugin to make the <select> elements more user-friendly.",
+                "drupal/select2_all": "Applies the Select2 library to all select fields on the site similar to the Chosen module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.9",
+                    "datestamp": "1656976425",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Configuration filter for importing and exporting extra config",
+            "homepage": "https://www.drupal.org/project/config_split",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_split",
+                "issues": "https://www.drupal.org/project/issues/config_split",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
             }
         },
         {
@@ -3365,72 +3020,6 @@
             }
         },
         {
-            "name": "drupal/devel",
-            "version": "4.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "4.1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-4.1.5.zip",
-                "reference": "4.1.5",
-                "shasum": "7d0b4397215f615a67ba80aab777e93918d497f9"
-            },
-            "require": {
-                "doctrine/common": "^2.7",
-                "drupal/core": "^8.8 || ^9",
-                "symfony/var-dumper": "^4 || ^5"
-            },
-            "conflict": {
-                "kint-php/kint": "<3"
-            },
-            "require-dev": {
-                "drush/drush": "^10"
-            },
-            "suggest": {
-                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.1.5",
-                    "datestamp": "1646072825",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "drupalspoons",
-                    "homepage": "https://www.drupal.org/user/3647684"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                }
-            ],
-            "description": "Various blocks, pages, and functions for developers.",
-            "homepage": "https://www.drupal.org/project/devel",
-            "support": {
-                "source": "https://gitlab.com/drupalspoons/devel",
-                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
-                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
-            }
-        },
-        {
             "name": "drupal/draggableviews",
             "version": "2.0.1",
             "source": {
@@ -3543,6 +3132,10 @@
             ],
             "authors": [
                 {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
@@ -3553,10 +3146,6 @@
                 {
                     "name": "Drupal Media Team",
                     "homepage": "https://www.drupal.org/user/3260690"
-                },
-                {
-                    "name": "cs_shadow",
-                    "homepage": "https://www.drupal.org/user/2828287"
                 },
                 {
                     "name": "phenaproxima",
@@ -3611,10 +3200,6 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "TR",
-                    "homepage": "https://www.drupal.org/user/202830"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
                 },
@@ -3633,6 +3218,10 @@
                 {
                     "name": "mglaman",
                     "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
                 }
             ],
             "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
@@ -3704,16 +3293,16 @@
                     "homepage": "https://www.drupal.org/user/3260690"
                 },
                 {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
                     "name": "marcingy",
                     "homepage": "https://www.drupal.org/user/77320"
                 },
                 {
                     "name": "oknate",
                     "homepage": "https://www.drupal.org/user/471638"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
                 },
                 {
                     "name": "samuel.mortenson",
@@ -3770,6 +3359,10 @@
             ],
             "authors": [
                 {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
@@ -3782,14 +3375,6 @@
                     "homepage": "https://www.drupal.org/user/3260690"
                 },
                 {
-                    "name": "Wim Leers",
-                    "homepage": "https://www.drupal.org/user/99777"
-                },
-                {
-                    "name": "cs_shadow",
-                    "homepage": "https://www.drupal.org/user/2828287"
-                },
-                {
                     "name": "oknate",
                     "homepage": "https://www.drupal.org/user/471638"
                 },
@@ -3800,6 +3385,10 @@
                 {
                     "name": "slashrsm",
                     "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
                 }
             ],
             "description": "Allows any entity to be embedded within a text area using a WYSIWYG editor.",
@@ -3884,6 +3473,7 @@
                 "shasum": "63dc715096dd71cfed7085f30eae78005d08433c"
             },
             "require": {
+                "drupal/color": "*",
                 "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
@@ -3909,10 +3499,6 @@
                 {
                     "name": "mrfelton",
                     "homepage": "https://www.drupal.org/user/305669"
-                },
-                {
-                    "name": "pratik_kamble",
-                    "homepage": "https://www.drupal.org/user/3204909"
                 }
             ],
             "description": "Adds a color indicator for the different environments.",
@@ -4091,16 +3677,16 @@
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
-                    "name": "Stalski",
-                    "homepage": "https://www.drupal.org/user/322618"
-                },
-                {
                     "name": "jyve",
                     "homepage": "https://www.drupal.org/user/591438"
                 },
                 {
                     "name": "nils.destoop",
                     "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
                 },
                 {
                     "name": "swentel",
@@ -4745,12 +4331,12 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
-                    "homepage": "https://www.drupal.org/user/3661446"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
                     "name": "dawehner",
@@ -5026,8 +4612,8 @@
                     "version": "1.0.0",
                     "datestamp": "1591893292",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -5040,6 +4626,10 @@
                     "name": "Naveen Valecha",
                     "homepage": "https://drupal.org/u/naveenvalecha",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
                 }
             ],
             "description": "Provides jQuery UI Touch Punch library.",
@@ -5161,7 +4751,7 @@
                 "reference": "c2e3d260d9cf21ec80826a48494b0e760c85b6f8"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
@@ -5169,8 +4759,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1652466511",
+                    "version": "1.0.0-beta2+1-dev",
+                    "datestamp": "1662137406",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5349,8 +4939,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "gravelpot",
-                    "homepage": "https://www.drupal.org/user/748208"
+                    "name": "Jeff Cardwell",
+                    "homepage": "https://www.drupal.org/user/2913129"
                 },
                 {
                     "name": "lreynaga",
@@ -5359,6 +4949,10 @@
                 {
                     "name": "mark_fullmer",
                     "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "mmarler",
+                    "homepage": "https://www.drupal.org/user/500192"
                 },
                 {
                     "name": "ricksta",
@@ -5371,6 +4965,10 @@
                 {
                     "name": "twfahey",
                     "homepage": "https://www.drupal.org/user/3403722"
+                },
+                {
+                    "name": "utexas",
+                    "homepage": "https://www.drupal.org/user/3716409"
                 }
             ],
             "description": "Manage which fields & layouts are available in Layout Builder",
@@ -5698,12 +5296,12 @@
                     "homepage": "https://www.drupal.org/user/213194"
                 },
                 {
-                    "name": "Nafes",
-                    "homepage": "https://www.drupal.org/user/2489926"
-                },
-                {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "Nafes",
+                    "homepage": "https://www.drupal.org/user/2489926"
                 },
                 {
                     "name": "pillarsdotnet",
@@ -5865,14 +5463,6 @@
             ],
             "authors": [
                 {
-                    "name": "Fabianx",
-                    "homepage": "https://www.drupal.org/user/693738"
-                },
-                {
-                    "name": "Jeremy",
-                    "homepage": "https://www.drupal.org/user/409"
-                },
-                {
                     "name": "bdragon",
                     "homepage": "https://www.drupal.org/user/53081"
                 },
@@ -5885,8 +5475,16 @@
                     "homepage": "https://www.drupal.org/user/1037976"
                 },
                 {
+                    "name": "Fabianx",
+                    "homepage": "https://www.drupal.org/user/693738"
+                },
+                {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "Jeremy",
+                    "homepage": "https://www.drupal.org/user/409"
                 },
                 {
                     "name": "jvandyk",
@@ -6158,8 +5756,12 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "kaushalkishorejaiswal",
-                    "homepage": "https://www.drupal.org/user/2228850"
+                    "name": "Robert Ngo",
+                    "homepage": "https://www.drupal.org/user/610230"
+                },
+                {
+                    "name": "seanB",
+                    "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
             "description": "Track and prune node revisions.",
@@ -6172,120 +5774,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/node_revision_delete",
                 "issues": "https://www.drupal.org/project/issues/node_revision_delete"
-            }
-        },
-        {
-            "name": "drupal/paragon_adminkit",
-            "version": "1.0.0-alpha12",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragon_adminkit.git",
-                "reference": "8.x-1.0-alpha12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragon_adminkit-8.x-1.0-alpha12.zip",
-                "reference": "8.x-1.0-alpha12",
-                "shasum": "5c0decb18d16703adb673105862894fe161e957b"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha12",
-                    "datestamp": "1623331041",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "a3hill",
-                    "homepage": "https://www.drupal.org/user/3137515"
-                },
-                {
-                    "name": "afireintheattic",
-                    "homepage": "https://www.drupal.org/user/3181619"
-                },
-                {
-                    "name": "michaellander",
-                    "homepage": "https://www.drupal.org/user/636494"
-                },
-                {
-                    "name": "switzern",
-                    "homepage": "https://www.drupal.org/user/894934"
-                }
-            ],
-            "description": "Drupal admin sub-theme of the Adminimal Drupal admin theme with specific functional enhancements.",
-            "homepage": "https://www.drupal.org/project/paragon_adminkit",
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragon_adminkit",
-                "issues": "https://www.drupal.org/project/issues/paragon_adminkit"
-            }
-        },
-        {
-            "name": "drupal/paragon_themekit",
-            "version": "1.0.0-alpha19",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragon_themekit.git",
-                "reference": "8.x-1.0-alpha19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragon_themekit-8.x-1.0-alpha19.zip",
-                "reference": "8.x-1.0-alpha19",
-                "shasum": "13ebd5b9d912ac91bdf2f3c7e60544251c133baf"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha19",
-                    "datestamp": "1623331061",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "a3hill",
-                    "homepage": "https://www.drupal.org/user/3137515"
-                },
-                {
-                    "name": "afireintheattic",
-                    "homepage": "https://www.drupal.org/user/3181619"
-                },
-                {
-                    "name": "michaellander",
-                    "homepage": "https://www.drupal.org/user/636494"
-                },
-                {
-                    "name": "switzern",
-                    "homepage": "https://www.drupal.org/user/894934"
-                }
-            ],
-            "description": "A subtheme of Classy, built for the Paragon distribution of Drupal 8.",
-            "homepage": "https://www.drupal.org/project/paragon_themekit",
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragon_themekit",
-                "issues": "https://www.drupal.org/project/issues/paragon_themekit"
             }
         },
         {
@@ -6347,10 +5835,6 @@
                     "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
                     "name": "jeroen.b",
                     "homepage": "https://www.drupal.org/user/1853532"
                 },
@@ -6361,6 +5845,10 @@
                 {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
                 }
             ],
             "description": "Enables the creation of Paragraphs entities.",
@@ -6589,12 +6077,16 @@
                     "homepage": "http://www.nielsvm.org"
                 },
                 {
-                    "name": "djbobbydrake",
-                    "homepage": "https://www.drupal.org/user/336378"
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
                 },
                 {
                     "name": "nielsvm",
                     "homepage": "https://www.drupal.org/user/163285"
+                },
+                {
+                    "name": "SqyD",
+                    "homepage": "https://www.drupal.org/user/106525"
                 }
             ],
             "description": "Provides a generic external cache invalidation API and queue service.",
@@ -6803,6 +6295,14 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
+                    "name": "greg.1.anderson",
+                    "homepage": "https://www.drupal.org/user/438598"
+                },
+                {
+                    "name": "kporras07",
+                    "homepage": "https://www.drupal.org/user/1349780"
+                },
+                {
                     "name": "pounard",
                     "homepage": "https://www.drupal.org/user/240164"
                 }
@@ -6896,7 +6396,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.4",
-                    "datestamp": "1637145565",
+                    "datestamp": "1654699160",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7153,10 +6653,6 @@
                     "homepage": "https://www.drupal.org/node/982682/committers"
                 },
                 {
-                    "name": "amateescu",
-                    "homepage": "https://www.drupal.org/user/729614"
-                },
-                {
                     "name": "cspitzlay",
                     "homepage": "https://www.drupal.org/user/419305"
                 },
@@ -7167,6 +6663,10 @@
                 {
                     "name": "mkalkbrenner",
                     "homepage": "https://www.drupal.org/user/124705"
+                },
+                {
+                    "name": "Nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
                 }
             ],
             "description": "Offers an implementation of the Search API that uses an Apache Solr server for indexing content.",
@@ -7414,8 +6914,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "gbyte",
-                    "homepage": "https://www.drupal.org/user/2381352"
+                    "name": "WalkingDexter",
+                    "homepage": "https://www.drupal.org/user/3251330"
                 }
             ],
             "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
@@ -7696,7 +7196,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.2",
-                    "datestamp": "1649343881",
+                    "datestamp": "1649343985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -8089,6 +7589,10 @@
             ],
             "authors": [
                 {
+                    "name": "arnested",
+                    "homepage": "https://www.drupal.org/user/245635"
+                },
+                {
                     "name": "Berdir",
                     "homepage": "https://www.drupal.org/user/214652"
                 },
@@ -8097,20 +7601,16 @@
                     "homepage": "https://www.drupal.org/user/339326"
                 },
                 {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
-                    "name": "arnested",
-                    "homepage": "https://www.drupal.org/user/245635"
-                },
-                {
                     "name": "gielfeldt",
                     "homepage": "https://www.drupal.org/user/366993"
                 },
                 {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
                 }
             ],
             "description": "Ultimate cron",
@@ -8267,12 +7767,8 @@
                     "homepage": "https://www.drupal.org/u/graber"
                 },
                 {
-                    "name": "Jon Pugh",
-                    "homepage": "https://www.drupal.org/user/17028"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
+                    "name": "Graber",
+                    "homepage": "https://www.drupal.org/user/1599440"
                 },
                 {
                     "name": "infojunkie",
@@ -8281,6 +7777,10 @@
                 {
                     "name": "joelpittet",
                     "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028"
                 }
             ],
             "description": "Adds an ability to perform bulk operations on selected entities from view results. Provides an API to create such operations.",
@@ -9792,18 +9292,15 @@
         },
         {
             "name": "npm-asset/jquery-ui-touch-punch",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:furf/jquery-ui-touch-punch.git",
-                "reference": "4bc009145202d9c7483ba85f3a236a8f3470354d"
-            },
+            "version": "0.2.3",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/furf/jquery-ui-touch-punch/zipball/4bc009145202d9c7483ba85f3a236a8f3470354d",
-                "reference": "4bc009145202d9c7483ba85f3a236a8f3470354d"
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery-ui-touch-punch/-/jquery-ui-touch-punch-0.2.3.tgz"
             },
-            "type": "npm-asset"
+            "type": "npm-asset",
+            "license": [
+                "Dual licensed under the MIT or GPL Version 2 licenses."
+            ]
         },
         {
             "name": "oomphinc/composer-installers-extender",
@@ -11098,6 +10595,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2021-09-24T13:30:14+00:00"
         },
         {
@@ -14010,193 +13508,43 @@
     ],
     "packages-dev": [
         {
-            "name": "behat/behat",
-            "version": "v3.10.0",
+            "name": "doctrine/cache",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Behat/Behat.git",
-                "reference": "a55661154079cf881ef643b303bfaf67bae3a09f"
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "56cd022adb5514472cb144c087393c1821911d09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/a55661154079cf881ef643b303bfaf67bae3a09f",
-                "reference": "a55661154079cf881ef643b303bfaf67bae3a09f",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/56cd022adb5514472cb144c087393c1821911d09",
+                "reference": "56cd022adb5514472cb144c087393c1821911d09",
                 "shasum": ""
             },
             "require": {
-                "behat/gherkin": "^4.9.0",
-                "behat/transliterator": "^1.2",
-                "ext-mbstring": "*",
-                "php": "^7.2 || ^8.0",
-                "psr/container": "^1.0",
-                "symfony/config": "^4.4 || ^5.0 || ^6.0",
-                "symfony/console": "^4.4 || ^5.0 || ^6.0",
-                "symfony/dependency-injection": "^4.4 || ^5.0 || ^6.0",
-                "symfony/event-dispatcher": "^4.4 || ^5.0 || ^6.0",
-                "symfony/translation": "^4.4 || ^5.0 || ^6.0",
-                "symfony/yaml": "^4.4 || ^5.0 || ^6.0"
+                "php": "~7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "container-interop/container-interop": "^1.2",
-                "herrera-io/box": "~1.6.1",
-                "phpunit/phpunit": "^8.5 || ^9.0",
-                "symfony/process": "^4.4 || ^5.0 || ^6.0",
-                "vimeo/psalm": "^4.8"
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "cache/integration-tests": "dev-master",
+                "doctrine/coding-standard": "^9",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "predis/predis": "~1.0",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
             },
             "suggest": {
-                "ext-dom": "Needed to output test results in JUnit format."
-            },
-            "bin": [
-                "bin/behat"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Hook\\": "src/Behat/Hook/",
-                    "Behat\\Step\\": "src/Behat/Step/",
-                    "Behat\\Behat\\": "src/Behat/Behat/",
-                    "Behat\\Testwork\\": "src/Behat/Testwork/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Scenario-oriented BDD framework for PHP",
-            "homepage": "http://behat.org/",
-            "keywords": [
-                "Agile",
-                "BDD",
-                "ScenarioBDD",
-                "Scrum",
-                "StoryBDD",
-                "User story",
-                "business",
-                "development",
-                "documentation",
-                "examples",
-                "symfony",
-                "testing"
-            ],
-            "support": {
-                "issues": "https://github.com/Behat/Behat/issues",
-                "source": "https://github.com/Behat/Behat/tree/v3.10.0"
-            },
-            "time": "2021-11-02T20:09:40+00:00"
-        },
-        {
-            "name": "behat/gherkin",
-            "version": "v4.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "0bc8d1e30e96183e4f36db9dc79caead300beff4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/0bc8d1e30e96183e4f36db9dc79caead300beff4",
-                "reference": "0bc8d1e30e96183e4f36db9dc79caead300beff4",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~7.2|~8.0"
-            },
-            "require-dev": {
-                "cucumber/cucumber": "dev-gherkin-22.0.0",
-                "phpunit/phpunit": "~8|~9",
-                "symfony/yaml": "~3|~4|~5"
-            },
-            "suggest": {
-                "symfony/yaml": "If you want to parse features, represented in YAML files"
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Behat\\Gherkin": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Gherkin DSL parser for PHP",
-            "homepage": "http://behat.org/",
-            "keywords": [
-                "BDD",
-                "Behat",
-                "Cucumber",
-                "DSL",
-                "gherkin",
-                "parser"
-            ],
-            "support": {
-                "issues": "https://github.com/Behat/Gherkin/issues",
-                "source": "https://github.com/Behat/Gherkin/tree/v4.9.0"
-            },
-            "time": "2021-10-12T13:05:09+00:00"
-        },
-        {
-            "name": "behat/mink",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minkphp/Mink.git",
-                "reference": "19e58905632e7cfdc5b2bafb9b950a3521af32c5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/19e58905632e7cfdc5b2bafb9b950a3521af32c5",
-                "reference": "19e58905632e7cfdc5b2bafb9b950a3521af32c5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "symfony/css-selector": "^4.4 || ^5.0 || ^6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5.22 || ^9.5.11",
-                "symfony/error-handler": "^4.4 || ^5.0 || ^6.0",
-                "symfony/phpunit-bridge": "^5.4 || ^6.0"
-            },
-            "suggest": {
-                "behat/mink-browserkit-driver": "fast headless driver for any app without JS emulation",
-                "behat/mink-selenium2-driver": "slow, but JS-enabled driver for any app (requires Selenium2)",
-                "behat/mink-zombie-driver": "fast and JS-enabled headless driver for any app (requires node.js)",
-                "dmore/chrome-mink-driver": "fast and JS-enabled driver for any app (requires chromium or google chrome)"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Behat\\Mink\\": "src/"
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -14205,867 +13553,910 @@
             ],
             "authors": [
                 {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Browser controller/emulator abstraction for PHP",
-            "homepage": "https://mink.behat.org/",
-            "keywords": [
-                "browser",
-                "testing",
-                "web"
-            ],
-            "support": {
-                "issues": "https://github.com/minkphp/Mink/issues",
-                "source": "https://github.com/minkphp/Mink/tree/v1.10.0"
-            },
-            "time": "2022-03-28T14:22:43+00:00"
-        },
-        {
-            "name": "behat/mink-browserkit-driver",
-            "version": "v1.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minkphp/MinkBrowserKitDriver.git",
-                "reference": "057926c9da452bac5bfcffb92eb4f3e1ce74dae9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkBrowserKitDriver/zipball/057926c9da452bac5bfcffb92eb4f3e1ce74dae9",
-                "reference": "057926c9da452bac5bfcffb92eb4f3e1ce74dae9",
-                "shasum": ""
-            },
-            "require": {
-                "behat/mink": "^1.7.1@dev",
-                "php": ">=5.4",
-                "symfony/browser-kit": "~2.3|~3.0|~4.0",
-                "symfony/dom-crawler": "~2.3|~3.0|~4.0"
-            },
-            "require-dev": {
-                "mink/driver-testsuite": "dev-master",
-                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.18 || ^8.5 || ^9.5",
-                "symfony/debug": "^2.7|^3.0|^4.0",
-                "symfony/http-kernel": "~2.3|~3.0|~4.0",
-                "yoast/phpunit-polyfills": "^1.0"
-            },
-            "type": "mink-driver",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Mink\\Driver\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Symfony2 BrowserKit driver for Mink framework",
-            "homepage": "https://mink.behat.org/",
-            "keywords": [
-                "Mink",
-                "Symfony2",
-                "browser",
-                "testing"
-            ],
-            "support": {
-                "issues": "https://github.com/minkphp/MinkBrowserKitDriver/issues",
-                "source": "https://github.com/minkphp/MinkBrowserKitDriver/tree/v1.4.1"
-            },
-            "time": "2021-12-10T14:17:06+00:00"
-        },
-        {
-            "name": "behat/mink-goutte-driver",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minkphp/MinkGoutteDriver.git",
-                "reference": "8139f520f417c81bf9d2f9a171fff400f6adc9ea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkGoutteDriver/zipball/8139f520f417c81bf9d2f9a171fff400f6adc9ea",
-                "reference": "8139f520f417c81bf9d2f9a171fff400f6adc9ea",
-                "shasum": ""
-            },
-            "require": {
-                "behat/mink-browserkit-driver": "~1.2@dev",
-                "fabpot/goutte": "~1.0.4|~2.0|~3.1",
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "mink/driver-testsuite": "dev-master"
-            },
-            "type": "mink-driver",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Mink\\Driver\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Goutte driver for Mink framework",
-            "homepage": "https://mink.behat.org/",
-            "keywords": [
-                "browser",
-                "goutte",
-                "headless",
-                "testing"
-            ],
-            "support": {
-                "issues": "https://github.com/minkphp/MinkGoutteDriver/issues",
-                "source": "https://github.com/minkphp/MinkGoutteDriver/tree/v1.3.0"
-            },
-            "time": "2021-10-12T11:35:46+00:00"
-        },
-        {
-            "name": "behat/mink-selenium2-driver",
-            "version": "v1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "e5f8421654930da725499fb92983e6948c6f973e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/e5f8421654930da725499fb92983e6948c6f973e",
-                "reference": "e5f8421654930da725499fb92983e6948c6f973e",
-                "shasum": ""
-            },
-            "require": {
-                "behat/mink": "^1.9@dev",
-                "ext-json": "*",
-                "instaclick/php-webdriver": "^1.4",
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "mink/driver-testsuite": "dev-master",
-                "phpunit/phpunit": "^8.5.22 || ^9.5.11",
-                "symfony/error-handler": "^4.4 || ^5.0"
-            },
-            "type": "mink-driver",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Mink\\Driver\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pete Otaqui",
-                    "email": "pete@otaqui.com",
-                    "homepage": "https://github.com/pete-otaqui"
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Selenium2 (WebDriver) driver for Mink framework",
-            "homepage": "https://mink.behat.org/",
-            "keywords": [
-                "ajax",
-                "browser",
-                "javascript",
-                "selenium",
-                "testing",
-                "webdriver"
-            ],
-            "support": {
-                "issues": "https://github.com/minkphp/MinkSelenium2Driver/issues",
-                "source": "https://github.com/minkphp/MinkSelenium2Driver/tree/v1.6.0"
-            },
-            "time": "2022-03-28T14:55:17+00:00"
-        },
-        {
-            "name": "behat/transliterator",
-            "version": "v1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Transliterator.git",
-                "reference": "baac5873bac3749887d28ab68e2f74db3a4408af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/baac5873bac3749887d28ab68e2f74db3a4408af",
-                "reference": "baac5873bac3749887d28ab68e2f74db3a4408af",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "chuyskywalker/rolling-curl": "^3.1",
-                "php-yaoi/php-yaoi": "^1.0",
-                "phpunit/phpunit": "^8.5.25 || ^9.5.19"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Transliterator\\": "src/Behat/Transliterator"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Artistic-1.0"
-            ],
-            "description": "String transliterator",
-            "keywords": [
-                "i18n",
-                "slug",
-                "transliterator"
-            ],
-            "support": {
-                "issues": "https://github.com/Behat/Transliterator/issues",
-                "source": "https://github.com/Behat/Transliterator/tree/v1.5.0"
-            },
-            "time": "2022-03-30T09:27:43+00:00"
-        },
-        {
-            "name": "drupal/drupal-driver",
-            "version": "v2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jhedstrom/DrupalDriver.git",
-                "reference": "000ce86a345bb8decaefdd7f0509825179641221"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jhedstrom/DrupalDriver/zipball/000ce86a345bb8decaefdd7f0509825179641221",
-                "reference": "000ce86a345bb8decaefdd7f0509825179641221",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/core-utility": "^8.4 || ^9 || ^10.0.0-alpha1",
-                "php": ">=7.4",
-                "symfony/dependency-injection": "~2.6|~3.0|~4.4|^6",
-                "symfony/process": "~2.5|~3.0|~4.4|^6"
-            },
-            "require-dev": {
-                "dms/phpunit-arraysubset-asserts": "^0.4.0",
-                "drupal/coder": "~8.3.0",
-                "drush-ops/behat-drush-endpoint": "*",
-                "mockery/mockery": "^0.9.4",
-                "php-parallel-lint/php-parallel-lint": "^1.0",
-                "phpspec/phpspec": "~2.0 || ~4.0 || ~6.1 || dev-main",
-                "phpunit/phpunit": "~6.0 || ~7.0 || ^9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Drupal\\Driver": "src/",
-                    "Drupal\\Tests\\Driver": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
                 {
-                    "name": "Jonathan Hedstrom",
-                    "email": "jhedstrom@gmail.com"
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "A collection of reusable Drupal drivers",
-            "homepage": "http://github.com/jhedstrom/DrupalDriver",
+            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
+            "homepage": "https://www.doctrine-project.org/projects/cache.html",
             "keywords": [
-                "drupal",
-                "test",
-                "web"
+                "abstraction",
+                "apcu",
+                "cache",
+                "caching",
+                "couchdb",
+                "memcached",
+                "php",
+                "redis",
+                "xcache"
             ],
             "support": {
-                "issues": "https://github.com/jhedstrom/DrupalDriver/issues",
-                "source": "https://github.com/jhedstrom/DrupalDriver/tree/v2.2.0"
+                "issues": "https://github.com/doctrine/cache/issues",
+                "source": "https://github.com/doctrine/cache/tree/1.13.0"
             },
             "funding": [
                 {
-                    "url": "https://github.com/jhedstrom",
-                    "type": "github"
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2022-05-16T18:47:08+00:00"
+            "time": "2022-05-20T20:06:54+00:00"
         },
         {
-            "name": "drupal/drupal-extension",
-            "version": "v4.2.1",
+            "name": "doctrine/common",
+            "version": "2.13.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jhedstrom/drupalextension.git",
-                "reference": "03c06860db91a2e456e3e7ca170414c2a4a40107"
+                "url": "https://github.com/doctrine/common.git",
+                "reference": "f3812c026e557892c34ef37f6ab808a6b567da7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jhedstrom/drupalextension/zipball/03c06860db91a2e456e3e7ca170414c2a4a40107",
-                "reference": "03c06860db91a2e456e3e7ca170414c2a4a40107",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/f3812c026e557892c34ef37f6ab808a6b567da7f",
+                "reference": "f3812c026e557892c34ef37f6ab808a6b567da7f",
                 "shasum": ""
             },
             "require": {
-                "behat/behat": "~3.2",
-                "behat/mink": "~1.5",
-                "behat/mink-goutte-driver": "~1.0",
-                "behat/mink-selenium2-driver": "~1.1",
-                "drupal/drupal-driver": "^2.1.0",
-                "friends-of-behat/mink-extension": "^2",
-                "symfony/browser-kit": "^3.4|~4.4",
-                "symfony/dependency-injection": "~3.0|~4.4",
-                "symfony/translation": "^3.4|~4.4"
+                "doctrine/annotations": "^1.0",
+                "doctrine/cache": "^1.0",
+                "doctrine/collections": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "doctrine/inflector": "^1.0",
+                "doctrine/lexer": "^1.0",
+                "doctrine/persistence": "^1.3.3",
+                "doctrine/reflection": "^1.0",
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "composer/installers": "^1.2",
-                "drupal/coder": "^8.3",
-                "drupal/core-composer-scaffold": "^9.1",
-                "drupal/core-recommended": "^9.1",
-                "drush/drush": "^10.5",
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpspec/phpspec": "^4.0 || ^6.0 || ^7.0"
+                "doctrine/coding-standard": "^1.0",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpunit/phpunit": "^7.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "symfony/phpunit-bridge": "^4.0.5"
             },
-            "type": "behat-extension",
+            "type": "library",
             "extra": {
-                "installer-paths": {
-                    "drupal/core": [
-                        "type:drupal-core"
-                    ]
+                "branch-alias": {
+                    "dev-master": "2.11.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
                 },
-                "drupal-scaffold": {
-                    "locations": {
-                        "web-root": "drupal/"
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, persistence interfaces, proxies, event system and much more.",
+            "homepage": "https://www.doctrine-project.org/projects/common.html",
+            "keywords": [
+                "common",
+                "doctrine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/common/issues",
+                "source": "https://github.com/doctrine/common/tree/2.13.x"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-05T16:46:05+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "41370af6a30faa9dc0368c4a6814d596e81aba7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/41370af6a30faa9dc0368c4a6814d596e81aba7f",
+                "reference": "41370af6a30faa9dc0368c4a6814d596e81aba7f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "event dispatcher",
+                "event manager",
+                "event system",
+                "events"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/event-manager/issues",
+                "source": "https://github.com/doctrine/event-manager/tree/1.1.x"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-29T18:28:51+00:00"
+        },
+        {
+            "name": "doctrine/inflector",
+            "version": "1.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9",
+                "reference": "4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^8.0",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector",
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
+            "homepage": "https://www.doctrine-project.org/projects/inflector.html",
+            "keywords": [
+                "inflection",
+                "inflector",
+                "lowercase",
+                "manipulation",
+                "php",
+                "plural",
+                "singular",
+                "strings",
+                "uppercase",
+                "words"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/inflector/issues",
+                "source": "https://github.com/doctrine/inflector/tree/1.4.4"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finflector",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-04-16T17:34:40+00:00"
+        },
+        {
+            "name": "doctrine/persistence",
+            "version": "1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/persistence.git",
+                "reference": "7a6eac9fb6f61bba91328f15aa7547f4806ca288"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/7a6eac9fb6f61bba91328f15aa7547f4806ca288",
+                "reference": "7a6eac9fb6f61bba91328f15aa7547f4806ca288",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "doctrine/cache": "^1.0",
+                "doctrine/collections": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "doctrine/reflection": "^1.2",
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/common": "<2.10@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpstan/phpstan": "^0.11",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "vimeo/psalm": "^3.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common",
+                    "Doctrine\\Persistence\\": "lib/Doctrine/Persistence"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.",
+            "homepage": "https://doctrine-project.org/projects/persistence.html",
+            "keywords": [
+                "mapper",
+                "object",
+                "odm",
+                "orm",
+                "persistence"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/persistence/issues",
+                "source": "https://github.com/doctrine/persistence/tree/1.3.x"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-20T12:56:16+00:00"
+        },
+        {
+            "name": "drupal/devel",
+            "version": "4.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/devel.git",
+                "reference": "4.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-4.1.5.zip",
+                "reference": "4.1.5",
+                "shasum": "7d0b4397215f615a67ba80aab777e93918d497f9"
+            },
+            "require": {
+                "doctrine/common": "^2.7",
+                "drupal/core": "^8.8 || ^9",
+                "symfony/var-dumper": "^4 || ^5"
+            },
+            "conflict": {
+                "kint-php/kint": "<3"
+            },
+            "require-dev": {
+                "drush/drush": "^10"
+            },
+            "suggest": {
+                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.1.5",
+                    "datestamp": "1646072825",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drupalspoons",
+                    "homepage": "https://www.drupal.org/user/3647684"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "https://www.drupal.org/project/devel",
+            "support": {
+                "source": "https://gitlab.com/drupalspoons/devel",
+                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
+                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
+            }
+        },
+        {
+            "name": "drupal/stage_file_proxy",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "a0bea520c139a4b0b67738b0c54e7ee21af081da"
+            },
+            "require": {
+                "drupal/core": ">=8.7.7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1637007759",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "stage_file_proxy.drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BarisW",
+                    "homepage": "https://www.drupal.org/user/107229"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "markdorison",
+                    "homepage": "https://www.drupal.org/user/346106"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                },
+                {
+                    "name": "msonnabaum",
+                    "homepage": "https://www.drupal.org/user/75278"
+                },
+                {
+                    "name": "netaustin",
+                    "homepage": "https://www.drupal.org/user/199298"
+                },
+                {
+                    "name": "robwilmshurst",
+                    "homepage": "https://www.drupal.org/user/144488"
+                }
+            ],
+            "description": "Provides stage_file_proxy module.",
+            "homepage": "https://www.drupal.org/project/stage_file_proxy",
+            "support": {
+                "source": "https://git.drupalcode.org/project/stage_file_proxy"
+            }
+        },
+        {
+            "name": "lemberg/draft-environment",
+            "version": "3.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lemberg/draft-environment.git",
+                "reference": "5db74c03a7514593a3923d7acf9fb316e8135398"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/5db74c03a7514593a3923d7acf9fb316e8135398",
+                "reference": "5db74c03a7514593a3923d7acf9fb316e8135398",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "nette/finder": "^2.5.2",
+                "nette/robot-loader": "^3.4.1",
+                "php": ">=7.4",
+                "symfony/filesystem": "^3.4.47 || ^4.4.27 || ^5.3.4 || ^6.0.9",
+                "symfony/yaml": "^3.4.41 || ^4.4.9 || ^5.3 || ^6.0.10",
+                "t2l/comments": "^1.1.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.1.9",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "dg/bypass-finals": "^1.3.1",
+                "drupal/coder": "^8.3.13",
+                "ergebnis/composer-normalize": "^2.15.0",
+                "ergebnis/phpstan-rules": "^1.0.0",
+                "mikey179/vfsstream": "^1.6.10",
+                "php-mock/php-mock-phpunit": "^2.5",
+                "php-parallel-lint/php-parallel-lint": "^1.3.1",
+                "phpro/grumphp": "^1.5.0",
+                "phpstan/extension-installer": "^1.1.0",
+                "phpstan/phpstan": "^1.8.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0.0",
+                "phpstan/phpstan-phpunit": "^1.1.1",
+                "phpstan/phpstan-strict-rules": "^1.3.0",
+                "phpunit/phpunit": "^9.5.10",
+                "symfony/process": "^3.4.47 || ^4.4.30 || ^5.3.7 || ^6.0.8",
+                "thecodingmachine/phpstan-strict-rules": "^1.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Lemberg\\Draft\\Environment\\Composer\\Plugin"
+            },
             "autoload": {
-                "psr-0": {
-                    "Drupal\\Drupal": "src/",
-                    "Drupal\\Exception": "src/",
-                    "Drupal\\MinkExtension": "src/",
-                    "Drupal\\DrupalExtension": "src/"
+                "psr-4": {
+                    "Lemberg\\Draft\\Environment\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
-                    "name": "Jonathan Hedstrom",
-                    "email": "jhedstrom@gmail.com"
-                },
-                {
-                    "name": "Melissa Anderson",
-                    "homepage": "https://github.com/eliza411"
-                },
-                {
-                    "name": "Pieter Frenssen",
-                    "homepage": "https://github.com/pfrenssen"
-                }
-            ],
-            "description": "Drupal extension for Behat",
-            "homepage": "http://drupal.org/project/drupalextension",
-            "keywords": [
-                "drupal",
-                "test",
-                "web"
-            ],
+            "description": "Development environment for Draft Drupal.",
             "support": {
-                "issues": "https://github.com/jhedstrom/drupalextension/issues",
-                "source": "https://github.com/jhedstrom/drupalextension/tree/v4.2.1"
+                "issues": "https://github.com/lemberg/draft-environment/issues",
+                "source": "https://github.com/lemberg/draft-environment/tree/3.6.3"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/jhedstrom",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-04-26T19:55:44+00:00"
+            "time": "2022-07-24T22:23:17+00:00"
         },
         {
-            "name": "fabpot/goutte",
-            "version": "v3.3.1",
+            "name": "nette/finder",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FriendsOfPHP/Goutte.git",
-                "reference": "80a23b64f44d54dd571d114c473d9d7e9ed84ca5"
+                "url": "https://github.com/nette/finder.git",
+                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/80a23b64f44d54dd571d114c473d9d7e9ed84ca5",
-                "reference": "80a23b64f44d54dd571d114c473d9d7e9ed84ca5",
+                "url": "https://api.github.com/repos/nette/finder/zipball/64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
+                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0",
-                "php": ">=7.1.3",
-                "symfony/browser-kit": "^4.4|^5.0",
-                "symfony/css-selector": "^4.4|^5.0",
-                "symfony/dom-crawler": "^4.4|^5.0"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "^5.0"
-            },
-            "type": "application",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Goutte\\": "Goutte"
-                },
-                "exclude-from-classmap": [
-                    "Goutte/Tests"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "A simple PHP Web Scraper",
-            "homepage": "https://github.com/FriendsOfPHP/Goutte",
-            "keywords": [
-                "scraper"
-            ],
-            "support": {
-                "issues": "https://github.com/FriendsOfPHP/Goutte/issues",
-                "source": "https://github.com/FriendsOfPHP/Goutte/tree/v3.3.1"
-            },
-            "time": "2020-11-01T09:30:18+00:00"
-        },
-        {
-            "name": "friends-of-behat/mink-extension",
-            "version": "v2.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfBehat/MinkExtension.git",
-                "reference": "df04efb3e88833208c3a99a3efa3f7e9f03854db"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfBehat/MinkExtension/zipball/df04efb3e88833208c3a99a3efa3f7e9f03854db",
-                "reference": "df04efb3e88833208c3a99a3efa3f7e9f03854db",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.0.5",
-                "behat/mink": "^1.5",
-                "php": ">=7.4",
-                "symfony/config": "^4.4 || ^5.0 || ^6.0"
-            },
-            "replace": {
-                "behat/mink-extension": "self.version"
-            },
-            "require-dev": {
-                "behat/mink-goutte-driver": "^1.1",
-                "phpspec/phpspec": "^6.0 || ^7.0 || 7.1.x-dev"
-            },
-            "type": "behat-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Behat\\MinkExtension": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com"
-                },
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                }
-            ],
-            "description": "Mink extension for Behat",
-            "homepage": "http://extensions.behat.org/mink",
-            "keywords": [
-                "browser",
-                "gui",
-                "test",
-                "web"
-            ],
-            "support": {
-                "source": "https://github.com/FriendsOfBehat/MinkExtension/tree/v2.6.1"
-            },
-            "time": "2021-12-24T13:19:26+00:00"
-        },
-        {
-            "name": "instaclick/php-webdriver",
-            "version": "1.4.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "200b8df772b74d604bebf25ef42ad6f8ee6380a9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/200b8df772b74d604bebf25ef42ad6f8ee6380a9",
-                "reference": "200b8df772b74d604bebf25ef42ad6f8ee6380a9",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5 || ^9.5",
-                "satooshi/php-coveralls": "^1.0 || ^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "WebDriver": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Justin Bishop",
-                    "email": "jubishop@gmail.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anthon Pang",
-                    "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork Maintainer"
-                }
-            ],
-            "description": "PHP WebDriver for Selenium 2",
-            "homepage": "http://instaclick.com/",
-            "keywords": [
-                "browser",
-                "selenium",
-                "webdriver",
-                "webtest"
-            ],
-            "support": {
-                "issues": "https://github.com/instaclick/php-webdriver/issues",
-                "source": "https://github.com/instaclick/php-webdriver/tree/1.4.14"
-            },
-            "time": "2022-04-19T02:06:59+00:00"
-        },
-        {
-            "name": "symfony/browser-kit",
-            "version": "v4.4.37",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "6e81008cac62369871cb6b8de64576ed138e3998"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/6e81008cac62369871cb6b8de64576ed138e3998",
-                "reference": "6e81008cac62369871cb6b8de64576ed138e3998",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.3",
-                "symfony/dom-crawler": "^3.4|^4.0|^5.0",
-                "symfony/polyfill-php80": "^1.16"
-            },
-            "require-dev": {
-                "symfony/css-selector": "^3.4|^4.0|^5.0",
-                "symfony/http-client": "^4.3|^5.0",
-                "symfony/mime": "^4.3|^5.0",
-                "symfony/process": "^3.4|^4.0|^5.0"
-            },
-            "suggest": {
-                "symfony/process": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\BrowserKit\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Simulates the behavior of a web browser, allowing you to make requests, click on links and submit forms programmatically",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/browser-kit/tree/v4.4.37"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-01-02T09:41:36+00:00"
-        },
-        {
-            "name": "symfony/config",
-            "version": "v4.4.41",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/config.git",
-                "reference": "9d031eb2d4292aed117b0f7fafd5c436dcf3dfd7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/9d031eb2d4292aed117b0f7fafd5c436dcf3dfd7",
-                "reference": "9d031eb2d4292aed117b0f7fafd5c436dcf3dfd7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.3",
-                "symfony/filesystem": "^3.4|^4.0|^5.0",
-                "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-php80": "^1.16",
-                "symfony/polyfill-php81": "^1.22"
-            },
-            "conflict": {
-                "symfony/finder": "<3.4"
-            },
-            "require-dev": {
-                "symfony/event-dispatcher": "^3.4|^4.0|^5.0",
-                "symfony/finder": "^3.4|^4.0|^5.0",
-                "symfony/messenger": "^4.1|^5.0",
-                "symfony/service-contracts": "^1.1|^2",
-                "symfony/yaml": "^3.4|^4.0|^5.0"
-            },
-            "suggest": {
-                "symfony/yaml": "To use the yaml reference dumper"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Config\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/config/tree/v4.4.41"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-04-12T15:19:55+00:00"
-        },
-        {
-            "name": "symfony/dom-crawler",
-            "version": "v4.4.42",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "be5a04618e5d44e71d013f177df80d3ec4b192a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/be5a04618e5d44e71d013f177df80d3ec4b192a0",
-                "reference": "be5a04618e5d44e71d013f177df80d3ec4b192a0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.3",
-                "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.0",
-                "symfony/polyfill-php80": "^1.16"
-            },
-            "conflict": {
-                "masterminds/html5": "<2.6"
-            },
-            "require-dev": {
-                "masterminds/html5": "^2.6",
-                "symfony/css-selector": "^3.4|^4.0|^5.0"
-            },
-            "suggest": {
-                "symfony/css-selector": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\DomCrawler\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Eases DOM navigation for HTML and XML documents",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/dom-crawler/tree/v4.4.42"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-04-30T18:34:00+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php81",
-            "version": "v1.25.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php81.git",
-                "reference": "5de4ba2d41b15f9bd0e19b2ab9674135813ec98f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/5de4ba2d41b15f9bd0e19b2ab9674135813ec98f",
-                "reference": "5de4ba2d41b15f9bd0e19b2ab9674135813ec98f",
-                "shasum": ""
-            },
-            "require": {
+                "nette/utils": "^2.4 || ^3.0",
                 "php": ">=7.1"
             },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php81\\": ""
-                },
                 "classmap": [
-                    "Resources/stubs"
+                    "src/"
                 ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "filesystem",
+                "glob",
+                "iterator",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/finder/issues",
+                "source": "https://github.com/nette/finder/tree/v2.5.3"
+            },
+            "time": "2021-12-12T17:43:24+00:00"
+        },
+        {
+            "name": "nette/robot-loader",
+            "version": "v3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/robot-loader.git",
+                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/robot-loader/zipball/e2adc334cb958164c050f485d99c44c430f51fe2",
+                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "nette/finder": "^2.5 || ^3.0",
+                "nette/utils": "^3.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "autoload",
+                "class",
+                "interface",
+                "nette",
+                "trait"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/robot-loader/issues",
+                "source": "https://github.com/nette/robot-loader/tree/v3.4.1"
+            },
+            "time": "2021-08-25T15:53:54+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2 <8.3"
+            },
+            "conflict": {
+                "nette/di": "<3.0.6"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "phpstan/phpstan": "^1.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/utils/issues",
+                "source": "https://github.com/nette/utils/tree/v3.2.8"
+            },
+            "time": "2022-09-12T23:36:20+00:00"
+        },
+        {
+            "name": "t2l/comments",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/T2L/comments.git",
+                "reference": "98dc7a97a275fd6326034d61bea1f7eb1d63b96c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/T2L/comments/zipball/98dc7a97a275fd6326034d61bea1f7eb1d63b96c",
+                "reference": "98dc7a97a275fd6326034d61bea1f7eb1d63b96c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.0",
+                "phpunit/phpunit": "^8.5 || ~9.0.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/yaml": "^3.4 || ^4.4 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Consolidation\\Comments\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -15073,40 +14464,20 @@
             ],
             "authors": [
                 {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
                 },
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
+                    "name": "Roman Paska",
+                    "email": "roman.paska@gmail.com"
                 }
             ],
-            "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
+            "description": "A tool for preserving comments, e.g. when parsing YAML files.",
             "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.25.0"
+                "issues": "https://github.com/T2L/comments/issues",
+                "source": "https://github.com/T2L/comments/tree/1.1.0"
             },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-09-13T13:58:11+00:00"
+            "time": "2020-04-27T15:47:56+00:00"
         }
     ],
     "aliases": [],
@@ -15127,18 +14498,18 @@
         "drupal/lb_claro": 10,
         "drupal/linkit": 10,
         "drupal/node_revision_delete": 5,
-        "drupal/paragon_adminkit": 15,
-        "drupal/paragon_themekit": 15,
         "drupal/path_redirect_import": 10,
         "drupal/purge": 10,
         "drupal/seckit": 5,
         "drupal/sitemap": 10,
-        "drupal/svg_upload_sanitizer": 15,
-        "npm-asset/jquery-ui-touch-punch": 20
+        "drupal/svg_upload_sanitizer": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "8.0.2"
+    },
     "plugin-api-version": "2.3.0"
 }

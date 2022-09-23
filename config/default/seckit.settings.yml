@@ -1,5 +1,6 @@
 _core:
   default_config_hash: QTuyXoghfaZggpyjFU72IEqKPKDZE-mTqXyATzJi3rU
+langcode: nl
 seckit_xss:
   csp:
     checkbox: false

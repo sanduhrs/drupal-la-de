@@ -1,3 +1,4 @@
+langcode: nl
 ignore_admin_paths: true
 ignore_ajax_links: true
 ignore_hashes: true

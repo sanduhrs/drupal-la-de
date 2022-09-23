@@ -115,6 +115,13 @@ display:
           draggable_views_reference: 'cases:order'
           draggable_views_null_order: after
           draggable_views_pass_arguments: false
+        random:
+          id: random
+          table: views
+          field: random
+          plugin_id: random
+          expose:
+            field_identifier: random
       arguments: {  }
       filters:
         status:
@@ -245,7 +252,7 @@ display:
       footer: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -398,7 +405,7 @@ display:
       display_description: ''
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -532,7 +539,7 @@ display:
       display_description: ''
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -788,7 +795,7 @@ display:
       display_description: ''
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1065,7 +1072,7 @@ display:
       display_description: ''
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

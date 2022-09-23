@@ -1,5 +1,5 @@
 uuid: e8fb6344-2afa-4d31-bb5d-0d2579294add
-langcode: en
+langcode: nl
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ dependencies:
 _core:
   default_config_hash: eOOnKrhRCCCbtd3OuxtPSzdWh4hgPgBcnj43Wx9Y0cw
 id: authenticated
-label: 'Authenticated user'
+label: 'Geverifieerde gebruiker'
 weight: 1
 is_admin: false
 permissions:
