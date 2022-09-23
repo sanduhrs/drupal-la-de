@@ -1,0 +1,50 @@
+# Dependabot does not run Composer scripts (and by coincedence also plugins).
+# This is a major issue making Dependabot useless. This GA workflow fixes that
+# by "redoing" the updates with scripts and plugins enabled.
+
+name: Dependabot Workflow
+on:
+  pull_request:
+    branches:
+      - main
+      - update-dependencies
+
+concurrency:
+  group: ${{ github.base_ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  metadata:
+    name: dependabot
+    if: ${{ startsWith(github.head_ref, 'dependabot') }}
+    uses: lembergsolutions/automation/.github/workflows/dependabot-metadata.yml@main
+
+  composer:
+    name: dependabot
+    if: ${{ needs.metadata.outputs.package_manager == 'composer' }}
+    needs: metadata
+    uses: lembergsolutions/automation/.github/workflows/dependabot-composer.yml@main
+    with:
+      head_ref: ${{ github.head_ref }}
+      dependency_name: ${{ needs.metadata.outputs.dependency_name }}
+    secrets:
+      PHP_VERSION: ${{ secrets.PHP_VERSION }}
+      COMPOSER_VERSION: ${{ secrets.COMPOSER_VERSION }}
+
+  composer-lock-diff:
+    name: dependabot
+    if: ${{ startsWith(github.head_ref, 'dependabot') }}
+    needs: composer
+    uses: lembergsolutions/automation/.github/workflows/composer-lock-diff.yml@main
+    secrets:
+      PHP_VERSION: ${{ secrets.PHP_VERSION }}
+      COMPOSER_VERSION: ${{ secrets.COMPOSER_VERSION }}
+
+  automerge:
+    name: dependabot
+    if: ${{ startsWith(github.head_ref, 'dependabot') }}
+    needs: composer-lock-diff
+    uses: lembergsolutions/automation/.github/workflows/automerge.yml@main

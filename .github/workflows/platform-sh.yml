@@ -1,0 +1,16 @@
+name: Platform.sh maintenance
+on:
+  # Run every night at 04:17.
+  schedule:
+    - cron: '17 4 * * *'
+
+jobs:
+  backup:
+    name: platform.sh
+    uses: lembergsolutions/automation/.github/workflows/platform-sh-backup.yml@main
+    secrets:
+      PHP_VERSION: ${{ secrets.PHP_VERSION }}
+      COMPOSER_VERSION: ${{ secrets.COMPOSER_VERSION }}
+      PLATFORMSH_CLI_TOKEN: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
+      PLATFORMSH_PROJECT_ID: ${{ secrets.PLATFORMSH_PROJECT_ID }}
+      PLATFORMSH_MAIN_BRANCH: ${{ secrets.PLATFORMSH_MAIN_BRANCH }}

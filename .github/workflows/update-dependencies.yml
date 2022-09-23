@@ -1,0 +1,26 @@
+name: Update Dependencies
+on:
+  schedule:
+    - cron: '47 2 * * 4'
+  workflow_dispatch:
+
+jobs:
+  update_dep:
+    name: update dependencies
+    uses: lembergsolutions/automation/.github/workflows/update-dependencies-pr.yml@main
+    with:
+      source_branch: update-dependencies
+      destination_branch: main
+
+  composer-lock-diff:
+    name: update dependencies
+    if: ${{ needs.update_dep.outputs.pull_request_number }}
+    needs: update_dep
+    uses: lembergsolutions/automation/.github/workflows/composer-lock-diff.yml@main
+    with:
+      head_ref: update-dependencies
+      base_ref: main
+      pull_request_number: ${{ needs.update_dep.outputs.pull_request_number }}
+    secrets:
+      PHP_VERSION: ${{ secrets.PHP_VERSION }}
+      COMPOSER_VERSION: ${{ secrets.COMPOSER_VERSION }}
