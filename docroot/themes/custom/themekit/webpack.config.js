@@ -8,7 +8,7 @@ const path = require('path');
 const chalk = require('chalk');
 const yaml = require('js-yaml');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const globImporter = require('node-sass-glob-importer');
 const glob = require('glob');
 const write_yaml = require('write-yaml');
@@ -124,9 +124,11 @@ module.exports = (env, argv) => {
         'window.jQuery': 'jquery',
       }),
 
-      new FixStyleOnlyEntriesPlugin(),
+      new RemoveEmptyScriptsPlugin(),
       new MiniCssExtractPlugin({ filename: '[name].css' }),
     ],
+    stats: { children: true },
+
     module: {
       rules: [
         {
