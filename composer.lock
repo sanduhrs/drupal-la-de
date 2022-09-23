@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec3d9fcbbeb7e0e382bbfd1f0d7ed639",
+    "content-hash": "2d8204d5809fd6c9452e155387ccd14b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3668,23 +3668,26 @@
         },
         {
             "name": "drupal/field_tools",
-            "version": "dev-1.x",
+            "version": "1.0.0-alpha9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_tools.git",
-                "reference": "55b6b3edf440d22c14f5e3d56f5ddd7e986dfd85"
+                "reference": "8.x-1.0-alpha9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_tools-8.x-1.0-alpha9.zip",
+                "reference": "8.x-1.0-alpha9",
+                "shasum": "2528d48ee2fa796c50c7c0fdf91f80dba173a4b2"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0-alpha8+3-dev",
-                    "datestamp": "1645310115",
+                    "version": "8.x-1.0-alpha9",
+                    "datestamp": "1645310211",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -4123,11 +4126,17 @@
         },
         {
             "name": "drupal/imageapi_optimize_webp",
-            "version": "dev-2.x",
+            "version": "2.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imageapi_optimize_webp.git",
-                "reference": "5d9a0fce516ae816ebe7b9e8b229479d4b35d9fd"
+                "reference": "2.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_webp-2.0.0-beta3.zip",
+                "reference": "2.0.0-beta3",
+                "shasum": "d4155038a30eb0590a19014097ba38c36f793a5e"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -4135,12 +4144,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "2.x-dev",
-                    "datestamp": "1633023822",
+                    "version": "2.0.0-beta3",
+                    "datestamp": "1633024033",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -4662,26 +4668,29 @@
         },
         {
             "name": "drupal/layout_builder_limit",
-            "version": "dev-1.0.x",
+            "version": "1.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/layout_builder_limit.git",
-                "reference": "c2e3d260d9cf21ec80826a48494b0e760c85b6f8"
+                "reference": "1.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_limit-1.0.0-beta3.zip",
+                "reference": "1.0.0-beta3",
+                "shasum": "69b3638a0890b095dc966d6c9368d27c6e4a9e72"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
                 "drupal": {
-                    "version": "1.0.0-beta2+1-dev",
-                    "datestamp": "1662137406",
+                    "version": "1.0.0-beta3",
+                    "datestamp": "1662137477",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -13600,13 +13609,13 @@
         "drupal/better_exposed_filters": 10,
         "drupal/block_field": 15,
         "drupal/csv_serialization": 10,
-        "drupal/field_tools": 20,
+        "drupal/field_tools": 15,
         "drupal/gin": 15,
         "drupal/imageapi_optimize": 10,
         "drupal/imageapi_optimize_gd": 10,
         "drupal/imageapi_optimize_tinypng": 10,
-        "drupal/imageapi_optimize_webp": 20,
-        "drupal/layout_builder_limit": 20,
+        "drupal/imageapi_optimize_webp": 10,
+        "drupal/layout_builder_limit": 10,
         "drupal/lb_claro": 10,
         "drupal/linkit": 10,
         "drupal/node_revision_delete": 5,
