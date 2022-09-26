@@ -62,7 +62,6 @@
         "drupal/node_revision_delete": "^1.0@RC",
         "drupal/paragraphs": "^1.0",
         "drupal/paragraphs_browser": "^1.0",
-        "drupal/path_redirect_import": "^1.0@beta",
         "drupal/pathauto": "^1.0",
         "drupal/quicklink": "^2.0",
         "drupal/redirect": "^1.0",
