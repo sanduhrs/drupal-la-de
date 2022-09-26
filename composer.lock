@@ -10153,23 +10153,22 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.7",
+            "version": "v6.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "3a4442138d80c9f7b600fb297534ac718b61d37f"
+                "reference": "a36b782dc19dce3ab7e47d4b92b13cefb3511da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/3a4442138d80c9f7b600fb297534ac718b61d37f",
-                "reference": "3a4442138d80c9f7b600fb297534ac718b61d37f",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a36b782dc19dce3ab7e47d4b92b13cefb3511da3",
+                "reference": "a36b782dc19dce3ab7e47d4b92b13cefb3511da3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
+                "php": ">=8.0.2",
                 "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.8",
-                "symfony/polyfill-php80": "^1.16"
+                "symfony/polyfill-mbstring": "~1.8"
             },
             "type": "library",
             "autoload": {
@@ -10197,7 +10196,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.4.7"
+                "source": "https://github.com/symfony/filesystem/tree/v6.0.12"
             },
             "funding": [
                 {
@@ -10213,7 +10212,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-01T12:33:59+00:00"
+            "time": "2022-08-02T16:01:06+00:00"
         },
         {
             "name": "symfony/finder",
@@ -13376,16 +13375,16 @@
         },
         {
             "name": "lemberg/draft-environment",
-            "version": "3.6.3",
+            "version": "3.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lemberg/draft-environment.git",
-                "reference": "5db74c03a7514593a3923d7acf9fb316e8135398"
+                "reference": "55c1483b7734452f22990a8aac952edc96b2f34a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/5db74c03a7514593a3923d7acf9fb316e8135398",
-                "reference": "5db74c03a7514593a3923d7acf9fb316e8135398",
+                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/55c1483b7734452f22990a8aac952edc96b2f34a",
+                "reference": "55c1483b7734452f22990a8aac952edc96b2f34a",
                 "shasum": ""
             },
             "require": {
@@ -13398,7 +13397,7 @@
                 "t2l/comments": "^1.1.0"
             },
             "require-dev": {
-                "composer/composer": "^2.1.9",
+                "composer/composer": "^2.2.12 || ^2.3.5",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "dg/bypass-finals": "^1.3.1",
                 "drupal/coder": "^8.3.13",
@@ -13412,7 +13411,7 @@
                 "phpstan/phpstan": "^1.8.0",
                 "phpstan/phpstan-deprecation-rules": "^1.0.0",
                 "phpstan/phpstan-phpunit": "^1.1.1",
-                "phpstan/phpstan-strict-rules": "^1.3.0",
+                "phpstan/phpstan-strict-rules": "^1.4.0",
                 "phpunit/phpunit": "^9.5.10",
                 "symfony/process": "^3.4.47 || ^4.4.30 || ^5.3.7 || ^6.0.8",
                 "thecodingmachine/phpstan-strict-rules": "^1.0.0"
@@ -13433,9 +13432,9 @@
             "description": "Development environment for Draft Drupal.",
             "support": {
                 "issues": "https://github.com/lemberg/draft-environment/issues",
-                "source": "https://github.com/lemberg/draft-environment/tree/3.6.3"
+                "source": "https://github.com/lemberg/draft-environment/tree/3.6.4"
             },
-            "time": "2022-07-24T22:23:17+00:00"
+            "time": "2022-09-23T19:07:20+00:00"
         },
         {
             "name": "nette/finder",
