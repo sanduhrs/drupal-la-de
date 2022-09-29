@@ -59,14 +59,14 @@ third_party_settings:
       allowed_layouts:
         - dnl_layout_onecol_section
         - dnl_layout_twocol_section
-      blacklisted_blocks: {  }
-      whitelisted_blocks: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
       restricted_categories: {  }
     entity_view_mode_restriction_by_region:
       allowed_layouts:
         - dnl_layout_onecol_section
         - dnl_layout_twocol_section
-      whitelisted_blocks:
+      allowlisted_blocks:
         dnl_layout_banner_section:
           all_regions:
             'Inline blocks':
@@ -79,7 +79,7 @@ third_party_settings:
               - 'inline_block:community_features'
               - 'inline_block:text'
             'Lists (Views)': {  }
-      blacklisted_blocks:
+      denylisted_blocks:
         dnl_layout_onecol_section:
           all_regions:
             'Inline blocks':
