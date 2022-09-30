@@ -8,6 +8,7 @@ url:
   prefixes:
     nl: ''
     en: en
+    '': null
   domains:
     nl: ''
     en: ''
