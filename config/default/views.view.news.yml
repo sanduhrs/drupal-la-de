@@ -164,6 +164,50 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  listing:
+    id: listing
+    display_title: Listing
+    display_plugin: block
+    position: 2
+    display_options:
+      title: ''
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 12
+          total_pages: null
+          id: 0
+          tags:
+            next: ''
+            previous: ''
+            first: ''
+            last: ''
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Alle -'
+            offset: false
+            offset_label: Startpunt
+          quantity: 3
+      defaults:
+        title: false
+        use_ajax: false
+        pager: false
+      use_ajax: true
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   slider:
     id: slider
     display_title: Slider
