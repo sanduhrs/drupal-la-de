@@ -71,10 +71,10 @@
           <a class="link--external" target="_blank" href="{{ node.field_link.uri }}"> {{ 'Bekijk website'|t }}</a>
         {% endif %}
       </div>
-      {% if node.field_website_of_the_year|length or  node.field_winner|length or node.field_runner_up|length %}
+      {% if node.field_website_of_the_year.value or node.field_winner.value or node.field_runner_up.value %}
         <div class="field-item-info field-awards">
           <h4 class="heading">{{ 'Splash Awards'|t }}</h4>
-          {% if node.field_website_of_the_year|length %}
+          {% if node.field_website_of_the_year.value %}
             <div class="field">
               <img
                 width="96"
@@ -85,7 +85,7 @@
               <div class="field-name">{{ 'Website of the year'|t }}</div>
             </div>
           {% endif %}
-          {% if node.field_winner|length %}
+          {% if node.field_winner.value %}
             <div class="field">
               <img
                 width="96"
@@ -96,7 +96,7 @@
               <div class="field-name">{{ 'Winnaar'|t }}</div>
             </div>
           {% endif %}
-          {% if node.field_runner_up|length %}
+          {% if node.field_runner_up.value %}
             <div class="field">
               <img
                 width="96"
