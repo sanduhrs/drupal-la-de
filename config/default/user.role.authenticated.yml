@@ -8,6 +8,7 @@ dependencies:
   module:
     - eu_cookie_compliance
     - filter
+    - matomo
     - media
     - shortcut
     - system
@@ -21,6 +22,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'display eu cookie compliance popup'
+  - 'opt-in or out of matomo tracking'
   - 'use text format basic_html'
   - 'use text format simple_html'
   - 'view media'
