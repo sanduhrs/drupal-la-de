@@ -27,5 +27,6 @@ processors:
       quality: '90'
       file_types:
         image/jpeg: image/jpeg
+        image/webp: image/webp
     weight: 3
     uuid: 23687bdb-d1b5-4b81-b183-dcc9bc2c48bf

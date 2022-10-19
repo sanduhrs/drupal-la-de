@@ -15,4 +15,4 @@ effects:
       width: 1920
       height: null
       upscale: false
-pipeline: medium_quality
+pipeline: default

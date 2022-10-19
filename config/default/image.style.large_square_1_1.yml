@@ -17,4 +17,4 @@ effects:
       width: 640
       height: 640
       crop_type: focal_point
-pipeline: medium_quality
+pipeline: default
