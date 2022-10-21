@@ -9,7 +9,7 @@ dependencies:
 _core:
   default_config_hash: VSN_nNHAqEdSY16jJzqWGfpeCF24AnLKYi5t9xHSUtE
 id: scheduler_scheduled_content
-label: 'Scheduled content'
+label: 'Geplande inhoud'
 module: node
 description: 'Find and manage scheduled content.'
 tag: default
