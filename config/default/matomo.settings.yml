@@ -2,8 +2,8 @@ _core:
   default_config_hash: mKwnhF-0ryfftZZP6jyqW8q9MEo9glyRkvRzSddrc0k
 langcode: nl
 site_id: '1'
-url_http: 'https://drupal.matomo.cloud/'
-url_https: ''
+url_http: 'http://drupal.matomo.cloud/'
+url_https: 'https://drupal.matomo.cloud/'
 domain_mode: 0
 visibility:
   request_path_mode: 0
