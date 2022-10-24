@@ -75,7 +75,7 @@
         "drupal/simple_sitemap": "^4.0",
         "drupal/site_settings": "^1.0",
         "drupal/sitemap": "^2.0@beta",
-        "drupal/smart_trim": "^1.0",
+        "drupal/smart_trim": "^2.0",
         "drupal/svg_image_field": "^2.1",
         "drupal/svg_upload_sanitizer": "^1.0@alpha",
         "drupal/swiftmailer": "^2.0",
