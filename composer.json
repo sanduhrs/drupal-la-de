@@ -12,7 +12,7 @@
         "drupal/address_map_link": "^1.2",
         "drupal/admin_toolbar": "^3.0",
         "drupal/advagg": "^5.0",
-        "drupal/allowed_formats": "^1.1",
+        "drupal/allowed_formats": "^2.0",
         "drupal/better_exposed_filters": "^6.0@beta",
         "drupal/block_field": "^1.0@alpha",
         "drupal/chosen": "^3.0",
