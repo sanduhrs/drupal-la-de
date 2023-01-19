@@ -3430,17 +3430,17 @@
         },
         {
             "name": "drupal/environment_indicator",
-            "version": "4.0.12",
+            "version": "4.0.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/environment_indicator.git",
-                "reference": "4.0.12"
+                "reference": "4.0.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/environment_indicator-4.0.12.zip",
-                "reference": "4.0.12",
-                "shasum": "4ccb08b69bb7cb2e093db209b7839484823bb746"
+                "url": "https://ftp.drupal.org/files/projects/environment_indicator-4.0.13.zip",
+                "reference": "4.0.13",
+                "shasum": "d98f94caecf7ba315b0cb008e6c2b82b2f8c3ce0"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
@@ -3448,8 +3448,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.12",
-                    "datestamp": "1671556019",
+                    "version": "4.0.13",
+                    "datestamp": "1674106809",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
