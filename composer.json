@@ -51,7 +51,7 @@
         "drupal/lazy": "^3.4",
         "drupal/lb_claro": "^1.0@beta",
         "drupal/link_attributes": "^1.0",
-        "drupal/linkit": "~6.0.0@beta",
+        "drupal/linkit": "~6.0.0-beta4@beta",
         "drupal/login_security": "^2.0",
         "drupal/mailsystem": "^4.0",
         "drupal/markup": "^1.0",
