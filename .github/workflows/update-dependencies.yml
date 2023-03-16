@@ -7,7 +7,7 @@ on:
 jobs:
   update_dep:
     name: update dependencies
-    uses: lembergsolutions/automation/.github/workflows/update-dependencies-pr.yml@main
+    uses: lembergsolutions/automation/.github/workflows/update-dependencies-pr.yml@2.x
     with:
       source_branch: update-dependencies
       destination_branch: main
@@ -16,11 +16,10 @@ jobs:
     name: update dependencies
     if: ${{ needs.update_dep.outputs.pull_request_number }}
     needs: update_dep
-    uses: lembergsolutions/automation/.github/workflows/composer-lock-diff.yml@main
+    uses: lembergsolutions/automation/.github/workflows/composer-lock-diff.yml@2.x
     with:
+      php_version: ${{ vars.PHP_VERSION }}
+      composer_version: ${{ vars.COMPOSER_VERSION }}
       head_ref: update-dependencies
       base_ref: main
       pull_request_number: ${{ needs.update_dep.outputs.pull_request_number }}
-    secrets:
-      PHP_VERSION: ${{ secrets.PHP_VERSION }}
-      COMPOSER_VERSION: ${{ secrets.COMPOSER_VERSION }}

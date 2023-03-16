@@ -6,7 +6,7 @@ jobs:
   composer-lock-diff:
     name: integrate
     if: ${{ !startsWith(github.head_ref, 'dependabot') }}
-    uses: lembergsolutions/automation/.github/workflows/composer-lock-diff.yml@main
-    secrets:
-      PHP_VERSION: ${{ secrets.PHP_VERSION }}
-      COMPOSER_VERSION: ${{ secrets.COMPOSER_VERSION }}
+    uses: lembergsolutions/automation/.github/workflows/composer-lock-diff.yml@2.x
+    with:
+      php_version: ${{ vars.PHP_VERSION }}
+      composer_version: ${{ vars.COMPOSER_VERSION }}
