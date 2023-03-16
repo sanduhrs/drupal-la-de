@@ -54,7 +54,7 @@
         "drupal/linkit": "~6.0.0-beta4@beta",
         "drupal/login_security": "^2.0",
         "drupal/mailsystem": "^4.0",
-        "drupal/markup": "^1.0",
+        "drupal/markup": "^2",
         "drupal/matomo": "^1.19",
         "drupal/media_responsive_thumbnail": "^1.0",
         "drupal/menu_block": "^1.0",
