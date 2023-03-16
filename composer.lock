@@ -5350,17 +5350,17 @@
         },
         {
             "name": "drupal/media_responsive_thumbnail",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_responsive_thumbnail.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_responsive_thumbnail-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "f477812d1dabcd6ccc97eab81b5bae6ef6476945"
+                "url": "https://ftp.drupal.org/files/projects/media_responsive_thumbnail-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "ef96d0c4e4f2759eb19888823e9e733af67f7445"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10"
@@ -5368,8 +5368,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1677359035",
+                    "version": "8.x-1.5",
+                    "datestamp": "1678903132",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
