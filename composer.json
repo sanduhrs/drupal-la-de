@@ -15,7 +15,7 @@
         "drupal/allowed_formats": "^2.0",
         "drupal/better_exposed_filters": "^6.0@beta",
         "drupal/block_field": "^1.0@alpha",
-        "drupal/chosen": "^3.0",
+        "drupal/chosen": "^4.0",
         "drupal/ckeditorheight": "^1.0",
         "drupal/components": "^2.2",
         "drupal/config_split": "^1.9",
