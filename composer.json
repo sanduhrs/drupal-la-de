@@ -33,7 +33,7 @@
         "drupal/field_group": "^3.0",
         "drupal/field_hidden": "^2.0",
         "drupal/field_tools": "^1.0@alpha",
-        "drupal/focal_point": "^1.0",
+        "drupal/focal_point": "^2.0",
         "drupal/gin": "^3.0@alpha",
         "drupal/gtm": "^1.6",
         "drupal/http_cache_control": "^2.0",
