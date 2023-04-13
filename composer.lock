@@ -1670,7 +1670,7 @@
             "extra": {
                 "drupal": {
                     "version": "5.0.0",
-                    "datestamp": "1672697815",
+                    "datestamp": "1658178949",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2445,12 +2445,12 @@
             ],
             "authors": [
                 {
-                    "name": "codebymikey",
-                    "homepage": "https://www.drupal.org/user/3573206"
-                },
-                {
                     "name": "Pasqualle",
                     "homepage": "https://www.drupal.org/user/80733"
+                },
+                {
+                    "name": "codebymikey",
+                    "homepage": "https://www.drupal.org/user/3573206"
                 }
             ],
             "description": "Provides basic revert and update functionality for other modules",
@@ -2860,10 +2860,6 @@
                 {
                     "name": "Matthew Grasmick",
                     "homepage": "https://www.drupal.org/user/455714"
-                },
-                {
-                    "name": "markdorison",
-                    "homepage": "https://www.drupal.org/user/346106"
                 }
             ],
             "description": "Provides CSV as a serialization format.",
@@ -3765,7 +3761,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.0-rc2",
-                    "datestamp": "1678733202",
+                    "datestamp": "1678627668",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -5001,14 +4997,6 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
-                {
-                    "name": "acbramley",
-                    "homepage": "https://www.drupal.org/user/1036766"
-                },
-                {
-                    "name": "jptaranto",
-                    "homepage": "https://www.drupal.org/user/135234"
-                },
                 {
                     "name": "larowlan",
                     "homepage": "https://www.drupal.org/user/395439"
@@ -6624,6 +6612,10 @@
                     "name": "Mark Casias (markie)",
                     "homepage": "https://www.drupal.org/u/markie",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "newsignature",
+                    "homepage": "https://www.drupal.org/user/765518"
                 },
                 {
                     "name": "ultimike",
