@@ -4,7 +4,6 @@
     "type": "drupal-project",
     "homepage": "https://drupal.nl",
     "require": {
-        "bower-asset/chosen": "^1.8",
         "bower-asset/lazysizes": "^5.2",
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "~1.0",
@@ -87,6 +86,7 @@
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^4.0",
         "drush/drush": "^11",
+        "jjj/chosen": "^2.2",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "platformsh/config-reader": "^2.4"
