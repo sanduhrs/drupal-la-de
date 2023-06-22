@@ -83,6 +83,7 @@ module:
   lb_claro: 0
   link: 0
   link_attributes: 0
+  link_attributes_menu_link_content: 0
   linkit: 0
   locale: 0
   login_security: 0
