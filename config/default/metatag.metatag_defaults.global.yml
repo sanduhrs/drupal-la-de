@@ -17,5 +17,4 @@ tags:
   og_url: '[node:url:absolute]'
   title: '[current-page:title] | [site:name]'
   twitter_cards_description: '[node:summary]'
-  twitter_cards_page_url: '[node:url:absolute]'
   twitter_cards_title: '[node:title]'
