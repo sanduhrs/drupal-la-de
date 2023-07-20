@@ -3745,17 +3745,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc4",
+            "version": "3.0.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc4"
+                "reference": "8.x-3.0-rc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc4.zip",
-                "reference": "8.x-3.0-rc4",
-                "shasum": "fb68fa5ead0465407b277509b8f3c50e7880127b"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc5.zip",
+                "reference": "8.x-3.0-rc5",
+                "shasum": "81010b540822f0cfc114fd0548e4e27e56b6dc1c"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -3764,8 +3764,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc4",
-                    "datestamp": "1688474403",
+                    "version": "8.x-3.0-rc5",
+                    "datestamp": "1689504430",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -5034,26 +5034,27 @@
         },
         {
             "name": "drupal/link_attributes",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/link_attributes.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/link_attributes-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "a6769086b50b43d70ba11db8f5c3b22053f17049"
+                "url": "https://ftp.drupal.org/files/projects/link_attributes-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "480a1f0269cb02a2cc50318ea672ac4e8fb370cb"
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^9 || ^10",
+                "php": ">=8.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1689118258",
+                    "version": "2.0.2",
+                    "datestamp": "1689299675",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
