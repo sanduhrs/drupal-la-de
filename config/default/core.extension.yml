@@ -89,7 +89,6 @@ module:
   login_security: 0
   mailsystem: 0
   markup: 0
-  matomo: 0
   media: 0
   media_library: 0
   media_responsive_thumbnail: 0
