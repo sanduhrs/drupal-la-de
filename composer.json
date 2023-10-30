@@ -16,6 +16,7 @@
         "drupal/block_field": "^1.0@alpha",
         "drupal/chosen": "^4.0",
         "drupal/ckeditorheight": "^1.0",
+        "drupal/classy": "^1.0",
         "drupal/components": "^2.2",
         "drupal/config_split": "^1.9",
         "drupal/config_update": "^1.0",
