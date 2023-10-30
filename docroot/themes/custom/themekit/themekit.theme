@@ -271,7 +271,7 @@ function themekit_library_info_alter(&$libraries, $extension) {
   // Get the path of the theme where this function is being called.
   $theme_name = basename(__FILE__, '.theme');
   // Get the path of the theme where this function is being called.
-  $theme_path = drupal_get_path('theme', $theme_name);
+  $theme_path = \Drupal::service('extension.list.theme')->getPath($theme_name);
   // Alter only the library definitions of the current theme.
   if ($extension == $theme_name) {
 
