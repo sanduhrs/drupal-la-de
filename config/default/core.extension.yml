@@ -7,8 +7,6 @@ module:
   address_map_link: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  advagg: 0
-  advagg_js_minify: 0
   allowed_formats: 0
   ban: 0
   better_exposed_filters: 0
