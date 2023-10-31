@@ -1,7 +1,7 @@
 name: Drupal.nl Layouts
 type: module
 description: 'Provides additional functionality for layouts.'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9.4 || ^10
 package: Dnl
 
 dependencies:
