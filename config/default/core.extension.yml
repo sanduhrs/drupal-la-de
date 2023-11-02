@@ -7,8 +7,6 @@ module:
   address_map_link: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  advagg: 0
-  advagg_js_minify: 0
   allowed_formats: 0
   ban: 0
   better_exposed_filters: 0
@@ -21,14 +19,11 @@ module:
   chosen_lib: 0
   ckeditor: 0
   ckeditorheight: 0
-  color: 0
   components: 0
   config: 0
   config_filter: 0
   config_split: 0
   config_translation: 0
-  config_update: 0
-  config_update_ui: 0
   content_moderation: 0
   contextual: 0
   crop: 0
@@ -109,7 +104,6 @@ module:
   path: 0
   path_alias: 0
   quicklink: 0
-  rdf: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0

@@ -251,17 +251,20 @@ div[data-drupal-messages] {
 }
 
 // Alter icon sizes on layout builder browser icons
-.ui-dialog-off-canvas #drupal-off-canvas {
-  .js-layout-builder-category {
-    .details-wrapper {
-      a.use-ajax {
-        color: $white;
-        display: flex;
-        align-items: center;
-        img {
-          width: 30px;
-          margin-right: 10px;
-          padding: 5px;
+.ui-dialog-off-canvas {
+  #drupal-off-canvas:not(.drupal-off-canvas-reset),
+  #drupal-off-canvas-wrapper {
+    .js-layout-builder-category {
+      .details-wrapper {
+        a.use-ajax {
+          color: $white;
+          display: flex;
+          align-items: center;
+          img {
+            width: 30px;
+            margin-right: 10px;
+            padding: 5px;
+          }
         }
       }
     }
@@ -329,7 +332,8 @@ ul.layout-selection {
   .ui-dialog-titlebar-close {
     top: 10px !important;
   }
-  #drupal-off-canvas {
+  #drupal-off-canvas:not(.drupal-off-canvas-reset),
+  #drupal-off-canvas-wrapper {
     // Normalize Text colors
     color: $white;
     a:not(.button) {

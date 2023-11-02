@@ -3,7 +3,7 @@ recipe: drupal9
 config:
   webroot: docroot
   database: mariadb:10.4
-  php: '8.0'
+  php: '8.2'
 services:
   appserver:
     xdebug: true
