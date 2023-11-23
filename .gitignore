@@ -1,59 +1,68 @@
-# Ignore non-custom parts of Drupal.
+# gitignore template for Drupal 8 projects
+#
+# earlier versions of Drupal are tracked in `community/PHP/`
+#
+# follows official upstream conventions:
+# https://www.drupal.org/docs/develop/using-composer
+
+# Ignore configuration files that may contain sensitive information
+/docroot/sites/*/*settings*.php
+/docroot/sites/*/*services*.yml
+
+# Ignore paths that may contain user-generated content
+/docroot/sites/*/files
+/docroot/sites/*/public
+/docroot/sites/*/private
+/docroot/sites/*/files-public
+/docroot/sites/*/files-private
+
+# Ignore paths that may contain temporary files
+/docroot/sites/*/translations
+/docroot/sites/*/tmp
+/docroot/sites/*/cache
+
+# Ignore drupal core (if not versioning drupal sources)
+.editorconfig
+.gitattributes
+/docroot/README.md
+/docroot/vendor
 /docroot/core
-/docroot/modules/contrib
-/docroot/profiles/contrib
-/docroot/themes/contrib
-/docroot/libraries
-/docroot/sites/development.*
-/docroot/sites/default/development.*
-/docroot/sites/example.*
-/docroot/sites/*/default.*
-/docroot/sites/*/*.local.php
-/docroot/sites/simpletest
-
-# Ignore uploads.
-/docroot/sites/default/files
-/private
-
-# Ignore Drupal scaffold.
-/.editorconfig
-/.gitattributes
+/docroot/modules/README.txt
+/docroot/profiles/README.txt
+/docroot/sites/development.services.yml
+/docroot/sites/example.settings.local.php
+/docroot/sites/example.sites.php
+/docroot/sites/README.txt
+/docroot/themes/README.txt
 /docroot/.csslintrc
 /docroot/.editorconfig
 /docroot/.eslintignore
 /docroot/.eslintrc.json
 /docroot/.gitattributes
-/docroot/.gitignore
-/docroot/.ht.router.php
 /docroot/.htaccess
+/docroot/.ht.router.php
 /docroot/autoload.php
-/docroot/INSTALL.txt
-/docroot/README.md
+/docroot/composer.json
+/docroot/composer.lock
 /docroot/example.gitignore
 /docroot/index.php
-/docroot/modules/README.txt
-/docroot/profiles/README.txt
+/docroot/INSTALL.txt
+/docroot/LICENSE.txt
+/docroot/README.txt
 /docroot/robots.txt
-/docroot/sites/README.txt
-/docroot/themes/README.txt
 /docroot/update.php
 /docroot/web.config
 
-# Ignore Composer-managed dependencies.
+# Ignore vendor dependencies, contrib, libraries and scripts
 /vendor
-
-# Ignore Vagrant virtual machine data.
-/.vagrant
-
-# Ignore local VM settings overrides.
-/vm-settings.local.yml
-
-# Ignore local Lando VM Settings
-/.lando.local.yml
-/.lando
-
-# Ignore Platform.sh local cache.
-.platform/local
-
-# Ignore .env files as they are personal
-/.env
+/docroot/libraries/
+/docroot/modules/contrib/
+/docroot/themes/contrib/
+/composer.phar
+/composer
+/robo.phar
+/robo
+/drush.phar
+/drush
+/drupal.phar
+/drupal
