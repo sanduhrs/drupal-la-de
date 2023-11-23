@@ -5,6 +5,6 @@ dependencies: {  }
 _core:
   default_config_hash: OxLyQ7vMXQRN8hIA13_4dq89rqTfqBGxez_z8vEY_EY
 id: content
-label: Inhoud
+label: Content
 groups: {  }
 map: {  }
