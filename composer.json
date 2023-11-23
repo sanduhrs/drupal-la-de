@@ -1,8 +1,9 @@
 {
-    "name": "drupal/drupal.nl",
-    "description": "Drupal 9 powered website for Drupal Dutch Association",
-    "type": "drupal-project",
-    "homepage": "https://drupal.nl",
+    "name": "drupal/la_eu",
+    "description": "Drupal powered website for Local Associations",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/la_eu",
     "require": {
         "bower-asset/lazysizes": "^5.2",
         "composer/installers": "^2.2",
