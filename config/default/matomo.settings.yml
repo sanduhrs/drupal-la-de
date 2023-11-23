@@ -63,7 +63,7 @@ status_codes_disabled: {  }
 =======
 _core:
   default_config_hash: mKwnhF-0ryfftZZP6jyqW8q9MEo9glyRkvRzSddrc0k
-langcode: nl
+langcode: en
 site_id: '1'
 url_http: 'http://drupal.matomo.cloud/'
 url_https: 'https://drupal.matomo.cloud/'
