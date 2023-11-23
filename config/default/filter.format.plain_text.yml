@@ -1,10 +1,10 @@
 uuid: 5f0a86b6-8cbf-4fca-8f3a-864764aa4885
-langcode: nl
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
-name: 'Platte tekst'
+name: 'Plain text'
 format: plain_text
 weight: 10
 filters:
