@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 4KdfjViUO_P7OWaCIlDlyoAchi2hWscZ9OU3K8g-rf8
-langcode: nl
+langcode: en
 max_links: 2000
 cron_generate: true
 remove_duplicates: true

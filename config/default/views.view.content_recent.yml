@@ -1,5 +1,5 @@
 uuid: a03d2a12-e17d-4f3f-9898-8b1d261eef89
-langcode: nl
+langcode: en
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: MxwbHUmXqKQgTGCTWcMxsfUH9NZJ8ZVqZp6801AOa40
 id: content_recent
-label: 'Recente inhoud'
+label: 'Recent content'
 module: node
-description: 'Recente inhoud.'
+description: 'Recent content.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Recente inhoud'
+      title: 'Recent content'
       fields:
         title:
           id: title

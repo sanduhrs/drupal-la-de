@@ -1,5 +1,5 @@
 uuid: fd124226-b6a5-4f1e-947c-84cd400cc115
-langcode: nl
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: uvMAn5Qf8Uni989mhr5KY4hx66xkSpP8nFYZMHgj7kY
 id: taxonomy_term
-label: Taxonomieterm
+label: 'Taxonomy term'
 module: taxonomy
-description: 'Inhoud van een bepaalde taxonomieterm'
+description: 'Content belonging to a certain taxonomy term.'
 tag: default
 base_table: node_field_data
 base_field: nid

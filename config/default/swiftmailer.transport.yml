@@ -1,6 +1,6 @@
 _core:
   default_config_hash: seT5IpfgCFuN0vt4jUtCf3OVwVAc2bYxNfgBaijAWzg
-langcode: nl
+langcode: en
 transport: sendmail
 smtp_host: 127.0.0.1
 smtp_port: 25

@@ -1,5 +1,5 @@
 uuid: 1b66dd1b-567e-4c40-bc95-1528e1f2c2dc
-langcode: nl
+langcode: en
 status: false
 dependencies:
   config:
@@ -10,9 +10,9 @@ dependencies:
 _core:
   default_config_hash: gA3tLETtsrObWW1Uvb6Mh-fg0Qu_6uCEzgL9jKQgPgo
 id: archive
-label: Archief
+label: Archive
 module: node
-description: 'Alle inhoud, op maand.'
+description: 'All content, by month.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Maandelijks archief'
+      title: 'Monthly archive'
       fields: {  }
       pager:
         type: mini
@@ -40,7 +40,7 @@ display:
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
             offset_label: Offset
       exposed_form:
@@ -188,7 +188,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Blok
+    display_title: Block
     display_plugin: block
     position: 1
     display_options:
