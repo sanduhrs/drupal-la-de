@@ -200,7 +200,9 @@
             "drupal/core": {
                 "[#3171835] Field Groups marked as required are missing red asterisk": "https://www.drupal.org/files/issues/2020-09-18/required-asterisk-missing--3171835--2.patch",
                 "[#3326684] Deprecated function: mb_strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in Drupal\\Component\\Utility\\Html::getId() (line 219 of core/lib/Drupal/Component/Utility/Html.php)": "https://www.drupal.org/files/issues/2023-11-21/3199.patch",
-                "[#3294680] PHP8.1 deprecation: str_replace(): Passing null to parameter #3": "https://www.drupal.org/files/issues/2023-06-07/3294680-22.patch"
+                "[#3294680] PHP8.1 deprecation: str_replace(): Passing null to parameter #3": "https://www.drupal.org/files/issues/2023-06-07/3294680-22.patch",
+                "[#3049332] PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2023-08-16/call-null-inline-block-3049332-83.patch",
+                "[#3294474] Imported layout builder settings fail if inline blocks are present due to missing revisions": "https://www.drupal.org/files/issues/2023-11-23/3294474-12-imported-lb-settings.diff"
             },
             "drupal/draggableviews": {
                 "[#2867348] Not working with Group By feature": "https://www.drupal.org/files/issues/2021-10-11/not_working_with_group_by-draggableviews-2867348-48.patch"
