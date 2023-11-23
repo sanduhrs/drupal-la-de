@@ -1,6 +1,6 @@
 _core:
   default_config_hash: yBZCJNXdy8aUxkDFubX_CjT_l7HZXhFN_4JXB0XmMJA
-langcode: nl
+langcode: en
 allow_date_only: false
 date_format: 'Y-m-d H:i:s'
 date_letters: djmnFMyY

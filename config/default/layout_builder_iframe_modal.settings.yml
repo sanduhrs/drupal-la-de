@@ -8,4 +8,4 @@ layout_builder_iframe_routes:
   - layout_builder.translate_block
   - layout_builder.translate_inline_block
 custom_routes: {  }
-langcode: nl
+langcode: en

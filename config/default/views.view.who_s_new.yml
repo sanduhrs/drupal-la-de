@@ -1,5 +1,5 @@
 uuid: 66429df3-d408-4359-b07f-70827c485ddc
-langcode: nl
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 _core:
   default_config_hash: dcO9_JlolsvinhsSB6nR4HS8Alkjv8wQAPbTKfCOl94
 id: who_s_new
-label: 'Wie is nieuw'
+label: "Who's new"
 module: user
-description: 'Toont een lijst van de nieuwste gebruikersaccounts op de website.'
+description: 'Shows a list of the newest user accounts on the site.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -20,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Wie is nieuw'
+      title: "Who's new"
       fields:
         name:
           id: name
@@ -183,14 +183,14 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: 'Wie is nieuw'
+    display_title: "Who's new"
     display_plugin: block
     position: 1
     display_options:
-      display_description: 'Een lijst van nieuwe gebruikers'
+      display_description: 'A list of new users'
       display_extenders: {  }
-      block_description: 'Wie is nieuw'
-      block_category: Gebruiker
+      block_description: "Who's new"
+      block_category: User
     cache_metadata:
       max-age: -1
       contexts:

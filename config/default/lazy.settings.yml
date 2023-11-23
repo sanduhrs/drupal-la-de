@@ -1,6 +1,6 @@
 _core:
   default_config_hash: y7LBTPYVTcA6s3XuXz3mXS0he0kmx7NQWmTz2fDSI-s
-langcode: nl
+langcode: en
 skipClass: no-lazy
 placeholderSrc: ''
 preferNative: false
