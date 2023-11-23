@@ -21,6 +21,7 @@ module:
   chosen_lib: 0
   ckeditor: 0
   ckeditorheight: 0
+  color: 0
   components: 0
   config: 0
   config_filter: 0
@@ -28,7 +29,6 @@ module:
   config_translation: 0
   content_moderation: 0
   contextual: 0
-  color: 0
   crop: 0
   csv_serialization: 0
   ctools: 0
