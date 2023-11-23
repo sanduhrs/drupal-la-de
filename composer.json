@@ -4,6 +4,10 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/la_eu",
+    "support": {
+        "docs": "https://www.drupal.org/project/la_eu",
+        "chat": "https://drupal.slack.com/archives/C05F15S2N2E"
+    },
     "require": {
         "bower-asset/lazysizes": "^5.2",
         "composer/installers": "^2.2",
