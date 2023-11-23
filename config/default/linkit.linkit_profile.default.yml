@@ -7,7 +7,7 @@ dependencies:
     - node
 _core:
   default_config_hash: Y3ASg8D4s4r6s3yw8t7y813YbR6Q7_iqNxnDZ3o0CP8
-label: Standaard
+label: Default
 id: default
 description: ''
 matchers:
