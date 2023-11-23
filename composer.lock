@@ -4,37 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "content-hash": "3b5fcd8c12ce6f48938506af8ad97595",
-||||||| parent of 85c09e6 (Updates composer lock file)
-    "content-hash": "2825188b912ce52289eabffb955cab5d",
-=======
     "content-hash": "242e1829d37d6454a4853cacf87311ba",
->>>>>>> 85c09e6 (Updates composer lock file)
-||||||| parent of 8be8a53 (Add patch to fix imported lb block fatal)
-    "content-hash": "242e1829d37d6454a4853cacf87311ba",
-=======
-    "content-hash": "3b5fcd8c12ce6f48938506af8ad97595",
->>>>>>> 8be8a53 (Add patch to fix imported lb block fatal)
-||||||| parent of e448f0b (Updates composer lock file)
-    "content-hash": "3b5fcd8c12ce6f48938506af8ad97595",
-=======
-    "content-hash": "4ee32899a679c65729e46c317c2cd0af",
->>>>>>> e448f0b (Updates composer lock file)
-||||||| parent of ce014e6 (Updates composer lock file)
-    "content-hash": "242e1829d37d6454a4853cacf87311ba",
-=======
-    "content-hash": "4ee32899a679c65729e46c317c2cd0af",
->>>>>>> ce014e6 (Updates composer lock file)
-||||||| parent of 259245b (Updates composer lock file)
-    "content-hash": "242e1829d37d6454a4853cacf87311ba",
-=======
-    "content-hash": "4ee32899a679c65729e46c317c2cd0af",
->>>>>>> 259245b (Updates composer lock file)
     "packages": [
         {
             "name": "asm89/stack-cors",
