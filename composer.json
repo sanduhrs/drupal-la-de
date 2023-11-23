@@ -212,6 +212,9 @@
                 "[#2901390] Affix correct langcode to paragraph in layout builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
                 "[#3090200] Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess(": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
             },
+            "drupal/system_status": {
+                "[#3299281] Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2023-02-15/system_status-drupal_10_compatibility-3299281-7.patch"
+            },
             "drupal/ultimate_cron": {
                 "[#3370283] PHP 8.2 / CronRule.php does not handle all variables properly": "https://www.drupal.org/files/issues/2023-06-26/3370283.patch"
             },
