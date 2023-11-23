@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "3b5fcd8c12ce6f48938506af8ad97595",
 ||||||| parent of 85c09e6 (Updates composer lock file)
     "content-hash": "2825188b912ce52289eabffb955cab5d",
@@ -23,6 +24,11 @@
 =======
     "content-hash": "4ee32899a679c65729e46c317c2cd0af",
 >>>>>>> e448f0b (Updates composer lock file)
+||||||| parent of ce014e6 (Updates composer lock file)
+    "content-hash": "242e1829d37d6454a4853cacf87311ba",
+=======
+    "content-hash": "4ee32899a679c65729e46c317c2cd0af",
+>>>>>>> ce014e6 (Updates composer lock file)
     "packages": [
         {
             "name": "asm89/stack-cors",
