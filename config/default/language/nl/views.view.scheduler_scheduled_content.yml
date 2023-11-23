@@ -1,5 +1,3 @@
-label: 'Scheduled content'
-description: 'Find and manage scheduled content.'
 display:
   default:
     display_options:
@@ -13,27 +11,34 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laatste »'
       fields:
+        node_bulk_form:
+          action_title: Action
         title:
           label: Title
+          separator: ', '
         type:
-          label: 'Content Type'
+          label: Inhoudstype
           separator: ', '
         name:
           label: Author
+          separator: ', '
         status:
           label: Status
           settings:
             format_custom_true: Published
             format_custom_false: Unpublished
+          separator: ', '
         publish_on:
-          label: 'Publish on'
+          label: 'Publiceer op'
+          separator: ', '
         unpublish_on:
-          label: 'Unpublish on'
+          label: 'Depubliceer op'
+          separator: ', '
         operations:
           label: Operations
       filters:
@@ -56,34 +61,19 @@ display:
         langcode:
           expose:
             label: Language
-      title: 'Scheduled Content'
-      empty:
-        area_text_custom:
-          content: 'No scheduled content.'
-    display_title: Master
+    display_title: Hoofd
   overview:
     display_options:
-      menu:
-        title: Scheduled
-        description: 'Content scheduled for publishing and unpublishing'
       tab_options:
         title: Content
-        description: 'Find and manage scheduled content'
-      display_description: "Overview of all scheduled content, as a tab on main 'content admin' page"
-    display_title: 'Content Overview'
   user_page:
     display_options:
       menu:
-        title: Scheduled
+        title: Gepland
       tab_options:
         title: Content
-        description: 'Find and manage scheduled content'
-      display_description: "Scheduled content tab on user profile, showing just that user's scheduled content"
       arguments:
         uid:
           exception:
             title: All
-      empty:
-        area_text_custom:
-          content: 'No scheduled content for user {{ arguments.uid }}'
-    display_title: 'User profile tab'
+    display_title: Gebruiker

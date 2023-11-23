@@ -5,6 +5,6 @@ dependencies: {  }
 _core:
   default_config_hash: 6q-4mat_5rePtmxm9HXLgqLaw5tie9t-lZ9l_qVvBAY
 id: default
-label: Standaard
+label: Default
 locked: true
 pattern: ((((t+ig)+im)+if)+is)+jc
