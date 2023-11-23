@@ -9,6 +9,19 @@
         "chat": "https://drupal.slack.com/archives/C05F15S2N2E"
     },
     "repositories": {
+        "system_status": {
+            "type": "package",
+            "package": {
+                "name": "drupal/system_status",
+                "type": "drupal-module",
+                "version": "2.x-dev@dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://git.drupalcode.org/project/system_status.git",
+                    "reference": "8.x-2.x"
+                }
+            }
+        },
         "_assets": {
             "type": "composer",
             "url": "https://asset-packagist.org"
