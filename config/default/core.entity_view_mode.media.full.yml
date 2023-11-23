@@ -1,5 +1,5 @@
 uuid: cea92457-129e-42fa-8493-aaa9033691f7
-langcode: nl
+langcode: en
 status: false
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: 6NBUEuGmlkClK8Fb76tSMMpO2eZ4LWCBdbUk4z7CuP0
 id: media.full
-label: 'Volledige inhoud'
+label: 'Full content'
 targetEntityType: media
 cache: true
