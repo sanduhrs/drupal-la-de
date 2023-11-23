@@ -36,8 +36,8 @@ content:
       enable_title: false
       link: ''
       force_fill: false
-      sanitize: '1'
-      sanitize_remote: 0
+      sanitize: true
+      sanitize_remote: false
     third_party_settings: {  }
     weight: 0
     region: content

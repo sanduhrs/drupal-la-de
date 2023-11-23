@@ -1,3 +1,4 @@
+description: 'Geplande inhoud zoeken en beheren.'
 display:
   default:
     display_options:
@@ -5,9 +6,9 @@ display:
         options:
           submit_button: Filter
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
       pager:
         options:
           tags:
@@ -17,21 +18,21 @@ display:
             last: 'laatste »'
       fields:
         node_bulk_form:
-          action_title: Action
+          action_title: Actie
         title:
-          label: Title
+          label: Titel
           separator: ', '
         type:
           label: Inhoudstype
           separator: ', '
         name:
-          label: Author
+          label: Auteur
           separator: ', '
         status:
           label: Status
           settings:
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Gepubliceerd
+            format_custom_false: 'Niet gepubliceerd'
           separator: ', '
         publish_on:
           label: 'Publiceer op'
@@ -40,40 +41,48 @@ display:
           label: 'Depubliceer op'
           separator: ', '
         operations:
-          label: Operations
+          label: Bewerkingen
       filters:
         title:
           expose:
-            label: Title
+            label: Titel
         type:
           expose:
-            label: 'Content type'
+            label: Inhoudstype
         status:
           expose:
             label: Status
           group_info:
-            label: 'Published status'
+            label: Publicatiestatus
             group_items:
               1:
-                title: Published
+                title: Gepubliceerd
               2:
-                title: Unpublished
+                title: 'Niet gepubliceerd'
         langcode:
           expose:
-            label: Language
+            label: Taal
+      empty:
+        area_text_custom:
+          content: 'Geen geplande inhoud.'
     display_title: Hoofd
   overview:
     display_options:
       tab_options:
-        title: Content
+        title: Inhoud
+        description: 'Geplande inhoud zoeken en beheren'
   user_page:
     display_options:
       menu:
         title: Gepland
       tab_options:
-        title: Content
+        title: Inhoud
+        description: 'Geplande inhoud zoeken en beheren'
       arguments:
         uid:
           exception:
-            title: All
+            title: Alle
+      empty:
+        area_text_custom:
+          content: 'Geen geplande inhoud voor gebruiker {{ arguments.uid }}'
     display_title: Gebruiker
