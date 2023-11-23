@@ -1,6 +1,6 @@
 _core:
   default_config_hash: Nn_gn7lyYWhJoGzZ0oRkZ5nrrpxp03Rru_tda5POfuU
-langcode: nl
+langcode: en
 session:
   parameter: language
 url:

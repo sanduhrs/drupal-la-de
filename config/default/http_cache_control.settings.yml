@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 7J75jee6uT-qT16hDiNTHOtRFPgAz_ppCBdl7GTo-As
-langcode: nl
+langcode: en
 cache:
   http:
     s_maxage: 3600

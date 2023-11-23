@@ -1,6 +1,6 @@
 _core:
   default_config_hash: U1q833aXD0suIAAqW2hFieiJpFsgw-M2EFFjzGrFxC4
-langcode: nl
+langcode: en
 track_time: 60
 user_wrong_count: 0
 host_wrong_count: 10

@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 0M3S8wlVlf_QJbFu_znZ1q4HKcPU48FAsjxRHW2xJew
-langcode: nl
+langcode: en
 theme: seven
 defaults:
   sender: swiftmailer

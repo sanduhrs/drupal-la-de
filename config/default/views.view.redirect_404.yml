@@ -1,5 +1,5 @@
 uuid: a086626a-26c8-4661-82f7-3b8bea2934ac
-langcode: nl
+langcode: en
 status: true
 dependencies:
   module:
@@ -17,11 +17,11 @@ base_field: ''
 display:
   default:
     id: default
-    display_title: Hoofd
+    display_title: Main
     display_plugin: default
     position: 0
     display_options:
-      title: "404-pagina's oplossen"
+      title: 'Resolve 404 pages'
       fields:
         path:
           id: path
@@ -33,7 +33,7 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: standard
-          label: Pad
+          label: Path
           exclude: false
           alter:
             alter_text: false
@@ -82,7 +82,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: serialized
-          label: Aantal
+          label: Count
           exclude: false
           alter:
             alter_text: false
@@ -133,7 +133,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: date
-          label: 'Laatste toegang'
+          label: 'Last access'
           exclude: false
           alter:
             alter_text: false
@@ -320,7 +320,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'Er zijn geen 404 fouten om op te lossen.'
+          content: 'There are no 404 errors to resolve.'
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -339,7 +339,7 @@ display:
           exposed: true
           expose:
             operator_id: path_op
-            label: Pad
+            label: Path
             description: ''
             use_operator: false
             operator: path_op
