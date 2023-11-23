@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 description: 'Geplande inhoud zoeken en beheren.'
 display:
   default:
@@ -86,3 +87,85 @@ display:
         area_text_custom:
           content: 'Geen geplande inhoud voor gebruiker {{ arguments.uid }}'
     display_title: Gebruiker
+||||||| parent of 820e79b (Updates config export after D10 upgrade)
+=======
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laatste »'
+      fields:
+        node_bulk_form:
+          action_title: Action
+        title:
+          label: Title
+          separator: ', '
+        type:
+          label: Inhoudstype
+          separator: ', '
+        name:
+          label: Author
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_true: Published
+            format_custom_false: Unpublished
+          separator: ', '
+        publish_on:
+          label: 'Publiceer op'
+          separator: ', '
+        unpublish_on:
+          label: 'Depubliceer op'
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: 'Content type'
+        status:
+          expose:
+            label: Status
+          group_info:
+            label: 'Published status'
+            group_items:
+              1:
+                title: Published
+              2:
+                title: Unpublished
+        langcode:
+          expose:
+            label: Language
+    display_title: Hoofd
+  overview:
+    display_options:
+      tab_options:
+        title: Content
+  user_page:
+    display_options:
+      menu:
+        title: Gepland
+      tab_options:
+        title: Content
+      arguments:
+        uid:
+          exception:
+            title: All
+    display_title: Gebruiker
+>>>>>>> 820e79b (Updates config export after D10 upgrade)
