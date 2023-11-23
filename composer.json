@@ -151,10 +151,10 @@
         "drupal-scaffold": {
             "gitignore": false,
             "locations": {
-                "web-root": "./docroot"
+                "web-root": "docroot/"
             },
             "file-mapping": {
-               "[web-root]/robots.txt": false
+                "[web-root]/robots.txt": false
             }
         },
         "enable-patching": true,
