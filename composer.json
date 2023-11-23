@@ -227,8 +227,8 @@
         ]
     },
     "require-dev": {
-        "drupal/devel": "^5.0",
-        "drupal/stage_file_proxy": "^2.0",
+        "drupal/devel": "^5.1",
+        "drupal/stage_file_proxy": "^2.1",
         "lemberg/draft-environment": "^3.6"
     }
 }
