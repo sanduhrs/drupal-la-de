@@ -7,6 +7,8 @@ module:
   address_map_link: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  advagg: 0
+  advagg_js_minify: 0
   allowed_formats: 0
   ban: 0
   better_exposed_filters: 0
@@ -26,6 +28,7 @@ module:
   config_translation: 0
   content_moderation: 0
   contextual: 0
+  color: 0
   crop: 0
   csv_serialization: 0
   ctools: 0
@@ -104,6 +107,7 @@ module:
   path: 0
   path_alias: 0
   quicklink: 0
+  rdf: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
