@@ -28,8 +28,6 @@ dependencies:
     - media_library
     - metatag
     - path
-    - scheduler
-    - scheduler_content_moderation_integration
     - telephone
     - text
 third_party_settings:
@@ -298,15 +296,8 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  publish_state:
-    type: scheduler_moderation
-    weight: 11
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -342,21 +333,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  unpublish_state:
-    type: scheduler_moderation
-    weight: 12
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   url_redirects:
     weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

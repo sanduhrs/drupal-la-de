@@ -22,10 +22,10 @@ third_party_settings:
         layout_id: dnl_layout_banner_section
         layout_settings:
           label: ''
-          context_mapping: {  }
           padding: default
           size: default
           valign: top
+          context_mapping: {  }
         components:
           9bd52231-d3fa-43b0-9674-469bd6a906f2:
             uuid: 9bd52231-d3fa-43b0-9674-469bd6a906f2
@@ -36,9 +36,9 @@ third_party_settings:
               label_display: ''
               provider: layout_builder
               view_mode: full
-              context_mapping: {  }
               block_revision_id: 19
               block_serialized: null
+              context_mapping: {  }
             weight: 0
             additional: {  }
         third_party_settings:
