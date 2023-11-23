@@ -128,18 +128,12 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "autoload": {
-        "psr-4": {
-            "Lemberg\\Draft\\Template\\": "src/"
-        }
-    },
     "config": {
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
-            "oomphinc/composer-installers-extender": true,
-            "lemberg/draft-environment": true
+            "oomphinc/composer-installers-extender": true
         },
         "platform": {
             "php": "8.2"
@@ -228,20 +222,9 @@
             }
         }
     },
-    "scripts": {
-        "post-install-cmd": [
-            "Lemberg\\Draft\\Template\\DrupalProject::createRequiredFiles",
-            "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
-        ],
-        "post-update-cmd": [
-            "Lemberg\\Draft\\Template\\DrupalProject::createRequiredFiles",
-            "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
-        ]
-    },
     "require-dev": {
         "drupal/devel": "^5.1",
         "drupal/stage_file_proxy": "^2.1",
-        "mglaman/drupal-check": "^1.4",
-        "lemberg/draft-environment": "^3.6"
+        "mglaman/drupal-check": "^1.4"
     }
 }
