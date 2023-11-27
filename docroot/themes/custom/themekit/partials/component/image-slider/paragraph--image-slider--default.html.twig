@@ -11,7 +11,7 @@
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          {% for key, slide in content.field_medias if key|first != '#' %}
+          {% for key, slide in content.field_medias|filter((value, key) => key|first != '#') %}
             <li class="glide__slide">{{ slide }}</li>
           {% endfor %}
         </ul>
@@ -22,7 +22,7 @@
           <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Next"></button>
         </div>
         <div class="glide__bullets" data-glide-el="controls[nav]">
-          {% for key, slide in content.field_medias if key|first != '#' %}
+          {% for key, slide in content.field_medias|filter((value, key) => key|first != '#') %}
             <button class="glide__bullet" data-glide-dir="={{ key }}"></button>
           {% endfor %}
         </div>
