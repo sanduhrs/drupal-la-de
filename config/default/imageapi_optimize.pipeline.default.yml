@@ -4,23 +4,9 @@ status: true
 dependencies:
   module:
     - imageapi_optimize_gd
-    - imageapi_optimize_tinypng
-    - imageapi_optimize_webp
 name: default
 label: Default
 processors:
-  af79d43c-9191-4221-9c38-fa76da260bde:
-    id: tinypng
-    data:
-      api_key: jdnLw3kdMF74nhHRTnzJj58lh0NhCnDT
-    weight: 1
-    uuid: af79d43c-9191-4221-9c38-fa76da260bde
-  273d571a-1c49-4fc7-a67e-a0a83c71c0d2:
-    id: imageapi_optimize_webp
-    data:
-      quality: '90'
-    weight: 2
-    uuid: 273d571a-1c49-4fc7-a67e-a0a83c71c0d2
   23687bdb-d1b5-4b81-b183-dcc9bc2c48bf:
     id: imageapi_optimize_gd
     data:

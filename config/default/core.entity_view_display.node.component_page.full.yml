@@ -27,7 +27,7 @@ third_party_settings:
           size: default
           valign: top
         components:
-          9bd52231-d3fa-43b0-9674-469bd6a906f2:
+          -
             uuid: 9bd52231-d3fa-43b0-9674-469bd6a906f2
             region: first
             configuration:
